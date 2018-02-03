@@ -1,0 +1,11 @@
+.button {
+	@include button;
+}
+
+.button--primary {
+	@include button--primary;
+}
+
+.button--danger {
+	@include button--danger;
+}

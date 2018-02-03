@@ -1,0 +1,11 @@
+.cta-button {
+  @include button--primary;
+  background-color: #fff;
+  background-image: none;
+  border-color: #fff;
+  color: $brandColor;
+
+  &:hover {
+    color: $brandColor;
+  }
+}

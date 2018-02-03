@@ -1,0 +1,31 @@
+.cta-trusted {
+  padding: 2em 0;
+
+  img {
+    width: 200px;
+  }
+}
+
+.cta-trusted--fluid {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.cta-trusted__label {
+  font-weight: 500;
+  font-size: 15px;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  display: inline-block;
+}
+
+.cta-trusted__testimonials {
+  margin-top: 2em;
+
+  img {
+    margin-right: 3em;
+    display: inline-block;
+  }
+}

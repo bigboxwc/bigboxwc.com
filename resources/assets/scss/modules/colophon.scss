@@ -1,0 +1,7 @@
+.colophon {
+	@include make-row;
+}
+
+.colophon__section {
+	flex-grow: 1;
+}

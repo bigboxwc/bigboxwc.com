@@ -1,0 +1,37 @@
+.feature-item {
+	@include make-col-ready;
+
+	@include media-breakpoint-up(lg) {
+		@include make-col(6);
+		margin-bottom: 4em;
+	}
+
+	h4 {
+    font-size: 20px;
+		font-weight: 400;
+		margin: 0;
+	}
+
+	p {
+    font-size: 16px;
+    color: #777;
+		margin: 0 0 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+	}
+
+  a {
+    color: $brandColor;
+  }
+}
+
+.feature-item__icon-placeholder {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: $activeColor;
+  box-shadow: 0 5px 15px rgba($activeColor, 0.20);
+  margin: 0 0 30px;
+}

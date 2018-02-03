@@ -1,0 +1,29 @@
+.how-it-works-quote {
+  color: #888;
+  margin: 2em 0;
+  position: relative;
+
+  &:before {
+    content: "\"";
+    position: absolute;
+    left: -13px;
+  }
+
+  cite {
+    display: block;
+    margin-top: 1em;
+  }
+}
+
+.how-it-works-quote__ation {
+  background: rgba(0, 0, 0, 0.06);
+  padding: 40px 15px 15px;
+  position: absolute;
+  top: 0;
+  left: 5em;
+
+  svg {
+    width: 28px;
+    height: 28px;
+  }
+}

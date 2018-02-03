@@ -1,0 +1,13 @@
+a {
+	color: #555;
+	text-decoration: none;
+
+	&:hover {
+		color: $activeColor;
+    text-decoration: none;
+
+		svg {
+			fill: $activeColor;
+		}
+	}
+}

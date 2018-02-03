@@ -1,0 +1,21 @@
+.list {
+	margin: 0 0 2em;
+	padding: 0;
+	list-style: none;
+
+	li {
+    color: #777;
+		margin-bottom: 0.5em;
+		padding: 0.25em 0;
+	}
+
+	a {
+    color: #777;
+		border-bottom: 2px solid transparent;
+	}
+
+	a:hover {
+		border-bottom: 2px solid $activeColor;
+    text-decoration: none;
+	}
+}
