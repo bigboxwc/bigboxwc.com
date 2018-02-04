@@ -22,7 +22,7 @@ function bigbox_enqueue_styles() {
 	$version    = bigbox_get_theme_version();
 	$stylesheet = 'bigbox';
 
-	$deps = array();
+	$deps = [];
 
 	wp_enqueue_style( 'select2' );
 	wp_enqueue_style( $stylesheet . '-fonts', 'https://fonts.googleapis.com/css?family=Arbutus+Slab|Lato' );
@@ -39,9 +39,9 @@ function bigbox_enqueue_scripts() {
 	$version    = bigbox_get_theme_version();
 	$stylesheet = 'bigbox';
 
-	$deps = array(
+	$deps = [
 		'wp-util',
-	);
+	];
 
 	// Combined application scripts. See `gulpfile.js` for more.
 	wp_enqueue_script( $stylesheet, get_template_directory_uri() . '/public/js/app.min.js', $deps, $version, true );
@@ -49,12 +49,12 @@ function bigbox_enqueue_scripts() {
 	// Send information to application scripts.
 	wp_localize_script(
 		$stylesheet, 'BigBox', apply_filters(
-			'bigbox_i18n', array(
-				'loginModalLinks' => array(
+			'bigbox_i18n', [
+				'loginModalLinks' => [
 					'[href="' . wp_login_url() . '"]',
 					'[href^="' . wp_login_url() . '?redirect_to"]',
-				),
-			)
+				],
+			]
 		)
 	);
 }

@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // @see wp-includes/template.php line 41.
-$types = array(
+$types = [
 	'index',
 	'404',
 	'archive',
@@ -48,7 +48,7 @@ $types = array(
 	'single',
 	'singular',
 	'attachment',
-);
+];
 
 foreach ( $types as $type ) {
 
@@ -66,7 +66,7 @@ foreach ( $types as $type ) {
 	 */
 	add_filter(
 		"{$type}_template_hierarchy", function( $templates ) {
-			$_templates = array();
+			$_templates = [];
 
 			foreach ( $templates as $k => $template ) {
 				// Skip the parent theme's /index.php which is required to be a valid theme.

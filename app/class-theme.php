@@ -40,7 +40,7 @@ final class Theme implements Registerable {
 	 * @since 1.0.0
 	 */
 	public function load_helpers() {
-		$helpers = array(
+		$helpers = [
 			'extras',
 			'assets',
 			'nav-menus',
@@ -50,7 +50,7 @@ final class Theme implements Registerable {
 			'wordpress',
 			'comments',
 			'template-tags',
-		);
+		];
 
 		foreach ( $helpers as $file ) {
 			require_once get_template_directory() . '/app/theme/' . $file . '.php';

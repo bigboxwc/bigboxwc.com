@@ -18,6 +18,7 @@ bigbox_view( 'global/header' );
 
 while ( have_posts() ) :
 	the_post();
+	the_content();
 endwhile;
 
 bigbox_view( 'global/footer' );

@@ -44,10 +44,10 @@ function bigbox_get_theme_version() {
  */
 function bigbox_view( $templates, $path = 'resources/views' ) {
 	if ( ! is_array( $templates ) ) {
-		$templates = array( $templates );
+		$templates = [ $templates ];
 	}
 
-	$_templates = array();
+	$_templates = [];
 
 	foreach ( $templates as $key => $template_name ) {
 		$_templates[] = $template_name . '.php';
@@ -106,7 +106,7 @@ function bigbox_get_partial( $partial, $suffix = null ) {
  *     @type string $desc  Optional SVG description.
  * }
  */
-function bigbox_svg( $args = array() ) {
+function bigbox_svg( $args = [] ) {
 	echo bigbox_get_svg( $args ); // WPCS: XSS ok.
 }
 
@@ -124,11 +124,11 @@ function bigbox_svg( $args = array() ) {
  * }
  * @return string SVG markup.
  */
-function bigbox_get_svg( $args = array() ) {
+function bigbox_get_svg( $args = [] ) {
 	// A string passed is assumed the icon name.
 	if ( ! is_array( $args ) ) {
 		$icon         = $args;
-		$args         = array();
+		$args         = [];
 		$args['icon'] = $icon;
 	}
 
@@ -140,13 +140,13 @@ function bigbox_get_svg( $args = array() ) {
 	}
 
 	// Set defaults.
-	$defaults = array(
+	$defaults = [
 		'icon'     => '',
 		'title'    => '',
 		'desc'     => '',
 		'fallback' => false,
-		'classes'  => array(),
-	);
+		'classes'  => [],
+	];
 
 	// Parse args.
 	$args = wp_parse_args( $args, $defaults );

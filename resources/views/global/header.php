@@ -43,7 +43,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<nav class="access">
 							<a href="#" class="access-item">All Solutions</a>
 							<a href="#" class="access-item">WooCommerce Theme</a>
-							<a href="#" class="access-item">Tips and Tricks</a>
+							<a href="#" class="access-item">Scaling WooCommerce Guides</a>
 						</nav>
 					</div>
 

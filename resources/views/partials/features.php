@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				<div class="feature-item__content">
 					<h4>Optimized WooCommerce Theme</h4>
-					<p>A beautifully designed WooCommerce theme built for extensive product catalogs.</p>
+					<p>A beautifully designed WooCommerce theme built for extensive product catalogs. Ensure your product cataloge is the focus of your website.</p>
 					<p><a href="/">Get the theme &rarr;</a></p>
 				</div>
 			</li>

@@ -28,20 +28,13 @@ function bigbox_add_theme_support() {
 	add_theme_support( 'automatic-feed-links' );
 
 	add_theme_support(
-		'html5', array(
+		'html5', [
 			'search-form',
 			'comment-form',
 			'commentlist',
 			'gallery',
 			'caption',
-		)
-	);
-
-	add_theme_support(
-		'custom-background', array(
-			'default-color' => '#fafafa',
-			'default-image' => '',
-		)
+		]
 	);
 
 	add_post_type_support( 'page', 'excerpt' );
@@ -50,6 +43,6 @@ function bigbox_add_theme_support() {
 
 	add_theme_support( 'gutenberg' );
 	add_theme_support( 'align-wide' );
-	add_theme_support( 'editor-color-palette', array() );
+	add_theme_support( 'editor-color-palette', [] );
 }
 add_action( 'after_setup_theme', 'bigbox_add_theme_support' );
