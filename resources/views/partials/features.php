@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<div class="block-header">
 			<h3 class="block-title">Build Your eCommerce Powerhouse</h3>
-			<p class="block-subtitle">Ensure your customers can find your products, discover new items, complete their checkout, and purchase again.</p>
+			<p class="block-subtitle">Ensure your customers can find your products, complete their checkout, and purchase again.</p>
 		</div>
 
 		<ul class="feature-list">

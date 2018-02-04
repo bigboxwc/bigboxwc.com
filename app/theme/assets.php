@@ -24,10 +24,7 @@ function bigbox_enqueue_styles() {
 
 	$deps = array();
 
-	if ( bigbox_has_integration( 'woocommerce' ) ) {
-		wp_enqueue_style( 'select2' );
-	}
-
+	wp_enqueue_style( 'select2' );
 	wp_enqueue_style( $stylesheet . '-fonts', 'https://fonts.googleapis.com/css?family=Arbutus+Slab|Lato' );
 	wp_enqueue_style( $stylesheet, get_template_directory_uri() . '/public/css/app.min.css', $deps, $version );
 }
@@ -45,12 +42,6 @@ function bigbox_enqueue_scripts() {
 	$deps = array(
 		'wp-util',
 	);
-
-	if ( bigbox_has_integration( 'woocommerce' ) ) {
-		$deps[] = 'wc-cart-fragments';
-		$deps[] = 'wc-checkout';
-		$deps[] = 'selectWoo';
-	}
 
 	// Combined application scripts. See `gulpfile.js` for more.
 	wp_enqueue_script( $stylesheet, get_template_directory_uri() . '/public/js/app.min.js', $deps, $version, true );

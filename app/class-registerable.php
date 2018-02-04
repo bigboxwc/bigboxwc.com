@@ -1,6 +1,6 @@
 <?php
 /**
- * Boostrap the application.
+ * Register objects.
  *
  * @since 1.0.0
  *
@@ -15,4 +15,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-ThemeFactory::create()->register();
+/**
+ * Registerable interface.
+ *
+ * @since 1.0.0
+ */
+interface Registerable {
+
+	/**
+	 * Register the current Registerable.
+	 *
+	 * @since 1.0.0
+	 */
+	public function register();
+
+}

@@ -1,6 +1,6 @@
 <?php
 /**
- * Boostrap the application.
+ * BigBox Exception.
  *
  * @since 1.0.0
  *
@@ -9,10 +9,17 @@
  * @author Spencer Finnell
  */
 
-namespace BigBox\Website;
+namespace BigBox\Website\Exception;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-ThemeFactory::create()->register();
+/**
+ * BigBox interface.
+ *
+ * @since 1.0.0
+ */
+interface BigBoxException {
+
+}

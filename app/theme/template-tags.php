@@ -94,24 +94,6 @@ function bigbox_get_partial( $partial, $suffix = null ) {
 }
 
 /**
- * Check if the theme is working with a 3rd party integration.
- *
- * @since 1.0.0
- *
- * @param string $integration The name of the registered integration.
- * @return bool
- */
-function bigbox_has_integration( $integration ) {
-	$integration = BigBox\Website\Integrations::get_integration( $integration );
-
-	if ( ! $integration ) {
-		return false;
-	}
-
-	return $integration->is_active();
-}
-
-/**
  * Echo SVG markup.
  *
  * @since 1.0.0

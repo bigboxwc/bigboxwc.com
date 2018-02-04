@@ -1,6 +1,6 @@
 <?php
 /**
- * Boostrap the application.
+ * Service.
  *
  * @since 1.0.0
  *
@@ -15,4 +15,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-ThemeFactory::create()->register();
+/**
+ * Service interface.
+ *
+ * @since 1.0.0
+ */
+interface Service extends Registerable {
+
+}
