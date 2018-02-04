@@ -21,6 +21,17 @@ $activeColor: #16afff;
 @import 'modules/list';
 @import 'modules/icon';
 
+// Card
+@import 'modules/card';
+@import 'modules/card-label';
+
+// Block
+@import 'modules/block';
+@import 'modules/block-cta';
+@import 'modules/block-header';
+@import 'modules/block-title';
+@import 'modules/block-subtitle';
+
 // Header
 @import 'modules/masthead';
 @import 'modules/brand-bar';
@@ -35,13 +46,6 @@ $activeColor: #16afff;
 @import 'modules/primary-menu';
 @import 'modules/access';
 @import 'modules/access-item';
-
-// Block
-@import 'modules/block';
-@import 'modules/block-cta';
-@import 'modules/block-header';
-@import 'modules/block-title';
-@import 'modules/block-subtitle';
 
 // Call to Action
 @import 'modules/cta';
@@ -68,3 +72,6 @@ $activeColor: #16afff;
 // FAQs
 @import 'modules/faqs';
 @import 'modules/faq';
+
+// Forms
+@import 'modules/auth-form';

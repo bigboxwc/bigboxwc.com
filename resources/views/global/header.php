@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<div class="masthead">
 
 					<div class="branding">
-						<h1 class="site-title">BigBox</h1>
+						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">BigBox</a></h1>
 					</div>
 
 					<div class="primary-menu">
