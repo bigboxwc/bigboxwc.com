@@ -20,10 +20,10 @@ while ( have_posts() ) :
 	the_post();
 
 	bigbox_partial( 'cta--theme' );
+	bigbox_partial( 'theme-overview' );
 	bigbox_partial( 'theme-features' );
 	bigbox_partial( 'theme-faqs' );
 	bigbox_partial( 'theme-pricing' );
-	bigbox_partial( 'cta--get-started' );
 endwhile;
 
 bigbox_view( 'global/footer' );
