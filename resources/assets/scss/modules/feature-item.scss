@@ -27,6 +27,19 @@
   }
 }
 
+.feature-item--mini {
+  margin-bottom: 3rem;
+
+	@include media-breakpoint-up(lg) {
+		@include make-col(4);
+	}
+
+  .feature-item__icon-placeholder {
+    width: 75px;
+    height: 75px;
+  }
+}
+
 .feature-item__icon-placeholder {
   width: 100px;
   height: 100px;

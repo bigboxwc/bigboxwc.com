@@ -20,8 +20,8 @@ while ( have_posts() ) :
 	the_post();
 
 	bigbox_partial( 'cta--home' );
-	bigbox_partial( 'features' );
-	bigbox_partial( 'how-it-works' );
+	bigbox_partial( 'overview' );
+	bigbox_partial( 'testimonial' );
 	bigbox_partial( 'cta--get-started' );
 endwhile;
 

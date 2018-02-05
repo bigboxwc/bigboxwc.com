@@ -1,0 +1,34 @@
+.form-input {
+  color: #555;
+  font: 400 18px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  padding: 0.75em;
+  border: 2px solid #eee;
+  border-radius: 3px;
+
+  &:focus {
+    outline: 0;
+    border-color: #ccc;
+  }
+}
+
+textarea,
+[type="email"],
+[type="search"],
+[type="tel"],
+[type="password"],
+[type="text"] {
+  width: 100%;
+  display: block;
+}
+
+[type="submit"] {
+  @include button--primary;
+  width: 100%;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+[type="checkbox"] {
+  margin: 0;
+  padding: 0;
+}

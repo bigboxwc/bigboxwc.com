@@ -29,7 +29,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @param string   $post_type The current post type.
  */
 function bigbox_page_templates( $post_templates, $theme, $post, $post_type ) {
-	$post_templates['resources/views/layout/home.php'] = esc_html_x( 'Home', 'page template title', 'bigbox' );
+	$post_templates['resources/views/layout/page-home.php']  = esc_html_x( 'Home', 'page template title', 'bigbox' );
+	$post_templates['resources/views/layout/page-theme.php'] = esc_html_x( 'Theme', 'page template title', 'bigbox' );
 
 	return $post_templates;
 }

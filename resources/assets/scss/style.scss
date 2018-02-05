@@ -13,6 +13,7 @@ $activeColor: #16afff;
 @import 'elements/html';
 @import 'elements/body';
 @import 'elements/a';
+@import 'elements/img';
 @import 'elements/label';
 
 // Repeatable Patterns
@@ -49,14 +50,6 @@ $activeColor: #16afff;
 
 // Call to Action
 @import 'modules/cta';
-@import 'modules/cta-about';
-@import 'modules/cta-button';
-@import 'modules/cta-get-started';
-@import 'modules/cta-mission';
-@import 'modules/cta-title';
-@import 'modules/cta-trusted';
-@import 'modules/cta-more';
-
 @import 'modules/hero-cta';
 
 // Features
@@ -73,5 +66,18 @@ $activeColor: #16afff;
 @import 'modules/faqs';
 @import 'modules/faq';
 
+// Alerts
+@import 'modules/notices';
+@import 'modules/notice';
+
 // Forms
+@import 'modules/form-row';
+@import 'modules/form-label';
+@import 'modules/form-input';
 @import 'modules/auth-form';
+
+// Pricing
+@import 'modules/price-table';
+@import 'modules/price-option';
+@import 'modules/price-features';
+@import 'modules/price-feature';

@@ -76,7 +76,7 @@ foreach ( $types as $type ) {
 					unset( $templates[ $k ] );
 				}
 
-				$_templates[] = 'resources/views/' . $template;
+				$_templates[] = 'resources/views/layout/' . $template;
 			}
 
 			// Merge with original. This allows child themes to avoid /resources/views/ structure.

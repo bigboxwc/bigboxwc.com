@@ -6,4 +6,55 @@
 	.container {
 		height: 100%;
 	}
+
+  img {
+    display: block;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+}
+
+.cta__content {
+	padding: 5em 0;
+	max-width: 75%;
+}
+
+.cta__content--fluid {
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+} 
+
+.cta__title {
+  font: 700 68px/1 'Lora', serif;
+  text-shadow: 0 1px 1px rgba($activeColor, 0.10);
+  margin: 0;
+}
+
+.cta__description {
+	margin: 1em 0 2em;
+}
+
+.cta__button {
+  @include button--primary;
+  background-color: #fff;
+  background-image: none;
+  border-color: #fff;
+  color: $brandColor;
+
+  &:hover {
+    color: $brandColor;
+  }
+}
+
+.cta__more {
+  color: #fff;
+  margin-left: 2rem;
+
+  &:hover {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+  }
 }

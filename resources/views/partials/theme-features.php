@@ -1,6 +1,6 @@
 <?php
 /**
- * Features
+ * Theme Features
  *
  * @since 1.0.0
  * @version 1.0.0
@@ -19,13 +19,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="container features__container">
 
 		<div class="block-header">
-			<h3 class="block-title">Build Your eCommerce Powerhouse</h3>
-			<p class="block-subtitle">Ensure your customers can find your products, complete their checkout, and purchase again.</p>
+			<h3 class="block-title">Everything you need. Nothing you don't.</h3>
+			<p class="block-subtitle">Create a store that matches your brand, your scale, and your specific needs.</p>
 		</div>
 
 		<ul class="feature-list">
 
-			<li class="feature-item">
+			<li class="feature-item feature-item--mini">
 				<div class="feature-item__icon-placeholder"></div>
 
 				<div class="feature-item__content">
@@ -35,7 +35,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</div>
 			</li>
 
-			<li class="feature-item">
+			<li class="feature-item feature-item--mini">
 				<div class="feature-item__icon-placeholder"></div>
 
 				<div class="feature-item__content">
@@ -45,31 +45,47 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</div>
 			</li>
 
-			<li class="feature-item">
+			<li class="feature-item feature-item--mini">
 				<div class="feature-item__icon-placeholder"></div>
 
 				<div class="feature-item__content">
-					<h4>Advanced Product Look-up</h4>
+					<h4>Advanced Product Searching</h4>
 					<p>Performance when you need it. Ensure your orders can be processed quickly and efficiently.</p>
 					<p><a href="/">Learn about hosting &rarr;</a></p>
 				</div>
 			</li>
 
-			<li class="feature-item">
+			<li class="feature-item feature-item--mini">
 				<div class="feature-item__icon-placeholder"></div>
 
 				<div class="feature-item__content">
-					<h4>Avoid Abandonment and Increase Conversions</h4>
+					<h4>Cart Abandoment</h4>
+					<p>Performance when you need it. Ensure your orders can be processed quickly and efficiently.</p>
+					<p><a href="/">Learn about hosting &rarr;</a></p>
+				</div>
+			</li>
+
+			<li class="feature-item feature-item--mini">
+				<div class="feature-item__icon-placeholder"></div>
+
+				<div class="feature-item__content">
+					<h4>Cart Abandoment</h4>
+					<p>Performance when you need it. Ensure your orders can be processed quickly and efficiently.</p>
+					<p><a href="/">Learn about hosting &rarr;</a></p>
+				</div>
+			</li>
+
+			<li class="feature-item feature-item--mini">
+				<div class="feature-item__icon-placeholder"></div>
+
+				<div class="feature-item__content">
+					<h4>Cart Abandoment</h4>
 					<p>Performance when you need it. Ensure your orders can be processed quickly and efficiently.</p>
 					<p><a href="/">Learn about hosting &rarr;</a></p>
 				</div>
 			</li>
 
 		</ul>
-
-		<div class="block-cta">
-			<a href="#" class="button button--primary">Start Optimizing Now</a>
-		</div>
 
 	</div>
 </div>

@@ -18,10 +18,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="cta">
 	<div class="container">
 
-		<div class="cta-get-started">
+		<div class="cta__content">
 			<h3 class="cta-get-started__title">Start Building Your Store Today</h3>
 			<p>Explore the fastest WooCommerce solutions available.</p>
-			<p><a href="#" class="cta-button button">Get Started Now</a></p>
+			<p><a href="#" class="cta__button button">Get Started Now</a></p>
 		</div>
 
 	</div>

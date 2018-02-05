@@ -66,6 +66,7 @@ class WooCommerce extends Integration implements Registerable, Service {
 	public function dequeue_styles( $styles ) {
 		unset( $styles['woocommerce-general'] );
 		unset( $styles['woocommerce-smallscreen'] );
+		unset( $styles['woocommerce-layout'] );
 
 		return $styles;
 	}

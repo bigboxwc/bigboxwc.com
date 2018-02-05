@@ -3,11 +3,11 @@ a {
 	text-decoration: none;
 
 	&:hover {
-		color: $activeColor;
+		color: $brandColor;
     text-decoration: none;
 
 		svg {
-			fill: $activeColor;
+			fill: $brandColor;
 		}
 	}
 }

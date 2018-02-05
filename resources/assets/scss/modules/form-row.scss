@@ -1,0 +1,28 @@
+.form-row {
+  margin: 0 0 2em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// WooCommerce adds clearfix.
+.woocommerce form,
+.woocommerce-page {
+  .form-row {
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.form-row--submit {
+
+}
+
+.form-row--actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
