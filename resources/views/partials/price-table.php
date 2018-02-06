@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="card price-option__inner">
 
 			<h3 class="price-option__price">$9 <sub>/month</sub></h3>
-			<span class="price-option__term">Cancel any time.</span>
+			<span class="price-option__term">(billed yearly)</span>
 
 			<ul class="price-features">
 				<li class="price-feature">Technical Support</li>

@@ -1,0 +1,21 @@
+.feature-callout {
+  .media {
+    align-items: center;
+  }
+
+  .block-title,
+  .block-subtitle {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    max-width: none;
+  }
+}
+
+.feature-callout__media {
+  max-width: 500px;
+  margin: -5rem 0;
+
+  .block--highlight-alt & {
+    margin: -3rem 0;
+  }
+}

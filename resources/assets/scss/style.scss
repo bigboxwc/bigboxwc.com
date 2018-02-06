@@ -57,6 +57,9 @@ $activeColor: #16afff;
 @import 'modules/feature-list';
 @import 'modules/feature-item';
 
+@import 'modules/feature-callout';
+@import 'modules/theme-features';
+
 // How it Works
 @import 'modules/how-it-works';
 @import 'modules/how-it-works-block-header';
@@ -81,3 +84,6 @@ $activeColor: #16afff;
 @import 'modules/price-option';
 @import 'modules/price-features';
 @import 'modules/price-feature';
+
+// Blog
+@import 'modules/blog-card';

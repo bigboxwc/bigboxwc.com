@@ -22,7 +22,7 @@ while ( have_posts() ) :
 	bigbox_partial( 'cta--home' );
 	bigbox_partial( 'overview' );
 	bigbox_partial( 'testimonial' );
-	bigbox_partial( 'cta--get-started' );
+	bigbox_partial( 'from-the-blog' );
 endwhile;
 
 bigbox_view( 'global/footer' );

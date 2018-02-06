@@ -1,5 +1,5 @@
 .block {
-  margin: 4rem 0;
+  margin: 5rem 0;
 }
 
 .block--alt {
@@ -10,15 +10,41 @@
 
 .block--highlight {
   color: #fff;
-  background: $activeColor;
   margin: 0;
   padding: 3rem 0;
+  position: relative;
+  overflow: visible;
+  background: $activeColor;
 
-  + .block--highlight {
-    margin: 0;
+  &:after {
+    background: $activeColor;
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: 0;
+    bottom: 0;
+    left: -5%;
+    width: 110%;
+    height: 50%;
+    z-index: 1;
+    transform: rotate(-1deg);
+  }
+
+  &:first-child:after {
+    display: none;
+  }
+
+  .media {
+    position: relative;
+    z-index: 2;
   }
 }
 
 .block--highlight-alt {
   background: $brandColor;
+
+  &:after {
+    background: $brandColor;
+    transform: rotate(1deg);
+  }
 }
