@@ -2,4 +2,8 @@
   opacity: 0.70;
   max-width: 60%;
   margin: 0 auto;
+
+  + .block-subtitle {
+    margin-top: 1rem;
+  }
 }

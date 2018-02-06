@@ -21,6 +21,10 @@ textarea,
   display: block;
 }
 
+button {
+  @include button;
+}
+
 [type="submit"] {
   @include button--primary;
   width: 100%;

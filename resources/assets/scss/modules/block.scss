@@ -16,6 +16,11 @@
   overflow: visible;
   background: $activeColor;
 
+  a {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+  }
+
   &:after {
     background: $activeColor;
     content: '';

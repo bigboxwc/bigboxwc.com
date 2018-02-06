@@ -35,10 +35,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<h4 class="section-title">Site Links</h4>
 
 						<ul class="list">
-							<li><a href="#">Solutions</a></li>
-							<li><a href="#">WooCommerce Theme</a></li>
-							<li><a href="#">Contact</a></li>
-							<li><a href="#">About</a></li>
+							<li><a href="/theme/">BigBox WooCommerce Theme</a></li>
+							<li><a href="/blog/">Resources &amp; Blog</a></li>
+							<li><a href="/contact/">Contact</a></li>
+							<li><a href="/about/">About</a></li>
 						</ul>
 					</div>
 
@@ -46,9 +46,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<h4 class="section-title">Legal</h4>
 
 						<ul class="list">
-							<li><a href="#">Terms of Service</a></li>
-							<li><a href="#">Privacy Policy</a></li>
-							<li><strong>Copyright &copy; 2018</strong></li>
+							<li><a href="/tos/">Terms of Service</a></li>
+							<li><a href="/privacy/">Privacy Policy</a></li>
+							<li><strong>Copyright &copy; <?php echo esc_html( date( 'Y' ) ); ?></strong></li>
 						</ul>
 					</div>
 

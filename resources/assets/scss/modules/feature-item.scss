@@ -1,10 +1,5 @@
 .feature-item {
-	@include make-col-ready;
-
-	@include media-breakpoint-up(lg) {
-		@include make-col(6);
-		margin-bottom: 4em;
-	}
+  margin-bottom: 30px;
 
 	h4 {
     font-size: 20px;
@@ -28,15 +23,42 @@
 }
 
 .feature-item--mini {
-  margin-bottom: 3rem;
-
-	@include media-breakpoint-up(lg) {
-		@include make-col(4);
-	}
-
   .feature-item__icon-placeholder {
     width: 75px;
     height: 75px;
+  }
+}
+
+.feature-item--overlay {
+  cursor: pointer;
+
+  h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 1rem 0 0;
+    width: 100%;
+  }
+
+  .feature-item__content {
+    text-align: center;
+    height: 100%;
+    padding: 2rem 2.5rem;
+    border: 1px solid rgba($activeColor, 0.20);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+      box-shadow: 0 5px 15px rgba($activeColor, 0.10);
+    }
+  }
+
+  .feature-item__icon-placeholder {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    border-width: 2px;
   }
 }
 

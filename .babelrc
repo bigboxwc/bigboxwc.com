@@ -25,7 +25,8 @@
 		"default": {
 			"plugins": [
 				"lodash",
-				"transform-runtime"
+				"transform-runtime",
+        "import-glob",
 			]
 		},
 	}

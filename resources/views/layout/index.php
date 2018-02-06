@@ -14,7 +14,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-bigbox_view( 'global/header' ); ?>
+bigbox_view( 'global/header' );
 
-<?php
+bigbox_partial( 'cta-blog' );
+
 bigbox_view( 'global/footer' );

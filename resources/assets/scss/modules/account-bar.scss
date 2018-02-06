@@ -1,0 +1,20 @@
+.account-bar {
+  padding: 10px 0;
+  background: #222029;
+
+  .container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .access-item {
+    margin: 0 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 300;
+
+    &:hover {
+      border-bottom-width: 1px;
+    }
+  }
+}

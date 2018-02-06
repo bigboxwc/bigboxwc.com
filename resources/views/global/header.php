@@ -30,24 +30,32 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<body <?php body_class(); ?>>
 
-		<div class="brand-bar">
+		<div class="account-bar">
 			<div class="container">
 
+				<nav class="access">
+					<a href="/account/" class="access-item">Account</a>
+					<a href="/support/" class="access-item">Support</a>
+					<a href="/contact/" class="access-item">Contact</a>
+				</nav>
+
+			</div>
+		</div>
+
+		<div class="brand-bar">
+			<div class="container">
 				<div class="masthead">
 
 					<div class="branding">
 						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">BigBox</a></h1>
 					</div>
 
-					<div class="primary-menu">
-						<nav class="access">
-							<a href="#" class="access-item">All Solutions</a>
-							<a href="#" class="access-item">WooCommerce Theme</a>
-							<a href="#" class="access-item">Scaling WooCommerce Guides</a>
-						</nav>
-					</div>
+					<nav class="access">
+						<a href="/theme/" class="access-item">All Features</a>
+						<a href="/blog/" class="access-item">Blog &amp; Resources</a>
+						<a href="/buy-now/" class="access-item access-item--active">Get BigBox</a>
+					</nav>
 
 				</div>
-
 			</div>
 		</div>

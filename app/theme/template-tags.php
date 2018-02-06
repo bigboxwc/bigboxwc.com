@@ -152,9 +152,7 @@ function bigbox_get_svg( $args = [] ) {
 	$args = wp_parse_args( $args, $defaults );
 
 	// Add default classes.
-	$args['classes'][] = 'ico';
-	$args['classes'][] = 'bigbox-icon';
-	$args['classes'][] = 'bigbox-icon-' . esc_attr( $args['icon'] );
+	$args['classes'][] = 'icon';
 
 	// Set aria hidden.
 	$aria_hidden = ' aria-hidden="true"';
@@ -195,7 +193,7 @@ function bigbox_get_svg( $args = [] ) {
 	 *
 	 * See https://core.trac.wordpress.org/ticket/38387.
 	 */
-	$svg .= ' <use xlink:href="' . get_template_directory_uri() . '/public/images/icons.svg?v=' . $version . '#' . esc_html( $args['icon'] ) . '"></use> ';
+	$svg .= ' <use xlink:href="' . get_template_directory_uri() . '/public/images/sprite.svg?v=' . $version . '#' . esc_html( $args['icon'] ) . '"></use> ';
 
 	// Add some markup to use as a fallback for browsers that do not support SVGs.
 	if ( $args['fallback'] ) {

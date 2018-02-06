@@ -20,7 +20,9 @@ while ( have_posts() ) :
 	the_post();
 
 	bigbox_partial( 'cta--home' );
-	bigbox_partial( 'overview' );
+	bigbox_partial( 'theme-overview' );
+	bigbox_partial( 'theme-features' );
+	bigbox_partial( 'theme-features-more' );
 	bigbox_partial( 'testimonial' );
 	bigbox_partial( 'from-the-blog' );
 endwhile;

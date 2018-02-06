@@ -22,6 +22,7 @@ while ( have_posts() ) :
 	bigbox_partial( 'cta--theme' );
 	bigbox_partial( 'theme-overview' );
 	bigbox_partial( 'theme-features' );
+	bigbox_partial( 'theme-features-woocommerce' );
 	bigbox_partial( 'theme-faqs' );
 	bigbox_partial( 'testimonial' );
 	bigbox_partial( 'from-the-blog' );

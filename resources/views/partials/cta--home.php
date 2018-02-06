@@ -22,8 +22,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<h2 class="cta__title"><?php the_title(); ?></h2>
 			<div class="cta__descsription"><?php the_content(); ?></div>
 
-			<a href="#" class="cta__button button">Optimize Your Store</a>
-			<a href="#" class="cta__more">Learn More &rarr;</a>
+			<a href="/buy/" class="cta__button button">Get BigBox Now</a>
+			<a href="/theme/" class="cta__more">Learn More &rarr;</a>
 		</div>
 
 	</div>

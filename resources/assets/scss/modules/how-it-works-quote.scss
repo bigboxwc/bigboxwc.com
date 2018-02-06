@@ -16,14 +16,10 @@
 }
 
 .how-it-works-quote__ation {
+  font: normal 56px/40px 'Lora', serif;
   background: rgba(0, 0, 0, 0.06);
-  padding: 40px 15px 15px;
+  padding: 50px 20px 0;
   position: absolute;
   top: 0;
-  left: 5em;
-
-  svg {
-    width: 28px;
-    height: 28px;
-  }
+  left: 90px;
 }

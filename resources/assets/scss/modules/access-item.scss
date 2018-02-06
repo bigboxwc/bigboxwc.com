@@ -5,6 +5,11 @@
   border-bottom: 2px solid transparent;
   display: inline-block;
 
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.access-item--active,
   &:hover {
     color: #fff;
     border-color: #fff;

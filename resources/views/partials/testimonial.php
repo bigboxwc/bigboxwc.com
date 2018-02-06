@@ -23,17 +23,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="how-it-works__detail">
 
 			<div class="block-header how-it-works-block-header">
-				<span class="how-it-works-quote__ation">
-					<svg class="icon icon-bubbles"><use xlink:href="./assets/images/symbol-defs.svg#icon-bubbles"></use></svg>
-				</span>
-
-				<h3 class="block-title">Improve customer experience with tangible data.</h3>
+				<span class="how-it-works-quote__ation">&ldquo;</span>
 
 				<p class="how-it-works-quote">
 					Knowing the features my customers use the most allowed me to not only improve the user experience of those feautures but also ensure I'm advertising those features the most. "
-					
+
 					<cite>&ndash; Pippin Williamson, Sandhills Development</cite>
 				</p>
+
+				<p><a href="#" class="button button--primary">Get BigBox Now</a></p>
 			</div>
 
 		</div>
