@@ -3,3 +3,8 @@
   position: relative;
   z-index: 2;
 }
+
+.brand-bar--static {
+  margin-bottom: 0;
+  background: $brandColor;
+}

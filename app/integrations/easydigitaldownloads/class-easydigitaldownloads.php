@@ -53,7 +53,7 @@ class EasyDigitalDownloads extends Integration implements Registerable, Service 
 	 * @return array $paths
 	 */
 	public function template_paths( $paths ) {
-		$paths[110] = 'app/integrations/easydigitaldownloads/views/';
+		$paths[0] = $this->get_dir() . '/views/';
 
 		return $paths;
 	}
