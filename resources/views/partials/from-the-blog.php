@@ -13,6 +13,14 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+
+$latest = new WP_Query( [
+	'post_per_page' => 3,
+] );
+
+if ( ! $latest->have_posts() ) :
+	return;
+endif;
 ?>
 
 <div id="from-the-blog" class="block">
@@ -20,52 +28,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<div class="block-header">
 			<h3 class="block-title">Tips &amp; Tricks From the Blog</h3>
-			<p class="block-subtitle">Create a store that matches your brand, your scale, and your specific needs.</p>
+			<p class="block-subtitle">Tips and tricks for getting the most out of WooCommerce.</p>
 		</div>
 
 		<div class="row">
 
-			<div class="col-md-4">
-				<div class="card blog-card">
-					<img src="https://optinmonster.com/wp-content/uploads/2018/02/abandoned-cart-email-examples.jpg" alt="" />
+			<?php
+			while ( $latest->have_posts() ) :
+				$latest->the_post();
 
-					<div class="card__inner card__inner--mini">
-						<h4 class="card__label--mini"><a href="#">14 Abandoned Cart Email Examples Proven to Boost Revenue</a></h4>
-
-						<p>Are you sending out abandoned cart emails when your visitors leave something in their shopping cart? If not, you’re missing out on huge amounts of income.</p>
-
-						<p><a href="#">Continue reading &rarr;</a></p>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-4">
-				<div class="card blog-card">
-					<img src="https://optinmonster.com/wp-content/uploads/2018/02/abandoned-cart-email-examples.jpg" alt="" />
-
-					<div class="card__inner card__inner--mini">
-						<h4 class="card__label--mini"><a href="#">14 Abandoned Cart Email Examples Proven to Boost Revenue</a></h4>
-
-						<p>Are you sending out abandoned cart emails when your visitors leave something in their shopping cart? If not, you’re missing out on huge amounts of income.</p>
-
-						<p><a href="#">Continue reading &rarr;</a></p>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-4">
-				<div class="card blog-card">
-					<img src="https://optinmonster.com/wp-content/uploads/2018/02/abandoned-cart-email-examples.jpg" alt="" />
-
-					<div class="card__inner card__inner--mini">
-						<h4 class="card__label--mini"><a href="#">14 Abandoned Cart Email Examples Proven to Boost Revenue</a></h4>
-
-						<p>Are you sending out abandoned cart emails when your visitors leave something in their shopping cart? If not, you’re missing out on huge amounts of income.</p>
-
-						<p><a href="#">Continue reading &rarr;</a></p>
-					</div>
-				</div>
-			</div>
+				echo '<div class="col-md-4">';
+				bigbox_partial( 'blog/content' );
+				echo '</div>';
+			endwhile;
+			?>
 
 		</div>
 

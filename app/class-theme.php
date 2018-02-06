@@ -106,7 +106,7 @@ final class Theme implements Registerable {
 	 */
 	private function get_services() {
 		return [
-			Integrations\WooCommerce::class,
+			Integrations\EasyDigitalDownloads::class,
 		];
 	}
 

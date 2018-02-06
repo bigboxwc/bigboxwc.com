@@ -18,9 +18,9 @@ bigbox_view( 'global/header' );
 
 while ( have_posts() ) :
 	the_post();
-	echo '<div class="container">';
-	the_content();
-	echo '</div>';
+
+	bigbox_partial( 'hero' );
+	bigbox_partial( 'blog/content-page' );
 endwhile;
 
 bigbox_view( 'global/footer' );
