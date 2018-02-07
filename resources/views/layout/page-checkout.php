@@ -28,90 +28,38 @@ bigbox_view( 'global/header-min' ); ?>
 		</div>
 
 		<div class="row justify-content-center">
-			<div class="col-lg-8">
+			<div id="edd_checkout_wrap" class="col-lg-8">
+				<div id="edd_checkout_form_wrap">
 
-				<form id="edd_purchase_form" class="edd_form" action="<?php echo esc_attr( $form_action ); ?>" method="POST">
+					<form id="edd_purchase_form" class="edd_form" action="<?php echo esc_attr( $form_action ); ?>" method="POST">
 
-					<p class="card__label">Account Information</p>
+						<div id="checkout-errors"></div>
 
-					<div class="card card__inner--mini">
-						<p class="form-row">
-							<label for="edd_email" class="form-label"><?php esc_html_e( 'Email Address', 'bigbox' ); ?></label>
-							<input name="edd_email" id="edd_email" class="form-input" type="text" placeholder="<?php esc_attr_e( 'Enter your email address', 'bigbox' ); ?>" />
-						</p>
+						<?php edd_get_template_part( 'checkout/account-information' ); ?>
 
-						<p class="form-row">
-							<label for="edd_password" class="form-label"><?php esc_html_e( 'Password', 'bigbox' ); ?></label>
-							<input name="edd_password" id="edd_password" class="form-input" type="password" placeholder="<?php esc_attr_e( 'Enter a strong password', 'bigbox' ); ?>" />
-						</p>
-					</div>
+						<div id="edd_cc_fields">
+							<?php
+							edd_get_template_part( 'checkout/billing-information' );
+							edd_get_template_part( 'checkout/order-summary' );
+							?>
 
-					<p class="card__label">Billing Information</p>
-
-					<div class="card card__inner--mini">
-						<div class="form-row-group">
-							<p class="form-row form-row--half">
-								<label for="edd_email" class="form-label"><?php esc_html_e( 'First Name', 'bigbox' ); ?></label>
-								<input name="edd_email" id="edd_email" class="form-input" type="text" placeholder="<?php esc_attr_e( 'First Name', 'bigbox' ); ?>" />
-							</p>
-
-							<p class="form-row form-row--half">
-								<label for="edd_email" class="form-label"><?php esc_html_e( 'Last Name', 'bigbox' ); ?></label>
-								<input name="edd_email" id="edd_email" class="form-input" type="text" placeholder="<?php esc_attr_e( 'Last Name', 'bigbox' ); ?>" />
-							</p>
+							<div class="row">
+								<div class="col-lg-8">
+									<?php
+									edd_get_template_part( 'checkout/gateway-select' );
+									edd_checkout_hidden_fields();
+									?>
+								</div>
+							</div>
 						</div>
 
-						<p class="form-row">
-							<label for="edd_email" class="form-label"><?php esc_html_e( 'Address', 'bigbox' ); ?></label>
-							<input name="edd_email" id="edd_email" class="form-input" type="text" placeholder="<?php esc_attr_e( 'Full Address', 'bigbox' ); ?>" />
-						</p>
-
-						<div class="form-row-group">
-							<p class="form-row form-row--half">
-								<label for="edd_email" class="form-label"><?php esc_html_e( 'City', 'bigbox' ); ?></label>
-								<input name="edd_email" id="edd_email" class="form-input" type="text" placeholder="<?php esc_attr_e( 'City', 'bigbox' ); ?>" />
-							</p>
-
-							<p class="form-row form-row--half">
-								<label for="edd_email" class="form-label"><?php esc_html_e( 'Postal / Zip Code', 'bigbox' ); ?></label>
-								<input name="edd_email" id="edd_email" class="form-input" type="text" placeholder="<?php esc_attr_e( 'Postal / Zip Code', 'bigbox' ); ?>" />
-							</p>
+						<div id="edd_purchase_submit">
+							<?php echo edd_checkout_button_purchase(); // @codingStandardsIgnoreLine ?>
 						</div>
 
-						<div class="form-row-group">
-							<p class="form-row form-row--half">
-								<label for="edd_email" class="form-label"><?php esc_html_e( 'Country', 'bigbox' ); ?></label>
-								<input name="edd_email" id="edd_email" class="form-input" type="text" placeholder="<?php esc_attr_e( 'United States', 'bigbox' ); ?>" />
-							</p>
+					</form>
 
-							<p class="form-row form-row--half">
-								<label for="edd_email" class="form-label"><?php esc_html_e( 'State / Province', 'bigbox' ); ?></label>
-								<input name="edd_email" id="edd_email" class="form-input" type="text" placeholder="<?php esc_attr_e( 'State / Province', 'bigbox' ); ?>" />
-							</p>
-						</div>
-					</div>
-
-					<div class="order-summary">
-						<p class="card__label">Order Overview</p>
-
-						<div class="order-summary__row">
-							<span class="order-summary__label order-summary__label--highlight">Instant Account Activation</span>
-							<span class="order-summary__value order-summary__value--highlight">Free!</span>
-						</div>
-
-						<div class="order-summary__row">
-							<span class="order-summary__label order-summary__label--highlight">Money Back Guaruntee</span>
-							<span class="order-summary__value order-summary__value--highlight">14 Days</span>
-						</div>
-
-						<div class="order-summary__row">
-							<span class="order-summary__label">BigBox WooCommerce Theme</span>
-							<span class="order-summary__value">$108.00</span>
-						</div>
-					</div>
-
-				</form>
-
+				</div>
 			</div>
 		</div>
 

@@ -20,9 +20,9 @@ while ( have_posts() ) :
 	the_post();
 
 	bigbox_partial( 'cta--home' );
-	bigbox_partial( 'theme-overview' );
-	bigbox_partial( 'theme-features' );
-	bigbox_partial( 'theme-features-more' );
+	bigbox_partial( 'features-overview' );
+	bigbox_partial( 'features-primary' );
+	bigbox_partial( 'features-woocommerce' );
 	bigbox_partial( 'testimonial' );
 	bigbox_partial( 'from-the-blog' );
 endwhile;

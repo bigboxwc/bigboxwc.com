@@ -1,7 +1,7 @@
 .form-row {
   margin: 0 0 2em;
 
-  &:last-child {
+  &:not(.form-row--half):last-child {
     margin-bottom: 0;
   }
 }
