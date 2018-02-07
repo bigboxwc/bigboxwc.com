@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Home
+ * Template Name: Features
  *
  * @since 1.0.0
  * @version 1.0.0
@@ -19,13 +19,13 @@ bigbox_view( 'global/header' );
 while ( have_posts() ) :
 	the_post();
 
-	bigbox_partial( 'cta--theme' );
-	bigbox_partial( 'theme-overview' );
-	bigbox_partial( 'theme-features' );
-	bigbox_partial( 'theme-features-woocommerce' );
-	bigbox_partial( 'theme-faqs' );
+	bigbox_partial( 'features-hero' );
+	bigbox_partial( 'features-overview' );
+	bigbox_partial( 'features-primary' );
+	bigbox_partial( 'features-woocommerce' );
+	bigbox_partial( 'features-faqs' );
 	bigbox_partial( 'testimonial' );
-	bigbox_partial( 'from-the-blog' );
+	bigbox_partial( 'theme-pricing' );
 endwhile;
 
 bigbox_view( 'global/footer' );

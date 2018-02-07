@@ -1,6 +1,6 @@
 <?php
 /**
- * CTA: Theme
+ * Hero: Features
  *
  * @since 1.0.0
  * @version 1.0.0
@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<a href="/demo/" class="cta__more">View Demo &rarr;</a>
 		</div>
 
-		<img src="http://wp-clean.dev/wp-content/uploads/2018/02/latest-featured-image-e1517843046247.jpg" alt="" />
+		<div class="hero-cta__image-placeholder"></div>
 
 	</div>
 </div>

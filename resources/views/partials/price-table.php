@@ -24,13 +24,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<span class="price-option__term">(billed yearly)</span>
 
 			<ul class="price-features">
+				<li class="price-feature"><strong>All Purchases Include:</strong></li>
 				<li class="price-feature">Technical Support</li>
 				<li class="price-feature">Automatic Updates</li>
 				<li class="price-feature">Detailed Documentation</li>
-				<li class="price-feature">More!</li>
+				<li class="price-feature">Instant Activation</li>
 			</ul>
 
-			<a href="#" class="button button--primary">Buy Now</a>
+			<a href="/buy/" class="button button--primary">Get Started Now</a>
 
 		</div>
 	</div>

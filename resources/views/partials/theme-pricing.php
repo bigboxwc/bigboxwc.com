@@ -19,8 +19,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="container">
 
 		<div class="block-header">
-			<h3 class="block-title">Simplified Pricing</h3>
-			<p class="block-subtitle">Create a store that matches your brand, your scale, and your specific needs.</p>
+			<h3 class="block-title">Get Started Right Now</h3>
+			<p class="block-subtitle">Join the thousands of people running large-scale WooCommerce-powered websites.</p>
 		</div>
 
 		<?php bigbox_partial( 'price-table' ); ?>

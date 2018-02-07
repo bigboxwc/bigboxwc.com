@@ -51,7 +51,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					</div>
 
 					<nav class="access">
-						<a href="/theme/" class="access-item">All Features</a>
+						<a href="/features/" class="access-item">All Features</a>
 						<a href="/blog/" class="access-item">Blog &amp; Resources</a>
 						<a href="/buy-now/" class="access-item access-item--active">Get BigBox</a>
 					</nav>
