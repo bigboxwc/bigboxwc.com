@@ -27,7 +27,7 @@ bigbox_view( 'global/header-min' ); ?>
 			<p class="block-subtitle">Your're on your way to a more scalable eCommerce solution.</p>
 		</div>
 
-		<div class="row">
+		<div class="row justify-content-center">
 			<div class="col-lg-8">
 
 				<form id="edd_purchase_form" class="edd_form" action="<?php echo esc_attr( $form_action ); ?>" method="POST">
@@ -88,6 +88,25 @@ bigbox_view( 'global/header-min' ); ?>
 								<label for="edd_email" class="form-label"><?php esc_html_e( 'State / Province', 'bigbox' ); ?></label>
 								<input name="edd_email" id="edd_email" class="form-input" type="text" placeholder="<?php esc_attr_e( 'State / Province', 'bigbox' ); ?>" />
 							</p>
+						</div>
+					</div>
+
+					<div class="order-summary">
+						<p class="card__label">Order Overview</p>
+
+						<div class="order-summary__row">
+							<span class="order-summary__label order-summary__label--highlight">Instant Account Activation</span>
+							<span class="order-summary__value order-summary__value--highlight">Free!</span>
+						</div>
+
+						<div class="order-summary__row">
+							<span class="order-summary__label order-summary__label--highlight">Money Back Guaruntee</span>
+							<span class="order-summary__value order-summary__value--highlight">14 Days</span>
+						</div>
+
+						<div class="order-summary__row">
+							<span class="order-summary__label">BigBox WooCommerce Theme</span>
+							<span class="order-summary__value">$108.00</span>
 						</div>
 					</div>
 
