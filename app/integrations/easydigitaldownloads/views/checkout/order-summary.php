@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div>
 
 	<div class="order-summary__row">
-		<span class="order-summary__label order-summary__label--highlight">Money Back Guaruntee</span>
+		<span class="order-summary__label order-summary__label--highlight">Money Back Guarantee</span>
 		<span class="order-summary__value order-summary__value--highlight">14 Days</span>
 	</div>
 
