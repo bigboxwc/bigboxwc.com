@@ -27,84 +27,84 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<li class="feature-item feature-item--overlay col-lg-3">
 				<div class="feature-item__content">
-					<div class="feature-item__icon-placeholder"></div>
+					<?php bigbox_svg( 'illustration-hacker' ); ?>
 					<h4>Customer Accounts and Guest Checkout</h4>
 				</div>
 			</li>
 
 			<li class="feature-item feature-item--overlay col-lg-3">
 				<div class="feature-item__content">
-					<div class="feature-item__icon-placeholder"></div>
+					<?php bigbox_svg( 'illustration-hand' ); ?>
 					<h4>One-Click Refunds</h4>
 				</div>
 			</li>
 
 			<li class="feature-item feature-item--overlay col-lg-3">
 				<div class="feature-item__content">
-					<div class="feature-item__icon-placeholder"></div>
+					<?php bigbox_svg( 'illustration-globe' ); ?>
 					<h4>Inventory Management</h4>
 				</div>
 			</li>
 
 			<li class="feature-item feature-item--overlay col-lg-3">
 				<div class="feature-item__content">
-					<div class="feature-item__icon-placeholder"></div>
+					<?php bigbox_svg( 'illustration-ipod' ); ?>
 					<h4>Order Management</h4>
 				</div>
 			</li>
 
 			<li class="feature-item feature-item--overlay col-lg-3">
 				<div class="feature-item__content">
-					<div class="feature-item__icon-placeholder"></div>
+					<?php bigbox_svg( 'illustration-hand' ); ?>
 					<h4>Search Engine Optimization</h4>
 				</div>
 			</li>
 
 			<li class="feature-item feature-item--overlay col-lg-3">
 				<div class="feature-item__content">
-					<div class="feature-item__icon-placeholder"></div>
+					<?php bigbox_svg( 'illustration-ipod' ); ?>
 					<h4>Unlimited Product Pages</h4>
 				</div>
 			</li>
 
 			<li class="feature-item feature-item--overlay col-lg-3">
 				<div class="feature-item__content">
-					<div class="feature-item__icon-placeholder"></div>
+					<?php bigbox_svg( 'illustration-hacker' ); ?>
 					<h4>Unlimited Product Variations</h4>
 				</div>
 			</li>
 
 			<li class="feature-item feature-item--overlay col-lg-3">
 				<div class="feature-item__content">
-					<div class="feature-item__icon-placeholder"></div>
+					<?php bigbox_svg( 'illustration-globe' ); ?>
 					<h4>Extensive Payment Processing Options</h4>
 				</div>
 			</li>
 
 			<li class="feature-item feature-item--overlay col-lg-3">
 				<div class="feature-item__content">
-					<div class="feature-item__icon-placeholder"></div>
+					<?php bigbox_svg( 'illustration-globe' ); ?>
 					<h4>Flexible Shipping Solutions</h4>
 				</div>
 			</li>
 
 			<li class="feature-item feature-item--overlay col-lg-3">
 				<div class="feature-item__content">
-					<div class="feature-item__icon-placeholder"></div>
+					<?php bigbox_svg( 'illustration-hand' ); ?>
 					<h4>Choose Your Own Domain</h4>
 				</div>
 			</li>
 
 			<li class="feature-item feature-item--overlay col-lg-3">
 				<div class="feature-item__content">
-					<div class="feature-item__icon-placeholder"></div>
+					<?php bigbox_svg( 'illustration-ipod' ); ?>
 					<h4>Robust Tax Options</h4>
 				</div>
 			</li>
 
 			<li class="feature-item feature-item--overlay col-lg-3">
 				<div class="feature-item__content">
-					<div class="feature-item__icon-placeholder"></div>
+					<?php bigbox_svg( 'illustration-hacker' ); ?>
 					<h4>Detailed Reporting Tools</h4>
 				</div>
 			</li>

@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<ul class="feature-list">
 
 			<li class="feature-item feature-item--mini col-lg-4">
-				<div class="feature-item__icon-placeholder"></div>
+				<?php bigbox_svg( 'illustration-imac' ); ?>
 
 				<div class="feature-item__content">
 					<h4>Optimized WooCommerce Theme</h4>
@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</li>
 
 			<li class="feature-item feature-item--mini col-lg-4">
-				<div class="feature-item__icon-placeholder"></div>
+				<?php bigbox_svg( 'illustration-imac-filter' ); ?>
 
 				<div class="feature-item__content">
 					<h4>Advanced Filtering Support</h4>
@@ -46,7 +46,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</li>
 
 			<li class="feature-item feature-item--mini col-lg-4">
-				<div class="feature-item__icon-placeholder"></div>
+				<?php bigbox_svg( 'illustration-swatches' ); ?>
 
 				<div class="feature-item__content">
 					<h4>Unlimited Products and Variations</h4>
@@ -56,7 +56,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</li>
 
 			<li class="feature-item feature-item--mini col-lg-4">
-				<div class="feature-item__icon-placeholder"></div>
+				<?php bigbox_svg( 'illustration-money' ); ?>
 
 				<div class="feature-item__content">
 					<h4>Flexible Payment Processing</h4>
@@ -66,7 +66,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</li>
 
 			<li class="feature-item feature-item--mini col-lg-4">
-				<div class="feature-item__icon-placeholder"></div>
+				<?php bigbox_svg( 'illustration-ship' ); ?>
 
 				<div class="feature-item__content">
 					<h4>Customize to Match Your Brand</h4>
@@ -76,7 +76,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</li>
 
 			<li class="feature-item feature-item--mini col-lg-4">
-				<div class="feature-item__icon-placeholder"></div>
+				<?php bigbox_svg( 'illustration-businessman' ); ?>
 
 				<div class="feature-item__content">
 					<h4>Advanced Search Support</h4>

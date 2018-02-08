@@ -20,7 +20,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div id="focus-1" class="block block--alt feature-callout">
 		<div class="container media">
 
-			<img src="https://optinmonster.com/wp-content/uploads/2017/10/beautiful-forms.png" alt="" class="feature-callout__media" />
+			<div class="feature-callout__media">
+				<?php bigbox_svg( 'graphic-shopping' ); ?>
+			</div>
 
 			<div class="block-header block-header--left media-body">
 				<h3 class="block-title">Simplified Display Designed for Hundreds of Products</h3>
@@ -42,7 +44,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<p class="block-subtitle">Ensure search result relevancy by integrating with WordPress's best search optimization solution: <a href="https://searchwp.com">SearchWP</a></p>
 			</div>
 
-			<img src="https://optinmonster.com/wp-content/uploads/2017/10/AB-test.png" alt="" class="feature-callout__media" />
+			<div class="feature-callout__media">
+				<?php bigbox_svg( 'graphic-scientist' ); ?>
+			</div>
 
 		</div>
 	</div>
@@ -50,7 +54,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div id="focus-3" class="block block--alt feature-callout">
 		<div class="container media">
 
-			<img src="https://optinmonster.com/wp-content/uploads/2017/10/beautiful-forms.png" alt="" class="feature-callout__media" />
+			<div class="feature-callout__media">
+				<?php bigbox_svg( 'graphic-imac' ); ?>
+			</div>
 
 			<div class="block-header block-header--left media-body">
 				<h3 class="block-title">Optimized for Conversions</h3>
@@ -68,7 +74,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<p class="block-subtitle">Add <a href="https://woocommerce.com/products/woocommerce-social-login/">social login</a>, <a href="https://woocommerce.com/products/shipping/">live shipping rates</a>, <a href="https://woocommerce.com/products/mailchimp-for-woocommerce/">Mailchimp newsletter</a> and more for <a href="https://woocommerce.com/product-category/woocommerce-extensions/">WooCommerce</a>. Integrations with the platform's top extensions means you can make your eCommerce store work for you instead of against you.</p>
 			</div>
 
-			<img src="https://optinmonster.com/wp-content/uploads/2017/10/beautiful-forms.png" alt="" class="feature-callout__media" />
+			<div class="feature-callout__media">
+				<?php bigbox_svg( 'graphic-ship' ); ?>
+			</div>
 
 		</div>
 	</div>
