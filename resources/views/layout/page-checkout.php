@@ -41,16 +41,9 @@ bigbox_view( 'global/header-min' ); ?>
 							<?php
 							edd_get_template_part( 'checkout/billing-information' );
 							edd_get_template_part( 'checkout/order-summary' );
+							edd_get_template_part( 'checkout/gateway-select' );
+							edd_checkout_hidden_fields();
 							?>
-
-							<div class="row">
-								<div class="col-lg-8">
-									<?php
-									edd_get_template_part( 'checkout/gateway-select' );
-									edd_checkout_hidden_fields();
-									?>
-								</div>
-							</div>
 						</div>
 
 						<div id="edd_purchase_submit">

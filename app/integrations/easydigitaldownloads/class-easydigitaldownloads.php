@@ -47,6 +47,7 @@ class EasyDigitalDownloads extends Integration implements Registerable, Service 
 		remove_action( 'edd_register_fields_before', 'edd_user_info_fields' );
 		remove_action( 'edd_after_cc_fields', 'edd_default_cc_address_fields' );
 		remove_action( 'edd_purchase_form_before_submit', 'edd_checkout_final_total', 999 );
+		remove_action( 'edd_purchase_form_register_fields', 'edd_get_register_fields' );
 
 		remove_action( 'edd_stripe_cc_form', 'edds_credit_card_form' );
 		add_action( 'edd_stripe_cc_form', function() {
