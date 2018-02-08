@@ -1,0 +1,29 @@
+.#{$choices-selector},
+.#{$choices-selector}__inner {
+  color: #555;
+  font: 400 18px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.#{$choices-selector}__inner {
+  border-width: 2px;
+
+  .is-focused &,
+  .is-open & { 
+    border-color: rgba($brandColor, 0.50);
+  }
+}
+
+.#{$choices-selector}__list--dropdown {
+  border: 2px solid $brandColor;
+  border-top: 0;
+  z-index: 5;
+
+  .is-open & {
+    border-color: rgba($brandColor, 0.50);
+  }
+}
+
+.#{$choices-selector}__item {
+  color: #555;
+  font-size: 16px;
+}

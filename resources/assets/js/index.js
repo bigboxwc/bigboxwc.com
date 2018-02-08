@@ -4,4 +4,5 @@
 import '../scss/style.scss';
 import '../images/*.svg';
 
+import './components/choices';
 import './components/faqs';

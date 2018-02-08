@@ -2,9 +2,24 @@ $brandColor: #3c64ff;
 // $brandColor: #4550E5;
 $activeColor: darken($brandColor, 5%);
 
+/**
+ * External dependencies
+ */
 // Bootstrap
 @import '~bootstrap/scss/bootstrap-grid';
 @import '~bootstrap/scss/media';
+
+// Choices
+$choices-button-icon-path: "~choices.js/assets/icons";
+$choices-bg-color: #fff;
+$choices-border-radius: 3px;
+$choices-highlight-color: $brandColor;
+$choices-keyline-color: #eee;
+@import '~choices.js/assets/styles/scss/choices';
+
+/**
+ * Internal dependencies
+ */
 
 // Local helpers
 @import 'helpers/animation-spin';
@@ -80,6 +95,7 @@ $activeColor: darken($brandColor, 5%);
 @import 'modules/form-label';
 @import 'modules/form-input';
 @import 'modules/auth-form';
+@import 'modules/choices';
 
 // Pricing
 @import 'modules/price-table';
