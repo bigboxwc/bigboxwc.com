@@ -27,8 +27,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<span class="order-summary__value order-summary__value--highlight">14 Days</span>
 	</div>
 
-	<div class="order-summary__row">
+	<div class="order-summary__row edd_cart_total">
 		<span class="order-summary__label">BigBox WooCommerce Theme</span>
-		<span class="order-summary__value">$108.00</span>
+		<span class="order-summary__value edd_cart_amount" data-total="108.00">$108.00</span>
 	</div>
 </div>

@@ -19,18 +19,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="card card__inner--mini">
 	<p class="form-row">
 		<label for="card_address" class="form-label"><?php esc_html_e( 'Address', 'bigbox' ); ?></label>
-		<input name="card_address" id="card_address" class="form-input" type="text" placeholder="<?php esc_attr_e( 'Full Address', 'bigbox' ); ?>" />
+		<input name="card_address" id="card_address" class="form-input card-address" type="text" placeholder="<?php esc_attr_e( 'Full Address', 'bigbox' ); ?>" />
 	</p>
 
 	<div class="form-row-group">
 		<p class="form-row form-row--half">
 			<label for="card_city" class="form-label"><?php esc_html_e( 'City', 'bigbox' ); ?></label>
-			<input name="card_city" id="card_city" class="form-input" type="text" placeholder="<?php esc_attr_e( 'City', 'bigbox' ); ?>" />
+			<input name="card_city" id="card_city" class="form-input card-city" type="text" placeholder="<?php esc_attr_e( 'City', 'bigbox' ); ?>" />
 		</p>
 
 		<p class="form-row form-row--half">
 			<label for="card_zip" class="form-label"><?php esc_html_e( 'Postal / Zip Code', 'bigbox' ); ?></label>
-			<input name="card_zip" id="card_zip" class="form-input" type="text" placeholder="<?php esc_attr_e( 'Postal / Zip Code', 'bigbox' ); ?>" />
+			<input name="card_zip" id="card_zip" class="form-input card-zip" type="text" placeholder="<?php esc_attr_e( 'Postal / Zip Code', 'bigbox' ); ?>" />
 		</p>
 	</div>
 
@@ -38,7 +38,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<p class="form-row form-row--half">
 			<label for="billing_country" class="form-label"><?php esc_html_e( 'Country', 'bigbox' ); ?></label>
 
-			<select name="billing_country" id="edd_address_country" class="billing_country edd-select<?php echo esc_attr( edd_field_is_required( 'billing_country' ) ? ' required' : null ); ?>" <?php echo esc_attr( edd_field_is_required( 'billing_country' ) ? ' required ' : null ); ?>>
+			<select name="billing_country" id="billing_conutry" class="billing_country edd-select<?php echo esc_attr( edd_field_is_required( 'billing_country' ) ? ' required' : null ); ?>" <?php echo esc_attr( edd_field_is_required( 'billing_country' ) ? ' required ' : null ); ?>>
 				<?php
 				$selected_country = edd_get_shop_country();
 
