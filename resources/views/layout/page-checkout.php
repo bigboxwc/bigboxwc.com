@@ -22,6 +22,12 @@ bigbox_view( 'global/header-min' ); ?>
 <div class="container">
 	<div class="block">
 
+		<?php if ( empty( edd_get_cart_contents() ) ) : ?>
+
+			<?php esc_html_e( 'Nothing to purchase.', 'bigbox' ); ?>
+
+		<?php else : ?>
+
 		<div class="block-header">
 			<h1 class="block-title">Complete Your Purchase</h3>
 			<p class="block-subtitle">Your're on your way to a more scalable eCommerce solution.</p>
@@ -55,6 +61,8 @@ bigbox_view( 'global/header-min' ); ?>
 				</div>
 			</div>
 		</div>
+
+		<?php endif; ?>
 
 	</div>
 </div>

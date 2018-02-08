@@ -1,3 +1,7 @@
+.#{$choices-selector}:last-of-type {
+  margin-bottom: 0;
+}
+
 .#{$choices-selector},
 .#{$choices-selector}__inner {
   color: #555;
@@ -5,12 +9,18 @@
 }
 
 .#{$choices-selector}__inner {
+  padding: 0;
   border-width: 2px;
 
   .is-focused &,
   .is-open & { 
     border-color: rgba($brandColor, 0.50);
   }
+}
+
+.#{$choices-selector}__list--single {
+  padding: 16px;
+  min-height: 45px;
 }
 
 .#{$choices-selector}__list--dropdown {
@@ -26,4 +36,14 @@
 .#{$choices-selector}__item {
   color: #555;
   font-size: 16px;
+}
+
+.#{$choices-selector}[data-type*="select-one"] {
+  .#{$choices-selector}__inner {
+    padding: 0;
+  }
+
+  &:after {
+    right: 15px;
+  }
 }

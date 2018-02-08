@@ -25,12 +25,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="form-row-group">
 		<p class="form-row form-row--half">
 			<label for="edd_user_pass" class="form-label"><?php esc_html_e( 'Password', 'bigbox' ); ?></label>
-			<input name="edd_user_pass" id="edd_user_pass" class="form-input" type="text" placeholder="<?php esc_attr_e( '********', 'bigbox' ); ?>" />
+			<input name="edd_user_pass" id="edd_user_pass" class="form-input" type="password" placeholder="<?php esc_attr_e( '********', 'bigbox' ); ?>" />
 		</p>
 
 		<p class="form-row form-row--half">
 			<label for="edd_user_pass_confirm" class="form-label"><?php esc_html_e( 'Confirm Password', 'bigbox' ); ?></label>
-			<input name="edd_user_pass_confirm" id="edd_user_pass_confirm" class="form-input" type="text" placeholder="<?php esc_attr_e( '********', 'bigbox' ); ?>" />
+			<input name="edd_user_pass_confirm" id="edd_user_pass_confirm" class="form-input" type="password" placeholder="<?php esc_attr_e( '********', 'bigbox' ); ?>" />
 		</p>
 	</div>
 </div>
+
+<input type="hidden" name="edd-purchase-var" value="needs-to-register"/>

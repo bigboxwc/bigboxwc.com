@@ -61,6 +61,23 @@ class EasyDigitalDownloads extends Integration implements Registerable, Service 
 
 			return $args;
 		} );
+
+		add_filter( 'edd_shop_states', function( $states ) {
+			return array_filter( $states );
+		} );
+
+		add_filter( 'edd_purchase_form_required_fields', function( $fields ) {
+			unset( $fields['edd_email'] );
+			unset( $fields['edd_first'] );
+
+			return $fields;
+		} );
+
+		add_filter( 'edd_logged_in_only', '__return_false', 99 );
+
+		add_action( 'edd_pre_process_purchase', function() {
+			$_POST['edd_email'] = $_POST['edd_user_login']; // @codingStandardsIgnoreLine
+		} );
 	}
 
 	/**

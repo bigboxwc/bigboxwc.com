@@ -49,14 +49,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 				$countries = edd_get_country_list();
 
 				foreach ( $countries as $country_code => $country ) :
+					if ( '' === $country_code ) :
+						continue;
+					endif;
+
 					echo '<option value="' . esc_attr( $country_code ) . '"' . selected( $country_code, $selected_country, false ) . '>' . esc_html( $country ) . '</option>';
 				endforeach;
 				?>
 			</select>
 		</p>
 
-		<p class="form-row form-row--half">
+		<p id="billing-state" class="form-row form-row--half">
 			<label for="card_state" class="form-label"><?php esc_html_e( 'State / Province', 'bigbox' ); ?></label>
+
+			<input name="card_state" type="hidden" />
+
 			<?php
 			$selected_state = edd_get_shop_state();
 			$states         = edd_get_shop_states( $selected_country );
@@ -70,6 +77,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<select name="card_state" id="card_state" class="card_state edd-select<?php echo esc_attr( edd_field_is_required( 'card_state' ) ? ' required' : null ); ?>">
 				<?php
 				foreach ( $states as $state_code => $state ) :
+					if ( '' === $state_code ) :
+						continue;
+					endif;
+
 					echo '<option value="' . esc_attr( $state_code ) . '"' . selected( $state_code, $selected_state, false ) . '>' . esc_html( $state ) . '</option>';
 				endforeach;
 				?>
