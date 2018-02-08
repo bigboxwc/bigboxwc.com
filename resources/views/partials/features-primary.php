@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div class="theme-features">
 
-	<div id="focus-1" class="block block--highlight feature-callout">
+	<div id="focus-1" class="block block--alt feature-callout">
 		<div class="container media">
 
 			<img src="https://optinmonster.com/wp-content/uploads/2017/10/beautiful-forms.png" alt="" class="feature-callout__media" />
@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 	</div>
 
-	<div id="focus-2" class="block block--highlight block--highlight-alt feature-callout">
+	<div id="focus-2" class="block feature-callout">
 		<div class="container media">
 
 			<div class="block-header block-header--left media-body">
@@ -47,7 +47,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 	</div>
 
-	<div id="focus-3" class="block block--highlight block--highlight-alt feature-callout">
+	<div id="focus-3" class="block block--alt feature-callout">
 		<div class="container media">
 
 			<img src="https://optinmonster.com/wp-content/uploads/2017/10/beautiful-forms.png" alt="" class="feature-callout__media" />
@@ -60,7 +60,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 	</div>
 
-	<div id="focus-3" class="block block--highlight feature-callout">
+	<div id="focus-3" class="block feature-callout">
 		<div class="container media">
 
 			<div class="block-header block-header--left media-body">

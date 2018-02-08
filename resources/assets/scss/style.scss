@@ -1,5 +1,5 @@
-$brandColor: #623fd0;
-$activeColor: #16afff;
+$brandColor: #3c64ff;
+$activeColor: darken($brandColor, 5%);
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap-grid';

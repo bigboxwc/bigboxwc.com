@@ -24,7 +24,7 @@ while ( have_posts() ) :
 	bigbox_partial( 'features-primary' );
 	bigbox_partial( 'features-woocommerce' );
 	bigbox_partial( 'features-faqs' );
-	bigbox_partial( 'testimonial' );
+	// bigbox_partial( 'testimonial' );
 	bigbox_partial( 'theme-pricing' );
 endwhile;
 

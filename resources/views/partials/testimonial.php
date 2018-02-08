@@ -23,8 +23,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="how-it-works__detail">
 
 			<div class="block-header how-it-works-block-header">
-				<span class="how-it-works-quote__ation">&ldquo;</span>
-
 				<p class="how-it-works-quote">
 					Knowing the features my customers use the most allowed me to not only improve the user experience of those feautures but also ensure I'm advertising those features the most. "
 

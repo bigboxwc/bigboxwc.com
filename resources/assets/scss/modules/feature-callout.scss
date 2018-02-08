@@ -1,4 +1,7 @@
 .feature-callout {
+  margin: 0;
+  padding: 3rem 0;
+
   .media {
     align-items: center;
   }
@@ -13,9 +16,4 @@
 
 .feature-callout__media {
   max-width: 500px;
-  margin: -5rem 0;
-
-  .block--highlight-alt & {
-    margin: -3rem 0;
-  }
 }
