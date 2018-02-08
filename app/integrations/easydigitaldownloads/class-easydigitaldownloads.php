@@ -54,13 +54,15 @@ class EasyDigitalDownloads extends Integration implements Registerable, Service 
 			edd_get_template_part( 'checkout/credit-card-form' );
 		} );
 
-		remove_action( 'edd_purchase_form_after_cc_form', 'edd_checkout_submit', 9999 );
-
-		add_filter( 'edd_global_checkout_script_vars', function( $args ) {
-			$args['checkout_error_anchor'] = '#checkout-errors';
-
-			return $args;
+		add_action( 'edd_purchase_form', function() {
+			if ( isset( $_POST['edd_payment_mode'] ) && 'paypal' === $_POST['edd_payment_mode'] ) { // @codingStandardsIgnoreLine
+				echo '<p style="margin-bottom: 2rem;">';
+				esc_html_e( 'You will be directed to PayPal', 'bigbox' );
+				echo '</p>';
+			}
 		} );
+
+		remove_action( 'edd_purchase_form_after_cc_form', 'edd_checkout_submit', 9999 );
 
 		add_filter( 'edd_shop_states', function( $states ) {
 			return array_filter( $states );

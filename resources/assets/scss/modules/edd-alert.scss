@@ -1,0 +1,7 @@
+.edd-alert {
+  .edd_error {
+    margin: 1rem 0;
+    @extend .notice;
+    @extend .notice--alert;
+  }
+}

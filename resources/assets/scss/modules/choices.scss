@@ -1,3 +1,4 @@
+// Overrides.
 .#{$choices-selector}:last-of-type {
   margin-bottom: 0;
 }
@@ -31,6 +32,11 @@
   .is-open & {
     border-color: rgba($brandColor, 0.50);
   }
+
+  .is-flipped & {
+    border-top: 2px solid rgba($brandColor, 0.50);
+    border-bottom: 0;
+  }
 }
 
 .#{$choices-selector}__item {
@@ -46,4 +52,10 @@
   &:after {
     right: 15px;
   }
+}
+
+// Extras.
+.form-row-group > .choices {
+  width: 48%;
+  margin-bottom: 0;
 }

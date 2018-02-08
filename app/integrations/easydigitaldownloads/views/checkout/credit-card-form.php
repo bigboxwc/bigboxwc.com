@@ -23,14 +23,14 @@ do_action( 'edd_before_cc_fields' );
 <p class="form-row">
 	<label for="card_number" class="form-label"><?php esc_html_e( 'Card Number', 'bigbox' ); ?></label>
 
-	<input type="tel" pattern="^[0-9!@#$%^&* ]*$" id="card_number" class="form-input" placeholder="<?php esc_html_e( 'Credit Card Number', 'bigbox' ); ?>" autocomplete="cc-number" />
+	<input type="tel" pattern="^[0-9!@#$%^&* ]*$" id="card_number" class="form-input card-number" placeholder="<?php esc_html_e( 'Credit Card Number', 'bigbox' ); ?>" autocomplete="cc-number" />
 </p>
 
 <div class="form-row-group">
 	<div class="form-row form-row--half">
 		<label for="card_exp_month" class="edd-label"><?php esc_html_e( 'Card Expiration (MM/YY)', 'bigbox' ); ?></label>
 
-		<div>
+		<div class="form-row-group">
 			<select id="card_exp_month" class="form-input" autocomplete="cc-exp-month">
 				<?php
 				for ( $i = 1; $i <= 12; $i++ ) : // @codingStandardsIgnoreLine

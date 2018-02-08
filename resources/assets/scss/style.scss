@@ -108,3 +108,8 @@ $choices-keyline-color: #eee;
 
 // Checkout
 @import 'modules/order-summary';
+@import 'modules/payment-method';
+
+// EDD
+@import 'modules/edd-loading';
+@import 'modules/edd-alert';

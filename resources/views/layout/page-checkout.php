@@ -43,7 +43,7 @@ bigbox_view( 'global/header-min' ); ?>
 
 						<?php edd_get_template_part( 'checkout/account-information' ); ?>
 
-						<div id="edd_cc_fields">
+						<div id="edd_cc_fields" class="edd-do-validate">
 							<?php
 							edd_get_template_part( 'checkout/billing-information' );
 							edd_get_template_part( 'checkout/order-summary' );

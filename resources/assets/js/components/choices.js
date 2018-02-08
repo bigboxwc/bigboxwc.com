@@ -12,14 +12,16 @@ const args = {
 new Choices('select', args);
 
 // EDD checkout supplements.
-//
 (function(window, undefined){
-	const $ = window.jQuery;
-	
+	const $     = window.jQuery;
+	const $body = $(document.body);
+
 	$(function($) {
-    $(document.body).on('edd_cart_billing_address_updated', (e, data) => {
+		// Billing updated. Refresh.
+    $body.on('edd_cart_billing_address_updated', (e, data) => {
       const $state = $('#billing-state');
 
+			// Remove existing items.
       $state
         .find('.choices, .form-input, .edd-input')
         .remove();
@@ -33,5 +35,14 @@ new Choices('select', args);
         new Choices('#edd_address_state', args);
       }
     });
+		
+		// Gateway loaded. Refresh.
+		$body.on('edd_gateway_loaded', (e) => {
+			const select = '#edd_purchase_form_wrap select';
+
+			if ($(select).length !== 0) {
+				new Choices(select, args);
+			}
+		});
   });
 })(window);
