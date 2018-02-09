@@ -30,17 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<body <?php body_class(); ?>>
 
-		<div class="account-bar">
-			<div class="container">
-
-				<nav class="access">
-					<a href="/account/" class="access-item">Account</a>
-					<a href="/support/" class="access-item">Support</a>
-					<a href="/contact/" class="access-item">Contact</a>
-				</nav>
-
-			</div>
-		</div>
+		<?php bigbox_partial( 'account-bar' ); ?>
 
 		<div class="brand-bar">
 			<div class="container">

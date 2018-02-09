@@ -1,6 +1,6 @@
 <?php
 /**
- * Receipt not found.
+ * Payment history not found.
  *
  * @since 1.0.0
  * @version 1.0.0
@@ -19,13 +19,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="container media">
 
 		<div class="feature-callout__media">
-			<?php bigbox_svg( 'graphic-receipt' ); ?>
+			<?php bigbox_svg( 'graphic-chip-head' ); ?>
 		</div>
 
 		<div class="block-header block-header--left media-body">
-			<h3 class="block-title">Purchase Not Found</h3>
+			<h3 class="block-title">😢 No Payments Found</h3>
 
-			<p class="block-subtitle">Sorry! Please <a href="/contact/">contact support</a> if you believe this is an error.</p>
+			<p class="block-subtitle">Sorry! Please <a href="/contact/">contact support</a> if you believe this is an error. You can also <a href="/features/">read more about BigBox for WooCommerce</a>.</p>
 		</div>
 
 	</div>

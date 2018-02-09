@@ -31,11 +31,9 @@ $payment_id = edd_get_purchase_id_by_key( $payment_key );
 
 if ( ! $payment_id ) :
 	edd_get_template_part( 'receipt/not-found' );
-	return;
+else :
+	edd_get_template_part( 'receipt/hero' );
+	edd_get_template_part( 'receipt/next-steps' );
 endif;
-
-edd_get_template_part( 'receipt/hero' );
-edd_get_template_part( 'receipt/next-steps' );
-bigbox_partial( 'from-the-blog' );
 
 bigbox_view( 'global/footer' );

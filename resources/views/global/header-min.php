@@ -30,6 +30,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<body <?php body_class( 'minimal' ); ?>>
 
+		<?php bigbox_partial( 'account-bar' ); ?>
+
 		<div class="brand-bar brand-bar--static">
 			<div class="container">
 				<div class="masthead justify-content-center">
