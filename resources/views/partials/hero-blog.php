@@ -21,6 +21,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="cta__content">
 			<h2 class="cta__title">WooCommerce Scaling Resources and Tips</h2>
 			<div class="cta__description">Tips and tricks for getting the most out of WooCommerce.</div>
+
+			<form>
+				<input type="search" placeholder="Find a topic..." name="s" id="s" />
+			</form>
 		</div>
 
 	</div>

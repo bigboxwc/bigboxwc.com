@@ -23,6 +23,7 @@ $choices-keyline-color: #eee;
 
 // Local helpers
 @import 'helpers/animation-spin';
+@import 'helpers/align';
 @import 'mixins/button';
 
 // HTML Elements
@@ -105,7 +106,7 @@ $choices-keyline-color: #eee;
 @import 'modules/price-feature';
 
 // Blog
-@import 'modules/blog-card';
+@import 'modules/blog-post';
 
 // Checkout
 @import 'modules/order-summary';

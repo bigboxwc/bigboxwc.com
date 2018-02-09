@@ -15,12 +15,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<div class="card blog-card">
-	<?php the_post_thumbnail( 'large' ); ?>
-
-	<div class="card__inner card__inner--mini">
-		<h4 class="card__label--mini"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-
-		<?php the_content(); ?>
+<div class="block blog-post">
+	<div class="alignwide">
+		<?php the_post_thumbnail( 'large' ); ?>
 	</div>
+
+	<div class="block-header blog-post__header">
+		<h3 class="block-title blog-post__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+
+		<div class="block-subtitle blog-post__subtitle">
+			<?php the_content(); ?>
+		</div>
+	</div>
+
 </div>
