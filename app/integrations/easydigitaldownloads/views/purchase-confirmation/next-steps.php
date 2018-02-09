@@ -1,6 +1,6 @@
 <?php
 /**
- * Receipt next steps.
+ * Purchase confirmation next steps.
  *
  * @since 1.0.0
  * @version 1.0.0
@@ -13,6 +13,12 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+
+global $payment_id;
+
+$licensing = edd_software_licensing();
+$licenses  = $licensing->get_licenses_of_purchase( $payment_id );
+$license   = current( $licenses );
 ?>
 
 <div class="container">
@@ -33,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 						<p>Follow the <strong>BigBox Setup Guide</strong> to complete your installation.</p>
 						<p class="next-steps__hint">When prompted enter your license key:</p>
-						<input type"text" class="form-input next-steps__license-key" value="773fdc5472b77fb8ad7055a830710da9" onClick="this.select();" />
+						<input type"text" class="form-input next-steps__license-key" value="<?php echo esc_attr( $license->key ); ?>" onClick="this.select();" />
 					</li>
 
 					<li>

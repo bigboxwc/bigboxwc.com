@@ -30,10 +30,10 @@ global $payment_id;
 $payment_id = edd_get_purchase_id_by_key( $payment_key );
 
 if ( ! $payment_id ) :
-	edd_get_template_part( 'receipt/not-found' );
+	edd_get_template_part( 'purchase-confirmation/not-found' );
 else :
-	edd_get_template_part( 'receipt/hero' );
-	edd_get_template_part( 'receipt/next-steps' );
+	edd_get_template_part( 'purchase-confirmation/hero' );
+	edd_get_template_part( 'purchase-confirmation/next-steps' );
 endif;
 
 bigbox_view( 'global/footer' );

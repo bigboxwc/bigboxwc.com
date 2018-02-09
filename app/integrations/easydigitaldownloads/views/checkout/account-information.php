@@ -12,6 +12,8 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+
+if ( ! is_user_logged_in() ) :
 ?>
 
 <p class="card__label">Account Information</p>
@@ -36,3 +38,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 </div>
 
 <input type="hidden" name="edd-purchase-var" value="needs-to-register"/>
+
+<?php else : ?>
+	<input name="edd_user_login" id="edd_user_login" class="form-input" type="hidden" value="<?php echo esc_attr( wp_get_current_user()->user_email ); ?>" />
+<?php endif; ?>

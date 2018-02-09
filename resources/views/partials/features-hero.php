@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<h2 class="cta__title">A WooCommerce Theme That<br />Matches Your Warehouse</h2>
 			<div class="cta__description"><?php the_content(); ?></div>
 
-			<a href="/buy-now/" class="cta__button button">Get BigBox Now</a>
+			<a href="/buy/" class="cta__button button">Get BigBox Now</a>
 			<a href="/demo/" class="cta__more">View Demo &rarr;</a>
 		</div>
 

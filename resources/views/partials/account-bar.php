@@ -12,6 +12,10 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+
+if ( is_page( edd_get_option( 'purchase_page' ) ) ) :
+	return;
+endif;
 ?>
 
 <div class="account-bar">

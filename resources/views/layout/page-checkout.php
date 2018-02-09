@@ -14,6 +14,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+$purchases = edd_get_users_purchases( get_current_user_id(), 1, true, 'any' );
+
+if ( is_user_logged_in() && $purchases ) {
+	wp_safe_redirect( get_permalink( edd_get_option( 'purchase_history_page' ) ) );
+	edd_die();
+}
+
 $payment_mode = edd_get_chosen_gateway();
 $form_action  = esc_url( edd_get_checkout_uri( 'payment-mode=' . $payment_mode ) );
 
