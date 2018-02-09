@@ -70,7 +70,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="container media">
 
 			<div class="block-header block-header--left media-body">
-				<h3 class="block-title">Integrated with WooCommerce's Top Extensions</h3>
+				<h3 class="block-title">Integrated with WooCommerce's Most Popular Extensions</h3>
 				<p class="block-subtitle">Add <a href="https://woocommerce.com/products/woocommerce-social-login/">social login</a>, <a href="https://woocommerce.com/products/shipping/">live shipping rates</a>, <a href="https://woocommerce.com/products/mailchimp-for-woocommerce/">Mailchimp newsletter</a> and more for <a href="https://woocommerce.com/product-category/woocommerce-extensions/">WooCommerce</a>. Integrations with the platform's top extensions means you can make your eCommerce store work for you instead of against you.</p>
 			</div>
 

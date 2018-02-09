@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<li class="price-feature">Instant Activation</li>
 			</ul>
 
-			<a href="/buy/" class="button button--primary">Get Started Now</a>
+			<a href="/buy/" class="button button--primary">Get BigBox Now</a>
 
 		</div>
 	</div>
