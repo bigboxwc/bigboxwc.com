@@ -32,6 +32,7 @@ function bigbox_page_templates( $post_templates, $theme, $post, $post_type ) {
 	$post_templates['resources/views/layout/page-home.php']     = esc_html_x( 'Page: Home', 'page template title', 'bigbox' );
 	$post_templates['resources/views/layout/page-features.php'] = esc_html_x( 'Page: Features', 'page template title', 'bigbox' );
 	$post_templates['resources/views/layout/page-checkout.php'] = esc_html_x( 'Page: Checkout', 'page template title', 'bigbox' );
+	$post_templates['resources/views/layout/page-receipt.php']  = esc_html_x( 'Page: Receipt', 'page template title', 'bigbox' );
 	$post_templates['resources/views/layout/page-minimal.php']  = esc_html_x( 'Layout: Minimal', 'page template title', 'bigbox' );
 
 	return $post_templates;

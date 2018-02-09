@@ -17,16 +17,17 @@
     margin-bottom: 1rem;
   }
 
-  a {
+  a:not(.button) {
     color: $brandColor;
   }
 }
 
 .feature-callout__media {
-  max-width: 500px;
+  margin: 0 3rem;
+  max-width: 400px;
   
   .icon {
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
   }
 }

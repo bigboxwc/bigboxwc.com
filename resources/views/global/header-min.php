@@ -28,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php wp_head(); ?>
 	</head>
 
-	<body <?php body_class(); ?>>
+	<body <?php body_class( 'minimal' ); ?>>
 
 		<div class="brand-bar brand-bar--static">
 			<div class="container">

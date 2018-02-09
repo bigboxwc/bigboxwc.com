@@ -1,0 +1,33 @@
+.next-steps {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin-bottom: 3rem;
+  }
+
+  p {
+    margin: 0.5rem 0;
+  }
+
+  a:not(.button) {
+    color: $activeColor;
+    border-bottom: 2px solid $activeColor;
+  }
+}
+
+.next-steps__step {
+  font-weight: 700;
+  font-size: 22px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #eee;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.75rem;
+}
