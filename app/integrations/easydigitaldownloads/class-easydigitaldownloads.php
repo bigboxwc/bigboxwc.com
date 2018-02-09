@@ -57,7 +57,7 @@ class EasyDigitalDownloads extends Integration implements Registerable, Service 
 		add_action( 'edd_purchase_form', function() {
 			if ( isset( $_POST['edd_payment_mode'] ) && 'paypal' === $_POST['edd_payment_mode'] ) { // @codingStandardsIgnoreLine
 				echo '<p style="margin-bottom: 2rem;">';
-				esc_html_e( 'You will be directed to PayPal', 'bigbox' );
+				esc_html_e( 'You will be redirected to PayPal to complete your purchase.', 'bigbox' );
 				echo '</p>';
 			}
 		} );

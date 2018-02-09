@@ -1,11 +1,19 @@
 .next-steps {
-  text-align: center;
   margin: 0;
   padding: 0;
   list-style: none;
 
   li {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+    padding-left: 5rem;
+    position: relative;
+    min-height: 60px;
+  }
+
+  .next-steps__hint {
+    opacity: 0.80;
+    font-size: 16px;
+    margin: 0;
   }
 
   p {
@@ -19,15 +27,22 @@
 }
 
 .next-steps__step {
+  color: #fff;
   font-weight: 700;
   font-size: 22px;
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  background: #eee;
-  display: inline-block;
+  background: $brandColor;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 0.75rem;
+  position: absolute;
+  left: 0;
+  top: 8px;
+}
+
+.next-steps__license-key {
+  margin: 1rem auto 0;
+  width: 75%;
 }

@@ -18,20 +18,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="container">
 	<div class="block">
 		<div class="row justify-content-center">
-			<div class="col-lg-7">
+			<div class="col-lg-8">
 
 				<ol class="next-steps">
 					<li>
 						<span class="next-steps__step">1</span>
 
 						<p>Visit <strong>Appearance &rarr; Themes &rarr; Add New</strong> in WordPress and upload your theme.</p>
-						<p>Need help choosing WordCommerce hosting? <a href="#">Learn more about hosting</a>.</p>
+						<p class="next-steps__hint">Need help choosing WordCommerce hosting? <a href="#">Learn more about hosting</a>.</p>
 					</li>
 
 					<li>
 						<span class="next-steps__step">2</span>
 
 						<p>Follow the <strong>BigBox Setup Guide</strong> to complete your installation.</p>
+						<p class="next-steps__hint">When prompted enter your license key:</p>
+						<input type"text" class="form-input next-steps__license-key" value="773fdc5472b77fb8ad7055a830710da9" onClick="this.select();" />
 					</li>
 
 					<li>

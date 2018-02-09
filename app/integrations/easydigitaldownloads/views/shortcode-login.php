@@ -30,7 +30,7 @@ if ( ! is_user_logged_in() ) :
 
 			<?php edd_print_errors(); ?>
 
-			<form id="edd_login_form" class="card card__inner" action="" method="post">
+			<form id="edd_login_form" class="card card__inner--mini" action="" method="post">
 
 				<p class="form-row">
 					<label for="edd_user_login" class="form-label"><?php esc_html_e( 'Username or Email', 'bigbox' ); ?></label>

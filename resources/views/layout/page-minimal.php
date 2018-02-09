@@ -22,4 +22,4 @@ while ( have_posts() ) :
 	the_content();
 endwhile;
 
-bigbox_view( 'global/footer-min' );
+bigbox_view( 'global/footer' );
