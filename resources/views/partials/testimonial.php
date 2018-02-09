@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<div id="how-it-works" class="block block--alt">
+<div id="how-it-works" class="block">
 	<div class="how-it-works">
 
 		<div class="how-it-works__pull" style="background-image:url(https://images.unsplash.com/photo-1485217988980-11786ced9454?dpr=2&auto=format&fit=crop&w=500&h=500&q=80&cs=tinysrgb&crop=);"></div>
