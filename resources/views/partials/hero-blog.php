@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<div class="cta hero-cta hero-cta--center">
+<div class="cta hero-cta blog-hero hero-cta--center">
 	<div class="container">
 
 		<div class="cta__content">
@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="cta__description">Tips and tricks for getting the most out of WooCommerce.</div>
 
 			<form>
-				<input type="search" placeholder="Find a topic..." name="s" id="s" />
+				<input type="search" placeholder="Find a topic..." name="s" id="s" class="form-input" />
 			</form>
 		</div>
 
