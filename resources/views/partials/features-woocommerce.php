@@ -113,7 +113,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	</div>
 </div>
-
-<div class="block-cta">
-	<a href="/buy/" class="button button--primary">Get BigBox Now</a>
-</div>

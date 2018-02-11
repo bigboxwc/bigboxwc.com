@@ -4,6 +4,8 @@
 
 .block--alt {
   background: $color-gray-100;
+  border: 1px solid $color-gray-200;
+  border-width: 1px 0;
 }
 
 .block--highlight {

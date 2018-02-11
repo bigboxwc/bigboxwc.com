@@ -64,6 +64,6 @@ add_filter(
  */
 add_filter(
 	'excerpt_length', function() {
-		return 63;
+		return is_home() ? 63 : 30;
 	}
 );

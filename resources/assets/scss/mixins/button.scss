@@ -1,6 +1,7 @@
 @mixin button {
   font: 400 18px/1.5 Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   cursor: pointer;
+  border: 0;
   padding: 17px 35px;
   display: inline-flex;
   align-items: center;

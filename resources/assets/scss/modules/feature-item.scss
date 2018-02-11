@@ -46,7 +46,7 @@
     text-align: center;
     height: 100%;
     padding: 2rem 2.5rem;
-    border: 1px solid rgba(0, 0, 0, 0.10);
+    border: 1px solid $color-gray-200;
     border-radius: 3px;
     display: flex;
     align-items: center;
@@ -54,6 +54,7 @@
     transition: all 0.2s ease-in;
 
     &:hover {
+      border-color: $color-gray-300;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     }
   }

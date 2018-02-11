@@ -1,3 +1,7 @@
 .theme-features {
   margin: 6rem 0;
+
+  .feature-callout:first-child {
+    margin-bottom: 0;
+  }
 }

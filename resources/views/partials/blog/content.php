@@ -15,9 +15,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<div class="block blog-post">
-	<div class="alignwide">
-		<?php the_post_thumbnail( 'large' ); ?>
+<div class="<?php echo esc_attr( is_home() ? 'block blog-post' : 'blog-post' ); ?>">
+	<div class="<?php echo esc_attr( is_home() ? 'alignwide' : 'alignnone' ); ?>">
+		<?php the_post_thumbnail( is_home() ? 'large' : 'medium' ); ?>
 	</div>
 
 	<div class="block-header blog-post__header">

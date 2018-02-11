@@ -54,7 +54,7 @@ while ( have_posts() ) :
 			</div>
 
 		</div>
-	</div
+	</div>
 </div>
 
 <?php

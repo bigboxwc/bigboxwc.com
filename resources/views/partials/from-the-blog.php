@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $latest = new WP_Query( [
-	'post_per_page' => 3,
+	'posts_per_page' => 3,
 ] );
 
 if ( ! $latest->have_posts() ) :
@@ -23,7 +23,7 @@ if ( ! $latest->have_posts() ) :
 endif;
 ?>
 
-<div id="from-the-blog" class="block">
+<div id="from-the-blog" class="block from-the-blog">
 	<div class="container">
 
 		<div class="block-header">
@@ -32,18 +32,20 @@ endif;
 		</div>
 
 		<div class="row">
-
 			<?php
 			while ( $latest->have_posts() ) :
 				$latest->the_post();
 
-				echo '<div class="col-md-4">';
+				echo '<div class="col-lg-4">';
 				bigbox_partial( 'blog/content' );
 				echo '</div>';
 			endwhile;
 			?>
-
 		</div>
 
 	</div>
+</div>
+
+<div class="block-cta">
+	<a href="/blog/" class="button button--primary">Discover More Resources</a>
 </div>

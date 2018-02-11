@@ -1,9 +1,21 @@
-.blog-post .alignwide img {
+.blog-post [class^="align"] img {
   display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.blog-post__header {
+  .from-the-blog & {
+    margin: 1rem 0;
+  }
 }
 
 .blog-post__title {
   max-width: none;
+
+  .from-the-blog & {
+    font-size: 20px;
+  }
 }
 
 .blog-post__meta {
@@ -21,4 +33,10 @@
 .blog-post__meta + .blog-post__content {
   text-align: left;
   margin-top: 2rem;
+}
+
+.blog-post__content {
+  .from-the-blog & {
+    font-size: 16px;
+  }
 }
