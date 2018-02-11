@@ -15,6 +15,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $subscription = bigbox_edd_get_subscription();
+$payment      = bigbox_edd_get_payment();
+$method       = false;
+
+if ( 'stripe' === $payment->gateway ) :
+	$card   = current( edd_stripe_get_existing_cards( get_current_user_id() ) );
+	$method = '**** - **** - **** - ' . $card['source']->last4;
+else :
+	$method = $payment->email;
+endif;
 ?>
 
 <div class="order-summary">
@@ -32,6 +41,11 @@ $subscription = bigbox_edd_get_subscription();
 	<div class="order-summary__row">
 		<span class="order-summary__label">Renewal Amount</span>
 		<span class="order-summary__value"><?php echo esc_html( edd_currency_filter( edd_format_amount( $subscription->initial_amount ), edd_get_payment_currency_code( $subscription->parent_payment_id ) ) ); ?></span>
+	</div>
+
+	<div class="order-summary__row">
+		<span class="order-summary__label">Payment Method</span>
+		<span class="order-summary__value"><?php echo esc_html( $method ); ?></span>
 	</div>
 
 </div>
