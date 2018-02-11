@@ -3,7 +3,7 @@
 }
 
 .block--alt {
-  background: #f9f9f9;
+  background: $color-gray-100;
 }
 
 .block--highlight {
@@ -12,7 +12,7 @@
   padding: 3rem 0;
   position: relative;
   overflow: visible;
-  background: $activeColor;
+  background: $brandColor;
 
   a {
     color: #fff;

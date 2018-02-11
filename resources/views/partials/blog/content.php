@@ -23,8 +23,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="block-header blog-post__header">
 		<h3 class="block-title blog-post__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 
-		<div class="block-subtitle blog-post__subtitle">
-			<?php the_content(); ?>
+		<div class="hentry blog-post__content">
+			<?php the_excerpt(); ?>
 		</div>
 	</div>
 

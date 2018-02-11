@@ -5,6 +5,14 @@
   max-width: 100vw;
 }
 
+.alignleft {
+  float: left;
+}
+
+.alignright {
+  float: right;
+}
+
 @include media-breakpoint-up(lg) {
   .alignwide {
     margin-left: -10%;

@@ -1,0 +1,11 @@
+.blog-hero {
+  form {
+    margin-top: 2rem;
+  }
+
+  .form-input {
+    border: 0;
+    box-shadow: 0 2px 4px rgba($brandColor, 0.10), 0 4px 10px rgba($brandColor, 0.30);
+    border: 1px solid $brandColor;
+  }
+}

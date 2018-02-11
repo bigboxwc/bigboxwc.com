@@ -51,7 +51,7 @@ add_filter(
  */
 add_filter(
 	'excerpt_more', function() {
-		return '&hellip;';
+		return '&hellip; <a href="' . get_permalink() . '">' . esc_html__( 'Continue Reading &rarr;', 'bigbox' ) . '</a>';
 	}
 );
 
@@ -64,6 +64,6 @@ add_filter(
  */
 add_filter(
 	'excerpt_length', function() {
-		return 20;
+		return 63;
 	}
 );

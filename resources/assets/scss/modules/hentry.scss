@@ -1,0 +1,100 @@
+.hentry {
+  color: $color-gray-500;
+  margin: 0 auto;
+
+  a {
+    color: $brandColor;
+
+    &:hover {
+      border-bottom: 2px solid $brandColor;
+    }
+  }
+
+  h2,
+  h3,
+  h4 {
+    color: $color-gray-700;
+    font-family: 'Lora', serif;
+    margin: 2rem 0;
+  }
+}
+
+.wp-caption {
+  text-align: center;
+  margin: 2rem 0;
+
+  a:hover {
+    border-bottom: 0;
+  }
+
+  &.alignright,
+  &.alignleft {
+    margin-top: 0;
+  }
+
+  &.alignleft {
+    margin-right: 2rem;
+  }
+
+  &.alignright {
+    margin-left: 2rem;
+  }
+}
+
+.wp-caption-text {
+  color: $color-gray-500;
+  font-size: 16px;
+}
+
+.gallery {
+  margin-bottom: -1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gallery-item {
+  margin: 0 0 1rem;
+  width: calc(50% - 0.5rem);
+}
+
+.gallery-columns-1 .gallery-item {
+  width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+  max-width: 48%;
+}
+
+.gallery-item a,
+.gallery-item a:hover,
+.gallery-item a:focus,
+.widget-area .gallery-item a,
+.widget-area .gallery-item a:hover,
+.widget-area .gallery-item a:focus {
+  border: none;
+  display: block;
+  max-width: 100%;
+}
+
+.gallery-icon,
+.gallery-item {
+  a {
+    img {
+      display: block;
+      transition: filter 0.2s ease-in;
+      backface-visibility: hidden;
+    }
+
+    &:hover {
+      opacity: 0.60;
+    }
+  }
+}
+
+.gallery-caption {
+  display: block;
+  text-align: left;
+  padding: 0 10px 0 0;
+  margin-bottom: 0;
+}

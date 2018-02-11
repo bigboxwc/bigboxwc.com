@@ -1,9 +1,10 @@
 a {
-	color: #555;
+	color: $color-gray-600;
 	text-decoration: none;
 
 	&:hover {
 		color: $brandColor;
+    border-bottom: 2px solid $brandColor;
     text-decoration: none;
 
 		svg {

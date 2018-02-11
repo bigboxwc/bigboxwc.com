@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<div class="cta__content">
 			<h2 class="cta__title"><?php the_title(); ?></h2>
-			<div class="cta__descsription"><?php the_content(); ?></div>
+			<div class="cta__description"><?php the_content(); ?></div>
 
 			<a href="/buy/" class="cta__button button">Get BigBox Now</a>
 			<a href="/features/" class="cta__more">Learn More &rarr;</a>

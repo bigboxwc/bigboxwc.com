@@ -16,8 +16,13 @@
 }
 
 .cta__content {
-	padding: 5em 0;
+	padding: 5rem 0;
 	max-width: 90%;
+}
+
+.cta__content--blog {
+  padding: 3rem;
+  max-width: 60%;
 }
 
 .cta__content--fluid {
@@ -30,20 +35,21 @@
 
 .cta__title {
   font: 700 68px/1 'Lora', serif;
-  text-shadow: 0 1px 1px rgba($activeColor, 0.10);
+  text-shadow: 0 1px 1px rgba($brandColor, 0.10);
   margin: 0;
 }
 
 .cta__description {
-	margin: 1em 0 2em;
+	margin: 1rem 0 0;
 }
 
 .cta__button {
   @include button--primary;
+  color: $brandColor;
+  margin-top: 2rem;
   background-color: #fff;
   background-image: none;
   border-color: #fff;
-  color: $brandColor;
 
   &:hover {
     color: $brandColor;

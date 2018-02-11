@@ -1,4 +1,24 @@
-.blog-post__title,
-.blog-post__subtitle {
+.blog-post .alignwide img {
+  display: block;
+}
+
+.blog-post__title {
   max-width: none;
+}
+
+.blog-post__meta {
+  color: $color-gray-500;
+  font-size: 16px;
+  margin-top: 0.5rem;
+
+  .avatar {
+    margin: -2px 3px 0 5px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.blog-post__meta + .blog-post__content {
+  text-align: left;
+  margin-top: 2rem;
 }

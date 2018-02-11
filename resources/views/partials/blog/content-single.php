@@ -1,6 +1,6 @@
 <?php
 /**
- * Page.
+ * Single blog post.
  *
  * @since 1.0.0
  * @version 1.0.0
@@ -20,13 +20,7 @@ while ( have_posts() ) :
 	the_post();
 
 	bigbox_partial( 'hero' );
-?>
-
-<div class="container">
-	<?php the_content(); ?>
-</div>
-
-<?php
+	bigbox_partial( 'blog/content-page' );
 endwhile;
 
 bigbox_view( 'global/footer' );

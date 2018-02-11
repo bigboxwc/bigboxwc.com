@@ -1,9 +1,17 @@
 .block-subtitle {
-  opacity: 0.70;
+  color: $color-gray-500;
   max-width: 60%;
   margin: 0 auto;
 
   + .block-subtitle {
     margin-top: 1rem;
+  }
+
+  a {
+    color: $brandColor;
+
+    &:hover {
+      border-bottom: 2px solid $brandColor;
+    }
   }
 }
