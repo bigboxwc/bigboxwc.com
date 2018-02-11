@@ -14,11 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-global $payment_id;
-
-$licensing = edd_software_licensing();
-$licenses  = $licensing->get_licenses_of_purchase( $payment_id );
-$license   = current( $licenses );
+$license = bigbox_edd_get_license();
 ?>
 
 <div class="container">

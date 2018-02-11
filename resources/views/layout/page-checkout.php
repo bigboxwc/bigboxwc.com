@@ -14,9 +14,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-$purchases = edd_get_users_purchases( get_current_user_id(), 1, true, 'any' );
+$payment = bigbox_edd_get_purchase();
 
-if ( is_user_logged_in() && $purchases ) {
+if ( is_user_logged_in() && $payment && 'publish' === $payment->status ) {
 	wp_safe_redirect( get_permalink( edd_get_option( 'purchase_history_page' ) ) );
 	edd_die();
 }
@@ -53,7 +53,6 @@ bigbox_view( 'global/header-min' ); ?>
 							edd_get_template_part( 'checkout/billing-information' );
 							edd_get_template_part( 'checkout/order-summary' );
 							edd_get_template_part( 'checkout/gateway-select' );
-							edd_checkout_hidden_fields();
 							?>
 						</div>
 
@@ -69,4 +68,4 @@ bigbox_view( 'global/header-min' ); ?>
 </div>
 
 <?php
-bigbox_view( 'global/footer' );
+bigbox_view( 'global/footer-min' );

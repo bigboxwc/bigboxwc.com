@@ -21,8 +21,12 @@ if ( ! is_user_logged_in() ) :
 else :
 	$purchase = bigbox_edd_get_purchase();
 
-	if ( ! $purchase ) :
-		edd_get_template_part( 'purchase-history/not-found' );
+	if ( 'publish' !== $purchase->status ) :
+		if ( $purchase->is_recoverable() ) :
+			edd_get_template_part( 'purchase-confirmation/recover' );
+		else :
+			edd_get_template_part( 'purchase-history/not-found' );
+		endif;
 	else :
 		edd_get_template_part( 'purchase-history/hero' );
 ?>

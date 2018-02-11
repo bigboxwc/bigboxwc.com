@@ -30,6 +30,8 @@ add_action( 'edd_purchase_form', function() {
 		esc_html_e( 'You will be redirected to PayPal to complete your purchase.', 'bigbox' );
 		echo '</p>';
 	}
+
+	edd_checkout_hidden_fields();
 } );
 
 remove_action( 'edd_purchase_form_after_cc_form', 'edd_checkout_submit', 9999 );

@@ -1,8 +1,9 @@
 .block {
-  margin: 5rem 0;
+  margin: 3rem 0 5rem;
 }
 
 .block--alt {
+  padding: 3rem 0;
   background: $color-gray-100;
   border: 1px solid $color-gray-200;
   border-width: 1px 0;

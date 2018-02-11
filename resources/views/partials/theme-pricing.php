@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<div id="pricing" class="block block--alt feature-callout">
+<div id="pricing" class="block block--alt">
 	<div class="container">
 
 		<div class="block-header">

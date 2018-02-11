@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Get a user's theme purchase.
  *
- * @todo Cache...
+ * @todo Cache... handle non-complete orders.
  *
  * @since 1.0.0
  *
@@ -27,7 +27,7 @@ function bigbox_edd_get_purchase() {
 	$payments = edd_get_users_purchases( get_current_user_id(), 20, true, 'any' );
 
 	if ( ! $payments ) {
-		return $payment;
+		return false;
 	}
 
 	// Assume we only have one... might chagne...
@@ -48,8 +48,8 @@ function bigbox_edd_get_purchase() {
  * @return false|EDD_SL_License False if no license is found.
  */
 function bigbox_edd_get_license() {
-	$license  = false;
-	$purchase = bigbox_edd_get_purchase();
+	$license = false;
+	$payment = bigbox_edd_get_purchase();
 
 	$licensing = edd_software_licensing();
 	$licenses  = $licensing->get_licenses_of_purchase( $payment->ID );
@@ -93,7 +93,9 @@ function bigbox_edd_get_download() {
 function bigbox_edd_get_download_url() {
 	$url = false;
 
-	$download      = bigbox_edd_get_download();
+	$purchase = bigbox_edd_get_purchase();
+	$download = bigbox_edd_get_download();
+
 	$price_id      = edd_get_cart_item_price_id( $download );
 	$purchase_data = edd_get_payment_meta( $purchase->ID );
 	$email         = edd_get_payment_user_email( $purchase->ID );

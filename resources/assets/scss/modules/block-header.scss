@@ -1,6 +1,10 @@
 .block-header {
   text-align: center;
   padding: 2rem 0;
+
+  .block--alt & {
+    padding-top: 0;
+  }
 }
 
 .block-header--left {

@@ -25,3 +25,7 @@
 .button--danger {
 	@include button--danger;
 }
+
+.button--size-sm {
+  @include button--size-sm;
+}

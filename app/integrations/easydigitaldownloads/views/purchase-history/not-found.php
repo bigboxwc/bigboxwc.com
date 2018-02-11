@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 
 		<div class="block-header block-header--left media-body">
-			<h3 class="block-title">😢 No Payments Found</h3>
+			<h3 class="block-title">😢 No Purchases Found</h3>
 
 			<p class="block-subtitle">Sorry! Please <a href="/contact/">contact support</a> if you believe this is an error. You can also <a href="/features/">read more about BigBox for WooCommerce</a>.</p>
 		</div>

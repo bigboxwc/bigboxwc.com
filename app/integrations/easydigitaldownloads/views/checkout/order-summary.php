@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<div class="order-summary">
+<div class="order-summary-wrap">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-lg-8">

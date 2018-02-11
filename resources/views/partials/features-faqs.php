@@ -91,8 +91,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</ul>
 
 	</div>
-</div>
 
-<div class="block-cta">
-	Still have a question? <a href="/contact/">Please get in touch &rarr;</a>
+	<div class="block-cta">
+		Still have a question? <a href="/contact/">Please get in touch &rarr;</a>
+	</div>
 </div>

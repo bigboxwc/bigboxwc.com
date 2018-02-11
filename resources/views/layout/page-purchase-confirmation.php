@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Page: Receipt
+ * Template Name: Page: Purchase Confirmation
  *
  * @since 1.0.0
  * @version 1.0.0
@@ -16,21 +16,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 bigbox_view( 'global/header-min' );
 
-$session = edd_get_purchase_session();
+$purchase = bigbox_edd_get_purchase();
 
-// @codingStandardsIgnoreStart
-if ( isset( $_GET['payment_key'] ) ) {
-	$payment_key = urldecode( $_GET['payment_key'] );
-} else if ( $session ) {
-	$payment_key = $session['purchase_key'];
-}
-// @codingStandardsIgnoreEnd
-
-global $payment_id;
-$payment_id = edd_get_purchase_id_by_key( $payment_key );
-
-if ( ! $payment_id ) :
+if ( ! $purchase ) :
 	edd_get_template_part( 'purchase-confirmation/not-found' );
+elseif ( 'publish' !== $purchase->status ) :
+	if ( $purchase->is_recoverable() ) :
+		edd_get_template_part( 'purchase-confirmation/recover' );
+	else :
+		edd_get_template_part( 'purchase-confirmation/not-found' );
+	endif;
 else :
 	edd_get_template_part( 'purchase-confirmation/hero' );
 	edd_get_template_part( 'purchase-confirmation/next-steps' );

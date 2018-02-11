@@ -12,6 +12,35 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+
+$logged_in = is_user_logged_in();
+$customer  = EDD()->session->get( 'customer' );
+$customer  = wp_parse_args( $customer, array(
+	'address' => array(
+		'line1'   => '',
+		'line2'   => '',
+		'city'    => '',
+		'zip'     => '',
+		'state'   => '',
+		'country' => '',
+	),
+) );
+
+$customer['address'] = array_map( 'sanitize_text_field', $customer['address'] );
+
+if ( $logged_in ) {
+	$user_address = get_user_meta( get_current_user_id(), '_edd_user_address', true );
+
+	foreach ( $customer['address'] as $key => $field ) {
+		if ( empty( $field ) && ! empty( $user_address[ $key ] ) ) {
+			$customer['address'][ $key ] = $user_address[ $key ];
+		} else {
+			$customer['address'][ $key ] = '';
+		}
+	}
+}
+
+$customer['address'] = apply_filters( 'edd_checkout_billing_details_address', $customer['address'], $customer );
 ?>
 
 <p class="card__label">Billing Information</p>
@@ -19,18 +48,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="card card__inner--mini">
 	<p class="form-row">
 		<label for="card_address" class="form-label"><?php esc_html_e( 'Address', 'bigbox' ); ?></label>
-		<input name="card_address" id="card_address" class="form-input card-address" type="text" placeholder="<?php esc_attr_e( 'Full Address', 'bigbox' ); ?>" />
+		<input name="card_address" id="card_address" class="form-input card-address" type="text" placeholder="<?php esc_attr_e( 'Full Address', 'bigbox' ); ?>" value="<?php echo esc_attr( $customer['address']['line1'] ); ?>" />
 	</p>
 
 	<div class="form-row-group">
 		<p class="form-row form-row--half">
 			<label for="card_city" class="form-label"><?php esc_html_e( 'City', 'bigbox' ); ?></label>
-			<input name="card_city" id="card_city" class="form-input card-city" type="text" placeholder="<?php esc_attr_e( 'City', 'bigbox' ); ?>" />
+			<input name="card_city" id="card_city" class="form-input card-city" type="text" placeholder="<?php esc_attr_e( 'City', 'bigbox' ); ?>" value="<?php echo esc_attr( $customer['address']['city'] ); ?>" />
 		</p>
 
 		<p class="form-row form-row--half">
 			<label for="card_zip" class="form-label"><?php esc_html_e( 'Postal / Zip Code', 'bigbox' ); ?></label>
-			<input name="card_zip" id="card_zip" class="form-input card-zip" type="text" placeholder="<?php esc_attr_e( 'Postal / Zip Code', 'bigbox' ); ?>" />
+			<input name="card_zip" id="card_zip" class="form-input card-zip" type="text" placeholder="<?php esc_attr_e( 'Postal / Zip Code', 'bigbox' ); ?>" value="<?php echo esc_attr( $customer['address']['zip'] ); ?>" />
 		</p>
 	</div>
 

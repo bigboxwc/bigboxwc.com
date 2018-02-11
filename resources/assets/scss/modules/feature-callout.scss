@@ -1,6 +1,4 @@
 .feature-callout {
-  padding: 3rem 0;
-
   .media {
     align-items: center;
   }
@@ -10,10 +8,6 @@
     margin-left: 3rem;
     margin-right: 3rem;
     max-width: none;
-  }
-
-  .block-title {
-    margin-bottom: 1rem;
   }
 
   a:not(.button) {
@@ -34,4 +28,8 @@
     width: 400px;
     height: 400px;
   }
+}
+
+.feature-callout__title {
+  margin-bottom: 1rem;
 }

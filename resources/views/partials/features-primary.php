@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 
 			<div class="block-header block-header--left media-body">
-				<h3 class="block-title">Simplified Display Designed for Hundreds of Products</h3>
+				<h3 class="block-title feature-callout__title">Simplified Display Designed for Hundreds of Products</h3>
 
 				<p class="block-subtitle">Designed to display any type of product simply and efficiently. Avoid the "empty shelf" look by putting your product catalog front and center and removing frivilous imagery and unused content areas.</p>
 			</div>
@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="container media">
 
 			<div class="block-header block-header--left media-body">
-				<h3 class="block-title">Advanced Catalog Filtering and Searching Integrations</h3>
+				<h3 class="block-title feature-callout__title">Advanced Catalog Filtering and Searching Integrations</h3>
 
 				<p class="block-subtitle">Ensure your customers find what they are looking for and you complete the sale with advanced support for WordPress's best product filtering solution: <a href="https://facetwp.com">FacetWP</a></p>
 
@@ -59,7 +59,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 
 			<div class="block-header block-header--left media-body">
-				<h3 class="block-title">Optimized for Conversions</h3>
+				<h3 class="block-title feature-callout__title">Optimized for Conversions</h3>
+
 				<p class="block-subtitle">A refined checkout experience ensures less cart abdonment and more completed purchases. Integration with <a href="https://woocommerce.com/products/recommendation-engine/">WooCommerce's Recommendation Engine</a> ensures your average cart size is as large as possible.</p>
 			</div>
 
@@ -70,7 +71,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="container media">
 
 			<div class="block-header block-header--left media-body">
-				<h3 class="block-title">Integrated with WooCommerce's Most Popular Extensions</h3>
+				<h3 class="block-title feature-callout__title">Integrated with WooCommerce's Most Popular Extensions</h3>
+
 				<p class="block-subtitle">Add <a href="https://woocommerce.com/products/woocommerce-social-login/">social login</a>, <a href="https://woocommerce.com/products/shipping/">live shipping rates</a>, <a href="https://woocommerce.com/products/mailchimp-for-woocommerce/">Mailchimp newsletter</a> and more for <a href="https://woocommerce.com/product-category/woocommerce-extensions/">WooCommerce</a>. Integrations with the platform's top extensions means you can make your eCommerce store work for you instead of against you.</p>
 			</div>
 

@@ -1,9 +1,9 @@
-.order-summary {
+.order-summary-wrap {
   @extend .payment-method;
   border-bottom: 1px solid $color-gray-200;
   border-top: 1px solid $color-gray-200;
   margin-top: 3rem;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .order-summary__row {
@@ -12,6 +12,10 @@
   justify-content: space-between;
   margin-bottom: 1.25rem;
   position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   &:after {
     width: 100%;
@@ -44,4 +48,12 @@
 .order-summary__label--highlight,
 .order-summary__value--highlight {
   color: $color-green;
+}
+
+.order-summary__subscription-details {
+  margin-bottom: 0;
+
+  .button {
+    margin-right: 10px;
+  }
 }
