@@ -28,7 +28,7 @@ do_action( 'edd_before_cc_fields' );
 
 <div class="form-row-group">
 	<div class="form-row form-row--half">
-		<label for="card_exp_month" class="edd-label"><?php esc_html_e( 'Card Expiration (MM/YY)', 'bigbox' ); ?></label>
+		<label for="card_exp_month" class="form-label"><?php esc_html_e( 'Card Expiration (MM/YY)', 'bigbox' ); ?></label>
 
 		<div class="form-row-group">
 			<select id="card_exp_month" class="form-input card-expiry-month" autocomplete="cc-exp-month">
@@ -50,7 +50,7 @@ do_action( 'edd_before_cc_fields' );
 	</div>
 
 	<p class="form-row form-row--half">
-		<label for="card_cvc" class="edd-label"><?php esc_html_e( 'Card CVC / CVV', 'bigbox' ); ?></label>
+		<label for="card_cvc" class="form-label"><?php esc_html_e( 'Card CVC / CVV', 'bigbox' ); ?></label>
 		<input type="tel" pattern="[0-9]{3,4}" size="4" id="card_cvc" class="form-input card-cvc" placeholder="<?php esc_html_e( 'Card CVC / CVV', 'bigbox' ); ?>" autocomplete="cc-csc" />
 	</p>
 </div>

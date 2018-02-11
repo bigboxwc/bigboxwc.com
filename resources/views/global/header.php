@@ -41,9 +41,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 					</div>
 
 					<nav class="access">
-						<a href="/features/" class="access-item">All Features</a>
-						<a href="/blog/" class="access-item">Blog &amp; Resources</a>
-						<a href="/buy/" class="access-item access-item--active">Get BigBox</a>
+						<a href="/features/" class="access-item <?php echo esc_attr( is_page( 'features' ) ? 'access-item--active' : null ); ?>">All Features</a>
+						<a href="/blog/" class="access-item <?php echo esc_attr( ( is_home() || is_singular( 'post' ) ) ? 'access-item--active' : null ); ?>">Blog &amp; Resources</a>
+						<a href="/buy/" class="access-item <?php echo esc_attr( is_front_page() ? 'access-item--active' : null ); ?>">Get BigBox</a>
 					</nav>
 
 				</div>

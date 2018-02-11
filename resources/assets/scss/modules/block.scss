@@ -1,11 +1,18 @@
 .block {
   margin: 5rem 0;
+  overflow: hidden;
 }
 
 .block--alt {
   background: $color-gray-100;
   border: 1px solid $color-gray-200;
   border-width: 1px 0;
+}
+
+// When used as hero
+.brand-bar + .block--alt {
+  margin-top: 0;
+  border-top: 0;
 }
 
 .block--highlight {

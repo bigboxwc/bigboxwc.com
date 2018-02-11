@@ -15,7 +15,7 @@
 
   .is-focused &,
   .is-open & { 
-    border-color: rgba($brandColor, 0.50);
+    border-color: rgba($brandColor, 0.80);
   }
 }
 
@@ -30,11 +30,11 @@
   z-index: 5;
 
   .is-open & {
-    border-color: rgba($brandColor, 0.50);
+    border-color: rgba($brandColor, 0.80);
   }
 
   .is-flipped & {
-    border-top: 2px solid rgba($brandColor, 0.50);
+    border-top: 2px solid rgba($brandColor, 0.80);
     border-bottom: 0;
   }
 }

@@ -88,11 +88,6 @@ $choices-keyline-color: #ddd;
 @import 'modules/feature-callout';
 @import 'modules/theme-features';
 
-// How it Works
-@import 'modules/how-it-works';
-@import 'modules/how-it-works-block-header';
-@import 'modules/how-it-works-quote';
-
 // FAQs
 @import 'modules/faqs';
 @import 'modules/faq';
@@ -122,6 +117,7 @@ $choices-keyline-color: #ddd;
 @import 'modules/from-the-blog';
 
 // Checkout
+@import 'modules/checkout';
 @import 'modules/order-summary';
 @import 'modules/payment-method';
 @import 'modules/next-steps';

@@ -22,7 +22,7 @@ while ( have_posts() ) :
 	bigbox_partial( 'features-hero' );
 	bigbox_partial( 'features-overview' );
 	bigbox_partial( 'features-primary' );
-	bigbox_partial( 'testimonial' );
+	bigbox_partial( 'testimonials' );
 	bigbox_partial( 'features-woocommerce' );
 	bigbox_partial( 'theme-pricing' );
 	bigbox_partial( 'features-faqs' );

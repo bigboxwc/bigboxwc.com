@@ -19,9 +19,8 @@
 }
 
 .blog-post__meta {
-  color: $color-gray-500;
   font-size: 16px;
-  margin-top: 0.5rem;
+  margin-top: 1.25rem;
 
   .avatar {
     margin: -2px 3px 0 5px;
@@ -36,6 +35,8 @@
 }
 
 .blog-post__content {
+  margin-top: 2rem;
+
   .from-the-blog & {
     font-size: 16px;
   }

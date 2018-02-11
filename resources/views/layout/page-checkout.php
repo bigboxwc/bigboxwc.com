@@ -26,13 +26,11 @@ $form_action  = esc_url( edd_get_checkout_uri( 'payment-mode=' . $payment_mode )
 
 bigbox_view( 'global/header-min' ); ?>
 
-<div class="container">
-	<div class="block">
+<div class="block block--alt checkout">
+	<div class="container">
 
 		<?php if ( empty( edd_get_cart_contents() ) ) : ?>
-
 			<?php esc_html_e( 'Nothing to purchase.', 'bigbox' ); ?>
-
 		<?php else : ?>
 
 		<div class="block-header">
@@ -59,10 +57,6 @@ bigbox_view( 'global/header-min' ); ?>
 							?>
 						</div>
 
-						<div id="edd_purchase_submit">
-							<?php echo edd_checkout_button_purchase(); // @codingStandardsIgnoreLine ?>
-						</div>
-
 					</form>
 
 				</div>
@@ -75,4 +69,4 @@ bigbox_view( 'global/header-min' ); ?>
 </div>
 
 <?php
-bigbox_view( 'global/footer-min' );
+bigbox_view( 'global/footer' );
