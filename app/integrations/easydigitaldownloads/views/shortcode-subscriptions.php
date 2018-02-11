@@ -21,7 +21,7 @@ $subscription = bigbox_edd_get_subscription();
 
 	<div class="order-summary__row">
 		<span class="order-summary__label">Status</span>
-		<span class="order-summary__value order-summary__value--highlight"><?php echo esc_html( $subscription->get_status_label() ); ?></span>
+		<span class="order-summary__value order-summary__value--<?php echo esc_attr( $subscription->get_status() ); ?>"><?php echo esc_html( $subscription->get_status_label() ); ?></span>
 	</div>
 
 	<div class="order-summary__row">

@@ -50,6 +50,16 @@
   color: $color-green;
 }
 
+.order-summary__value--publish,
+.order-summary__value--active,
+.order-summary__value--completed {
+  color: $color-green;
+}
+
+.order-summary__value--cancelled {
+  color: $color-red;
+}
+
 .order-summary__subscription-details {
   margin-bottom: 0;
 

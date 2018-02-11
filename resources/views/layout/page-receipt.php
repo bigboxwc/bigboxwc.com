@@ -17,12 +17,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 bigbox_view( 'global/header-min' );
 
 if ( ! is_user_logged_in() ) :
-	echo do_shortcode( '[edd_login redirect="/checkout/purchase-history/"]' );
+	echo do_shortcode( '[edd_login redirect="/checkout/payment-history/"]' );
 else :
-	$purchase = bigbox_edd_get_purchase();
+	$payment = bigbox_edd_get_payment();
 
-	if ( ! $purchase ) :
-		edd_get_template_part( 'purchase-history/not-found' );
+	if ( ! $payment ) :
+		edd_get_template_part( 'payment-history/not-found' );
 	else :
 ?>
 
@@ -30,7 +30,7 @@ else :
 
 	<div class="block-header">
 		<h1 class="block-title">Purchase Receipt</h3>
-		<p class="block-subtitle">Details for your <?php echo esc_html( date_i18n( get_option( 'date_format' ), strtotime( $purchase->date ) ) ); ?> purchase.</p>
+		<p class="block-subtitle">Details for your <?php echo esc_html( date_i18n( get_option( 'date_format' ), strtotime( $payment->date ) ) ); ?> payment.</p>
 	</div>
 
 	<div class="container">
@@ -45,27 +45,27 @@ else :
 
 						<div class="order-summary__row">
 							<span class="order-summary__label">ID</span>
-							<span class="order-summary__value"><?php echo esc_html( $purchase->key ); ?></span>
+							<span class="order-summary__value"><?php echo esc_html( $payment->key ); ?></span>
 						</div>
 
 						<div class="order-summary__row">
 							<span class="order-summary__label">Status</span>
-							<span class="order-summary__value order-summary__value--highlight"><?php echo esc_html( edd_get_payment_status( $purchase, true ) ); ?></span>
+							<span class="order-summary__value order-summary__value--<?php echo esc_attr( edd_get_payment_status( $payment ) ); ?>"><?php echo esc_html( edd_get_payment_status( $payment, true ) ); ?></span>
 						</div>
 
 						<div class="order-summary__row">
 							<span class="order-summary__label">Method</span>
-							<span class="order-summary__value"><?php echo esc_html( edd_get_gateway_checkout_label( edd_get_payment_gateway( $purchase->ID ) ) ); ?></span>
+							<span class="order-summary__value"><?php echo esc_html( edd_get_gateway_checkout_label( edd_get_payment_gateway( $payment->ID ) ) ); ?></span>
 						</div>
 
 						<?php
-						if ( ( $fees = edd_get_payment_fees( $purchase->ID, 'fee' ) ) ) :
+						if ( ( $fees = edd_get_payment_fees( $payment->ID, 'fee' ) ) ) :
 							foreach ( $fees as $fee ) :
 						?>
 
 						<div class="order-summary__row">
 							<span class="order-summary__label"><?php echo esc_html( $fee['label'] ); ?></span>
-							<span class="order-summary__value"><?php echo edd_currency_filter( edd_format_amount( $fee['amount'] ) ); ?></span>
+							<span class="order-summary__value"><?php echo esc_html( edd_currency_filter( edd_format_amount( $fee['amount'] ) ) ); ?></span>
 						</div>
 
 						<?php
@@ -75,12 +75,12 @@ else :
 
 						<div class="order-summary__row">
 							<span class="order-summary__label"><?php echo esc_html__( 'Subtotal', 'bigbox' ); ?></span>
-							<span class="order-summary__value"><?php echo esc_html( edd_payment_subtotal( $purchase->ID ) ); ?></span>
+							<span class="order-summary__value"><?php echo esc_html( edd_payment_subtotal( $payment->ID ) ); ?></span>
 						</div>
 
 						<div class="order-summary__row">
 							<span class="order-summary__label"><?php echo esc_html__( 'Total', 'bigbox' ); ?></span>
-							<span class="order-summary__value"><strong><?php echo esc_html( edd_payment_amount( $purchase->ID ) ); ?></strong></span>
+							<span class="order-summary__value"><strong><?php echo esc_html( edd_payment_amount( $payment->ID ) ); ?></strong></span>
 						</div>
 
 					</div>

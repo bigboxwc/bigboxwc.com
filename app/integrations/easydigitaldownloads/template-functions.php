@@ -13,6 +13,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+function bigbox_edd_get_payment() {
+	return bigbox_edd_get_purchase();
+}
+
 /**
  * Get a user's theme purchase.
  *

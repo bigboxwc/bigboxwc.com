@@ -28,9 +28,9 @@ endif;
 edd_print_errors();
 ?>
 
-<form action="<?php echo esc_url( $action_url ); ?>" id="edd-recurring-form" method="POST">
+<form action="" id="edd-recurring-form" method="POST">
 	<p class="form-row">
-		<a href="<?php echo esc_url( bigbox_edd_get_receipt_url() ); ?>">&larr; Back</a>
+		<a href="<?php echo esc_url( bigbox_edd_get_receipt_url() ); ?>">&larr; Cancel</a>
 	</p>
 
 	<input name="edd-recurring-update-gateway" type="hidden" value="<?php echo esc_attr( $subscription->gateway ); ?>" />

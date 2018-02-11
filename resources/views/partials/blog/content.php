@@ -17,11 +17,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div class="<?php echo esc_attr( is_home() ? 'block blog-post' : 'blog-post' ); ?>">
 	<div class="<?php echo esc_attr( is_home() ? 'alignwide' : 'alignnone' ); ?>">
-		<?php the_post_thumbnail( is_home() ? 'large' : 'medium' ); ?>
+		<a href="<?php the_permalink(); ?>">
+			<?php the_post_thumbnail( is_home() ? 'large' : 'medium' ); ?>
+		</a>
 	</div>
 
 	<div class="block-header blog-post__header">
-		<h3 class="block-title blog-post__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+		<h3 class="block-title blog-post__title">
+			<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+		</h3>
 
 		<div class="hentry blog-post__content">
 			<?php the_excerpt(); ?>
