@@ -40,18 +40,23 @@ function bigbox_get_theme_version() {
  * @since 1.0.0
  *
  * @param string|array $templates The name of the template.
- * @param string       $path Path to locate templates.
+ * @param array        $args Variables to pass to partial.
  */
-function bigbox_view( $templates, $path = 'resources/views' ) {
+function bigbox_view( $templates, $args = [] ) {
 	if ( ! is_array( $templates ) ) {
 		$templates = [ $templates ];
+	}
+
+	// Extract variable to use in template file.
+	if ( ! empty( $args ) && is_array( $args ) ) {
+		extract( $args ); // @codingStandardsIgnoreLine
 	}
 
 	$_templates = [];
 
 	foreach ( $templates as $key => $template_name ) {
 		$_templates[] = $template_name . '.php';
-		$_templates[] = trailingslashit( $path ) . $template_name . '.php';
+		$_templates[] = 'resources/views/' . $template_name . '.php';
 	}
 
 	locate_template( $_templates, true, false );
@@ -63,10 +68,10 @@ function bigbox_view( $templates, $path = 'resources/views' ) {
  * @since 1.0.0
  *
  * @param string $partial The file name of the partial to load.
- * @param string $suffix Allow creation of strings like `content-aside`.
+ * @param array  $args Variables to pass to partial.
  */
-function bigbox_partial( $partial, $suffix = null ) {
-	echo bigbox_get_partial( $partial, $suffix ); // XSS: ok.
+function bigbox_partial( $partial, $args = [] ) {
+	echo bigbox_get_partial( $partial, $args ); // XSS: ok.
 }
 
 /**
@@ -78,17 +83,13 @@ function bigbox_partial( $partial, $suffix = null ) {
  * @since 1.0.0
  *
  * @param string $partial The file name of the partial to load.
- * @param string $suffix Allow creation of strings like `content-aside`.
+ * @param array  $args Variables to pass to partial.
  * @return string
  */
-function bigbox_get_partial( $partial, $suffix = null ) {
-	if ( $suffix ) {
-		$partial = $partial . '-' . $suffix;
-	}
-
+function bigbox_get_partial( $partial, $args = [] ) {
 	ob_start();
 
-	bigbox_view( 'partials/' . $partial );
+	bigbox_view( 'partials/' . $partial, $args );
 
 	return ob_get_clean();
 }

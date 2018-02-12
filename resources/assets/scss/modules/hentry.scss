@@ -14,7 +14,11 @@
   h4 {
     color: $color-gray-700;
     font-family: 'Lora', serif;
-    margin: 2rem 0;
+    margin: 2rem 0 0;
+  }
+
+  h2 {
+    margin: 2.5rem 0 0;
   }
 
   p {
@@ -173,6 +177,23 @@
 .wp-block-pullquote {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.wp-block-pullquote {
+  color: $color-gray-700;
+  border-top-color: $color-gray-700;
+  border-bottom-color: $color-gray-700;
+
+  cite {
+    color: $color-gray-400;
+    font-weight: normal;
+    text-transform: none;
+    font-style: normal;
+  }
+
+  p:first-child {
+    margin-top: 0;
+  }
 }
 
 .wp-block-image {

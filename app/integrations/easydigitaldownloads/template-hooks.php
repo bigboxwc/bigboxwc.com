@@ -21,7 +21,7 @@ remove_action( 'edd_purchase_form_register_fields', 'edd_get_register_fields' );
 
 remove_action( 'edd_stripe_cc_form', 'edds_credit_card_form' );
 add_action( 'edd_stripe_cc_form', function() {
-	edd_get_template_part( 'checkout/credit-card-form' );
+	bigbox_partial( 'edd/checkout/credit-card-form' );
 } );
 
 add_action( 'edd_purchase_form', function() {

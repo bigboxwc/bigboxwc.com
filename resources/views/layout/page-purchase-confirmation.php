@@ -19,16 +19,16 @@ bigbox_view( 'global/header-min' );
 $purchase = bigbox_edd_get_purchase();
 
 if ( ! $purchase ) :
-	edd_get_template_part( 'purchase-confirmation/not-found' );
+	bigbox_partial( 'edd/purchase-confirmation/not-found' );
 elseif ( 'publish' !== $purchase->status ) :
 	if ( $purchase->is_recoverable() ) :
-		edd_get_template_part( 'purchase-confirmation/recover' );
+		bigbox_partial( 'edd/purchase-confirmation/recover' );
 	else :
-		edd_get_template_part( 'purchase-confirmation/not-found' );
+		bigbox_partial( 'edd/purchase-confirmation/not-found' );
 	endif;
 else :
-	edd_get_template_part( 'purchase-confirmation/hero' );
-	edd_get_template_part( 'purchase-confirmation/next-steps' );
+	bigbox_partial( 'edd/purchase-confirmation/hero' );
+	bigbox_partial( 'edd/purchase-confirmation/next-steps' );
 endif;
 
 bigbox_view( 'global/footer' );

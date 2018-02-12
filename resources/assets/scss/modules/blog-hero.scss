@@ -3,6 +3,11 @@
     margin-top: 2rem;
   }
 
+  img {
+    border-radius: 2px;
+  }
+
+  img,
   .form-input {
     border: 0;
     box-shadow: 0 2px 4px rgba($brandColor, 0.10), 0 4px 10px rgba($brandColor, 0.30);

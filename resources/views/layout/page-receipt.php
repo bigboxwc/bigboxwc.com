@@ -22,7 +22,7 @@ else :
 	$payment = bigbox_edd_get_payment();
 
 	if ( ! $payment ) :
-		edd_get_template_part( 'payment-history/not-found' );
+		bigbox_partial( 'edd/purchase-history/not-found' );
 	else :
 ?>
 

@@ -57,7 +57,7 @@ class EasyDigitalDownloads extends Integration implements Registerable, Service 
 	 * @return array $paths
 	 */
 	public function template_paths( $paths ) {
-		$paths[0] = $this->get_dir() . '/views/';
+		$paths[0] = get_template_directory() . '/resources/views/partials/edd/';
 
 		return $paths;
 	}

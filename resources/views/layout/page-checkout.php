@@ -46,13 +46,13 @@ bigbox_view( 'global/header-min' ); ?>
 
 						<div id="checkout-errors"></div>
 
-						<?php edd_get_template_part( 'checkout/account-information' ); ?>
+						<?php bigbox_partial( 'edd/checkout/account-information' ); ?>
 
 						<div id="edd_cc_fields" class="edd-do-validate">
 							<?php
-							edd_get_template_part( 'checkout/billing-information' );
-							edd_get_template_part( 'checkout/order-summary' );
-							edd_get_template_part( 'checkout/gateway-select' );
+							bigbox_partial( 'edd/checkout/billing-information' );
+							bigbox_partial( 'edd/checkout/order-summary' );
+							bigbox_partial( 'edd/checkout/gateway-select' );
 							?>
 						</div>
 

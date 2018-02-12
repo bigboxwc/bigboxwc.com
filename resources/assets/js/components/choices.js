@@ -3,20 +3,21 @@
  */
 import Choices from 'choices.js';
 
-// All selects.
-const args = {
-  shouldSort: false,
-  shouldSortItems: false,
-};
-
-new Choices('select', args);
-
-// EDD checkout supplements.
 (function(window, undefined){
 	const $     = window.jQuery;
 	const $body = $(document.body);
 
 	$(function($) {
+    const args = {
+      shouldSort: false,
+      shouldSortItems: false,
+    };
+
+    // All selects.
+    if ($('select').length > 0) {
+      new Choices('select', args);
+    }
+
 		// Billing updated. Refresh.
     $body.on('edd_cart_billing_address_updated', (e, data) => {
       const $state = $('#billing-state');

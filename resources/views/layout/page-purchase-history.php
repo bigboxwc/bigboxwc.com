@@ -20,7 +20,7 @@ if ( ! is_user_logged_in() ) :
 ?>
 
 <div class="block block--alt">
-	<?php echo do_shortcode( '[edd_login redirect="/checkout/purchase-history/"]' ); ?>
+	<?php echo do_shortcode( '[edd_login redirect="/account/"]' ); ?>
 </div>
 
 <?php
@@ -29,12 +29,12 @@ else :
 
 	if ( 'publish' !== $purchase->status ) :
 		if ( $purchase->is_recoverable() ) :
-			edd_get_template_part( 'purchase-confirmation/recover' );
+			bigbox_partial( 'edd/purchase-history/recover' );
 		else :
-			edd_get_template_part( 'purchase-history/not-found' );
+			bigbox_partial( 'edd/purchase-history/not-found' );
 		endif;
 	else :
-		edd_get_template_part( 'purchase-history/hero' );
+		bigbox_partial( 'edd/purchase-history/hero' );
 ?>
 
 <div id="features" class="block">
