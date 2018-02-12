@@ -27,7 +27,9 @@ if ( ! is_user_logged_in() ) :
 else :
 	$purchase = bigbox_edd_get_purchase();
 
-	if ( 'publish' !== $purchase->status ) :
+	if ( ! $purchase ) :
+		bigbox_partial( 'edd/purchase-history/not-found' );
+	elseif ( 'publish' !== $purchase->status ) :
 		if ( $purchase->is_recoverable() ) :
 			bigbox_partial( 'edd/purchase-history/recover' );
 		else :
