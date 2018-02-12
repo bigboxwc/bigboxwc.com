@@ -139,7 +139,7 @@ function bigbox_edd_get_subscription() {
 	$purchase     = bigbox_edd_get_purchase();
 
 	$subscriber    = new EDD_Recurring_Subscriber( get_current_user_id(), true );
-	$subscriptions = $subscriber->get_subscriptions( 0, array( 'active', 'expired', 'cancelled', 'failing', 'trialling' ) );
+	$subscriptions = $subscriber->get_subscriptions( 0, [ 'active', 'expired', 'cancelled', 'failing', 'trialling' ] );
 
 	if ( ! $subscriptions ) {
 		return $subscription;

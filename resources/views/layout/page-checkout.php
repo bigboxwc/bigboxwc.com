@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-$payment = bigbox_edd_get_purchase();
+$payment = bigbox_edd_get_payment();
 
 if ( is_user_logged_in() && $payment && 'publish' === $payment->status ) {
 	wp_safe_redirect( get_permalink( edd_get_option( 'purchase_history_page' ) ) );

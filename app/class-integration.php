@@ -36,7 +36,7 @@ abstract class Integration {
 	 * @var array $active
 	 * @since 1.0.0
 	 */
-	protected $dependencies = array();
+	protected $dependencies = [];
 
 	/**
 	 * If this integration is active and meets dependency requiremens.

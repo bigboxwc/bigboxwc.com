@@ -15,16 +15,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $logged_in = is_user_logged_in();
 $customer  = EDD()->session->get( 'customer' );
-$customer  = wp_parse_args( $customer, array(
-	'address' => array(
+$customer  = wp_parse_args( $customer, [
+	'address' => [
 		'line1'   => '',
 		'line2'   => '',
 		'city'    => '',
 		'zip'     => '',
 		'state'   => '',
 		'country' => '',
-	),
-) );
+	],
+] );
 
 $customer['address'] = array_map( 'sanitize_text_field', $customer['address'] );
 

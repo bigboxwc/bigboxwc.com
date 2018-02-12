@@ -16,9 +16,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-$purchases = edd_get_users_purchases( get_current_user_id(), 1, true, 'any' );
+$payment = bigbox_edd_get_payment();
 
-if ( is_user_logged_in() && $purchases ) {
+if ( is_user_logged_in() && $payment && 'publish' === $payment->status ) {
 	wp_safe_redirect( get_permalink( edd_get_option( 'purchase_history_page' ) ) );
 	edd_die();
 }
@@ -29,7 +29,7 @@ $download = $wpdb->get_var( "SELECT ID from {$wpdb->prefix}posts WHERE post_type
 
 if ( $download ) {
 	edd_empty_cart();
-	edd_add_to_cart( $download, array() );
+	edd_add_to_cart( $download, [] );
 	wp_safe_redirect( edd_get_checkout_uri() );
 	edd_die();
 } else {

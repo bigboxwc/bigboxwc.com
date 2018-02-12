@@ -44,7 +44,7 @@ else :
 					<div class="order-summary">
 
 						<div class="order-summary__row">
-							<span class="order-summary__label">ID</span>
+							<span class="order-summary__label">Transaction ID</span>
 							<span class="order-summary__value"><?php echo esc_html( $payment->key ); ?></span>
 						</div>
 
