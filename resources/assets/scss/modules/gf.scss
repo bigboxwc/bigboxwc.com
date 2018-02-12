@@ -1,3 +1,11 @@
+.gform_wrapper {
+  .validation_error {
+    @extend .notice;
+    @extend .notice--alert;
+    margin: 0 0 2em;
+  }
+}
+
 .gform_fields {
   margin: 0;
   padding: 0;
@@ -21,6 +29,23 @@
   }
 }
 
+.gfield_error {
+  textarea,
+  input {
+    border-color: $color-red;
+  }
+
+  .validation_message {
+    color: $color-red;
+  }
+}
+
 .gform_footer {
   margin-top: 2rem;
+}
+
+.validation_message {
+  font-size: 15px;
+  opacity: 0.60;
+  padding: 10px 0 0;
 }
