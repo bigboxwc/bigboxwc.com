@@ -35,7 +35,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<h4 class="section-title">Site Links</h4>
 
 						<ul class="list">
-							<li><a href="/theme/">BigBox WooCommerce Theme</a></li>
+							<li><a href="/features/">BigBox WooCommerce Theme</a></li>
 							<li><a href="/blog/">Resources &amp; Blog</a></li>
 							<li><a href="/contact/">Contact</a></li>
 							<li><a href="/about/">About</a></li>

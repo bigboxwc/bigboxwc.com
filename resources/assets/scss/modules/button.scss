@@ -22,6 +22,10 @@
 	@include button--primary;
 }
 
+.button--blank {
+  @include button--blank;
+}
+
 .button--danger {
 	@include button--danger;
 }

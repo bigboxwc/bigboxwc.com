@@ -25,9 +25,30 @@
   }
 }
 
-.hero-cta__image-placeholder {
-  width: 75%;
-  height: 400px;
-  margin: 0 auto;
-  background: $color-gray-100;
+.hero-cta__search {
+  position: relative;
+
+  [type="submit"] {
+    @include button--blank;
+    padding: 10px 13px 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    display: inline-block;
+
+    &:hover svg {
+      fill: $color-gray-500;
+    }
+  }
+
+  [type="search"] {
+    padding-left: 45px;
+  }
+
+  svg {
+    fill: $color-gray-300;
+    width: 20px;
+    height: 20px;
+  }
 }

@@ -23,8 +23,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="cta__description">Tips and tricks for getting the most out of WooCommerce.</div>
 
 			<?php if ( ! is_singular() ) : ?>
-			<form>
-				<input type="search" placeholder="Find a topic..." name="s" id="s" class="form-input" />
+			<form action="<?php echo esc_url( home_url() ); ?>" method="GET" class="hero-cta__search">
+				<button type="submit" class="button" aria-title="<?php esc_attr_e( 'Submit', 'bigbox' ); ?>">
+					<?php bigbox_svg( 'search' ); ?>
+				</button>
+
+				<input type="search" placeholder="<?php esc_attr_e( 'Find a topic...', 'bigbox' ); ?>" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" id="s" class="form-input" />
 			</form>
 			<?php endif; ?>
 		</div>

@@ -15,10 +15,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<div class="<?php echo esc_attr( is_home() ? 'block blog-post' : 'blog-post' ); ?>">
-	<div class="<?php echo esc_attr( is_home() ? 'alignwide' : 'alignnone' ); ?>">
+<div class="<?php echo esc_attr( ! is_page() ? 'block blog-post' : 'blog-post' ); ?>">
+	<div class="<?php echo esc_attr( ! is_page() ? 'alignwide' : 'alignnone' ); ?>">
 		<a href="<?php the_permalink(); ?>">
-			<?php the_post_thumbnail( is_home() ? 'large' : 'medium' ); ?>
+			<?php the_post_thumbnail( ! is_page() ? 'large' : 'medium' ); ?>
 		</a>
 	</div>
 
