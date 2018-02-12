@@ -20,9 +20,11 @@ $method       = false;
 
 if ( 'stripe' === $payment->gateway ) :
 	$card   = current( edd_stripe_get_existing_cards( get_current_user_id() ) );
-	$method = '**** - **** - **** - ' . $card['source']->last4;
+	$method = 'Card: ' . $card['source']->last4;
+elseif ( 'paypal' === $payment->gateway ) :
+	$method = 'PayPal: ' . $payment->email;
 else :
-	$method = $payment->email;
+	$method = 'Manual';
 endif;
 ?>
 

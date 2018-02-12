@@ -26,9 +26,12 @@ if ( ! is_user_logged_in() ) :
 <?php
 else :
 	$payment = bigbox_edd_get_payment();
+	$license = bigbox_edd_get_license();
 
 	if ( ! $payment ) :
 		bigbox_partial( 'edd/purchase-history/not-found' );
+	elseif ( $license && 'expired' === $license->status ) :
+		echo 'hi';
 	elseif ( 'publish' !== $payment->status ) :
 		if ( $payment->is_recoverable() ) :
 			bigbox_partial( 'edd/purchase-history/recover' );

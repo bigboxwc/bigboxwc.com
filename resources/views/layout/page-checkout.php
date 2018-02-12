@@ -14,9 +14,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-$payment = bigbox_edd_get_payment();
+$license = bigbox_edd_get_license();
 
-if ( is_user_logged_in() && $payment && 'publish' === $payment->status ) {
+if ( is_user_logged_in() && $license && 'expired' !== $license->status ) {
 	wp_safe_redirect( get_permalink( edd_get_option( 'purchase_history_page' ) ) );
 	edd_die();
 }
