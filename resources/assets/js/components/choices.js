@@ -4,19 +4,24 @@
 import Choices from 'choices.js';
 
 (function(window, undefined){
-	const $     = window.jQuery;
-	const $body = $(document.body);
+	const $         = window.jQuery;
+	const $body     = $(document.body);
+  const $document = $(document);
 
-	$(function($) {
-    const args = {
-      shouldSort: false,
-      shouldSortItems: false,
-    };
+  const args = {
+    shouldSort: false,
+    shouldSortItems: false,
+  };
 
+  const allSelects = () => {
     // All selects.
     if ($('select').length > 0) {
       new Choices('select', args);
     }
+  }
+
+	$(function($) {
+    allSelects();
 
 		// Billing updated. Refresh.
     $body.on('edd_cart_billing_address_updated', (e, data) => {
@@ -39,11 +44,12 @@ import Choices from 'choices.js';
 		
 		// Gateway loaded. Refresh.
 		$body.on('edd_gateway_loaded', (e) => {
-			const select = '#edd_purchase_form_wrap select';
-
-			if ($(select).length !== 0) {
-				new Choices(select, args);
-			}
+      allSelects();
 		});
+
+    // Gravity Forms rendered. Refresh.
+    $document.on('gform_post_render', (e) => {
+      allSelects();
+    });
   });
 })(window);
