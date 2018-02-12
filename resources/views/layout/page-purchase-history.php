@@ -17,7 +17,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 bigbox_view( 'global/header-min' );
 
 if ( ! is_user_logged_in() ) :
-	echo do_shortcode( '[edd_login redirect="/checkout/purchase-history/"]' );
+?>
+
+<div class="block block--alt">
+	<?php echo do_shortcode( '[edd_login redirect="/checkout/purchase-history/"]' ); ?>
+</div>
+
+<?php
 else :
 	$purchase = bigbox_edd_get_purchase();
 
