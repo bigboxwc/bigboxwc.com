@@ -107,6 +107,7 @@ final class Theme implements Registerable {
 	private function get_services() {
 		return [
 			Integrations\EasyDigitalDownloads::class,
+			Integrations\GravityForms::class,
 		];
 	}
 

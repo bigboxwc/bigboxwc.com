@@ -18,9 +18,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<footer class="mastfoot">
 			<div class="container">
 
-				<div class="colophon">
+				<div class="colophon row">
 
-					<div class="colophon__section">
+					<div class="colophon__section col-sm-12 col-lg-6">
 						<h4 class="section-title">Tips and Tricks</h4>
 
 						<ul class="list">
@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						</ul>
 					</div>
 
-					<div class="colophon__section">
+					<div class="colophon__section col-sm-6 col-lg-3">
 						<h4 class="section-title">Site Links</h4>
 
 						<ul class="list">
@@ -42,7 +42,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						</ul>
 					</div>
 
-					<div class="colophon__section">
+					<div class="colophon__section col-sm-6 col-lg-3">
 						<h4 class="section-title">Legal</h4>
 
 						<ul class="list">

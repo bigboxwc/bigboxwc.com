@@ -1,9 +1,5 @@
 .form-row {
-  margin: 0 0 2em;
-
-  &:not(.form-row--half):last-child {
-    margin-bottom: 0;
-  }
+  @include form-row;
 }
 
 .form-row--half {

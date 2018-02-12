@@ -22,8 +22,14 @@ while ( have_posts() ) :
 	bigbox_partial( 'hero' );
 ?>
 
-<div class="container">
-	<?php the_content(); ?>
+<div class="block">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-sm-12 col-md-10 col-lg-8">
+				<?php the_content(); ?>
+			</div>
+		</div>
+	</div>
 </div>
 
 <?php

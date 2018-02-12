@@ -1,0 +1,26 @@
+.gform_fields {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gfield {
+  @include form-row;
+
+  label {
+    @include form-label;
+  }
+}
+
+.ginput_container_email,
+.ginput_container_textarea,
+.ginput_container_text {
+  textarea,
+  input {
+    @include form-input;
+  }
+}
+
+.gform_footer {
+  margin-top: 2rem;
+}

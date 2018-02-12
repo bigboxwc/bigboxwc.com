@@ -36,7 +36,10 @@ $choices-keyline-color: #ddd;
 // Local helpers
 @import 'helpers/animation-spin';
 @import 'helpers/align';
+
+// Mixins
 @import 'mixins/button';
+@import 'mixins/form';
 
 // HTML Elements
 @import 'elements/html';
@@ -127,3 +130,6 @@ $choices-keyline-color: #ddd;
 // EDD
 @import 'modules/edd-loading';
 @import 'modules/edd-alert';
+
+// GF
+@import 'modules/gf';
