@@ -13,20 +13,43 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-function bigbox_edd_get_payment() {
-	return bigbox_edd_get_purchase();
+/**
+ * Custom Stripe credit card form.
+ *
+ * @since 1.0.0
+ */
+function bigbox_edd_stripe_cc_form() {
+	bigbox_partial( 'edd/checkout/credit-card-form' );
+}
+
+/**
+ * Custom purchase form fields.
+ *
+ * When PayPal is being used add a custom note. Always add custom hidden fields
+ * to ensure the current gateway is known.
+ *
+ * @since 1.0.0
+ */
+function bigbox_edd_purchase_form() {
+	if ( isset( $_POST['edd_payment_mode'] ) && 'paypal' === $_POST['edd_payment_mode'] ) { // @codingStandardsIgnoreLine
+		echo '<p style="margin-bottom: 2rem;">';
+		esc_html_e( 'You will be redirected to PayPal to complete your purchase.', 'bigbox' );
+		echo '</p>';
+	}
+
+	edd_checkout_hidden_fields();
 }
 
 /**
  * Get a user's theme purchase.
  *
- * @todo Cache... handle non-complete orders.
+ * @todo Cache...
  *
  * @since 1.0.0
  *
  * @return false|EDD_Payment False if no payment is found.
  */
-function bigbox_edd_get_purchase() {
+function bigbox_edd_get_payment() {
 	$payment  = false;
 	$payments = edd_get_users_purchases( get_current_user_id(), 20, true, array( 'publish', 'pending', 'failed', 'abandoned', 'processing' ) );
 
