@@ -25,7 +25,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="block-header block-header--left media-body">
 			<h3 class="block-title">😢 No Purchases Found</h3>
 
-			<p class="block-subtitle">Sorry! Please <a href="/contact/">contact support</a> if you believe this is an error. You can also <a href="/features/">read more about BigBox for WooCommerce</a>.</p>
+			<p class="block-subtitle">Sorry, there is no active purchase for <strong><?php echo esc_html( wp_get_current_user()->user_email ); ?></strong>. Please <a href="/contact/">contact support</a> if you believe this is an error.</p>
+
+			<p class="block-subtitle">You can also <a href="/features/">read more about BigBox for WooCommerce</a>.</p>
 		</div>
 
 	</div>

@@ -28,7 +28,7 @@ function bigbox_edd_get_payment() {
  */
 function bigbox_edd_get_purchase() {
 	$payment  = false;
-	$payments = edd_get_users_purchases( get_current_user_id(), 20, true, 'any' );
+	$payments = edd_get_users_purchases( get_current_user_id(), 20, true, array( 'publish', 'pending', 'failed', 'abandoned', 'processing' ) );
 
 	if ( ! $payments ) {
 		return false;

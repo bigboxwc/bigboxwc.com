@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<div class="feature-item__content">
 					<h4>Optimized WooCommerce Theme</h4>
 					<p>A beautifully designed WooCommerce theme built for extensive product catalogs. Ensure your product catalog is the focus of your website.</p>
-					<p><a href="/">Get the theme &rarr;</a></p>
+					<p><a href="/buy/">Get the theme &rarr;</a></p>
 				</div>
 			</li>
 
@@ -61,7 +61,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<div class="feature-item__content">
 					<h4>Flexible Payment Processing</h4>
 					<p>Built in Stripe and PayPal support means you can start accepting payments instantly. Dozens of other gateway options means you have flexibility.</p>
-					<p><a href="/">Learn about payment procesing &rarr;</a></p>
+					<p><a href="/">Learn about payment processing &rarr;</a></p>
 				</div>
 			</li>
 
@@ -91,5 +91,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 </div>
 
 <div class="block-cta">
-	<a href="/buy/" class="button button--primary">Get BigBox Now</a> &nbsp; &nbsp; <a href="/demo/">View Demo &rarr;</a>
+	<a href="/buy/" class="button button--primary">Get BigBox Now</a> &nbsp; &nbsp; &nbsp; <a href="/demo/">View Demo &rarr;</a>
 </div>
