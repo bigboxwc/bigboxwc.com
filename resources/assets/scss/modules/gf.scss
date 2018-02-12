@@ -6,6 +6,12 @@
   }
 }
 
+.gform_confirmation_message {
+  @extend .notice;
+  @extend .notice--success;
+  margin: 0 0 2em;
+}
+
 .gform_fields {
   margin: 0;
   padding: 0;
