@@ -16,12 +16,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 bigbox_view( 'global/header-min' );
 
-$purchase = bigbox_edd_get_purchase();
+$payment = bigbox_edd_get_payment();
 
-if ( ! $purchase ) :
+if ( ! $payment ) :
 	bigbox_partial( 'edd/purchase-confirmation/not-found' );
-elseif ( 'publish' !== $purchase->status ) :
-	if ( $purchase->is_recoverable() ) :
+elseif ( 'publish' !== $payment->status ) :
+	if ( $payment->is_recoverable() ) :
 		bigbox_partial( 'edd/purchase-confirmation/recover' );
 	else :
 		bigbox_partial( 'edd/purchase-confirmation/not-found' );

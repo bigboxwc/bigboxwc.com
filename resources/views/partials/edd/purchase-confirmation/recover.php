@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-$purchase = bigbox_edd_get_purchase();
+$payment = bigbox_edd_get_payment();
 ?>
 
 <div class="block feature-callout">
@@ -30,7 +30,7 @@ $purchase = bigbox_edd_get_purchase();
 			<p class="block-subtitle">Please <a href="/contact/">contact support</a> if you believe this is an error.</p>
 
 			<p class="block-subtitle">
-				<a href="<?php echo esc_url( $purchase->get_recovery_url() ); ?>" class="button button--primary">Recover Purchase</a>
+				<a href="<?php echo esc_url( $payment->get_recovery_url() ); ?>" class="button button--primary">Recover Purchase</a>
 			</p>
 		</div>
 

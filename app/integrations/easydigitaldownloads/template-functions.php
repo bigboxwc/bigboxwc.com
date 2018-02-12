@@ -76,7 +76,7 @@ function bigbox_edd_get_payment() {
  */
 function bigbox_edd_get_license() {
 	$license = false;
-	$payment = bigbox_edd_get_purchase();
+	$payment = bigbox_edd_get_payment();
 
 	$licensing = edd_software_licensing();
 	$licenses  = $licensing->get_licenses_of_purchase( $payment->ID );
@@ -97,9 +97,9 @@ function bigbox_edd_get_license() {
  */
 function bigbox_edd_get_download() {
 	$downloa  = false;
-	$purchase = bigbox_edd_get_purchase();
+	$payment = bigbox_edd_get_payment();
 
-	$downloads = edd_get_payment_meta_cart_details( $purchase->ID, true );
+	$downloads = edd_get_payment_meta_cart_details( $payment->ID, true );
 
 	if ( empty( $downloads ) ) {
 		return $download;
@@ -120,16 +120,16 @@ function bigbox_edd_get_download() {
 function bigbox_edd_get_download_url() {
 	$url = false;
 
-	$purchase = bigbox_edd_get_purchase();
+	$payment = bigbox_edd_get_payment();
 	$download = bigbox_edd_get_download();
 
 	$price_id      = edd_get_cart_item_price_id( $download );
-	$purchase_data = edd_get_payment_meta( $purchase->ID );
-	$email         = edd_get_payment_user_email( $purchase->ID );
+	$payment_data = edd_get_payment_meta( $payment->ID );
+	$email         = edd_get_payment_user_email( $payment->ID );
 	$files         = edd_get_download_files( $download['id'], 0 );
 
 	foreach ( $files as $filekey => $file ) {
-		$url = edd_get_download_file_url( $purchase_data['key'], $email, $filekey, $download['id'], $price_id );
+		$url = edd_get_download_file_url( $payment_data['key'], $email, $filekey, $download['id'], $price_id );
 
 		continue;
 	}
@@ -159,7 +159,7 @@ function bigbox_edd_get_download_version() {
  */
 function bigbox_edd_get_subscription() {
 	$subscription = false;
-	$purchase     = bigbox_edd_get_purchase();
+	$payment      = bigbox_edd_get_payment();
 
 	$subscriber    = new EDD_Recurring_Subscriber( get_current_user_id(), true );
 	$subscriptions = $subscriber->get_subscriptions( 0, [ 'active', 'expired', 'cancelled', 'failing', 'trialling' ] );
@@ -179,7 +179,7 @@ function bigbox_edd_get_subscription() {
  * @return string URL to receipt.
  */
 function bigbox_edd_get_receipt_url() {
-	$purchase = bigbox_edd_get_purchase();
+	$payment = bigbox_edd_get_payment();
 
-	return esc_url( add_query_arg( 'payment_key', $purchase->key, home_url( '/account/receipt/' ) ) );
+	return esc_url( add_query_arg( 'payment_key', $payment->key, home_url( '/account/receipt/' ) ) );
 }

@@ -25,12 +25,12 @@ if ( ! is_user_logged_in() ) :
 
 <?php
 else :
-	$purchase = bigbox_edd_get_purchase();
+	$payment = bigbox_edd_get_payment();
 
-	if ( ! $purchase ) :
+	if ( ! $payment ) :
 		bigbox_partial( 'edd/purchase-history/not-found' );
-	elseif ( 'publish' !== $purchase->status ) :
-		if ( $purchase->is_recoverable() ) :
+	elseif ( 'publish' !== $payment->status ) :
+		if ( $payment->is_recoverable() ) :
 			bigbox_partial( 'edd/purchase-history/recover' );
 		else :
 			bigbox_partial( 'edd/purchase-history/not-found' );
