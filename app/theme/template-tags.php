@@ -59,7 +59,11 @@ function bigbox_view( $templates, $args = [] ) {
 		$_templates[] = 'resources/views/' . $template_name . '.php';
 	}
 
-	locate_template( $_templates, true, false );
+	$template = locate_template( $_templates );
+
+	if ( $template ) {
+		include $template;
+	}
 }
 
 /**

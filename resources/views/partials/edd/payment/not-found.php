@@ -1,6 +1,6 @@
 <?php
 /**
- * Payment history not found.
+ * Receipt not found.
  *
  * @since 1.0.0
  * @version 1.0.0
@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<p class="block-subtitle">Sorry, there is no active purchase for <strong><?php echo esc_html( wp_get_current_user()->user_email ); ?></strong>. Please <a href="/contact/">contact support</a> if you believe this is an error.</p>
 
-			<p class="block-subtitle">You can also <a href="/features/">read more about BigBox for WooCommerce</a>.</p>
+			<p class="block-subtitle"><a href="/buy/" class="button button--primary">Get BigBox Now</a></p>
 		</div>
 
 	</div>

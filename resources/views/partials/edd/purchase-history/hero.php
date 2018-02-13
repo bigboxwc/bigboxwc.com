@@ -13,9 +13,6 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
-
-$license      = bigbox_edd_get_license();
-$subscription = bigbox_edd_get_subscription();
 ?>
 
 <div class="block block--alt feature-callout">

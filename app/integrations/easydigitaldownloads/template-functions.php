@@ -78,6 +78,10 @@ function bigbox_edd_get_license() {
 	$license = false;
 	$payment = bigbox_edd_get_payment();
 
+	if ( ! $payment ) {
+		return $license;
+	}
+
 	$licensing = edd_software_licensing();
 	$licenses  = $licensing->get_licenses_of_purchase( $payment->ID );
 

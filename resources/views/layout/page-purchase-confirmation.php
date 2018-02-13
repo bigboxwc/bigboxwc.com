@@ -19,12 +19,12 @@ bigbox_view( 'global/header-min' );
 $payment = bigbox_edd_get_payment();
 
 if ( ! $payment ) :
-	bigbox_partial( 'edd/purchase-confirmation/not-found' );
+	bigbox_partial( 'edd/payment/not-found' );
 elseif ( 'publish' !== $payment->status ) :
 	if ( $payment->is_recoverable() ) :
-		bigbox_partial( 'edd/purchase-confirmation/recover' );
+		bigbox_partial( 'edd/payment/recover' );
 	else :
-		bigbox_partial( 'edd/purchase-confirmation/not-found' );
+		bigbox_partial( 'edd/payment/not-found' );
 	endif;
 else :
 	bigbox_partial( 'edd/purchase-confirmation/hero' );
