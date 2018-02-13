@@ -36,6 +36,7 @@ function bigbox_page_templates( $post_templates, $theme, $post, $post_type ) {
 	$post_templates['resources/views/layout/page-purchase-history.php']      = esc_html_x( 'Page: Purchase History', 'page template title', 'bigbox' );
 	$post_templates['resources/views/layout/page-receipt.php']               = esc_html_x( 'Page: Receipt', 'page template title', 'bigbox' );
 	$post_templates['resources/views/layout/page-buy.php']                   = esc_html_x( 'Page: Buy', 'page template title', 'bigbox' );
+	$post_templates['resources/views/layout/page-support.php']               = esc_html_x( 'Page: Support', 'page template title', 'bigbox' );
 	$post_templates['resources/views/layout/page-minimal.php']               = esc_html_x( 'Layout: Minimal', 'page template title', 'bigbox' );
 
 	return $post_templates;

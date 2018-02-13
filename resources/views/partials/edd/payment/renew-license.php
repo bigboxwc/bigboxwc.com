@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<div class="block feature-callout">
+<div class="block block--alt feature-callout">
 	<div class="container media">
 
 		<div class="feature-callout__media">

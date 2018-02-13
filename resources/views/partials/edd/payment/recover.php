@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $payment = bigbox_edd_get_payment();
 ?>
 
-<div class="block feature-callout">
+<div class="block block--alt feature-callout">
 	<div class="container media">
 
 		<div class="feature-callout__media">
@@ -27,7 +27,7 @@ $payment = bigbox_edd_get_payment();
 		<div class="block-header block-header--left media-body">
 			<h3 class="block-title">Incomplete Purchase</h3>
 
-			<p class="block-subtitle">Please <a href="/contact/">contact support</a> if you believe this is an error.</p>
+			<p class="block-subtitle">Please <a href="/contact/">contact us</a> if you believe this is an error.</p>
 
 			<p class="block-subtitle">
 				<a href="<?php echo esc_url( $payment->get_recovery_url() ); ?>" class="button button--primary">Recover Purchase</a>

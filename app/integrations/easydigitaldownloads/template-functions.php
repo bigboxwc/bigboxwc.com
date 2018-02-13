@@ -41,9 +41,37 @@ function bigbox_edd_purchase_form() {
 }
 
 /**
- * Get a user's theme purchase.
+ * See if our payment is all good to go.
  *
- * @todo Cache...
+ * @since 1.0.0
+ *
+ * @param array $data Account data.
+ * @return string
+ */
+function bigbox_edd_allgood( $data ) {
+	ob_start();
+
+	if ( ! $data['payment'] ) : // We got nothing.
+		bigbox_partial( 'edd/payment/not-found' );
+	elseif ( $data['license'] && 'expired' === $data['license']->status ) : // Expired license.
+		bigbox_partial( 'edd/payment/renew-license', [
+			'license' => $data['license'],
+		] );
+	elseif ( 'publish' !== $data['payment']->status ) : // Refunded or incomplete.
+		if ( $payment->is_recoverable() ) :
+			bigbox_partial( 'edd/payment/recover', [
+				'payment' => $data['payment'],
+			] );
+		else :
+			bigbox_partial( 'edd/payment/not-found' );
+		endif;
+	endif;
+
+	return ob_get_clean();
+}
+
+/**
+ * Get a user's theme purchase.
  *
  * @since 1.0.0
  *
@@ -100,8 +128,8 @@ function bigbox_edd_get_license() {
  * @return false|array. False if no download is found.
  */
 function bigbox_edd_get_download() {
-	$downloa  = false;
-	$payment = bigbox_edd_get_payment();
+	$download = false;
+	$payment  = bigbox_edd_get_payment();
 
 	$downloads = edd_get_payment_meta_cart_details( $payment->ID, true );
 
@@ -124,13 +152,13 @@ function bigbox_edd_get_download() {
 function bigbox_edd_get_download_url() {
 	$url = false;
 
-	$payment = bigbox_edd_get_payment();
+	$payment  = bigbox_edd_get_payment();
 	$download = bigbox_edd_get_download();
 
-	$price_id      = edd_get_cart_item_price_id( $download );
+	$price_id     = edd_get_cart_item_price_id( $download );
 	$payment_data = edd_get_payment_meta( $payment->ID );
-	$email         = edd_get_payment_user_email( $payment->ID );
-	$files         = edd_get_download_files( $download['id'], 0 );
+	$email        = edd_get_payment_user_email( $payment->ID );
+	$files        = edd_get_download_files( $download['id'], 0 );
 
 	foreach ( $files as $filekey => $file ) {
 		$url = edd_get_download_file_url( $payment_data['key'], $email, $filekey, $download['id'], $price_id );

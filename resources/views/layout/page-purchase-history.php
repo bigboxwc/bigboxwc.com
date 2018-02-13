@@ -29,20 +29,14 @@ else :
 	$license      = bigbox_edd_get_license();
 	$subscription = bigbox_edd_get_subscription();
 
-	if ( ! $payment ) : // We got nothing.
-		bigbox_partial( 'edd/payment/not-found' );
-	elseif ( $license && 'expired' === $license->status ) : // Expired license.
-		bigbox_partial( 'edd/payment/renew-license', [
-			'license' => $license,
-		] );
-	elseif ( 'publish' !== $payment->status ) : // Refunded or incomplete.
-		if ( $payment->is_recoverable() ) :
-			bigbox_partial( 'edd/payment/recover', [
-				'payment' => $payment,
-			] );
-		else :
-			bigbox_partial( 'edd/payment/not-found' );
-		endif;
+	$allgood = bigbox_edd_allgood( [
+		'payment'      => $payment,
+		'license'      => $license,
+		'subscription' => $subscription,
+	] );
+
+	if ( '' !== $allgood ) :
+		echo $allgood; // WPCS: XSS okay.
 	else : // Valid payment.
 		if ( $subscription && 'active' !== $subscription->status ) : // Subscription will end.
 			bigbox_partial( 'edd/payment/reactivate-subscription', [
