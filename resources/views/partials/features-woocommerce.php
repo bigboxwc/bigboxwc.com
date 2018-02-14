@@ -13,6 +13,11 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+
+$woocommerce_features = get_posts( [
+	'post_parent' => 5601,
+	'post_type'   => 'page',
+] );
 ?>
 
 <div id="features" class="block">
@@ -25,89 +30,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<ul class="feature-list">
 
+			<?php foreach ( $woocommerce_features as $feature ) : ?>
+
 			<li class="feature-item feature-item--overlay col-lg-3">
-				<a href="/why-use-woocommerce/customer-accounts-and-guest-checkout/" data-slug="customer-accounts-and-guest-checkout" class="feature-item__content js-modal-trigger--ajax">
+				<a href="<?php echo esc_url( get_permalink( $feature->ID ) ); ?>" data-slug="<?php echo esc_attr( $feature->post_name ); ?>" class="feature-item__content js-modal-trigger--ajax">
 					<?php bigbox_svg( 'illustration-hacker' ); ?>
-					<h4>Customer Accounts and Guest Checkout</h4>
+					<h4><?php echo esc_html( $feature->post_title ); ?></h4>
 				</a>
 			</li>
 
-			<li class="feature-item feature-item--overlay col-lg-3">
-				<a href="/why-use-woocommerce/one-click-refunds/" data-slug="one-click-refunds" class="feature-item__content js-modal-trigger--ajax">
-					<?php bigbox_svg( 'illustration-hand' ); ?>
-					<h4>One-Click Refunds</h4>
-				</a>
-			</li>
-
-			<li class="feature-item feature-item--overlay col-lg-3">
-				<div class="feature-item__content">
-					<?php bigbox_svg( 'illustration-globe' ); ?>
-					<h4>Inventory Management</h4>
-				</div>
-			</li>
-
-			<li class="feature-item feature-item--overlay col-lg-3">
-				<div class="feature-item__content">
-					<?php bigbox_svg( 'illustration-ipod' ); ?>
-					<h4>Order Management</h4>
-				</div>
-			</li>
-
-			<li class="feature-item feature-item--overlay col-lg-3">
-				<div class="feature-item__content">
-					<?php bigbox_svg( 'illustration-hand' ); ?>
-					<h4>Search Engine Optimization</h4>
-				</div>
-			</li>
-
-			<li class="feature-item feature-item--overlay col-lg-3">
-				<div class="feature-item__content">
-					<?php bigbox_svg( 'illustration-ipod' ); ?>
-					<h4>Unlimited Product Pages</h4>
-				</div>
-			</li>
-
-			<li class="feature-item feature-item--overlay col-lg-3">
-				<div class="feature-item__content">
-					<?php bigbox_svg( 'illustration-hacker' ); ?>
-					<h4>Unlimited Product Variations</h4>
-				</div>
-			</li>
-
-			<li class="feature-item feature-item--overlay col-lg-3">
-				<div class="feature-item__content">
-					<?php bigbox_svg( 'illustration-globe' ); ?>
-					<h4>Extensive Payment Processing Options</h4>
-				</div>
-			</li>
-
-			<li class="feature-item feature-item--overlay col-lg-3">
-				<div class="feature-item__content">
-					<?php bigbox_svg( 'illustration-globe' ); ?>
-					<h4>Flexible Shipping Solutions</h4>
-				</div>
-			</li>
-
-			<li class="feature-item feature-item--overlay col-lg-3">
-				<div class="feature-item__content">
-					<?php bigbox_svg( 'illustration-hand' ); ?>
-					<h4>Choose Your Own Domain</h4>
-				</div>
-			</li>
-
-			<li class="feature-item feature-item--overlay col-lg-3">
-				<div class="feature-item__content">
-					<?php bigbox_svg( 'illustration-ipod' ); ?>
-					<h4>Robust Tax Options</h4>
-				</div>
-			</li>
-
-			<li class="feature-item feature-item--overlay col-lg-3">
-				<div class="feature-item__content">
-					<?php bigbox_svg( 'illustration-hacker' ); ?>
-					<h4>Detailed Reporting Tools</h4>
-				</div>
-			</li>
+			<?php endforeach; ?>
 
 		</ul>
 

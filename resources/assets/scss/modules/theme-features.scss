@@ -5,3 +5,9 @@
     margin-bottom: 0;
   }
 }
+
+.theme-features {
+  .block:nth-child(odd) {
+    @extend .block--alt;
+  }
+}

@@ -1,6 +1,6 @@
 .modal-close {
   color: $color-gray-300;
-  padding: 10px 15px;
+  padding: 3px 10px;
   font-size: 28px;
   position: absolute;
   top: 0;
@@ -12,13 +12,12 @@
 }
 
 .modal-header {
-  padding: 2rem 1.5rem 0;
+  padding: 1.5rem 1.5rem 0;
   border-bottom: 0;
 }
 
 .modal-title {
   color: $color-gray-700;
-  font-weight: 400;
   font-size: 20px;
   margin: 0;
 }
@@ -31,7 +30,7 @@
 }
 
 .modal-body {
-  color: $color-gray-500;
+  color: $color-gray-600;
   padding: 1.5rem;
 
   p:firt-child {
