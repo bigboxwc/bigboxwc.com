@@ -99,6 +99,55 @@ function bigbox_get_partial( $partial, $args = [] ) {
 }
 
 /**
+ * Return the name of an SVG for a feature.
+ *
+ * @since 1.0.0
+ *
+ * @param string $icon Default SVG.
+ * @param string $name Name of the feature.
+ * @return string
+ */
+function bigbox_feature_svg( $icon, $name ) {
+	switch ( $name ) {
+		case 'advanced-catalog-filtering-and-searching-integrations':
+			$icon = 'scientist';
+			break;
+		case 'optimized-for-conversions':
+			$icon = 'imac';
+			break;
+		case 'simplified-display-designed-for-hundreds-of-products':
+			$icon = 'shopping';
+			break;
+		case 'integrated-with-woocommerces-most-popular-extensions':
+			$icon = 'ship';
+			break;
+	}
+
+	return $icon;
+}
+add_filter( 'bigbox_feature_svg', 'bigbox_feature_svg', 10, 2 );
+
+/**
+ * Return the name of an SVG for a WooCommerce feature.
+ *
+ * @since 1.0.0
+ *
+ * @param string $icon Default SVG.
+ * @param string $name Name of the feature.
+ * @return string
+ */
+function bigbox_woocommerce_feature_svg( $icon, $name ) {
+	switch ( $name ) {
+		case 'one-click-refunds':
+			$icon = 'ship';
+			break;
+	}
+
+	return $icon;
+}
+add_filter( 'bigbox_woocommerce_feature_svg', 'bigbox_woocommerce_feature_svg', 10, 2 );
+
+/**
  * Echo SVG markup.
  *
  * @since 1.0.0

@@ -15,8 +15,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $features = get_posts( [
-	'post_parent' => 11,
+	'post_parent' => get_page_by_path( 'features' )->ID,
 	'post_type'   => 'page',
+	'orderby'     => 'menu_order',
+	'order'       => 'asc',
 ] );
 ?>
 
@@ -28,7 +30,7 @@ $features = get_posts( [
 		<div class="container media">
 
 			<div class="feature-callout__media">
-				<?php bigbox_svg( 'graphic-shopping' ); ?>
+				<?php bigbox_svg( 'graphic-' . apply_filters( 'bigbox_feature_svg', 'shopping', $feature->post_name ) ); ?>
 			</div>
 
 			<div class="block-header block-header--left media-body">

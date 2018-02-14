@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $faqs = get_posts( [
-	'post_parent' => 5601,
+	'post_parent' => get_page_by_path( 'faqs' )->ID,
 	'post_type'   => 'page',
 ] );
 ?>
@@ -29,6 +29,7 @@ $faqs = get_posts( [
 		</div>
 
 		<ul class="faqs">
+
 			<?php foreach ( $faqs as $faq ) : ?>
 
 			<li class="faq">

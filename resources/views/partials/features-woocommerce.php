@@ -15,8 +15,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $woocommerce_features = get_posts( [
-	'post_parent' => 5601,
+	'post_parent' => get_page_by_path( 'why-use-woocommerce' )->ID,
 	'post_type'   => 'page',
+	'orderby'     => 'menu_order',
+	'order'       => 'asc',
 ] );
 ?>
 
@@ -34,7 +36,7 @@ $woocommerce_features = get_posts( [
 
 			<li class="feature-item feature-item--overlay col-lg-3">
 				<a href="<?php echo esc_url( get_permalink( $feature->ID ) ); ?>" data-slug="<?php echo esc_attr( $feature->post_name ); ?>" class="feature-item__content js-modal-trigger--ajax">
-					<?php bigbox_svg( 'illustration-hacker' ); ?>
+					<?php bigbox_svg( 'illustration-' . apply_filters( 'bigbox_woocommerce_feature_svg', 'hacker', $feature->post_name ) ); ?>
 					<h4><?php echo esc_html( $feature->post_title ); ?></h4>
 				</a>
 			</li>

@@ -10,4 +10,10 @@
   .block:nth-child(odd) {
     @extend .block--alt;
   }
+
+  .block:nth-child(even) {
+    .feature-callout__media {
+      order: 2;
+    }
+  }
 }
