@@ -44,5 +44,10 @@
   "bugs": {
     "url": "https://github.com/spencerfinnell/bigbox/issues"
   },
-  "homepage": "https://bigboxwp.com"
+  "homepage": "https://bigboxwp.com",
+  "dependencies": {
+    "exports-loader": "^0.7.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.12.9"
+  }
 }

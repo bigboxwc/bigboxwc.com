@@ -18,8 +18,10 @@ $color-blue: $brandColor;
  * External dependencies
  */
 // Bootstrap
+@import '~bootstrap/scss/mixins';
 @import '~bootstrap/scss/bootstrap-grid';
 @import '~bootstrap/scss/media';
+@import '~bootstrap/scss/modal';
 
 // Choices
 $choices-button-icon-path: "~choices.js/assets/icons";
@@ -54,6 +56,7 @@ $choices-keyline-color: #ddd;
 @import 'modules/list';
 @import 'modules/icon';
 @import 'modules/pill';
+@import 'modules/modal';
 
 // Card
 @import 'modules/card';

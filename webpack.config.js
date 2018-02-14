@@ -21,7 +21,7 @@ const extractConfig = {
 		},
 		{
 			loader: 'sass-loader',
-    },
+		},
 	],
 };
 
@@ -37,30 +37,30 @@ module.exports = {
 	},
 	module: {
 		rules: [
-      {
-        test: /\.svg$/,
-        use: [
-          {
-            loader: 'svg-sprite-loader',
-            options: {
-              extract: true,
-              spriteFilename: './public/images/sprite.svg'
-            },
-          },
-          'svgo-loader'
-        ],
-        include: /images/,
-      },
+			{
+				test: /\.svg$/,
+				use: [
+					{
+						loader: 'svg-sprite-loader',
+						options: {
+							extract: true,
+							spriteFilename: './public/images/sprite.svg'
+						},
+					},
+					'svgo-loader'
+				],
+				include: /images/,
+			},
 			{
 				test: /.js$/,
 				loader: 'babel-loader',
 				exclude: /node_modules/,
-        include: /js/,
+				include: /js/,
 			},
 			{
 				test: /.s?css$/,
 				use: cssPlugin.extract( extractConfig ),
-        include: /scss/,
+				include: /scss/,
 			},
 		],
 	},
@@ -69,6 +69,12 @@ module.exports = {
 			'process.env.NODE_ENV': JSON.stringify( process.env.NODE_ENV || 'development' ),
 		} ),
 		cssPlugin,
-    new SpritePlugin(),
+		new SpritePlugin(),
+		new webpack.ProvidePlugin( {
+			// '$': 'jquery',
+			// jQuery: 'jquery',
+			Popper: ['popper.js', 'default'],
+			'Util': "exports-loader?Util!bootstrap/js/dist/util"
+		} ),
 	],
 };

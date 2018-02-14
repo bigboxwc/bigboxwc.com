@@ -10,5 +10,4 @@
       $(this).parents('.faq').toggleClass('faq--active');
     });
   });
-
 })(window);

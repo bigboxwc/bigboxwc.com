@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<ul class="feature-list">
 
 			<li class="feature-item feature-item--overlay col-lg-3">
-				<div class="feature-item__content">
+				<div data-toggle="modal" data-target="#why-use-woocommerce/customer-accounts-guest-accounts" class="feature-item__content">
 					<?php bigbox_svg( 'illustration-hacker' ); ?>
 					<h4>Customer Accounts and Guest Checkout</h4>
 				</div>
@@ -111,5 +111,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		</ul>
 
+	</div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Customer Accounts &amp; Guest Accounts</h5>
+
+				<button type="button" class="button button--blank modal-close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+
+			<div class="modal-body">
+				<p>Allow customers to register and choose to automatically generate usernames and passwords, or not. Display a returning customer login reminder. Enable guest checkout for those who don’t want to register.</p>
+			</div>
+		</div>
 	</div>
 </div>
