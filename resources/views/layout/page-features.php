@@ -23,8 +23,10 @@ while ( have_posts() ) :
 	bigbox_partial( 'features-overview' );
 	bigbox_partial( 'features-primary' );
 	bigbox_partial( 'features-woocommerce' );
+	bigbox_partial( 'testimonials' );
 	bigbox_partial( 'theme-pricing' );
 	bigbox_partial( 'features-faqs' );
+	bigbox_partial( 'cta-buy' );
 endwhile;
 
 bigbox_view( 'global/footer' );

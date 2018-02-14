@@ -36,4 +36,9 @@ bigbox_partial( 'hero-blog' ); ?>
 </div>
 
 <?php
+bigbox_partial( 'features-overview', [
+	'alt' => true,
+] );
+bigbox_partial( 'cta-buy' );
+
 bigbox_view( 'global/footer' );
