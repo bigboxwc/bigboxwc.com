@@ -1,9 +1,4 @@
 /**
- * External dependencies.
- */
-import 'bootstrap/js/dist/modal';
-
-/**
  * Internal dependencies.
  */
 
@@ -14,4 +9,4 @@ import '../images/*.svg';
 
 import './components/choices';
 import './components/faqs';
-import './components/features';
+import './components/modal';

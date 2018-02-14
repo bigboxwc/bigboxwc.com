@@ -41,6 +41,7 @@ function bigbox_enqueue_scripts() {
 
 	$deps = [
 		'wp-util',
+		'wp-api',
 	];
 
 	// Combined application scripts. See `gulpfile.js` for more.
@@ -59,3 +60,13 @@ function bigbox_enqueue_scripts() {
 	);
 }
 add_action( 'wp_enqueue_scripts', 'bigbox_enqueue_scripts' );
+
+/**
+ * Load script templates.
+ *
+ * @since 1.0.0
+ */
+function bigbox_enqueue_tmpls() {
+	bigbox_view( 'tmpl/tmpl-modal' );
+}
+add_action( 'wp_footer', 'bigbox_enqueue_tmpls' );
