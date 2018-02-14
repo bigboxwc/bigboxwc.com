@@ -22,12 +22,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php bigbox_svg( 'graphic-chip-head' ); ?>
 		</div>
 
-		<div class="block-header block-header--left media-body">
-			<h3 class="block-title">😢 No Purchases Found</h3>
+		<div class="feature-callout__content">
+			<h3 class="feature-callout__title">😢 No Purchases Found</h3>
 
-			<p class="block-subtitle">Sorry, there is no active purchase for <strong><?php echo esc_html( wp_get_current_user()->user_email ); ?></strong>. Please <a href="/contact/">contact support</a> if you believe this is an error.</p>
+			<p>Sorry, there is no active purchase for <strong><?php echo esc_html( wp_get_current_user()->user_email ); ?></strong>. Please <a href="/contact/">contact support</a> if you believe this is an error.</p>
 
-			<p class="block-subtitle"><a href="/buy/" class="button button--primary">Get BigBox Now</a></p>
+			<p><a href="/buy/" class="button button--primary">Get BigBox Now</a></p>
 		</div>
 
 	</div>

@@ -51,42 +51,41 @@ else :
 		endif;
 ?>
 
-<div id="features" class="block">
-	<div class="container features__container">
+<div id="features" class="block container features__container">
 
-		<ul class="feature-list">
+	<ul class="feature-list">
 
-			<li class="feature-item feature-item--overlay col-lg-3">
-				<a href="<?php echo esc_url( bigbox_edd_get_download_url() ); ?>" class="feature-item__content">
-					<?php bigbox_svg( 'illustration-hacker' ); ?>
-					<h4>Download BigBox</h4>
-					<span class="pill"><?php echo esc_html( bigbox_edd_get_download_version() ); ?></span>
-				</a>
-			</li>
+		<li class="feature-item feature-item--overlay col-lg-3">
+			<a href="<?php echo esc_url( bigbox_edd_get_download_url() ); ?>" class="feature-item__content">
+				<?php bigbox_svg( 'illustration-hacker' ); ?>
+				<h4>Download BigBox</h4>
+				<span class="pill"><?php echo esc_html( bigbox_edd_get_download_version() ); ?></span>
+			</a>
+		</li>
 
-			<li class="feature-item feature-item--overlay col-lg-3">
-				<a href="/docs/" class="feature-item__content">
-					<?php bigbox_svg( 'illustration-hand' ); ?>
-					<h4>View the Documentation</h4>
-				</a>
-			</li>
+		<li class="feature-item feature-item--overlay col-lg-3">
+			<a href="/docs/" class="feature-item__content">
+				<?php bigbox_svg( 'illustration-hand' ); ?>
+				<h4>View the Documentation</h4>
+			</a>
+		</li>
 
-			<li class="feature-item feature-item--overlay col-lg-3">
-				<a href="/support/" class="feature-item__content">
-					<?php bigbox_svg( 'illustration-globe' ); ?>
-					<h4>Contact Technical Support</h4>
-				</a>
-			</li>
+		<li class="feature-item feature-item--overlay col-lg-3">
+			<a href="/support/" class="feature-item__content">
+				<?php bigbox_svg( 'illustration-globe' ); ?>
+				<h4>Contact Technical Support</h4>
+			</a>
+		</li>
 
-			<li class="feature-item feature-item--overlay col-lg-3">
-				<a href="<?php echo esc_url( bigbox_edd_get_receipt_url() ); ?>" class="feature-item__content">
-					<?php bigbox_svg( 'illustration-ipod' ); ?>
-					<h4>View Receipt &amp; Manage Subscription</h4>
-				</a>
-			</li>
+		<li class="feature-item feature-item--overlay col-lg-3">
+			<a href="<?php echo esc_url( bigbox_edd_get_receipt_url() ); ?>" class="feature-item__content">
+				<?php bigbox_svg( 'illustration-ipod' ); ?>
+				<h4>View Receipt &amp; Manage Subscription</h4>
+			</a>
+		</li>
 
-		</ul>
-	</div>
+	</ul>
+
 </div>
 
 <?php

@@ -24,12 +24,12 @@ $payment = bigbox_edd_get_payment();
 			<?php bigbox_svg( 'graphic-receipt' ); ?>
 		</div>
 
-		<div class="block-header block-header--left media-body">
-			<h3 class="block-title">Incomplete Purchase</h3>
+		<div class="feature-callout__content">
+			<h3 class="feature-callout__title">Incomplete Purchase</h3>
 
-			<p class="block-subtitle">Please <a href="/contact/">contact us</a> if you believe this is an error.</p>
+			<p>Please <a href="/contact/">contact us</a> if you believe this is an error.</p>
 
-			<p class="block-subtitle">
+			<p>
 				<a href="<?php echo esc_url( $payment->get_recovery_url() ); ?>" class="button button--primary">Recover Purchase</a>
 			</p>
 		</div>
