@@ -66,8 +66,6 @@ comments_template( '/resources/views/partials/blog/comments.php' );
 
 endwhile;
 
-bigbox_partial( 'features-overview', [
-	'alt' => true,
-] );
+bigbox_partial( 'features-overview' );
 
 bigbox_view( 'global/footer' );

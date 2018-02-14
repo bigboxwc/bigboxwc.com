@@ -17,6 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 bigbox_view( 'global/header-min' );
 
 $payment = bigbox_edd_get_payment();
+$license = bigbox_edd_get_license();
 
 if ( ! $payment ) :
 	bigbox_partial( 'edd/payment/not-found' );
@@ -28,7 +29,9 @@ elseif ( 'publish' !== $payment->status ) :
 	endif;
 else :
 	bigbox_partial( 'edd/purchase-confirmation/hero' );
-	bigbox_partial( 'edd/purchase-confirmation/next-steps' );
+	bigbox_partial( 'edd/purchase-confirmation/next-steps', [
+		'license' => $license,
+	] );
 endif;
 
 bigbox_view( 'global/footer' );

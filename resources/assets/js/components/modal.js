@@ -1,58 +1,55 @@
 /**
  * External dependencies.
  */
+import $ from 'jquery';
 import 'bootstrap/js/dist/modal';
 
-(function(window, undefined){
-	window.wp       = window.wp || {};
-	const $         = window.jQuery;
-	const modalTmpl = wp.template('modal');
+window.wp       = window.wp || {};
+const modalTmpl = wp.template('modal');
 
-	// @todo only supports pages currently.
-	const showModal = function(options = {}) {
-		const $modal = $('#bigbox-ajax-modal');
-		const pages  = new wp.api.collections.Pages();
+// @todo only supports pages currently.
+const showModal = function(options = {}) {
+  const $modal = $('#bigbox-ajax-modal');
+  const pages  = new wp.api.collections.Pages();
 
-		pages.fetch({
-			data: {
-				slug: options.slug,
-			},
-			success: function(collection) {
-				if (collection.models[0]) {
-					const data   = collection.models[0].attributes;
-					const $modal = $(modalTmpl(data));
+  pages.fetch({
+    data: {
+      slug: options.slug,
+    },
+    success: function(collection) {
+      if (collection.models[0]) {
+        const data   = collection.models[0].attributes;
+        const $modal = $(modalTmpl(data));
 
-					// Show modal.
-					$modal.modal('show');
+        // Show modal.
+        $modal.modal('show');
 
-					// Keep only one instance in the DOM.
-					$modal.on('hidden.bs.modal', function() {
-						$modal.modal('dispose');
-						$modal.remove();
-					});
-				}
+        // Keep only one instance in the DOM.
+        $modal.on('hidden.bs.modal', function() {
+          $modal.modal('dispose');
+          $modal.remove();
+        });
+      }
 
-				return null;
-			},
-			error: function() {
-				return null;
-			}
-		});
+      return null;
+    },
+    error: function() {
+      return null;
+    }
+  });
 
-		return null;
-	}
-	
-	$(function($) {
-		$('.js-modal-trigger--ajax').on('click', function(e) {
-			e.preventDefault();
+  return null;
+}
 
-			const $link = $(this);
-			const slug  = $link.data('slug');
+$(function($) {
+  $('.js-modal-trigger--ajax').on('click', function(e) {
+    e.preventDefault();
 
-			return showModal({
-				slug,
-			});
-		});
-	});
+    const $link = $(this);
+    const slug  = $link.data('slug');
 
-})(window);
+    return showModal({
+      slug,
+    });
+  });
+});

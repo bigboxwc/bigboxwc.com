@@ -78,18 +78,23 @@ function bigbox_edd_allgood( $data ) {
  * @return false|EDD_Payment False if no payment is found.
  */
 function bigbox_edd_get_payment() {
-	$payment  = false;
-	$payments = edd_get_users_purchases( get_current_user_id(), 20, true, array( 'publish', 'pending', 'failed', 'abandoned', 'processing' ) );
+	$payment = wp_cache_get( 'payment', 'bigbox' );
 
-	if ( ! $payments ) {
-		return false;
-	}
+	if ( ! $payment ) {
+		$payments = edd_get_users_purchases( get_current_user_id(), 20, true, array( 'publish', 'pending', 'failed', 'abandoned', 'processing' ) );
 
-	// Assume we only have one... might chagne...
-	foreach ( $payments as $payment ) {
-		$payment = new EDD_Payment( $payment->ID );
+		if ( ! $payments ) {
+			return false;
+		}
 
-		continue;
+		// Assume we only have one... might chagne...
+		foreach ( $payments as $payment ) {
+			$payment = new EDD_Payment( $payment->ID );
+
+			continue;
+		}
+
+		wp_cache_set( 'payment', $payment, 'bigbox' );
 	}
 
 	return $payment;

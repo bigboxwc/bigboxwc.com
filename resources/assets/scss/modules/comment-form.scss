@@ -1,0 +1,11 @@
+.comment-form {
+  label {
+    @include form-label;
+  }
+
+  [type="text"],
+  [type="email"],
+  textarea {
+    @include form-input;
+  }
+}

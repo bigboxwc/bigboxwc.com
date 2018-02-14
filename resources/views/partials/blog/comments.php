@@ -24,8 +24,6 @@ endif;
 ?>
 
 
-<?php if ( have_comments() ) : ?>
-
 <div class="blog-post__comments block block--alt">
 	<div class="block-header">
 		<h3 class="block-title">
@@ -38,26 +36,16 @@ endif;
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-lg-8">
-				<?php wp_list_comments(); ?>
+				<?php
+				if ( have_comments() ) :
+					wp_list_comments();
+				endif;
+
+				if ( comments_open() ) :
+					comment_form();
+				endif;
+				?>
 			</div>
 		</div>
 	</div>
 </div>
-
-<?php
-endif;
-
-if ( comments_open() ) :
-?>
-
-<div class="blog-post__comments block">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-8">
-				<?php comment_form(); ?>
-			</div>
-		</div>
-	</div>
-</div>
-
-<?php endif; ?>
