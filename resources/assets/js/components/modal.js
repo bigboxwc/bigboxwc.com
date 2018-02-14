@@ -1,3 +1,7 @@
+/**
+ * External dependencies.
+ */
+
 (function(window, undefined){
 	window.wp = window.wp || {};
 	const $   = window.jQuery;
@@ -17,6 +21,7 @@
 				if (collection.models[0]) {
 					const data = collection.models[0].attributes;
 
+					console.log(data);
 				} else {
 					return null;
 				}
@@ -24,10 +29,6 @@
 			error: function() {
 				return null;
 			}
-		});
-
-		$modal.on('hidden.bs.modal', function() {
-			$modal.remove();
 		});
 
 		return null;
