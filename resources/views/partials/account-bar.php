@@ -16,6 +16,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( is_page( edd_get_option( 'purchase_page' ) ) ) :
 	return;
 endif;
+
+if ( ! is_user_logged_in() ) :
+	return;
+endif;
 ?>
 
 <div class="account-bar">

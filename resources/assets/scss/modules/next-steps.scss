@@ -21,8 +21,7 @@
   }
 
   a:not(.button) {
-    color: $brandColor;
-    border-bottom: 2px solid $brandColor;
+    @include link-focus;
   }
 }
 

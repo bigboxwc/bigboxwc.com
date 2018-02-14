@@ -4,6 +4,9 @@
 import $ from 'jquery';
 import Choices from 'choices.js';
 
+/**
+ * Create custom select boxes using Choices.js
+ */
 const $body     = $(document.body);
 const $document = $(document);
 

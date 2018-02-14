@@ -33,6 +33,23 @@
   }
 }
 
+@mixin button--secondary {
+  @include button;
+  color: $color-gray-700;
+  background-color: $color-gray-500;
+  background-image: linear-gradient(170deg, $color-gray-100, $color-gray-200);
+  box-shadow: 0 2px 4px rgba($color-gray-200, 0.10), 0 4px 10px rgba($color-gray-500, 0.10) !important; // [1]
+  border: 1px solid $color-gray-300;
+
+  &:hover {
+    color: $color-gray-700;
+    background-color: $color-gray-500;
+    background-image: linear-gradient(170deg, $color-gray-100, $color-gray-200);
+    box-shadow: 0 2px 4px rgba($color-gray-200, 0.20), 0 4px 10px rgba($color-gray-500, 0.20) !important; // [1]
+    border: 1px solid $color-gray-300;
+  }
+}
+
 // [1] Gutenberg adds their own !important declaration.
 @mixin button--blank {
   line-height: 1;

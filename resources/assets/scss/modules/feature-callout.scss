@@ -6,20 +6,6 @@
   .media {
     align-items: center;
   }
-
-  p {
-    color: $color-gray-500;
-
-    &:only-child,
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  a:not(.button) {
-    color: $brandColor;
-    border-bottom: 2px solid $brandColor;
-  }
 }
 
 .feature-callout__media {
@@ -38,6 +24,19 @@
 
 .feature-callout__content {
   margin: 0 3rem;
+
+  p {
+    color: $color-gray-500;
+
+    &:only-child,
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a:not(.button) {
+    @include link-focus;
+  }
 }
 
 .feature-callout__title {

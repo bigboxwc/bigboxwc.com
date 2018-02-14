@@ -8,10 +8,6 @@
   }
 
   a:not(.button) {
-    color: $brandColor;
-
-    &:hover {
-      border-bottom: 2px solid $brandColor;
-    }
+    @include link-focus;
   }
 }

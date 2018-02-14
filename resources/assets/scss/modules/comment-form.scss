@@ -3,9 +3,19 @@
     @include form-label;
   }
 
+  [type="url"],
   [type="text"],
   [type="email"],
   textarea {
     @include form-input;
   }
+}
+
+.comment-notes,
+.logged-in-as,
+.must-log-in,
+.form-allowed-tags {
+  text-align: center;
+  color: $color-gray-500;
+  margin-top: 0;
 }

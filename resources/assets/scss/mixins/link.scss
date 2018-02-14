@@ -1,0 +1,8 @@
+@mixin link-focus {
+  color: $brandColor;
+  border-bottom-color: $brandColor;
+
+  &:hover {
+    border-bottom-color: transparent;
+  }
+}

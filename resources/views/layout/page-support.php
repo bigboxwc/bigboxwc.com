@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-bigbox_view( 'global/header' );
+bigbox_view( 'global/header-min' );
 
 if ( ! is_user_logged_in() ) :
 ?>
@@ -35,11 +35,13 @@ else :
 		echo $allgood; // WPCS: XSS okay.
 	else : // All good in the hood.
 		the_post();
-
-		bigbox_partial( 'hero' );
 ?>
 
 <div class="block">
+	<div class="block-header">
+		<h3 class="block-title"><?php the_title(); ?></h3>
+	</div>
+
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-sm-12 col-md-10 col-lg-8">

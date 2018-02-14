@@ -1,13 +1,11 @@
-(function(window, undefined){
-	const $ = window.jQuery;
-	
-	$(function($) {
-    const $toggle = $('.faq__title');
+/**
+ * Toggle FAQ items.
+ */
 
-    $toggle.on('click', function(e) {
-      e.preventDefault();
+const $toggle = $('.faq__title');
 
-      $(this).parents('.faq').toggleClass('faq--active');
-    });
-  });
-})(window);
+$toggle.on('click', function(e) {
+  e.preventDefault();
+
+  $(this).parents('.faq').toggleClass('faq--active');
+});

@@ -6,6 +6,22 @@
   }
 }
 
+.ginput_container {
+  position: relative;
+}
+
+.ginput_counter {
+  color: $color-gray-300;
+  position: absolute;
+  top: -23px;
+  right: 0;
+  font-size: 13px;
+
+  &.warningTextareaInfo {
+    color: $color-red;
+  }
+}
+
 .gform_confirmation_message {
   @extend .notice;
   @extend .notice--success;
@@ -26,6 +42,8 @@
   }
 }
 
+.ginput_container_website,
+.ginput_container_password,
 .ginput_container_email,
 .ginput_container_textarea,
 .ginput_container_text {
@@ -50,8 +68,35 @@
   margin-top: 2rem;
 }
 
+.gfield_description,
 .validation_message {
   font-size: 15px;
   opacity: 0.60;
-  padding: 10px 0 0;
+  padding: 5px 0 0;
+}
+
+.gfield_html {
+  a {
+    @include link-focus;
+  }
+}
+
+.gform_drop_area {
+  font-size: 16px;
+  color: $color-gray-500;
+  text-align: center;
+  padding: 1.5rem;
+  background: $color-gray-100;
+  border: 2px dashed $color-gray-300;
+  border-radius: 3px;
+
+  .button {
+    @include button--secondary;
+    @include button--size-sm;
+  }
+}
+
+.gform_drop_instructions {
+  display: block;
+  margin-bottom: 0.5rem;
 }

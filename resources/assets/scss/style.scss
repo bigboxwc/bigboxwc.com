@@ -42,6 +42,7 @@ $choices-keyline-color: #ddd;
 // Mixins
 @import 'mixins/button';
 @import 'mixins/form';
+@import 'mixins/link';
 
 // HTML Elements
 @import 'elements/html';
@@ -123,6 +124,7 @@ $choices-keyline-color: #ddd;
 @import 'modules/blog-post';
 @import 'modules/hentry';
 @import 'modules/comment-form';
+@import 'modules/comment-list';
 @import 'modules/from-the-blog';
 
 // Checkout

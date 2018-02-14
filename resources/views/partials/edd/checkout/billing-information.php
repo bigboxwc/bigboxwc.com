@@ -67,7 +67,7 @@ $customer['address'] = apply_filters( 'edd_checkout_billing_details_address', $c
 		<p class="form-row form-row--half">
 			<label for="billing_country" class="form-label"><?php esc_html_e( 'Country', 'bigbox' ); ?></label>
 
-			<select name="billing_country" id="billing_conutry" class="billing_country edd-select<?php echo esc_attr( edd_field_is_required( 'billing_country' ) ? ' required' : null ); ?>" <?php echo esc_attr( edd_field_is_required( 'billing_country' ) ? ' required ' : null ); ?>>
+			<select name="billing_country" id="edd_address_country" class="billing_country edd-select<?php echo esc_attr( edd_field_is_required( 'billing_country' ) ? ' required' : null ); ?>" <?php echo esc_attr( edd_field_is_required( 'billing_country' ) ? ' required ' : null ); ?>>
 				<?php
 				$selected_country = edd_get_shop_country();
 

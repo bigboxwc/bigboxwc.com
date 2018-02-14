@@ -36,13 +36,27 @@ endif;
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-lg-8">
-				<?php
-				if ( have_comments() ) :
-					wp_list_comments();
-				endif;
+				<?php if ( have_comments() ) : ?>
+				<ol class="comment-list">
+					<?php
+					wp_list_comments( [
+						'avatar_size' => 100,
+						'style'       => 'ol',
+						'short_ping'  => true,
+					] );
+					?>
+				</ol>
 
+				<?php the_comments_pagination(); ?>
+
+				<?php endif; ?>
+
+				<?php
 				if ( comments_open() ) :
-					comment_form();
+					comment_form( [
+						'title_reply_before' => '<div clas="block-header"><h3 class="block-title">',
+						'title_reply_after'  => '</h3></div>',
+					] );
 				endif;
 				?>
 			</div>
