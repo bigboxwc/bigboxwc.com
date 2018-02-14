@@ -37,11 +37,31 @@ else :
 		the_post();
 ?>
 
-<div class="block">
-	<div class="block-header">
-		<h3 class="block-title"><?php the_title(); ?></h3>
-	</div>
+<div class="block block--alt feature-callout">
+	<div class="container media">
 
+		<div class="feature-callout__media">
+			<?php bigbox_svg( 'graphic-programmer' ); ?>
+		</div>
+
+		<div class="feature-callout__content">
+			<h3 class="feature-callout__title">🔎 Review the Documentation</h3>
+
+			<p>Before submitting a ticket please search the documentation.</p>
+
+			<form>
+				<p class="form-group">
+					<strong>Find Answers:</strong><br />
+					<input type"text" class="form-input next-steps__license-key" value="" placeholder="Installing a WordPress theme..." />
+					<input type="submit" value="Search" class="button button--primary button--size-sm" />
+				</p>
+			</form>
+		</div>
+
+	</div>
+</div>
+
+<div class="block">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-sm-12 col-md-10 col-lg-8">

@@ -1,5 +1,9 @@
 .form-input {
   @include form-input;
+
+  + .button {
+    margin-left: 1rem;
+  }
 }
 
 textarea,
@@ -15,13 +19,6 @@ textarea,
 
 button {
   @include button;
-}
-
-[type="submit"] {
-  @include button--primary;
-  width: 100%;
-  padding-top: 18px;
-  padding-bottom: 18px;
 }
 
 [type="checkbox"] {
