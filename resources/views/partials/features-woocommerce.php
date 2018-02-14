@@ -33,10 +33,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</li>
 
 			<li class="feature-item feature-item--overlay col-lg-3">
-				<div class="feature-item__content">
+				<a href="/why-use-woocommerce/one-click-refunds/" data-slug="one-click-refunds" class="feature-item__content js-modal-trigger--ajax">
 					<?php bigbox_svg( 'illustration-hand' ); ?>
 					<h4>One-Click Refunds</h4>
-				</div>
+				</a>
 			</li>
 
 			<li class="feature-item feature-item--overlay col-lg-3">
