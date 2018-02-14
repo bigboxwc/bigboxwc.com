@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="container media">
 
 		<div class="feature-callout__media">
-			<?php bigbox_svg( 'graphic-programmer' ); ?>
+			<?php bigbox_svg( 'graphic-hospital' ); ?>
 		</div>
 
 		<div class="feature-callout__content">
