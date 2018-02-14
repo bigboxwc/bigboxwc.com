@@ -66,6 +66,11 @@
 
 .gform_footer {
   margin-top: 2rem;
+
+  .button {
+    @include button--primary;
+    @include button--size-block;
+  }
 }
 
 .gfield_description,

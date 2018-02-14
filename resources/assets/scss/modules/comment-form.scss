@@ -19,3 +19,8 @@
   color: $color-gray-500;
   margin-top: 0;
 }
+
+.form-submit [type="submit"] {
+  @include button--primary;
+  @include button--size-block;
+}
