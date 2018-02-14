@@ -1,6 +1,6 @@
 <?php
 /**
- * Hero: Features
+ * CTA: Home
  *
  * @since 1.0.0
  * @version 1.0.0
@@ -15,18 +15,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<div class="cta hero-cta hero-cta--center block">
+<div class="cta hero-cta block">
 	<div class="container">
 
 		<div class="cta__content">
-			<h2 class="cta__title">A WooCommerce Theme That<br />Matches Your Warehouse</h2>
-			<div class="cta__description"><?php the_content(); ?></div>
+			<h2 class="cta__title">WooCommerce Theme for Large Product Catalogs</h2>
+			<div class="cta__description"><p>Easily manage and scale large product catalogs for WooCommerce.</p></div>
 
 			<a href="/buy/" class="cta__button button">Get BigBox Now</a>
-			<a href="/demo/" class="cta__more">View Demo &rarr;</a>
+			<a href="/features/" class="cta__more">Learn More &rarr;</a>
 		</div>
-
-		<div class="hero-cta__image-placeholder"></div>
 
 	</div>
 </div>

@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-		<footer class="mastfoot">
+		<footer class="mastfoot block">
 			<div class="container">
 
 				<div class="colophon row">

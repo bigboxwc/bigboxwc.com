@@ -23,7 +23,7 @@
   @include button;
   color: #fff;
   background-color: $brandColor;
-  background-image: linear-gradient(170deg, $brandColor, lighten($brandColor, 10%));
+  background-image: linear-gradient(170deg, $brandColor, lighten($brandColor, 5%));
   box-shadow: 0 2px 4px rgba($brandColor, 0.10), 0 4px 10px rgba($brandColor, 0.30) !important; // [1]
 
   &:hover {

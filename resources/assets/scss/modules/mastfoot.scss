@@ -1,11 +1,15 @@
 .mastfoot {
-  margin-top: 3rem;
+  margin-bottom: 0;
   padding: 2rem 0;
   background: #fff;
   border-top: 1px solid #eee;
 }
 
 .block--alt + .mastfoot {
-  margin-top: -3rem;
+  margin-top: -5rem;
   border-top: 0;
+}
+
+.block--alt + .block--alt + .mastfoot {
+  border-top: 1px solid #eee;
 }

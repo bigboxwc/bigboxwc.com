@@ -1,3 +1,11 @@
+.blog-post {
+  margin-bottom: 5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .blog-post [class^="align"] img {
   display: block;
   width: 100%;

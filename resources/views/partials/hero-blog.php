@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<div class="cta hero-cta blog-hero hero-cta--center">
+<div class="cta hero-cta blog-hero hero-cta--center block">
 	<div class="container">
 
 		<div class="cta__content cta__content--blog">

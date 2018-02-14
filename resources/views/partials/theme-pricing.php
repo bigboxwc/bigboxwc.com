@@ -16,12 +16,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <div id="pricing" class="block block--alt">
-	<div class="container">
+	<div class="block-header">
+		<h3 class="block-title">Get Started Right Now</h3>
+		<p class="block-subtitle">Join the thousands of people running large-scale WooCommerce-powered websites.</p>
+	</div>
 
-		<div class="block-header">
-			<h3 class="block-title">Get Started Right Now</h3>
-			<p class="block-subtitle">Join the thousands of people running large-scale WooCommerce-powered websites.</p>
-		</div>
+	<div class="container">
 
 		<?php bigbox_partial( 'price-table' ); ?>
 

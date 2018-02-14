@@ -1,39 +1,23 @@
 .block {
-  margin: 3rem 0;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .block--alt {
-  padding: 3rem 0;
+  padding: 5rem 0;
   background: $color-gray-100;
   border: 1px solid $color-gray-200;
   border-width: 1px 0;
+
+  + .block--alt {
+    margin-top: -5rem;
+    background: none;
+    border: 0;
+  }
 }
 
 // When used as hero
 .brand-bar + .block--alt {
   margin-top: 0;
   border-top: 0;
-}
-
-.block--highlight {
-  color: #fff;
-  margin: 0;
-  padding: 3rem 0;
-  position: relative;
-  overflow: visible;
-  background: $brandColor;
-
-  a {
-    color: #fff;
-    border-bottom: 2px solid #fff;
-  }
-
-  .media {
-    position: relative;
-    z-index: 2;
-  }
-}
-
-.block--highlight-alt {
-  background: $brandColor;
 }

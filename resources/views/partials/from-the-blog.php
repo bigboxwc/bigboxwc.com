@@ -16,6 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $latest = new WP_Query( [
 	'posts_per_page' => 3,
+	'no_found_rows'  => true,
 ] );
 
 if ( ! $latest->have_posts() ) :
@@ -23,7 +24,7 @@ if ( ! $latest->have_posts() ) :
 endif;
 ?>
 
-<div id="from-the-blog" class="block from-the-blog">
+<div class="block from-the-blog">
 	<div class="container">
 
 		<div class="block-header">
@@ -44,8 +45,8 @@ endif;
 		</div>
 
 	</div>
-</div>
 
-<div class="block-cta">
-	<a href="/blog/" class="button button--primary">Discover More Resources</a>
+	<div class="block-cta">
+		<a href="/blog/" class="button button--primary">Discover More Resources</a>
+	</div>
 </div>

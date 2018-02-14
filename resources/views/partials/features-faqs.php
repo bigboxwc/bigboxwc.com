@@ -21,13 +21,12 @@ $faqs = get_posts( [
 ?>
 
 <div id="faqs" class="block">
+	<div class="block-header">
+		<h3 class="block-title">Frequenty Asked Questions</h3>
+		<p class="block-subtitle">Still have questions about the theme? We've answered some of the most common questions below.</p>
+	</div>
+
 	<div class="container">
-
-		<div class="block-header">
-			<h3 class="block-title">Frequenty Asked Questions</h3>
-			<p class="block-subtitle">Still have questions about the theme? We've answered some of the most common questions below.</p>
-		</div>
-
 		<ul class="faqs">
 
 			<?php foreach ( $faqs as $faq ) : ?>
@@ -46,7 +45,6 @@ $faqs = get_posts( [
 			<?php endforeach; ?>
 
 		</ul>
-
 	</div>
 
 	<div class="block-cta">

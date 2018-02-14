@@ -1,28 +1,24 @@
+// @todo cleanup
 .feature-callout {
-  padding: 3rem 0;
+  margin: 0;
+  padding: 3rem 0 !important;
 
   .media {
     align-items: center;
   }
 
-  .block-title,
-  p {
-    margin-left: 3rem;
-    margin-right: 3rem;
-    max-width: none;
-  }
-
   p {
     color: $color-gray-500;
+
+    &:only-child,
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   a:not(.button) {
     color: $brandColor;
     border-bottom: 2px solid $brandColor;
-  }
-
-  + .feature-callout {
-    margin: 0;
   }
 }
 
@@ -34,8 +30,17 @@
     width: 400px;
     height: 400px;
   }
+
+  .feature-callout--alt & {
+    order: 2;
+  }
+}
+
+.feature-callout__content {
+  margin: 0 3rem;
 }
 
 .feature-callout__title {
-  margin-bottom: 1rem;
+  font: 700 30px/1.25 'Lora', serif;
+  margin: 0 auto 0.2rem;
 }

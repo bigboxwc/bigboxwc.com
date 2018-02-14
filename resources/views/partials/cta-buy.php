@@ -1,6 +1,6 @@
 <?php
 /**
- * CTA: Home
+ * CTA: Buy
  *
  * @since 1.0.0
  * @version 1.0.0
@@ -15,12 +15,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<div class="cta hero-cta">
+<div class="cta hero-cta hero-cta--mini">
 	<div class="container">
 
 		<div class="cta__content">
-			<h2 class="cta__title"><?php the_title(); ?></h2>
-			<div class="cta__description"><?php the_content(); ?></div>
+			<h2 class="cta__title">WooCommerce Theme for Large Product Catalogs</h2>
+			<div class="cta__description"><p>Easily manage and scale large product catalogs for WooCommerce.</p></div>
 
 			<a href="/buy/" class="cta__button button">Get BigBox Now</a>
 			<a href="/features/" class="cta__more">Learn More &rarr;</a>

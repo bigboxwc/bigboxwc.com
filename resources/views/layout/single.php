@@ -20,7 +20,7 @@ while ( have_posts() ) :
 	the_post();
 ?>
 
-<div class="cta hero-cta blog-hero hero-cta--center">
+<div class="cta hero-cta blog-hero hero-cta--center block">
 	<div class="container">
 
 		<div class="cta__content cta__content--blog">
@@ -43,11 +43,11 @@ while ( have_posts() ) :
 	</div>
 </div>
 
-<div class="container">
+<div class="container block">
 	<div class="row justify-content-center">
 		<div class="col-lg-8">
 
-			<div class="block blog-post">
+			<div class="blog-post">
 				<div class="alignwide">
 					<?php the_post_thumbnail( 'large' ); ?>
 				</div>
@@ -62,6 +62,12 @@ while ( have_posts() ) :
 </div>
 
 <?php
+comments_template( '/resources/views/partials/blog/comments.php' );
+
 endwhile;
+
+bigbox_partial( 'features-overview', [
+	'alt' => true,
+] );
 
 bigbox_view( 'global/footer' );

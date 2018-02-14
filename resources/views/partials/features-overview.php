@@ -15,13 +15,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<div id="features" class="block">
-	<div class="container features__container">
+<div class="block block--<?php echo esc_attr( isset( $alt ) ? 'alt' : 'standard' ); ?>">
+	<div class="block-header">
+		<h3 class="block-title">Build Your eCommerce Powerhouse</h3>
+		<p class="block-subtitle">Create a store that matches your brand, your scale, and your specific needs.</p>
+	</div>
 
-		<div class="block-header">
-			<h3 class="block-title">Build Your eCommerce Powerhouse</h3>
-			<p class="block-subtitle">Create a store that matches your brand, your scale, and your specific needs.</p>
-		</div>
+	<div class="container features__container">
 
 		<ul class="feature-list">
 
@@ -88,8 +88,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</ul>
 
 	</div>
-</div>
 
-<div class="block-cta">
-	<a href="/buy/" class="button button--primary">Get BigBox Now</a> &nbsp; &nbsp; &nbsp; <a href="/demo/">View Demo &rarr;</a>
+	<div class="block-cta">
+		<a href="/buy/" class="button button--primary">Get BigBox Now</a> &nbsp; &nbsp; &nbsp; <a href="/demo/">View Demo &rarr;</a>
+	</div>
 </div>

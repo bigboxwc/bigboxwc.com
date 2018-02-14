@@ -23,12 +23,12 @@ $woocommerce_features = get_posts( [
 ?>
 
 <div id="features" class="block">
-	<div class="container features__container">
+	<div class="block-header">
+		<h3 class="block-title">Why Use WooCommerce?</h3>
+		<p class="block-subtitle">WooCommerce is an open-source, completely customizable eCommerce platform for entrepreneurs worldwide.</p>
+	</div>
 
-		<div class="block-header">
-			<h3 class="block-title">Why Use WooCommerce?</h3>
-			<p class="block-subtitle">WooCommerce is an open-source, completely customizable eCommerce platform for entrepreneurs worldwide.</p>
-		</div>
+	<div class="container features__container">
 
 		<ul class="feature-list">
 

@@ -19,7 +19,7 @@ bigbox_view( 'global/header' );
 while ( have_posts() ) :
 	the_post();
 
-	bigbox_partial( 'cta--home' );
+	bigbox_partial( 'cta-home' );
 	bigbox_partial( 'features-overview' );
 	bigbox_partial( 'features-primary' );
 	bigbox_partial( 'testimonial' );

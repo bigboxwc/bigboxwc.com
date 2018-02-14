@@ -18,10 +18,11 @@ bigbox_view( 'global/header' );
 
 bigbox_partial( 'hero-blog' ); ?>
 
-<div class="container">
-	<div class="row justify-content-center">
+<div class="block">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-8">
 
-		<div class="col-lg-8">
 			<?php
 			while ( have_posts() ) :
 				the_post();
@@ -29,8 +30,8 @@ bigbox_partial( 'hero-blog' ); ?>
 				bigbox_partial( 'blog/content' );
 			endwhile;
 			?>
+			</div>
 		</div>
-
 	</div>
 </div>
 
