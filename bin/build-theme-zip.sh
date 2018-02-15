@@ -72,7 +72,8 @@ zip -r bigbox.zip \
 	style.css \
 	app \
 	bootstrap \
-	resources \
+	resources/languages \
+	resources/views \
 	public \
 	vendor \
 	LICENSE \
