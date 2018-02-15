@@ -15,16 +15,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $logged_in = is_user_logged_in();
 $customer  = EDD()->session->get( 'customer' );
+
+// @codingStandardsIgnoreStart
 $customer  = wp_parse_args( $customer, [
 	'address' => [
-		'line1'   => '',
+		'line1'   => isset ( $_POST['card_address'] ) ? $_POST['card_address'] : null,
 		'line2'   => '',
-		'city'    => '',
-		'zip'     => '',
-		'state'   => '',
-		'country' => '',
+		'city'    => isset ( $_POST['card_city'] ) ? $_POST['card_city'] : null,
+		'zip'     => isset ( $_POST['card_zip'] ) ? $_POST['card_zip'] : null,
+		'state'   => isset ( $_POST['card_state'] ) ? $_POST['card_state'] : null,
+		'country' => isset ( $_POST['billing_country'] ) ? $_POST['billing_country'] : null,
 	],
 ] );
+// @codingStandardsIgnoreEnd
 
 $customer['address'] = array_map( 'sanitize_text_field', $customer['address'] );
 
