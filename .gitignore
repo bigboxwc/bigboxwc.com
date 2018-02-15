@@ -4,6 +4,5 @@
 *.zip
 node_modules
 public
-bigbox
 vendor/autoload.php
 vendor/composer
