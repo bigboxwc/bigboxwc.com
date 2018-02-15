@@ -79,6 +79,19 @@ $searchField.on('keyup', debounce(function() {
 }, 300));
 
 /**
+ * Close results clicking elsewhere.
+ *
+ * @since 1.0.0
+ */
+$searchResults.click(function(e) {
+	e.stopPropagation();
+});
+
+$(window).on('click', function() {
+	$searchResults.fadeOut();
+});
+
+/**
  * Connect to Gravity Forms.
  *
  * Only enable the first "Reproduction Steps" checkbox after a search.
