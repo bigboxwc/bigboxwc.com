@@ -1,9 +1,17 @@
 .masthead {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  text-align: center;
   color: #fff;
   padding: 1em 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  @include media-breakpoint-up(lg) {
+    text-align: left;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .masthead--min {

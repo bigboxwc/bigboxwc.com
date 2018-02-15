@@ -11,7 +11,12 @@
 .feature-callout__media {
   margin: 0 3rem;
   max-width: 400px;
-  
+  display: none;
+
+  @include media-breakpoint-up(xl) {
+    display: block;
+  }
+
   .icon {
     width: 400px;
     height: 400px;
@@ -23,7 +28,9 @@
 }
 
 .feature-callout__content {
-  margin: 0 3rem;
+  @include media-breakpoint-up(xl) {
+    margin: 0 3rem;
+  }
 
   p {
     color: $color-gray-500;

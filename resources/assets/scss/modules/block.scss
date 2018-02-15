@@ -1,18 +1,31 @@
 .block {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+
+  @include media-breakpoint-up(xl) {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
 }
 
 .block--alt {
-  padding: 5rem 0;
+  padding: 3rem 0;
   background: $color-gray-100;
   border: 1px solid $color-gray-200;
   border-width: 1px 0;
 
+  @include media-breakpoint-up(xl) {
+    padding: 5rem 0;
+  }
+
   + .block--alt {
-    margin-top: -5rem;
+    margin-top: -3rem;
     background: none;
     border: 0;
+
+    @include media-breakpoint-up(xl) {
+      margin-top: -5rem;
+    }
   }
 }
 

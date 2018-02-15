@@ -52,7 +52,7 @@ else :
 			<p>Before submitting a ticket please search the documentation.</p>
 
 			<form class="docs-search" method="GET" action="/">
-				<p class="form-group">
+				<p class="form-row">
 					<strong>Find Answers:</strong><br />
 					<input type"text" id="docs-search-keywords" class="form-input docs-search__keywords" value="" placeholder="Installing a WordPress theme..." />
 					<input type="submit" value="Search" class="button button--primary button--size-sm" />
@@ -68,7 +68,7 @@ else :
 <div class="block">
 	<div class="container">
 		<div class="row justify-content-center">
-			<div class="col-sm-12 col-md-10 col-lg-8">
+			<div class="col-sm-12 col-xl-8">
 				<?php the_content(); ?>
 			</div>
 		</div>

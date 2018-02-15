@@ -11,7 +11,9 @@
   }
 
   .cta__title {
-    font-size: 48px;
+    @include media-breakpoint-up(lg) {
+      font-size: 48px;
+    }
   }
 
   img {

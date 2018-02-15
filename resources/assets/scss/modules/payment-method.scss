@@ -15,8 +15,11 @@
 #edd-payment-mode-wrap {
   display: flex;
   justify-content: space-between;
-  width: 50%;
   margin: 1rem -10px 2rem;
+
+  @include media-breakpoint-up(lg) {
+    width: 50%;
+  }
 }
 
 .edd-gateway-option {
@@ -48,4 +51,8 @@
 .edd-gateway-option-selected {
   color: $brandColor;
   border-color: rgba($brandColor, 0.80);
+}
+
+#edd_purchase_submit .button {
+  @include button--size-block;
 }

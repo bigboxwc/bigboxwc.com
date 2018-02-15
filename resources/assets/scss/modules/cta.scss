@@ -2,7 +2,10 @@
 	color: #fff;
 	background: $brandColor;
 	position: relative;
-  padding-top: 72px;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 72px;
+  }
 
 	.container {
 		height: 100%;
@@ -10,13 +13,21 @@
 }
 
 .cta__content {
-	padding: 5rem 0;
-	max-width: 90%;
+  padding: 3rem 0;
+  max-width: none;
+
+  @include media-breakpoint-up(lg) {
+    max-width: 90%;
+    padding: 5rem 0;
+  }
 }
 
 .cta__content--blog {
   padding: 3rem;
-  max-width: 60%;
+
+  @include media-breakpoint-up(lg) {
+    max-width: 60%;
+  }
 }
 
 .cta__content--fluid {
@@ -28,9 +39,17 @@
 } 
 
 .cta__title {
-  font: 700 68px/1 'Lora', serif;
+  font: 700 38px/1 'Lora', serif;
   text-shadow: 0 1px 1px rgba($brandColor, 0.10);
   margin: 0;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 50px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 68px;
+  }
 }
 
 .cta__description {
@@ -39,10 +58,13 @@
 
 .cta__button {
   color: $brandColor;
-  margin-top: 2rem;
   background-color: #fff;
   background-image: none;
   border-color: #fff;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 2rem;
+  }
 
   &:hover {
     color: $brandColor;
@@ -60,12 +82,22 @@
 }
 
 .cta--mini {
+  text-align: center;
   padding-top: 0;
+
+  @include media-breakpoint-up(lg) {
+    text-align: left;
+  }
 }
 
 // [1] Bring up when next to another normal block.
-.block + .cta--mini {
-  margin-top: -5rem; // [1]
+.block--alt + .cta--mini {
+  margin-top: -3rem;
+
+
+  @include media-breakpoint-up(xl) {
+    margin-top: -5rem; // [1]
+  }
 }
 
 .cta__content--mini {

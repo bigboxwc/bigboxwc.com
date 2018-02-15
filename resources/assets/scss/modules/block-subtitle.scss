@@ -1,7 +1,10 @@
 .block-subtitle {
   color: $color-gray-500;
-  max-width: 60%;
   margin: 0 auto;
+
+  @include media-breakpoint-up(lg) {
+    max-width: 60%;
+  }
 
   + .block-subtitle {
     margin-top: 1rem;

@@ -1,9 +1,13 @@
 .access-item {
   color: #fff;
   font-size: 15px;
-  margin: 0 20px;
+  margin: 0 10px;
   border-bottom: 2px solid transparent;
   display: inline-block;
+
+  @include media-breakpoint-up(md) {
+    margin: 0 20px;
+  }
 
   &:last-child {
     margin-right: 0;

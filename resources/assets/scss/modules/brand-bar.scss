@@ -1,7 +1,12 @@
 .brand-bar {
-  margin-bottom: -72px;
+  background: $brandColor;
   position: relative;
   z-index: 2;
+
+  @include media-breakpoint-up(md) {
+    background: none;
+    margin-bottom: -72px;
+  }
 }
 
 .brand-bar--static {

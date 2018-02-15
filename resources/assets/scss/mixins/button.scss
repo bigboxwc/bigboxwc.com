@@ -1,8 +1,8 @@
 @mixin button {
-  font: 400 18px/1.5 Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font: 400 16px/1.5 Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   cursor: pointer;
+  padding: 13px 20px;
   border: 0;
-  padding: 17px 35px;
   border-radius: 3px;
   transition: transform 0.10s ease-in-out, box-shadow 0.2s ease-in;
   display: inline-flex;
@@ -10,6 +10,11 @@
   justify-content: center;
   position: relative;
   z-index: 2;
+
+  @include media-breakpoint-up(md) {
+    font-size: 18px;
+    padding: 17px 35px;
+  }
 
   &:hover {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
