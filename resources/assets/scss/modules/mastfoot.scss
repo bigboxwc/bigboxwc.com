@@ -5,13 +5,10 @@
   border-top: 1px solid #eee;
 }
 
-.block--alt + .mastfoot {
-  margin-top: 0;
-  border-top: 0;
-}
-
+.block--alt + .mastfoot,
 .cta + .mastfoot {
   margin-top: -5rem;
+  border-top: 0;
 }
 
 .block--alt + .block--alt + .mastfoot {

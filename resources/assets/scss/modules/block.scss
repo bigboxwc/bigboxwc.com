@@ -29,6 +29,10 @@
   }
 }
 
+.block--highlight {
+  background-color: $brandColor;
+}
+
 // When used as hero
 .brand-bar + .block--alt {
   margin-top: 0;

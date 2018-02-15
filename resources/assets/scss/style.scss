@@ -71,6 +71,10 @@ $choices-keyline-color: #ddd;
 @import 'modules/block-title';
 @import 'modules/block-subtitle';
 
+// Alerts
+@import 'modules/notices';
+@import 'modules/notice';
+
 // Header
 @import 'modules/masthead';
 @import 'modules/account-bar';
@@ -102,9 +106,8 @@ $choices-keyline-color: #ddd;
 @import 'modules/faqs';
 @import 'modules/faq';
 
-// Alerts
-@import 'modules/notices';
-@import 'modules/notice';
+// Testimonials
+@import 'modules/testimonials';
 
 // Forms
 @import 'modules/form-row';
