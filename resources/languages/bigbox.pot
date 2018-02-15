@@ -9,8 +9,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2018-02-15T19:11:59+00:00\n"
-"PO-Revision-Date: 2018-02-15T19:11:59+00:00\n"
+"POT-Creation-Date: 2018-02-15T19:26:41+00:00\n"
+"PO-Revision-Date: 2018-02-15T19:26:41+00:00\n"
 "X-Domain: bigbox\n"
 
 #: app/integrations/easydigitaldownloads/template-functions.php:36
