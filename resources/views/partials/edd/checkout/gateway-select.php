@@ -38,10 +38,11 @@ $chosen_gateway = edd_get_chosen_gateway();
 							$checked_class = $checked ? ' edd-gateway-option-selected' : '';
 						?>
 
-							<label for="edd-gateway-<?php echo esc_attr( $gateway_id ); ?>" class="edd-gateway-option<?php echo esc_attr( $checked_class ); ?>" id="edd-gateway-option-<?php echo esc_attr( $gateway_id ); ?>">
+							<label for="edd-gateway-<?php echo esc_attr( $gateway_id ); ?>" class="edd-gateway-option edd-gateway-option--<?php echo esc_attr( $gateway_id ); ?><?php echo esc_attr( $checked_class ); ?>" id="edd-gateway-option-<?php echo esc_attr( $gateway_id ); ?>" aria-title="Click to pay with <?php echo esc_attr( $label ); ?>">
 								<input type="radio" name="payment-mode" class="edd-gateway" id="edd-gateway-<?php echo esc_attr( $gateway_id ); ?>" value="<?php echo esc_attr( $gateway_id ); ?>" <?php echo esc_attr( $checked ); ?> />
 
-								<?php echo esc_html( $label ); ?>
+								<span><?php echo esc_html( $label ); ?></span>
+								<?php bigbox_svg( 'graphic-' . $gateway_id ); ?>
 							</label>
 
 						<?php
@@ -62,6 +63,8 @@ $chosen_gateway = edd_get_chosen_gateway();
 				<div id="edd_purchase_submit">
 					<?php echo edd_checkout_button_purchase(); // @codingStandardsIgnoreLine ?>
 				</div>
+
+				<p class="edd-purchase-terms">By clicking "Purchase", you agree to the <strong>BigBox</strong> <a href="/tos">Terms of Service</a> and <a href="/privacy-policty">Privacy Policy</a>.</p>
 
 			</div>
 		</div>

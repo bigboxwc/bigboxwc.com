@@ -16,10 +16,6 @@
   display: flex;
   justify-content: space-between;
   margin: 1rem -10px 2rem;
-
-  @include media-breakpoint-up(lg) {
-    width: 50%;
-  }
 }
 
 .edd-gateway-option {
@@ -48,6 +44,37 @@
   }
 }
 
+.edd-gateway-option--stripe {
+  &.edd-gateway-option-selected {
+    color: #6771e5;
+    border-color: #6771e5;
+  }
+
+  svg {
+    width: 119px;
+    height: 26px;
+  }
+
+  span {
+    margin-right: 1rem;
+  }
+}
+
+.edd-gateway-option--paypal {
+  &.edd-gateway-option-selected {
+    border-color: #003087;
+  }
+
+  svg {
+    width: 124px;
+    height: 33px;
+  }
+
+  span {
+    display: none;
+  }
+}
+
 .edd-gateway-option-selected {
   color: $brandColor;
   border-color: rgba($brandColor, 0.80);
@@ -55,4 +82,11 @@
 
 #edd_purchase_submit .button {
   @include button--size-block;
+}
+
+.edd-purchase-terms {
+  color: $color-gray-500;
+  text-align: center;
+  font-size: 15px;
+  margin: 1.5rem 0;
 }
