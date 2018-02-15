@@ -40,6 +40,8 @@ bigbox_view( 'global/header-min' ); ?>
 
 		<div class="row justify-content-center">
 			<div id="edd_checkout_wrap" class="col-lg-8">
+				<?php do_action( 'edd_print_errors' ); ?>
+
 				<div id="edd_checkout_form_wrap">
 
 					<form id="edd_purchase_form" class="edd_form" action="<?php echo esc_attr( $form_action ); ?>" method="POST">
