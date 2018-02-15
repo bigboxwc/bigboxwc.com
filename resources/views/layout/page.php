@@ -14,15 +14,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-bigbox_view( 'global/header' );
+bigbox_view( 'global/header', [
+	'min' => true,
+] );
 
 while ( have_posts() ) :
 	the_post();
-
-	bigbox_partial( 'hero' );
 ?>
 
 <div class="block">
+	<div class="block-header">
+		<h3 class="block-title"><?php the_title(); ?></h3>
+	</div>
+
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-sm-12 col-md-10 col-lg-8">

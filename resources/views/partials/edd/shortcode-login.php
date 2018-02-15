@@ -46,7 +46,7 @@ if ( ! is_user_logged_in() ) :
 					<input type="hidden" name="edd_redirect" value="<?php echo esc_url( $edd_login_redirect ); ?>"/>
 					<input type="hidden" name="edd_login_nonce" value="<?php echo esc_attr( wp_create_nonce( 'edd-login-nonce' ) ); ?>"/>
 					<input type="hidden" name="edd_action" value="user_login"/>
-					<input id="edd_login_submit" type="submit" class="edd-submit" value="<?php esc_attr_e( 'Sign In', 'bigbox' ); ?>"/>
+					<input id="edd_login_submit" type="submit" class="button button--size-block" value="<?php esc_attr_e( 'Sign In', 'bigbox' ); ?>"/>
 				</p>
 
 				<p class="form-row form-row--actions">

@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 bigbox_view( 'global/header', [
-	'min' => $true,
+	'min' => true,
 ] );
 
 if ( ! is_user_logged_in() ) :

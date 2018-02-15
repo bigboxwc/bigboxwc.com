@@ -26,10 +26,10 @@ bigbox_view( 'global/header', [
 			<?php bigbox_svg( 'graphic-chip-head' ); ?>
 		</div>
 
-		<div class="block-header block-header--left media-body">
-			<h3 class="block-title">😢 Page Not Found</h3>
+		<div class="feature-callout__content">
+			<h3 class="feature-callout__title">😢 Page Not Found</h3>
 
-			<p class="block-subtitle">Uh oh! Please <a href="/contact/">contact support</a> if you believe this is an error. You can also <a href="/features/">read more about BigBox for WooCommerce</a>.</p>
+			<p>Uh oh! Please <a href="/contact/">contact support</a> if you believe this is an error. You can also <a href="/features/">read more about BigBox for WooCommerce</a>.</p>
 		</div>
 
 	</div>

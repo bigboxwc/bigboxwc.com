@@ -30,14 +30,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<body <?php body_class(); ?>>
 
-		<?php bigbox_partial( 'account-bar' ); ?>
-
 		<div class="brand-bar <?php echo esc_attr( isset( $min ) && $min ? 'brand-bar--static' : null ); ?>">
 			<div class="container">
 				<div class="masthead">
 					<?php
 					bigbox_partial( 'branding' );
-					bigbox_partial( 'access' );
+
+					if ( is_user_logged_in() ) :
+						bigbox_partial( 'access' );
+					else :
+						bigbox_partial( 'access-guest' );
+					endif;
 					?>
 				</div>
 			</div>

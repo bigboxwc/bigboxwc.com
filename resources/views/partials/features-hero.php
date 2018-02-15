@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<a href="/demo/" class="cta__more">View Demo &rarr;</a>
 		</div>
 
-		<div class="hero-cta__image-placeholder"></div>
+		<img src="<?php echo get_template_directory_uri(); ?>/screenshot.png" alt="" />
 
 	</div>
 </div>
