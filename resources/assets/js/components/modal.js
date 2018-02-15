@@ -1,7 +1,6 @@
 /**
  * External dependencies.
  */
-import $ from 'jquery';
 import 'bootstrap/js/dist/modal';
 
 window.wp       = window.wp || {};

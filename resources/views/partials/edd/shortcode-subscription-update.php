@@ -30,7 +30,7 @@ edd_print_errors();
 
 <form action="" id="edd-recurring-form" method="POST">
 	<p class="form-row">
-		<a href="<?php echo esc_url( bigbox_edd_get_receipt_url() ); ?>">&larr; Cancel</a>
+		<a href="<?php echo esc_url( bigbox_edd_get_receipt_url() ); ?>" class="ui-red">&larr; Cancel</a>
 	</p>
 
 	<input name="edd-recurring-update-gateway" type="hidden" value="<?php echo esc_attr( $subscription->gateway ); ?>" />
@@ -49,5 +49,5 @@ edd_print_errors();
 
 	<input type="hidden" name="edd_action" value="recurring_update_payment" />
 	<input type="hidden" name="subscription_id" value="<?php echo esc_attr( $subscription->id ); ?>" />
-	<input type="submit" name="edd-recurring-update-submit" id="edd-recurring-update-submit" value="<?php echo esc_attr( __( 'Update Payment Method', 'bigbox' ) ); ?>" />
+	<input type="submit" name="edd-recurring-update-submit" id="edd-recurring-update-submit" class="button button--primary button--size-block" value="<?php echo esc_attr( __( 'Update Payment Method', 'bigbox' ) ); ?>" />
 </form>

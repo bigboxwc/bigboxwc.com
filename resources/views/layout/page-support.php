@@ -16,6 +16,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 bigbox_view( 'global/header-min' );
 
+wp_enqueue_script( 'bigbox-support' );
+
 if ( ! is_user_logged_in() ) :
 ?>
 
@@ -49,12 +51,14 @@ else :
 
 			<p>Before submitting a ticket please search the documentation.</p>
 
-			<form>
+			<form class="docs-search" method="GET" action="/">
 				<p class="form-group">
 					<strong>Find Answers:</strong><br />
-					<input type"text" class="form-input next-steps__license-key" value="" placeholder="Installing a WordPress theme..." />
+					<input type"text" id="docs-search-keywords" class="form-input docs-search__keywords" value="" placeholder="Installing a WordPress theme..." />
 					<input type="submit" value="Search" class="button button--primary button--size-sm" />
 				</p>
+
+				<ul id="docs-search-results" class="docs-search__results"></ul>
 			</form>
 		</div>
 
@@ -75,4 +79,5 @@ else :
 	endif;
 endif;
 
+bigbox_view( 'tmpl/tmpl-docs-search-result' );
 bigbox_view( 'global/footer' );

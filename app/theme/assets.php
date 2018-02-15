@@ -47,13 +47,15 @@ function bigbox_enqueue_scripts() {
 	// Combined application scripts. See `gulpfile.js` for more.
 	wp_enqueue_script( $stylesheet, get_template_directory_uri() . '/public/js/app.min.js', $deps, $version, true );
 
+	// Support scripts.
+	wp_register_script( $stylesheet . '-support', get_template_directory_uri() . '/public/js/support.min.js', [ $stylesheet ], $version, true );
+
 	// Send information to application scripts.
 	wp_localize_script(
 		$stylesheet, 'BigBox', apply_filters(
 			'bigbox_i18n', [
-				'loginModalLinks' => [
-					'[href="' . wp_login_url() . '"]',
-					'[href^="' . wp_login_url() . '?redirect_to"]',
+				'support' => [
+					'apiRoot' => 'https://listify.astoundify.com/search/ajax',
 				],
 			]
 		)

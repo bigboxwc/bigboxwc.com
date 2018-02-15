@@ -38,6 +38,7 @@ $choices-keyline-color: #ddd;
 // Local helpers
 @import 'helpers/animation-spin';
 @import 'helpers/align';
+@import 'helpers/ui';
 
 // Mixins
 @import 'mixins/button';
@@ -112,6 +113,7 @@ $choices-keyline-color: #ddd;
 @import 'modules/form-input';
 @import 'modules/auth-form';
 @import 'modules/choices';
+@import 'modules/docs-search';
 
 // Pricing
 @import 'modules/price-table';

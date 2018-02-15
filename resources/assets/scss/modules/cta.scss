@@ -38,7 +38,6 @@
 }
 
 .cta__button {
-  @include button--primary;
   color: $brandColor;
   margin-top: 2rem;
   background-color: #fff;
@@ -58,4 +57,25 @@
     color: #fff;
     border-bottom: 2px solid #fff;
   }
+}
+
+.cta--mini {
+  padding-top: 0;
+}
+
+// [1] Bring up when next to another normal block.
+.block + .cta--mini {
+  margin-top: -5rem; // [1]
+}
+
+.cta__content--mini {
+  padding: 3rem 0;
+}
+
+.cta__title--mini {
+  font-size: 40px;
+}
+
+.cta__button--mini {
+  margin-top: 0;
 }

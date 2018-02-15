@@ -1,0 +1,66 @@
+.docs-search {
+  position: relative;
+}
+
+.docs-search__keywords {
+  margin: 1rem auto 0;
+  width: 372px;
+}
+
+.docs-search__results {
+  display: none;
+  margin: 0;
+  padding: 1.5rem;
+  list-style: none;
+  background: #fff;
+  border-radius: 3px;
+  border: 2px solid rgba($brandColor, 0.80);
+  position: absolute;
+  top: 110%;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  max-height: 350px;
+  overflow: scroll;
+}
+
+.docs-search__results-item {
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// @todo don't make so generic
+.gfield_checkbox li {
+  position: relative;
+  transition: all 0.2s ease-in-out;
+
+  label,
+  input {
+    position: relative;
+    z-index: 1;
+  }
+  
+  &:after {
+    background-color: transparent;
+    border-radius: 3px;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: -5px;
+    bottom: 0;
+    transition: all 0.2s ease-in-out;
+    z-index: 0;
+  }
+}
+
+.gfield_checkbox li.docs-search__needs-search {
+  color: red;
+  
+  &:after {
+    background-color: rgba($red, 0.10);
+  }
+}

@@ -30,9 +30,12 @@ const cssPlugin = new ExtractTextPlugin( {
 } );
 
 module.exports = {
-	entry: './resources/assets/js',
+  entry: {
+    app: './resources/assets/js/app.js',
+    support: './resources/assets/js/support.js',
+  },
 	output: {
-		filename: 'public/js/app.min.js',
+		filename: 'public/js/[name].min.js',
 		path: __dirname,
 	},
 	module: {

@@ -29,3 +29,7 @@
 .button--size-sm {
   @include button--size-sm;
 }
+
+.button--size-block {
+  @include button--size-block;
+}

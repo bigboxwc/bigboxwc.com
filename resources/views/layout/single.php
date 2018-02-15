@@ -66,6 +66,11 @@ comments_template( '/resources/views/partials/blog/comments.php' );
 
 endwhile;
 
-bigbox_partial( 'features-overview' );
+bigbox_partial( 'features-overview', [
+	'alt'     => true,
+	'context' => 'features',
+] );
+
+bigbox_partial( 'cta-buy' );
 
 bigbox_view( 'global/footer' );

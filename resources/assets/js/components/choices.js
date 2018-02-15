@@ -1,7 +1,6 @@
 /**
  * External dependencies
  */
-import $ from 'jquery';
 import Choices from 'choices.js';
 
 /**

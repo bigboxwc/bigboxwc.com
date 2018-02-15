@@ -90,6 +90,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div>
 
 	<div class="block-cta">
-		<a href="/buy/" class="button button--primary">Get BigBox Now</a> &nbsp; &nbsp; &nbsp; <a href="/demo/">View Demo &rarr;</a>
+		<?php if ( isset( $context ) && 'features' === $context ) : ?>
+			<a href="/features/" class="button button--primary">View All Features</a> 
+		<?php else : ?>
+			<a href="/buy/" class="button button--primary">Get BigBox Now</a> 
+		<?php endif; ?>
+
+			&nbsp; &nbsp; &nbsp; 
+
+		<a href="/demo/">View Demo &rarr;</a>
 	</div>
 </div>
