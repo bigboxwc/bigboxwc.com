@@ -24,15 +24,6 @@
   p {
     line-height: 1.75;
   }
-
-  .wp-block-cover-image {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-
-    h2 {
-      color: #fff;
-    }
-  }
 }
 
 .wp-caption {
@@ -210,5 +201,15 @@
 .wp-block-button {
   .wp-block-button__link {
     @include button--primary;
+  }
+}
+
+.wp-block-cover-image {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: auto;
+
+  h2 {
+    color: #fff;
   }
 }

@@ -19,7 +19,7 @@
   float: right;
 }
 
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(xl) {
   .alignwide {
     margin-left: -10%;
     margin-right: -10%;
