@@ -79,4 +79,6 @@ zip -r bigbox.zip \
 	CHANGELOG.md \
 	screenshot.png
 
+unzip bigbox.zip -d bigbox && zip -r "bigbox-$PACKAGE_VERSION.zip" bigbox
+
 status "Done. Version v$PACKAGE_VERSION build complete."
