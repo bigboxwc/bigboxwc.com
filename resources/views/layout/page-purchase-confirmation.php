@@ -14,7 +14,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-bigbox_view( 'global/header-min' );
+bigbox_view( 'global/header', [
+	'min' => true,
+] );
 
 $payment = bigbox_edd_get_payment();
 $license = bigbox_edd_get_license();

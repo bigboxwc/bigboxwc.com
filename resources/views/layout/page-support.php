@@ -14,7 +14,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-bigbox_view( 'global/header-min' );
+bigbox_view( 'global/header', [
+	'min' => true,
+] );
 
 wp_enqueue_script( 'bigbox-support' );
 
@@ -50,6 +52,8 @@ else :
 			<h3 class="feature-callout__title">🔎 Review the Documentation</h3>
 
 			<p>Before submitting a ticket please search the documentation.</p>
+
+			<p><strong>Please note:</strong> technical support is just that: technical. We are not able provide website customization or setup services.</p>
 
 			<form class="docs-search" method="GET" action="/">
 				<p class="form-row">

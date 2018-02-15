@@ -14,7 +14,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-bigbox_view( 'global/header-min' );
+bigbox_view( 'global/header', [
+	'min' => true,
+] );
 
 if ( ! is_user_logged_in() ) :
 	echo do_shortcode( '[edd_login redirect="/checkout/payment-history/"]' );

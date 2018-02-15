@@ -1,9 +1,8 @@
 <?php
 /**
- * Minimal page footer.
+ * Branding
  *
  * @since 1.0.0
- * @version 1.0.0
  *
  * @package BigBox
  * @category Theme
@@ -13,9 +12,8 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
-
-wp_footer();
 ?>
 
-	</body>
-</html>
+<div class="branding">
+	<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">BigBox</a></h1>
+</div>

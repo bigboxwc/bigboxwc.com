@@ -25,6 +25,7 @@ endif;
 
 
 <div class="blog-post__comments block block--alt">
+	<?php if ( have_comments() ) : ?>
 	<div class="block-header">
 		<h3 class="block-title">
 			<?php comments_number( __( '0 Comments', 'bigbox' ), __( '1 Comment', 'bigbox' ), __( '% Comments', 'bigbox' ) ); ?>
@@ -32,6 +33,7 @@ endif;
 
 		<p class="block-subtitle">Discuss "<?php the_title(); ?>" with others.</p>
 	</div>
+	<?php endif; ?>
 
 	<div class="container">
 		<div class="row justify-content-center">

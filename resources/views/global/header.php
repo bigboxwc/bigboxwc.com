@@ -32,20 +32,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php bigbox_partial( 'account-bar' ); ?>
 
-		<div class="brand-bar">
+		<div class="brand-bar <?php echo esc_attr( isset( $min ) && $min ? 'brand-bar--static' : null ); ?>">
 			<div class="container">
 				<div class="masthead">
-
-					<div class="branding">
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">BigBox</a></h1>
-					</div>
-
-					<nav class="access">
-						<a href="/features/" class="access-item <?php echo esc_attr( is_page( 'features' ) ? 'access-item--active' : null ); ?>">All Features</a>
-						<a href="/blog/" class="access-item <?php echo esc_attr( ( is_home() || is_singular( 'post' ) ) ? 'access-item--active' : null ); ?>">Blog &amp; Resources</a>
-						<a href="/buy/" class="access-item <?php echo esc_attr( is_front_page() ? 'access-item--active' : null ); ?>">Get BigBox</a>
-					</nav>
-
+					<?php
+					bigbox_partial( 'branding' );
+					bigbox_partial( 'access' );
+					?>
 				</div>
 			</div>
 		</div>

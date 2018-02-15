@@ -14,9 +14,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-bigbox_view( 'global/header' );
-
 the_post();
+
+bigbox_view( 'global/header', [
+	'min' => ! get_post()->post_parent ? '-min' : null,
+] );
+
+if ( get_post()->post_parent ) :
 ?>
 
 <div class="cta hero-cta hero-cta--minor hero-cta--center">
@@ -31,6 +35,8 @@ the_post();
 </div>
 
 <?php
+endif;
+
 bigbox_partial( 'features-woocommerce' );
 
 bigbox_view( 'global/footer' );
