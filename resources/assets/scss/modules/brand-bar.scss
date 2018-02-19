@@ -3,7 +3,7 @@
   position: relative;
   z-index: 2;
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     background: none;
     margin-bottom: -72px;
   }
