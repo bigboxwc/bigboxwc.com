@@ -33,22 +33,28 @@ add_action( 'edd_stripe_cc_form', 'bigbox_edd_stripe_cc_form' );
 add_action( 'edd_purchase_form', 'bigbox_edd_purchase_form' );
 
 // Remove empty states (messes with Choices script).
-add_filter( 'edd_shop_states', function( $states ) {
-	return array_filter( $states );
-} );
+add_filter(
+	'edd_shop_states', function( $states ) {
+		return array_filter( $states );
+	}
+);
 
 // Remove required fields.
-add_filter( 'edd_purchase_form_required_fields', function( $fields ) {
-	unset( $fields['edd_email'] );
-	unset( $fields['edd_first'] );
+add_filter(
+	'edd_purchase_form_required_fields', function( $fields ) {
+		unset( $fields['edd_email'] );
+		unset( $fields['edd_first'] );
 
-	return $fields;
-} );
+		return $fields;
+	}
+);
 
 // No need to log in.
 add_filter( 'edd_logged_in_only', '__return_false', 99 );
 
 // Map email to inputted login name.
-add_action( 'edd_pre_process_purchase', function() {
+add_action(
+	'edd_pre_process_purchase', function() {
 	$_POST['edd_email'] = $_POST['edd_user_login']; // @codingStandardsIgnoreLine
-} );
+	}
+);

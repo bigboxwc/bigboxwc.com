@@ -14,9 +14,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-bigbox_view( 'global/header', [
-	'min' => true,
-] );
+bigbox_view(
+	'global/header', [
+		'min' => true,
+	]
+);
 
 $payment = bigbox_edd_get_payment();
 $license = bigbox_edd_get_license();
@@ -31,9 +33,11 @@ elseif ( 'publish' !== $payment->status ) :
 	endif;
 else :
 	bigbox_partial( 'edd/purchase-confirmation/hero' );
-	bigbox_partial( 'edd/purchase-confirmation/next-steps', [
-		'license' => $license,
-	] );
+	bigbox_partial(
+		'edd/purchase-confirmation/next-steps', [
+			'license' => $license,
+		]
+	);
 endif;
 
 bigbox_view( 'global/footer' );

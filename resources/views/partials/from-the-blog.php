@@ -14,10 +14,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-$latest = new WP_Query( [
-	'posts_per_page' => 3,
-	'no_found_rows'  => true,
-] );
+$latest = new WP_Query(
+	[
+		'posts_per_page' => 3,
+		'no_found_rows'  => true,
+	]
+);
 
 if ( ! $latest->have_posts() ) :
 	return;

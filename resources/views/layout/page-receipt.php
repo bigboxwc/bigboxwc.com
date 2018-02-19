@@ -14,17 +14,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-bigbox_view( 'global/header', [
-	'min' => true,
-] );
+bigbox_view(
+	'global/header', [
+		'min' => true,
+	]
+);
 
 if ( ! is_user_logged_in() ) :
 	echo do_shortcode( '[edd_login redirect="/checkout/payment-history/"]' );
 else :
+	$allgood = bigbox_edd_allgood();
 	$payment = bigbox_edd_get_payment();
+	$license = bigbox_edd_get_license();
 
-	if ( ! $payment ) :
-		bigbox_partial( 'edd/purchase-history/not-found' );
+	if ( '' !== $allgood ) :
+		echo $allgood; // WPCS: XSS okay.
 	else :
 ?>
 
@@ -46,13 +50,13 @@ else :
 					<div class="order-summary">
 
 						<div class="order-summary__row">
-							<span class="order-summary__label">Transaction ID</span>
-							<span class="order-summary__value"><?php echo esc_html( $payment->key ); ?></span>
+							<span class="order-summary__label">Status</span>
+							<span class="order-summary__value order-summary__value--<?php echo esc_attr( edd_get_payment_status( $payment ) ); ?>"><?php echo esc_html( edd_get_payment_status( $payment, true ) ); ?></span>
 						</div>
 
 						<div class="order-summary__row">
-							<span class="order-summary__label">Status</span>
-							<span class="order-summary__value order-summary__value--<?php echo esc_attr( edd_get_payment_status( $payment ) ); ?>"><?php echo esc_html( edd_get_payment_status( $payment, true ) ); ?></span>
+							<span class="order-summary__label">License Key</span>
+							<span class="order-summary__value"><?php echo esc_html( $license->key ); ?></span>
 						</div>
 
 						<div class="order-summary__row">
@@ -61,7 +65,9 @@ else :
 						</div>
 
 						<?php
-						if ( ( $fees = edd_get_payment_fees( $payment->ID, 'fee' ) ) ) :
+						$fees = edd_get_payment_fees( $payment->ID, 'fee' );
+
+						if ( $fees ) :
 							foreach ( $fees as $fee ) :
 						?>
 

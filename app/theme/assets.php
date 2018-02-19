@@ -24,8 +24,7 @@ function bigbox_enqueue_styles() {
 
 	$deps = [];
 
-	wp_enqueue_style( 'select2' );
-	wp_enqueue_style( $stylesheet . '-fonts', 'https://fonts.googleapis.com/css?family=Lora:700|Lato:300,400,700' );
+	wp_enqueue_style( $stylesheet . '-fonts', 'https://fonts.googleapis.com/css?family=Lora:700|Lato:400,700' );
 	wp_enqueue_style( $stylesheet, get_template_directory_uri() . '/public/css/app.min.css', $deps, $version );
 }
 add_action( 'wp_enqueue_scripts', 'bigbox_enqueue_styles' );
@@ -55,7 +54,7 @@ function bigbox_enqueue_scripts() {
 		$stylesheet, 'BigBox', apply_filters(
 			'bigbox_i18n', [
 				'support' => [
-					'apiRoot' => 'https://listify.astoundify.com/search/ajax',
+					'apiRoot' => 'https://docs.bigboxwc.com/search/ajax',
 				],
 			]
 		)

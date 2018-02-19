@@ -14,9 +14,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-bigbox_view( 'global/header', [
-	'min' => true,
-] );
+bigbox_view(
+	'global/header', [
+		'min' => true,
+	]
+);
 
 if ( ! is_user_logged_in() ) :
 ?>
@@ -27,29 +29,27 @@ if ( ! is_user_logged_in() ) :
 
 <?php
 else :
-	$payment      = bigbox_edd_get_payment();
 	$license      = bigbox_edd_get_license();
 	$subscription = bigbox_edd_get_subscription();
-
-	$allgood = bigbox_edd_allgood( [
-		'payment'      => $payment,
-		'license'      => $license,
-		'subscription' => $subscription,
-	] );
+	$allgood      = bigbox_edd_allgood();
 
 	if ( '' !== $allgood ) :
 		echo $allgood; // WPCS: XSS okay.
 	else : // Valid payment.
 		if ( $subscription && 'active' !== $subscription->status ) : // Subscription will end.
-			bigbox_partial( 'edd/payment/reactivate-subscription', [
-				'subscription' => $subscription,
-				'license'      => $license,
-			] );
+			bigbox_partial(
+				'edd/payment/reactivate-subscription', [
+					'subscription' => $subscription,
+					'license'      => $license,
+				]
+			);
 		else : // All good in the hood.
-			bigbox_partial( 'edd/purchase-history/hero', [
-				'subscription' => $subscription,
-				'license'      => $license,
-			] );
+			bigbox_partial(
+				'edd/purchase-history/hero', [
+					'subscription' => $subscription,
+					'license'      => $license,
+				]
+			);
 		endif;
 ?>
 

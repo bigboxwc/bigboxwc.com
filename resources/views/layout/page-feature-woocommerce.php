@@ -16,9 +16,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 the_post();
 
-bigbox_view( 'global/header', [
-	'min' => ! get_post()->post_parent ? '-min' : null,
-] );
+bigbox_view(
+	'global/header', [
+		'min' => ! get_post()->post_parent ? '-min' : null,
+	]
+);
 
 if ( get_post()->post_parent ) :
 ?>

@@ -24,9 +24,11 @@ if ( is_user_logged_in() && $license && 'expired' !== $license->status ) {
 $payment_mode = edd_get_chosen_gateway();
 $form_action  = esc_url( edd_get_checkout_uri( 'payment-mode=' . $payment_mode ) );
 
-bigbox_view( 'global/header', [
-	'min' => true,
-] ); ?>
+bigbox_view(
+	'global/header', [
+		'min' => true,
+	]
+); ?>
 
 <div class="block block--alt checkout">
 	<div class="container">

@@ -15,13 +15,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $i     = 0;
-$posts = get_posts( [
-	'post_parent' => get_page_by_path( 'features' )->ID,
-	'post_type'   => 'page',
-	'orderby'     => 'menu_order',
-	'order'       => 'asc',
+$posts = get_posts(
+	[
+		'post_parent' => get_page_by_path( 'features' )->ID,
+		'post_type'   => 'page',
+		'orderby'     => 'menu_order',
+		'order'       => 'asc',
 	'nopaging'    => true, // @codingStandardsIgnoreLine
-] );
+	]
+);
 ?>
 
 <?php

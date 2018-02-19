@@ -14,13 +14,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-$woocommerce_features = get_posts( [
-	'post_parent' => get_page_by_path( 'why-use-woocommerce' )->ID,
-	'post_type'   => 'page',
-	'orderby'     => 'menu_order',
-	'order'       => 'asc',
+$woocommerce_features = get_posts(
+	[
+		'post_parent' => get_page_by_path( 'why-use-woocommerce' )->ID,
+		'post_type'   => 'page',
+		'orderby'     => 'menu_order',
+		'order'       => 'asc',
 	'nopaging'    => true, // @codingStandardsIgnoreLine
-] );
+	]
+);
 ?>
 
 <div id="features" class="block">

@@ -66,10 +66,12 @@ comments_template( '/resources/views/partials/blog/comments.php' );
 
 endwhile;
 
-bigbox_partial( 'features-overview', [
-	'alt'     => true,
-	'context' => 'features',
-] );
+bigbox_partial(
+	'features-overview', [
+		'alt'     => true,
+		'context' => 'features',
+	]
+);
 
 bigbox_partial( 'cta-buy' );
 

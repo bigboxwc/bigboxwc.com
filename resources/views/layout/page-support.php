@@ -14,9 +14,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-bigbox_view( 'global/header', [
-	'min' => true,
-] );
+bigbox_view(
+	'global/header', [
+		'min' => true,
+	]
+);
 
 wp_enqueue_script( 'bigbox-support' );
 
@@ -29,11 +31,13 @@ if ( ! is_user_logged_in() ) :
 
 <?php
 else :
-	$allgood = bigbox_edd_allgood( [
-		'payment'      => bigbox_edd_get_payment(),
-		'license'      => bigbox_edd_get_license(),
-		'subscription' => bigbox_edd_get_subscription(),
-	] );
+	$allgood = bigbox_edd_allgood(
+		[
+			'payment'      => bigbox_edd_get_payment(),
+			'license'      => bigbox_edd_get_license(),
+			'subscription' => bigbox_edd_get_subscription(),
+		]
+	);
 
 	if ( '' !== $allgood ) :
 		echo $allgood; // WPCS: XSS okay.

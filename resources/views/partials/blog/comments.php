@@ -41,11 +41,13 @@ endif;
 				<?php if ( have_comments() ) : ?>
 				<ol class="comment-list">
 					<?php
-					wp_list_comments( [
-						'avatar_size' => 100,
-						'style'       => 'ol',
-						'short_ping'  => true,
-					] );
+					wp_list_comments(
+						[
+							'avatar_size' => 100,
+							'style'       => 'ol',
+							'short_ping'  => true,
+						]
+					);
 					?>
 				</ol>
 
@@ -55,10 +57,12 @@ endif;
 
 				<?php
 				if ( comments_open() ) :
-					comment_form( [
-						'title_reply_before' => '<div clas="block-header"><h3 class="block-title">',
-						'title_reply_after'  => '</h3></div>',
-					] );
+					comment_form(
+						[
+							'title_reply_before' => '<div clas="block-header"><h3 class="block-title">',
+							'title_reply_after'  => '</h3></div>',
+						]
+					);
 				endif;
 				?>
 			</div>

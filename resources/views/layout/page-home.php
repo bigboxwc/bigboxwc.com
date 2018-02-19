@@ -21,9 +21,11 @@ while ( have_posts() ) :
 
 	bigbox_partial( 'cta-home' );
 	bigbox_partial( 'features-overview' );
-	bigbox_partial( 'features-primary', [
-		'context' => 'features',
-	] );
+	bigbox_partial(
+		'features-primary', [
+			'context' => 'features',
+		]
+	);
 	bigbox_partial( 'features-faqs' );
 	bigbox_partial( 'testimonials' );
 	bigbox_partial( 'from-the-blog' );

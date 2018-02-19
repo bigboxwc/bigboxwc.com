@@ -14,9 +14,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-bigbox_view( 'global/header', [
-	'min' => true,
-] );
+bigbox_view(
+	'global/header', [
+		'min' => true,
+	]
+);
 ?>
 
 <div class="block feature-callout">

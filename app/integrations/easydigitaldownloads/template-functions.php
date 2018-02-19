@@ -48,20 +48,32 @@ function bigbox_edd_purchase_form() {
  * @param array $data Account data.
  * @return string
  */
-function bigbox_edd_allgood( $data ) {
+function bigbox_edd_allgood( $data = [] ) {
 	ob_start();
+
+	$data = wp_parse_args(
+		$data, [
+			'payment'      => bigbox_edd_get_payment(),
+			'license'      => bigbox_edd_get_license(),
+			'subscription' => bigbox_edd_get_subscription(),
+		]
+	);
 
 	if ( ! $data['payment'] ) : // We got nothing.
 		bigbox_partial( 'edd/payment/not-found' );
 	elseif ( $data['license'] && 'expired' === $data['license']->status ) : // Expired license.
-		bigbox_partial( 'edd/payment/renew-license', [
-			'license' => $data['license'],
-		] );
+		bigbox_partial(
+			'edd/payment/renew-license', [
+				'license' => $data['license'],
+			]
+		);
 	elseif ( 'publish' !== $data['payment']->status ) : // Refunded or incomplete.
 		if ( $payment->is_recoverable() ) :
-			bigbox_partial( 'edd/payment/recover', [
-				'payment' => $data['payment'],
-			] );
+			bigbox_partial(
+				'edd/payment/recover', [
+					'payment' => $data['payment'],
+				]
+			);
 		else :
 			bigbox_partial( 'edd/payment/not-found' );
 		endif;

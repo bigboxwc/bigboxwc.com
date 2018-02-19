@@ -14,11 +14,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-$faqs = get_posts( [
-	'post_parent' => get_page_by_path( 'faqs' )->ID,
-	'post_type'   => 'page',
+$faqs = get_posts(
+	[
+		'post_parent' => get_page_by_path( 'faqs' )->ID,
+		'post_type'   => 'page',
 	'nopaging'    => true, // @codingStandardsIgnoreLine
-] );
+	]
+);
 ?>
 
 <div id="faqs" class="block block--alt">

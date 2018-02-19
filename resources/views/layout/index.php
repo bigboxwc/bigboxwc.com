@@ -36,10 +36,12 @@ bigbox_partial( 'hero-blog' ); ?>
 </div>
 
 <?php
-bigbox_partial( 'features-overview', [
-	'alt'     => true,
-	'context' => 'features',
-] );
+bigbox_partial(
+	'features-overview', [
+		'alt'     => true,
+		'context' => 'features',
+	]
+);
 
 bigbox_partial( 'cta-buy' );
 
