@@ -29,6 +29,7 @@
     "popper.js": "^1.12.9",
     "postcss-loader": "^2.0.10",
     "raw-loader": "^0.5.1",
+    "sass-lint": "^1.12.1",
     "sass-loader": "^6.0.6",
     "svg-sprite-loader": "^3.6.2",
     "svgo": "^1.0.4",
