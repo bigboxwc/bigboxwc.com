@@ -36,7 +36,7 @@ foreach ( $posts as $post ) :
 	<div class="container media">
 
 		<div class="feature-callout__media">
-			<?php bigbox_svg( 'graphic-' . apply_filters( 'bigbox_feature_svg', 'shopping', $post->post_name ) ); ?>
+			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/screenshot.png" alt="" />
 		</div>
 
 		<div class="feature-callout__content">
@@ -52,3 +52,16 @@ foreach ( $posts as $post ) :
 $i++;
 endforeach;
 wp_reset_postdata();
+?>
+
+<div class="block-cta">
+	<?php if ( isset( $context ) && 'features' === $context ) : ?>
+		<a href="/features/" class="button button--primary">View All Features</a> 
+	<?php else : ?>
+		<a href="/buy/" class="button button--primary">Get BigBox Now</a> 
+	<?php endif; ?>
+
+		&nbsp; &nbsp; &nbsp; 
+
+	<a href="/demo/">View Demo &rarr;</a>
+</div>
