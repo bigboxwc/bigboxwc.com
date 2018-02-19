@@ -24,6 +24,10 @@
   text-align: center;
   color: $color-gray-500;
   margin-top: 0;
+
+  a:last-child {
+    @include link-focus;
+  }
 }
 
 .form-submit [type="submit"] {

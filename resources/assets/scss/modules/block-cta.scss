@@ -1,6 +1,10 @@
 .block-cta {
   text-align: center;
   margin-top: 3rem;
+
+  a:not(.button) {
+    @include link-focus;
+  }
 }
 
 .block-cta__sublink {

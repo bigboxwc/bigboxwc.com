@@ -96,8 +96,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<a href="/buy/" class="button button--primary">Get BigBox Now</a> 
 		<?php endif; ?>
 
-			&nbsp; &nbsp; &nbsp; 
-
-		<a href="/demo/">View Demo &rarr;</a>
+		<a href="/demo/" class="block-cta__sublink">View Demo &rarr;</a>
 	</div>
 </div>

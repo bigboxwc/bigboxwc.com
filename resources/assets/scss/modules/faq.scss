@@ -34,7 +34,6 @@
   svg {
     width: 18px;
     height: 18px;
-    margin-top: 2px;
   }
 
   span {
@@ -65,7 +64,7 @@
   overflow: hidden;
 
   a {
-    border-bottom: 2px solid rgba(0, 0, 0, 0.20);
+    @include link-focus;
   }
 }
 
