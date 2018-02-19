@@ -3,7 +3,9 @@
 }
 
 .form-row--half {
-  width: 48%;
+  @include media-breakpoint-up(md) {
+    width: 48%;
+  }
 }
 
 // WooCommerce adds clearfix.

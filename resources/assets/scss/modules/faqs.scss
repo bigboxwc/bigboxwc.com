@@ -1,6 +1,9 @@
 .faqs {
-	max-width: 80%;
-	margin: 0 auto;
-	padding: 0;
-	list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  
+  @include media-breakpoint-up(lg) {
+    max-width: 80%;
+  }
 }
