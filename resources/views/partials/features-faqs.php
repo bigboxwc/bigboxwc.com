@@ -21,7 +21,7 @@ $faqs = get_posts( [
 ] );
 ?>
 
-<div id="faqs" class="block">
+<div id="faqs" class="block block--alt">
 	<div class="block-header">
 		<h3 class="block-title">Frequenty Asked Questions</h3>
 		<p class="block-subtitle">Still have questions about the theme? We've answered some of the most common questions below.</p>
