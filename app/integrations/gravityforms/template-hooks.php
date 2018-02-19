@@ -12,6 +12,3 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
-
-// Add `form-input` to fields.
-add_filter( 'gform_field_css_class', 'bigbox_gform_field_css_class' );
