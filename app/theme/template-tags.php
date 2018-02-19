@@ -118,7 +118,7 @@ function bigbox_feature_svg( $icon, $name ) {
 		case 'simplified-display-designed-for-hundreds-of-products':
 			$icon = 'shopping';
 			break;
-		case 'integrated-with-woocommerces-most-popular-extensions':
+		case 'integrated-with-woocommerces-top-extensions':
 			$icon = 'ship';
 			break;
 	}
@@ -137,13 +137,9 @@ add_filter( 'bigbox_feature_svg', 'bigbox_feature_svg', 10, 2 );
  * @return string
  */
 function bigbox_woocommerce_feature_svg( $icon, $name ) {
-	switch ( $name ) {
-		case 'one-click-refunds':
-			$icon = 'ship';
-			break;
-	}
+	$icons = array( 'hacker', 'ship', 'hand', 'globe' );
 
-	return $icon;
+	return $icons[ rand( 0, 3 ) ];
 }
 add_filter( 'bigbox_woocommerce_feature_svg', 'bigbox_woocommerce_feature_svg', 10, 2 );
 

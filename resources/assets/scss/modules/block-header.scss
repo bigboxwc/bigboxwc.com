@@ -1,4 +1,6 @@
 .block-header {
+  @include make-container();
+  @include make-container-max-widths();
   text-align: center;
   padding: 2rem 15px;
 

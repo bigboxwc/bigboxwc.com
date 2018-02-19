@@ -51,7 +51,7 @@ add_filter(
  */
 add_filter(
 	'excerpt_more', function() {
-		return '&hellip; <a href="' . get_permalink() . '">' . esc_html__( 'Continue Reading &rarr;', 'bigbox' ) . '</a>';
+		return '&hellip; <p><a href="' . get_permalink() . '">' . esc_html__( 'Continue Reading &rarr;', 'bigbox' ) . '</a></p>';
 	}
 );
 

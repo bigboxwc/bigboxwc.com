@@ -19,6 +19,7 @@ $woocommerce_features = get_posts( [
 	'post_type'   => 'page',
 	'orderby'     => 'menu_order',
 	'order'       => 'asc',
+	'nopaging'    => true, // @codingStandardsIgnoreLine
 ] );
 ?>
 
