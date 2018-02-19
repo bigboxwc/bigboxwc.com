@@ -14,7 +14,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<nav class="access">
+<nav id="access" class="access">
+	<a href="#access-toggle" class="access-item--close access-item" aria-label="Close">&times; Close</a>
 	<a href="/features/" class="access-item <?php echo esc_attr( is_page( 'features' ) ? 'access-item--active' : null ); ?>">All Features</a>
 	<a href="/blog/" class="access-item <?php echo esc_attr( ( is_home() || is_singular( 'post' ) ) ? 'access-item--active' : null ); ?>">Blog &amp; Resources</a>
 	<a href="/buy/" class="access-item <?php echo esc_attr( is_front_page() ? 'access-item--active' : null ); ?>">Get BigBox</a>

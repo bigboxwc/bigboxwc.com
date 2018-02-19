@@ -33,15 +33,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="brand-bar <?php echo esc_attr( isset( $min ) && $min ? 'brand-bar--static' : null ); ?>">
 			<div class="container">
 				<div class="masthead">
-					<?php
-					bigbox_partial( 'branding' );
+					<?php bigbox_partial( 'branding' ); ?>
 
+					<a href="#access" class="access-toggle access-toggle--open" aria-expanded="false" aria-controls="access" aria-label="Open menu" role="button">
+						<?php bigbox_svg( 'hamburger' ); ?>
+					</a>
+
+					<?php
 					if ( is_user_logged_in() ) :
 						bigbox_partial( 'access' );
 					else :
 						bigbox_partial( 'access-guest' );
 					endif;
 					?>
+
+					<a id="access-toggle" href="#access-toggle" class="access-backdrop" tabindex="-1" aria-hidden="true" aria-label="Close menu" hidden=""></a>
 				</div>
 			</div>
 		</div>

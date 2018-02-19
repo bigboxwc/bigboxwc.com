@@ -1,11 +1,15 @@
 .brand-bar {
   background: $brandColor;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 
   @include media-breakpoint-up(lg) {
     background: none;
     margin-bottom: -72px;
+  }
+
+  .container {
+    position: relative;
   }
 }
 

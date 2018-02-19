@@ -1,14 +1,74 @@
-.access {
-  order: 0;
-  margin: 0 auto;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.access-toggle--open {
+  position: absolute;
+  left: 15px;
+
+  @include media-breakpoint-up(sm) {
+    left: 0;
+  }
 
   @include media-breakpoint-up(lg) {
-    order: 1;
-    margin: 0;
-    width: auto;
+    display: none;
   }
+
+  &:hover svg,
+  svg {
+    fill: #fff;
+  }
+}
+
+.access {
+  text-align: left;
+  padding: 1.5rem;
+  width: calc(100% - 64px);
+  max-width: 320px;
+  position: fixed;
+  top: 0;
+  right: auto;
+  left: 0;
+  height: 100vh;
+  background: #fff;
+  overflow: hidden scroll;
+  transform: translateX(-100%);
+  transition: transform 0.25s ease-in-out;
+  z-index: 2;
+  will-change: transform;
+
+  @include media-breakpoint-up(lg) {
+    text-align: right;
+    padding: 0;
+    width: auto;
+    height: auto;
+    position: relative;
+    background: none;
+    overflow: auto;
+    transform: none;
+    display: flex;
+    max-width: none;
+  }
+}
+
+.access:target,
+.access[aria-expanded="true"] {
+  transform: none;
+}
+
+.access-backdrop {
+  position: fixed;
+  visibility: hidden;
+  content: '';
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background: none;
+  cursor: default;
+  transition: background 0.20s ease;
+  display: block;
+}
+
+.access:target + .access-backdrop,
+.access[aria-expanded="true"] + .access-backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  visibility: visible;
 }
