@@ -28,7 +28,7 @@ while ( have_posts() ) :
 	</div>
 </div>
 
-<div class="block"
+<div class="block">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="hentry col-sm-12 col-md-10 col-lg-8">
