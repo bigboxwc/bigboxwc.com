@@ -61,7 +61,7 @@ npm run build
 rm -f bigbox*.zip
 
 # Update version in style.css
-sed -i "s/\@\@pkg.version/$PACKAGE_VERSION/g" style.css
+sed -i "s/__version__/$PACKAGE_VERSION/g" style.css
 
 # Generate the plugin zip file
 status "Creating archive..."
