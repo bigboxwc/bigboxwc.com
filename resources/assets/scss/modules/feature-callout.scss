@@ -13,7 +13,7 @@
   order: 0;
   margin-bottom: 3rem;
 
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(lg) {
     flex: 0 1 500px;
     margin-bottom: 0;
   }
@@ -36,7 +36,7 @@
   }
 
   .feature-callout--alt & {
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       order: 2;
     }
   }
@@ -45,7 +45,7 @@
 .feature-callout__content {
   flex: 1 0 100%;
 
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(lg) {
     margin: 0 3rem;
     flex: 1;
   }

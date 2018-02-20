@@ -7,6 +7,14 @@
   }
 }
 
+/**
+ * [1] Should fall inside a .block most of the time. But when this is not possible
+ *     make sure the sibling item does not duplicate margin.
+ */
+.block + .block-cta {
+  margin-top: 0; // [1]
+}
+
 .block-cta__sublink {
   font-size: 15px;
   margin-left: 1em;

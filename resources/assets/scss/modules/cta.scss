@@ -105,7 +105,11 @@
 }
 
 .cta__title--mini {
-  font-size: 40px;
+  font-size: 26px;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 40px;
+  }
 }
 
 .cta__button--mini {

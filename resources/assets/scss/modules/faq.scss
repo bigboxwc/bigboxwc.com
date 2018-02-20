@@ -10,7 +10,12 @@
   }
 
   svg {
-    transform: rotate(90deg);
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      display: block;
+      transform: rotate(90deg);
+    }
   }
 }
 
@@ -20,6 +25,7 @@
 }
 
 .faq__title {
+  text-align: left;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -37,7 +43,9 @@
   }
 
   span {
-    margin-left: 8px;
+    @include media-breakpoint-up(md) {
+      margin-left: 8px;
+    }
   }
 }
 

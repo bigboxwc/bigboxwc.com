@@ -1,6 +1,7 @@
 .hero-cta {
   margin-top: 0;
-  background-image: linear-gradient(170deg, lighten($brandColor, 10%) 0%, lighten($brandColor, 10%) 40%, $brandColor 100%);
+  background: $brandColor;
+  background-image: linear-gradient(170deg, lighten($brandColor, 5%) 0%, lighten($brandColor, 5%) 40%, $brandColor 100%);
   overflow: hidden;
 
   img {
