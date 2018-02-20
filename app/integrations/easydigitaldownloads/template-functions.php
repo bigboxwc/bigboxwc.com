@@ -33,7 +33,7 @@ function bigbox_edd_stripe_cc_form() {
 function bigbox_edd_purchase_form() {
 	if ( isset( $_POST['edd_payment_mode'] ) && 'paypal' === $_POST['edd_payment_mode'] ) { // @codingStandardsIgnoreLine
 		echo '<p style="margin-bottom: 2rem;">';
-		esc_html_e( 'You will be redirected to PayPal to complete your purchase.', 'bigbox' );
+		echo 'You will be redirected to PayPal to complete your purchase.';
 		echo '</p>';
 	}
 

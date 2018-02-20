@@ -54,18 +54,26 @@ endif;
 
 <p class="order-summary__subscription-details">
 	<?php if ( $subscription->can_update() ) : ?>
-		<a href="<?php echo esc_url( $subscription->get_update_url() ); ?>" class="button button--primary button--size-sm"><?php esc_html_e( 'Update Payment Method', 'bigbox' ); ?></a>
+		<a href="<?php echo esc_url( $subscription->get_update_url() ); ?>" class="button button--primary button--size-sm">
+			Update Payment Method
+		</a>
 	<?php endif; ?>
 
 	<?php if ( $subscription->can_renew() ) : ?>
-		<a href="<?php echo esc_url( $subscription->get_renew_url() ); ?>" class="button button--primary button--size-sm"><?php esc_html_e( 'Renew', 'bigbox' ); ?></a>
+		<a href="<?php echo esc_url( $subscription->get_renew_url() ); ?>" class="button button--primary button--size-sm">
+			Renew
+		</a>
 	<?php endif; ?>
 
 	<?php if ( $subscription->can_cancel() ) : ?>
-		<a href="<?php echo esc_url( $subscription->get_cancel_url() ); ?>" class="button button--danger button--size-sm"><?php esc_html_e( 'Cancel', 'bigbox' ); ?></a>
+		<a href="<?php echo esc_url( $subscription->get_cancel_url() ); ?>" class="button button--danger button--size-sm">
+			Cancel
+		</a>
 	<?php endif; ?>
 
 	<?php if ( $subscription->can_reactivate() ) : ?>
-		<a href="<?php echo esc_url( $subscription->get_reactivation_url() ); ?>" class="button button--primary button--size-sm"><?php esc_html_e( 'Reactivate', 'bigbox' ); ?></a>
+		<a href="<?php echo esc_url( $subscription->get_reactivation_url() ); ?>" class="button button--primary button--size-sm">
+			Reactivate
+		</a>
 	<?php endif; ?>
 </p>

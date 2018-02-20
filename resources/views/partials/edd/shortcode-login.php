@@ -33,12 +33,12 @@ if ( ! is_user_logged_in() ) :
 			<form id="edd_login_form" class="card card__inner--mini" action="" method="post">
 
 				<p class="form-row">
-					<label for="edd_user_login" class="form-label"><?php esc_html_e( 'Username or Email', 'bigbox' ); ?></label>
+					<label for="edd_user_login" class="form-label">Username or Email</label>
 					<input name="edd_user_login" id="edd_user_login" class="form-input" type="text"/>
 				</p>
 
 				<p class="form-row">
-					<label for="edd_user_pass" class="form-label"><?php esc_html_e( 'Password', 'bigbox' ); ?></label>
+					<label for="edd_user_pass" class="form-label">Password</label>
 					<input name="edd_user_pass" id="edd_user_pass" class="form-input" type="password"/>
 				</p>
 
@@ -46,18 +46,18 @@ if ( ! is_user_logged_in() ) :
 					<input type="hidden" name="edd_redirect" value="<?php echo esc_url( $edd_login_redirect ); ?>"/>
 					<input type="hidden" name="edd_login_nonce" value="<?php echo esc_attr( wp_create_nonce( 'edd-login-nonce' ) ); ?>"/>
 					<input type="hidden" name="edd_action" value="user_login"/>
-					<input id="edd_login_submit" type="submit" class="button button--size-block" value="<?php esc_attr_e( 'Sign In', 'bigbox' ); ?>"/>
+					<input id="edd_login_submit" type="submit" class="button button--size-block" value="Sign In"/>
 				</p>
 
 				<p class="form-row form-row--actions">
 
 					<label class="form-label form-label--checkbox">
 						<input name="rememberme" type="checkbox" id="rememberme" value="forever" class="form-input form-input--checkbox" /> 
-						<span><?php esc_html_e( 'Remember Me', 'bigbox' ); ?></span>
+						<span>Remember Me</span>
 					</label>
 
 					<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>">
-						<?php esc_attr_e( 'Lost Password?', 'bigbox' ); ?>
+						Lost Password?
 					</a>
 				</p>
 

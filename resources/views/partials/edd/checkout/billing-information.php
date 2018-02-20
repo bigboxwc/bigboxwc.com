@@ -50,25 +50,25 @@ $customer['address'] = apply_filters( 'edd_checkout_billing_details_address', $c
 
 <div class="card card__inner--mini">
 	<p class="form-row">
-		<label for="card_address" class="form-label"><?php esc_html_e( 'Address', 'bigbox' ); ?></label>
-		<input name="card_address" id="card_address" class="form-input card-address" type="text" placeholder="<?php esc_attr_e( 'Full Address', 'bigbox' ); ?>" value="<?php echo esc_attr( $customer['address']['line1'] ); ?>" />
+		<label for="card_address" class="form-label">Address</label>
+		<input name="card_address" id="card_address" class="form-input card-address" type="text" placeholder="Full Address" value="<?php echo esc_attr( $customer['address']['line1'] ); ?>" />
 	</p>
 
 	<div class="form-row-group">
 		<p class="form-row form-row--half">
-			<label for="card_city" class="form-label"><?php esc_html_e( 'City', 'bigbox' ); ?></label>
-			<input name="card_city" id="card_city" class="form-input card-city" type="text" placeholder="<?php esc_attr_e( 'City', 'bigbox' ); ?>" value="<?php echo esc_attr( $customer['address']['city'] ); ?>" />
+			<label for="card_city" class="form-label">City</label>
+			<input name="card_city" id="card_city" class="form-input card-city" type="text" placeholder="City" value="<?php echo esc_attr( $customer['address']['city'] ); ?>" />
 		</p>
 
 		<p class="form-row form-row--half">
-			<label for="card_zip" class="form-label"><?php esc_html_e( 'Postal / Zip Code', 'bigbox' ); ?></label>
-			<input name="card_zip" id="card_zip" class="form-input card-zip" type="text" placeholder="<?php esc_attr_e( 'Postal / Zip Code', 'bigbox' ); ?>" value="<?php echo esc_attr( $customer['address']['zip'] ); ?>" />
+			<label for="card_zip" class="form-label">Postal / Zip Code</label>
+			<input name="card_zip" id="card_zip" class="form-input card-zip" type="text" placeholder="Postal / Zip Code" value="<?php echo esc_attr( $customer['address']['zip'] ); ?>" />
 		</p>
 	</div>
 
 	<div class="form-row-group">
 		<p class="form-row form-row--half">
-			<label for="billing_country" class="form-label"><?php esc_html_e( 'Country', 'bigbox' ); ?></label>
+			<label for="billing_country" class="form-label">Country</label>
 
 			<select name="billing_country" id="edd_address_country" class="billing_country edd-select<?php echo esc_attr( edd_field_is_required( 'billing_country' ) ? ' required' : null ); ?>" <?php echo esc_attr( edd_field_is_required( 'billing_country' ) ? ' required ' : null ); ?>>
 				<?php
@@ -92,7 +92,7 @@ $customer['address'] = apply_filters( 'edd_checkout_billing_details_address', $c
 		</p>
 
 		<p id="billing-state" class="form-row form-row--half">
-			<label for="card_state" class="form-label"><?php esc_html_e( 'State / Province', 'bigbox' ); ?></label>
+			<label for="card_state" class="form-label">State / Province</label>
 
 			<input name="card_state" type="hidden" />
 

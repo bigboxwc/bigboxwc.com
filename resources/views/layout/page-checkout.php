@@ -34,7 +34,7 @@ bigbox_view(
 	<div class="container">
 
 		<?php if ( empty( edd_get_cart_contents() ) ) : ?>
-			<?php esc_html_e( 'Nothing to purchase.', 'bigbox' ); ?>
+			<p>Nothing to purchase.</p>
 		<?php else : ?>
 
 		<div class="block-header">
