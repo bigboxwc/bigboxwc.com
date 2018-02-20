@@ -84,4 +84,7 @@ zip -r bigbox.zip \
 unzip bigbox.zip -d bigbox && zip -r "bigbox-$PACKAGE_VERSION.zip" bigbox
 rm -rf bigbox && rm -f bigbox.zip
 
+# Reset style.css -- kinda ghetto.
+git reset head --hard
+
 status "Done. Version v$PACKAGE_VERSION build complete."
