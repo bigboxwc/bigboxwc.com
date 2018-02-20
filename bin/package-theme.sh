@@ -54,13 +54,14 @@ git clean -xdf
 status "Installing dependencies..."
 npm install
 composer install
-status "Creating language files..."
-wp i18n make-pot .
 status "Generating build..."
 npm run build
 
 # Remove any existing zip file
 rm -f bigbox*.zip
+
+# Update version in style.css
+sed -i "s/@@pkg.version/$PACKAGE_VERSION/g" style.css
 
 # Generate the plugin zip file
 status "Creating archive..."
@@ -72,7 +73,6 @@ zip -r bigbox.zip \
 	style.css \
 	app \
 	bootstrap \
-	resources/languages \
 	resources/views \
 	public \
 	vendor \
