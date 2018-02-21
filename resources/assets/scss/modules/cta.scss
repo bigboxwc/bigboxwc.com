@@ -26,7 +26,7 @@
   padding: 3rem;
 
   @include media-breakpoint-up(lg) {
-    max-width: 90%;
+    max-width: 70%;
   }
 }
 
@@ -61,6 +61,7 @@
   background-color: #fff;
   background-image: none;
   border-color: #fff;
+  box-shadow: 0 2px 4px darken($brandColor, 5%), 0 4px 10px darken($brandColor, 5%) !important; // [1]
 
   @include media-breakpoint-up(lg) {
     margin-top: 2rem;
@@ -68,6 +69,7 @@
 
   &:hover {
     color: $brandColor;
+    box-shadow: 0 4px 10px darken($brandColor, 5%), 0 7px 20px darken($brandColor, 5%) !important; // [1]
   }
 }
 

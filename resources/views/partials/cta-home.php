@@ -19,10 +19,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="container">
 
 		<div class="cta__content">
-			<h2 class="cta__title">WooCommerce Theme for Large Product Catalogs</h2>
-			<div class="cta__description"><p>Easily manage and scale large product catalogs for WooCommerce.</p></div>
+			<h2 class="cta__title">WooCommerce Solutions for Large Product Catalogs</h2>
+			<div class="cta__description"><p>Easily manage and scale large WooCommerce product catalogs with the BigBox theme.</p></div>
 
-			<a href="/buy/" class="cta__button button">Get BigBox Now</a>
+			<a href="/buy/" class="button cta__button">Get BigBox Now</a>
 			<a href="/features/" class="cta__more">Learn More &rarr;</a>
 		</div>
 

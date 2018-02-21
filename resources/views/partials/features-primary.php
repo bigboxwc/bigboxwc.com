@@ -38,7 +38,7 @@ foreach ( $posts as $post ) :
 	<div class="container media">
 
 		<div class="feature-callout__media">
-			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/screenshot.png" alt="" />
+			<img src="https://raw.githubusercontent.com/woocommerce/storefront/master/screenshot.png" alt="" />
 		</div>
 
 		<div class="feature-callout__content">

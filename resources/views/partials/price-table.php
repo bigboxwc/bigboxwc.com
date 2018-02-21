@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div class="price-table row justify-content-md-center">
 
-	<div class="price-option col col-md-8 col-lg-6">
+	<div class="price-option col col-md-8 col-lg-5">
 		<div class="card price-option__inner">
 
 			<h3 class="price-option__price">$9 <sub>/month</sub></h3>
