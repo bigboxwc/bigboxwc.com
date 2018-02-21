@@ -22,12 +22,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php bigbox_svg( 'graphic-hospital' ); ?>
 		</div>
 
-		<div class="block-header block-header--left media-body">
-			<h3 class="block-title">⚠️  Your License Has Expired</h3>
+		<div class="feature-callout__content">
+			<h3 class="feature-callout__title">🚨 Your License Has Expired</h3>
 
-			<p class="block-subtitle">A valid license is required to download your files and access technical support.</p>
+			<p>A valid license is required to download your files and access technical support.</p>
 
-			<p class="block-subtitle">
+			<p>
 				<a href="<?php echo esc_url( $license->get_renewal_url() ); ?>" class="button button--primary">Renew License</a>
 			</p>
 		</div>
