@@ -25,7 +25,7 @@ $payment = bigbox_edd_get_payment();
 		</div>
 
 		<div class="feature-callout__content">
-			<h3 class="feature-callout__title">Incomplete Purchase</h3>
+			<h3 class="feature-callout__title">⚠️  Incomplete Purchase</h3>
 
 			<p>Please <a href="/contact/">contact us</a> if you believe this is an error.</p>
 
