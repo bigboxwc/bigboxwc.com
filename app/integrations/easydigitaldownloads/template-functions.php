@@ -61,14 +61,14 @@ function bigbox_edd_allgood( $data = [] ) {
 
 	if ( ! $data['payment'] ) : // We got nothing.
 		bigbox_partial( 'edd/payment/not-found' );
-	elseif ( $data['license'] && 'expired' === $data['license']->status ) : // Expired license.
+	elseif ( $data['license'] && ! in_array( $data['license']->status, [ 'active', 'inactive' ], true ) ) : // Expired license.
 		bigbox_partial(
 			'edd/payment/renew-license', [
 				'license' => $data['license'],
 			]
 		);
 	elseif ( 'publish' !== $data['payment']->status ) : // Refunded or incomplete.
-		if ( $payment->is_recoverable() ) :
+		if ( $data['payment']->is_recoverable() ) :
 			bigbox_partial(
 				'edd/payment/recover', [
 					'payment' => $data['payment'],
