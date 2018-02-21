@@ -93,18 +93,13 @@ function bigbox_edd_get_payment() {
 	$payment = wp_cache_get( 'payment', 'bigbox' );
 
 	if ( ! $payment ) {
-		$payments = edd_get_users_purchases( get_current_user_id(), 20, true, array( 'publish', 'pending', 'failed', 'abandoned', 'processing' ) );
+		$payments = edd_get_users_purchases( get_current_user_id(), 1, true, array( 'publish', 'pending', 'failed', 'abandoned', 'processing' ) );
 
 		if ( ! $payments ) {
 			return false;
 		}
 
-		// Assume we only have one... might chagne...
-		foreach ( $payments as $payment ) {
-			$payment = new EDD_Payment( $payment->ID );
-
-			continue;
-		}
+		$payment = new EDD_Payment( current( $payments )->ID );
 
 		wp_cache_set( 'payment', $payment, 'bigbox' );
 	}
