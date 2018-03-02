@@ -1,34 +1,28 @@
-.price-option {
-  // @include make-col-ready;
-  // @include make-col(6);
-  // @include make-col-push(3);
-}
-
 .price-option__inner {
-  text-align: center;
-  padding: 40px;
+	text-align: center;
+	padding: 40px;
 }
 
 .price-option__price,
 .price-option__term {
-  display: inline-block;
-  vertical-align: bottom;
+	display: inline-block;
+	vertical-align: bottom;
 }
 
 .price-option__price {
-  font: 700 42px 'Lora', serif;
-  margin: 0;
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
+	font: 700 42px Lora, serif;
+	margin: 0;
+	display: flex;
+	align-items: baseline;
+	justify-content: center;
 
-  sub {
-    opacity: 0.50;
-    font-size: 14px;
-  }
+	sub {
+		opacity: 0.5;
+		font-size: 14px;
+	}
 }
 
 .price-option__term {
-  color: $color-gray-300;
-  font-size: 14px;
+	color: $color-gray-300;
+	font-size: 14px;
 }

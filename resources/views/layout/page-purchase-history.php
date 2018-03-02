@@ -31,7 +31,11 @@ if ( ! is_user_logged_in() ) :
 else :
 	$license      = bigbox_edd_get_license();
 	$subscription = bigbox_edd_get_subscription();
-	$allgood      = bigbox_edd_allgood();
+
+	$allgood = bigbox_edd_allgood( [
+		'license'      => $license,
+		'subscription' => $subscription,
+	] );
 
 	if ( '' !== $allgood ) :
 		echo $allgood; // WPCS: XSS okay.

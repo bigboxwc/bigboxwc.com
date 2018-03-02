@@ -1,34 +1,34 @@
 .access-item {
-  color: $brandColor;
-  margin-bottom: 0.5rem;
-  display: block;
+	color: $brandColor;
+	margin-bottom: 0.5rem;
+	display: block;
 
-  @include media-breakpoint-up(lg) {
-    color: #fff;
-    font-size: 15px;
-    margin: 0 20px;
-    border-bottom: 2px solid transparent;
+	@include media-breakpoint-up(lg) {
+		color: #fff;
+		font-size: 15px;
+		margin: 0 20px;
+		border-bottom: 2px solid transparent;
 
-    &:last-child {
-      margin-right: 0;
-    }
+		&:last-child {
+			margin-right: 0;
+		}
 
-    &.access-item--active,
-    &:hover {
-      color: #fff;
-      border-color: #fff;
-    }
-  }
+		&.access-item--active,
+		&:hover {
+			color: #fff;
+			border-color: #fff;
+		}
+	}
 }
 
 .access-item--close {
-  color: initial;
-  font-size: 15px;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid $color-gray-200;
+	color: initial;
+	font-size: 15px;
+	margin-bottom: 1rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid $color-gray-200;
 
-  @include media-breakpoint-up(lg) {
-    display: none;
-  }
+	@include media-breakpoint-up(lg) {
+		display: none;
+	}
 }

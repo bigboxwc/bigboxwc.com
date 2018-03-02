@@ -1,9 +1,9 @@
 .form-row-group {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 
-  &:last-child {
-    margin-bottom: -1rem;
-  }
+	&:last-child {
+		margin-bottom: -1rem;
+	}
 }

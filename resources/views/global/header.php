@@ -40,7 +40,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					</a>
 
 					<?php
-					if ( is_user_logged_in() ) :
+					if ( is_user_logged_in() && '' === bigbox_edd_allgood() ) :
 						bigbox_partial( 'access' );
 					else :
 						bigbox_partial( 'access-guest' );

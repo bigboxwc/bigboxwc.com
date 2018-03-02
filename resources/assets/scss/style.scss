@@ -8,7 +8,7 @@ $color-gray-500: #767676;
 $color-gray-600: #4e4e4e;
 $color-gray-700: #383838;
 $color-gray-800: #282828;
-$color-gray-900: #222222;
+$color-gray-900: #222;
 
 $color-green: #35d87a;
 $color-red: #ff3b56;
@@ -18,10 +18,10 @@ $color-blue: $brandColor;
  * External dependencies
  */
 // Bootstrap
-@import '~bootstrap/scss/mixins';
-@import '~bootstrap/scss/bootstrap-grid';
-@import '~bootstrap/scss/media';
-@import '~bootstrap/scss/modal';
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/bootstrap-grid";
+@import "~bootstrap/scss/media";
+@import "~bootstrap/scss/modal";
 
 // Choices
 $choices-button-icon-path: "~choices.js/assets/icons";
@@ -29,118 +29,112 @@ $choices-bg-color: #fff;
 $choices-border-radius: 3px;
 $choices-highlight-color: $brandColor;
 $choices-keyline-color: #ddd;
-@import '~choices.js/assets/styles/scss/choices';
+
+@import "~choices.js/assets/styles/scss/choices";
 
 /**
  * Internal dependencies
  */
 
 // Local helpers
-@import 'helpers/animation-spin';
-@import 'helpers/align';
-@import 'helpers/ui';
+@import "helpers/animation-spin";
+@import "helpers/align";
+@import "helpers/ui";
 
 // Mixins
-@import 'mixins/button';
-@import 'mixins/form';
-@import 'mixins/link';
+@import "mixins/button";
+@import "mixins/form";
+@import "mixins/link";
 
 // HTML Elements
-@import 'elements/html';
-@import 'elements/body';
-@import 'elements/a';
-@import 'elements/img';
-@import 'elements/label';
+@import "elements/html";
+@import "elements/body";
+@import "elements/a";
+@import "elements/img";
+@import "elements/label";
 
 // Repeatable Patterns
-@import 'modules/button';
-@import 'modules/section-title';
-@import 'modules/list';
-@import 'modules/icon';
-@import 'modules/pill';
-@import 'modules/modal';
+@import "modules/button";
+@import "modules/section-title";
+@import "modules/list";
+@import "modules/icon";
+@import "modules/pill";
+@import "modules/modal";
 
 // Card
-@import 'modules/card';
-@import 'modules/card-label';
+@import "modules/card";
+@import "modules/card-label";
 
 // Block
-@import 'modules/block';
-@import 'modules/block-cta';
-@import 'modules/block-header';
-@import 'modules/block-title';
-@import 'modules/block-subtitle';
+@import "modules/block";
+@import "modules/block-cta";
+@import "modules/block-header";
+@import "modules/block-title";
+@import "modules/block-subtitle";
 
 // Alerts
-@import 'modules/notices';
-@import 'modules/notice';
+@import "modules/notices";
+@import "modules/notice";
 
 // Header
-@import 'modules/masthead';
-@import 'modules/account-bar';
-@import 'modules/brand-bar';
-@import 'modules/branding';
-@import 'modules/site-title';
+@import "modules/masthead";
+@import "modules/account-bar";
+@import "modules/brand-bar";
+@import "modules/branding";
+@import "modules/site-title";
 
 // Footer
-@import 'modules/mastfoot';
-@import 'modules/colophon';
+@import "modules/mastfoot";
 
 // Nav
-@import 'modules/access';
-@import 'modules/access-item';
+@import "modules/access";
+@import "modules/access-item";
 
 // Call to Action
-@import 'modules/cta';
-@import 'modules/hero-cta';
+@import "modules/cta";
+@import "modules/hero-cta";
 
 // Features
-@import 'modules/features';
-@import 'modules/feature-list';
-@import 'modules/feature-item';
-
-@import 'modules/feature-callout';
-@import 'modules/theme-features';
+@import "modules/feature-list";
+@import "modules/feature-item";
+@import "modules/feature-callout";
 
 // FAQs
-@import 'modules/faqs';
-@import 'modules/faq';
-
-// Testimonials
-@import 'modules/testimonials';
+@import "modules/faqs";
+@import "modules/faq";
 
 // Forms
-@import 'modules/form-row';
-@import 'modules/form-row-group';
-@import 'modules/form-label';
-@import 'modules/form-input';
-@import 'modules/auth-form';
-@import 'modules/choices';
-@import 'modules/docs-search';
+@import "modules/form-row";
+@import "modules/form-row-group";
+@import "modules/form-label";
+@import "modules/form-input";
+@import "modules/auth-form";
+@import "modules/choices";
+@import "modules/docs-search";
 
 // Pricing
-@import 'modules/price-table';
-@import 'modules/price-option';
-@import 'modules/price-features';
-@import 'modules/price-feature';
+@import "modules/price-table";
+@import "modules/price-option";
+@import "modules/price-features";
+@import "modules/price-feature";
 
 // Blog
-@import 'modules/blog-hero';
-@import 'modules/blog-post';
-@import 'modules/hentry';
-@import 'modules/comment-form';
-@import 'modules/comment-list';
-@import 'modules/from-the-blog';
+@import "modules/blog-hero";
+@import "modules/blog-post";
+@import "modules/hentry";
+@import "modules/comment-form";
+@import "modules/comment-list";
+@import "modules/from-the-blog";
 
 // Checkout
-@import 'modules/checkout';
-@import 'modules/order-summary';
-@import 'modules/payment-method';
-@import 'modules/next-steps';
+@import "modules/checkout";
+@import "modules/order-summary";
+@import "modules/payment-method";
+@import "modules/next-steps";
 
 // EDD
-@import 'modules/edd-loading';
-@import 'modules/edd-alert';
+@import "modules/edd-loading";
+@import "modules/edd-alert";
 
 // GF
-@import 'modules/gf';
+@import "modules/gf";

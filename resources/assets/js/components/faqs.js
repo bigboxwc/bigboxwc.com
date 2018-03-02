@@ -2,10 +2,10 @@
  * Toggle FAQ items.
  */
 
-const $toggle = $('.faq__title');
+const $toggle = $( '.faq__title' );
 
-$toggle.on('click', function(e) {
-  e.preventDefault();
+$toggle.on( 'click', function( e ) {
+	e.preventDefault();
 
-  $(this).parents('.faq').toggleClass('faq--active');
-});
+	$( this ).parents( '.faq' ).toggleClass( 'faq--active' );
+} );

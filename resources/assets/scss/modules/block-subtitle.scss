@@ -1,18 +1,19 @@
 .block-subtitle {
-  font-size: 16px;
-  color: $color-gray-500;
-  margin: 0 auto;
+	font-size: 16px;
+	color: $color-gray-500;
+	margin: 0 auto;
 
-  @include media-breakpoint-up(lg) {
-    font-size: 18px;
-    max-width: 66.66667%;
-  }
+	@include media-breakpoint-up(lg) {
+		font-size: 18px;
+		max-width: 66.66667%;
+	}
 
-  + .block-subtitle {
-    margin-top: 1rem;
-  }
+	+ .block-subtitle {
+		margin-top: 1rem;
+	}
 
-  a:not(.button) {
-    @include link-focus;
-  }
+	a:not(.button) {
+
+		@include link-focus;
+	}
 }

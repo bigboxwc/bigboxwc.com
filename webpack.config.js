@@ -3,19 +3,19 @@
  */
 const webpack = require( 'webpack' );
 const ExtractTextPlugin = require( 'extract-text-webpack-plugin' ); // CSS loader for styles specific to block editing.
-const SpritePlugin = require('svg-sprite-loader/plugin');
+const SpritePlugin = require( 'svg-sprite-loader/plugin' );
 
 // Configuration for the ExtractTextPlugin.
 const extractConfig = {
 	use: [
 		{ 
-			loader: 'raw-loader' 
+			loader: 'raw-loader', 
 		},
 		{
 			loader: 'postcss-loader',
 			options: {
 				plugins: [
-					require('autoprefixer'),
+					require( 'autoprefixer' ),
 				],
 			},
 		},
@@ -30,10 +30,10 @@ const cssPlugin = new ExtractTextPlugin( {
 } );
 
 module.exports = {
-  entry: {
-    app: './resources/assets/js/app.js',
-    support: './resources/assets/js/support.js',
-  },
+	entry: {
+		app: './resources/assets/js/app.js',
+		support: './resources/assets/js/support.js',
+	},
 	output: {
 		filename: 'public/js/[name].min.js',
 		path: __dirname,
@@ -47,10 +47,10 @@ module.exports = {
 						loader: 'svg-sprite-loader',
 						options: {
 							extract: true,
-							spriteFilename: './public/images/sprite.svg'
+							spriteFilename: './public/images/sprite.svg',
 						},
 					},
-					'svgo-loader'
+					'svgo-loader',
 				],
 				include: /images/,
 			},
@@ -67,9 +67,9 @@ module.exports = {
 			},
 		],
 	},
-  externals: {
-    jquery: 'jQuery',
-  },
+	externals: {
+		jquery: 'jQuery',
+	},
 	plugins: [
 		new webpack.DefinePlugin( {
 			'process.env.NODE_ENV': JSON.stringify( process.env.NODE_ENV || 'development' ),
@@ -77,11 +77,11 @@ module.exports = {
 		cssPlugin,
 		new SpritePlugin(),
 		new webpack.ProvidePlugin( {
-			'$': 'jquery',
+			$: 'jquery',
 			jQuery: 'jquery',
 			'window.jQuery': 'jquery',
-			Popper: ['popper.js', 'default'],
-			'Util': "exports-loader?Util!bootstrap/js/dist/util"
+			Popper: [ 'popper.js', 'default' ],
+			Util: "exports-loader?Util!bootstrap/js/dist/util",
 		} ),
 	],
 };

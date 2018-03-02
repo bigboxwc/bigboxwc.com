@@ -1,32 +1,32 @@
 .form-row {
-  @include form-row;
+
+	@include form-row;
 }
 
 .form-row--half {
-  @include media-breakpoint-up(md) {
-    width: 48%;
-  }
+
+	@include media-breakpoint-up(md) {
+		width: 48%;
+	}
 }
 
 // WooCommerce adds clearfix.
 .woocommerce form,
 .woocommerce-page {
-  .form-row {
-    &:before,
-    &:after {
-      display: none;
-    }
-  }
-}
 
-.form-row--submit {
+	.form-row {
 
+		&:before,
+		&:after {
+			display: none;
+		}
+	}
 }
 
 .form-row--actions {
-  font-size: 16px;
-  margin-top: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+	font-size: 16px;
+	margin-top: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }

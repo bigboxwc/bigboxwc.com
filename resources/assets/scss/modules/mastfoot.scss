@@ -1,28 +1,29 @@
 .mastfoot {
-  margin-bottom: 0;
-  padding: 2rem 0;
-  background: #fff;
-  border-top: 1px solid #eee;
+	margin-bottom: 0;
+	padding: 2rem 0;
+	background: #fff;
+	border-top: 1px solid #eee;
 }
 
 // Remove border and margin on alt blocks and callouts.
 .block--alt:not(.feature-callout) + .mastfoot,
 .cta + .mastfoot {
-  margin-top: -3rem;
-  border-top: 0;
+	margin-top: -3rem;
+	border-top: 0;
 
-  @include media-breakpoint-up(lg) {
-    margin-top: -5rem;
-  }
+	@include media-breakpoint-up(lg) {
+		margin-top: -5rem;
+	}
 }
 
-// Remove border and margin on callout blocks but don't pull up since callouts always have no margin.
+// Remove border and margin on callout blocks but don't
+// pull up since callouts always have no margin.
 .block--alt.feature-callout + .mastfoot {
-  margin-top: 0;
-  border-top: 0;
+	margin-top: 0;
+	border-top: 0;
 }
 
 // Sibling alt blocks self-corret to blank so add the border back.
 .block--alt + .block--alt + .mastfoot {
-  border-top: 1px solid #eee;
+	border-top: 1px solid #eee;
 }

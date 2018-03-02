@@ -1,15 +1,16 @@
 .block-header {
-  @include make-container();
-  @include make-container-max-widths();
-  text-align: center;
-  padding: 2rem 15px;
 
-  &:first-child,
-  .block--alt & {
-    padding-top: 0;
-  }
+	@include make-container();
+	@include make-container-max-widths();
+	text-align: center;
+	padding: 2rem 15px;
+
+	&:first-child,
+	.block--alt & {
+		padding-top: 0;
+	}
 }
 
 .block-header--left {
-  text-align: left;
+	text-align: left;
 }

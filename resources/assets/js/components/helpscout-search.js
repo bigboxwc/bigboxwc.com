@@ -1,95 +1,97 @@
+/* global BigBox */
+
 /**
  * External dependencies.
  */
 import axios from 'axios';
-import { debounce, each } from 'lodash';
+import { debounce } from 'lodash';
 
-window.wp            = window.wp || {};
-const $gform         = $('.gform_wrapper');
-const $searchField   = $('#docs-search-keywords');
-const $searchResults = $('#docs-search-results');
-let   hasSearched    = false;
-let   searchResults  = null;
+window.wp = window.wp || {};
+const $searchField = $( '#docs-search-keywords' );
+const $searchResults = $( '#docs-search-results' );
+let hasSearched = false;
+let searchResults = null;
 
 /**
  * Perform search.
  *
  * We cannot use wp.ajax as it expects a specifically structured response.
  *
- * @since 1.0.0
+ * @Param   {string} searchTerm Term to seasrch for.
+ * @return {Promise} Promise Search results.
  */
-const searchDocs = function(searchTerm) {
-  // User has searched -- let Gravity Forms know.
-  hasSearched = true;
-  $(document).trigger('gform_hasSearched');
+const searchDocs = function( searchTerm ) {
+	// User has searched -- let Gravity Forms know.
+	hasSearched = true;
+	$( document ).trigger( 'gform_hasSearched' );
 
-  return axios.get(`${BigBox.support.apiRoot}?query=${searchTerm}` )
-    .then(function(response) {
-      searchResults = response.data.articles.results;
-    })
-    .catch(function(response){
-      searchResults = null;
-    });
-}
+	return axios.get( `${ BigBox.support.apiRoot }?query=${ searchTerm }` )
+		.then( function( response ) {
+			searchResults = response.data.articles.results;
+		} )
+		.catch( function() {
+			searchResults = null;
+		} );
+};
 
 /**
  * Display found items or relevant message.
  *
- * @since 1.0.0
+ * @param {string} searchTerm Term to search.
  */
-const displaySuggestions = function(searchTerm) {
-  const tmpl = wp.template('docsSearchResult');
+const displaySuggestions = function( searchTerm ) {
+	const tmpl = wp.template( 'docsSearchResult' );
 
-  // Clear existing.
-  $searchResults.html('');
+	// Clear existing.
+	$searchResults.html( '' );
 
-  // Results and term.
-  if (searchResults.length > 0 && '' !== searchTerm) {
-    $searchResults.fadeIn();
+	// Results and term.
+	if ( searchResults.length > 0 && '' !== searchTerm ) {
+		$searchResults.fadeIn();
 
-    _.each(searchResults, function(result) {
-      $searchResults.append(tmpl(result));
-    });
+		_.each( searchResults, function( result ) {
+			$searchResults.append( tmpl( result ) );
+		} );
 
-  // No results and term.
-  } else if ( 0 == searchResults.length && '' !== searchTerm ) {
-    $searchResults.fadeIn();
+		// No results and term.
+	} else if ( 0 === searchResults.length && '' !== searchTerm ) {
+		$searchResults.fadeIn();
 
-    // @todo use a template.
-    $searchResults.append('<li>Nothing found. Please adjust your search terms or submit a ticket below.</li>');
+		// @todo use a template.
+		$searchResults.append( '<li>Nothing found. Please adjust your search terms or submit a ticket below.</li>' );
 
-  // Catch all.
-  } else {
-    $searchResults.fadeOut();
-  }
-}
+		// Catch all.
+	} else {
+		$searchResults.fadeOut();
+	}
+};
 
 /**
  * Watch for DOM input.
  *
  * @since 1.0.0
  */
-$searchField.on('keyup', debounce(function() {
-  const searchTerm = $(this).val();
-  const results    = searchDocs(searchTerm);
+$searchField.on( 'keyup', debounce( function() {
+	const searchTerm = $( this ).val();
+	const results = searchDocs( searchTerm );
   
-  results.then(function() {
-    displaySuggestions(searchTerm);
-  });
-}, 300));
+	results.then( function() {
+		displaySuggestions( searchTerm );
+	} );
+}, 300 ) );
 
 /**
  * Close results clicking elsewhere.
  *
  * @since 1.0.0
  */
-$searchResults.click(function(e) {
+$searchResults.click( function( e ) {
 	e.stopPropagation();
-});
+} );
 
-$(window).on('click', function() {
+$( window ).on( 'click', function() {
 	$searchResults.fadeOut();
-});
+} );
 
 /**
  * Connect to Gravity Forms.
@@ -98,12 +100,12 @@ $(window).on('click', function() {
  *
  * @since 1.0.0
  */
-$(document).on('gform_post_render gform_hasSearched', function() {
-  const $item = $('.gfield_checkbox li:first-child');
+$( document ).on( 'gform_post_render gform_hasSearched', function() {
+	const $item = $( '.gfield_checkbox li:first-child' );
   
-  $item
-    .find('input')
-    .attr('disabled', !hasSearched)
-    .end()
-    .toggleClass('docs-search__needs-search', !hasSearched);
-});
+	$item
+		.find( 'input' )
+		.attr( 'disabled', ! hasSearched )
+		.end()
+		.toggleClass( 'docs-search__needs-search', ! hasSearched );
+} );

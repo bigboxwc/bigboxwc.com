@@ -1,61 +1,63 @@
 .hero-cta {
-  margin-top: 0;
-  background: $brandColor;
-  background-image: linear-gradient(170deg, lighten($brandColor, 5%) 0%, lighten($brandColor, 5%) 40%, $brandColor 100%);
-  overflow: hidden;
+	margin-top: 0;
+	background: $brandColor;
+	background-image: linear-gradient(170deg, lighten($brandColor, 5%) 0%, lighten($brandColor, 5%) 40%, $brandColor 100%);
+	overflow: hidden;
 
-  img {
-    display: block;
-    box-shadow: 0 -2px 4px rgba(60, 100, 255, 0.1), 0 -2px 10px rgba(60, 100, 255, 0.3);
-  }
+	img {
+		display: block;
+		box-shadow: 0 -2px 4px rgba(60, 100, 255, 0.1), 0 -2px 10px rgba(60, 100, 255, 0.3);
+	}
 }
 
 .hero-cta--center {
-  text-align: center;
+	text-align: center;
 
-  .cta__content {
-    margin: 0 auto;
-  }
+	.cta__content {
+		margin: 0 auto;
+	}
 
-  .cta__title {
-    @include media-breakpoint-up(lg) {
-      font-size: 48px;
-    }
-  }
+	.cta__title {
 
-  img {
-    margin: 0 auto;
+		@include media-breakpoint-up(lg) {
+			font-size: 48px;
+		}
+	}
 
-    @include media-breakpoint-up(lg) {
-      max-width: 75%;
-    }
-  }
+	img {
+		margin: 0 auto;
+
+		@include media-breakpoint-up(lg) {
+			max-width: 75%;
+		}
+	}
 }
 
 .hero-cta__search {
-  position: relative;
+	position: relative;
 
-  [type="submit"] {
-    @include button--blank;
-    padding: 14px 13px 13px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: auto;
-    display: inline-block;
+	[type="submit"] {
 
-    &:hover svg {
-      fill: $color-gray-500;
-    }
-  }
+		@include button--blank;
+		padding: 14px 13px 13px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: auto;
+		display: inline-block;
 
-  [type="search"] {
-    padding-left: 45px;
-  }
+		&:hover svg {
+			fill: $color-gray-500;
+		}
+	}
 
-  svg {
-    fill: $color-gray-300;
-    width: 20px;
-    height: 20px;
-  }
+	[type="search"] {
+		padding-left: 45px;
+	}
+
+	svg {
+		fill: $color-gray-300;
+		width: 20px;
+		height: 20px;
+	}
 }

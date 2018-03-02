@@ -3,9 +3,9 @@
 	background: $brandColor;
 	position: relative;
 
-  @include media-breakpoint-up(lg) {
-    padding-top: 72px;
-  }
+	@include media-breakpoint-up(lg) {
+		padding-top: 72px;
+	}
 
 	.container {
 		height: 100%;
@@ -13,21 +13,21 @@
 }
 
 .cta__content {
-  padding: 3rem 0;
-  max-width: none;
+	padding: 3rem 0;
+	max-width: none;
 
-  @include media-breakpoint-up(lg) {
-    max-width: 80%;
-    padding: 5rem 0;
-  }
+	@include media-breakpoint-up(lg) {
+		max-width: 80%;
+		padding: 5rem 0;
+	}
 }
 
 .cta__content--blog {
-  padding: 3rem;
+	padding: 3rem;
 
-  @include media-breakpoint-up(lg) {
-    max-width: 70%;
-  }
+	@include media-breakpoint-up(lg) {
+		max-width: 70%;
+	}
 }
 
 .cta__content--fluid {
@@ -36,20 +36,20 @@
 	top: 50%;
 	left: 0;
 	transform: translateY(-50%);
-} 
+}
 
 .cta__title {
-  font: 700 38px/1 'Lora', serif;
-  text-shadow: 0 1px 1px rgba($brandColor, 0.10);
-  margin: 0;
+	font: 700 38px/1 Lora, serif;
+	text-shadow: 0 1px 1px rgba($brandColor, 0.1);
+	margin: 0;
 
-  @include media-breakpoint-up(lg) {
-    font-size: 50px;
-  }
+	@include media-breakpoint-up(lg) {
+		font-size: 50px;
+	}
 
-  @include media-breakpoint-up(xl) {
-    font-size: 68px;
-  }
+	@include media-breakpoint-up(xl) {
+		font-size: 68px;
+	}
 }
 
 .cta__description {
@@ -57,63 +57,63 @@
 }
 
 .cta__button {
-  color: $brandColor;
-  background-color: #fff;
-  background-image: none;
-  border-color: #fff;
-  box-shadow: 0 2px 4px darken($brandColor, 5%), 0 4px 10px darken($brandColor, 5%) !important; // [1]
+	color: $brandColor;
+	background-color: #fff;
+	background-image: none;
+	border-color: #fff;
+	box-shadow: 0 2px 4px darken($brandColor, 5%), 0 4px 10px darken($brandColor, 5%) !important; // [1]
 
-  @include media-breakpoint-up(lg) {
-    margin-top: 2rem;
-  }
+	@include media-breakpoint-up(lg) {
+		margin-top: 2rem;
+	}
 
-  &:hover {
-    color: $brandColor;
-    box-shadow: 0 4px 10px darken($brandColor, 5%), 0 7px 20px darken($brandColor, 5%) !important; // [1]
-  }
+	&:hover {
+		color: $brandColor;
+		box-shadow: 0 4px 10px darken($brandColor, 5%), 0 7px 20px darken($brandColor, 5%) !important; // [1]
+	}
 }
 
 .cta__more {
-  color: #fff;
-  margin-left: 2rem;
+	color: #fff;
+	margin-left: 2rem;
 
-  &:hover {
-    color: #fff;
-    border-bottom: 2px solid #fff;
-  }
+	&:hover {
+		color: #fff;
+		border-bottom: 2px solid #fff;
+	}
 }
 
 .cta--mini {
-  text-align: center;
-  padding-top: 0;
+	text-align: center;
+	padding-top: 0;
 
-  @include media-breakpoint-up(lg) {
-    text-align: left;
-  }
+	@include media-breakpoint-up(lg) {
+		text-align: left;
+	}
 }
 
 // [1] Bring up when next to another normal block.
 .block--alt + .cta--mini {
-  margin-top: -3rem;
+	margin-top: -3rem;
 
 
-  @include media-breakpoint-up(xl) {
-    margin-top: -5rem; // [1]
-  }
+	@include media-breakpoint-up(xl) {
+		margin-top: -5rem; // [1]
+	}
 }
 
 .cta__content--mini {
-  padding: 3rem 0;
+	padding: 3rem 0;
 }
 
 .cta__title--mini {
-  font-size: 26px;
+	font-size: 26px;
 
-  @include media-breakpoint-up(lg) {
-    font-size: 40px;
-  }
+	@include media-breakpoint-up(lg) {
+		font-size: 40px;
+	}
 }
 
 .cta__button--mini {
-  margin-top: 0;
+	margin-top: 0;
 }

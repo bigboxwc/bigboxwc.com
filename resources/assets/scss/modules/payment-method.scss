@@ -1,98 +1,101 @@
 .payment-method {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  background: #fff;
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	background: #fff;
 }
 
 .payment-method {
-  padding-top: 1rem;
+	padding-top: 1rem;
 }
 
 #edd-payment-mode-wrap {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 1rem -10px 2rem;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: 1rem -10px 2rem;
 }
 
 .edd-gateway-option {
-  color: $color-gray-500;
-  cursor: pointer;
-  position: relative;
-  margin: 0 10px;
-  padding: 10px 30px;
-  display: inline-flex;
-  flex: 1 0;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid $color-gray-300;
-  border-radius: 3px;
-  width: 100%;
+	color: $color-gray-500;
+	cursor: pointer;
+	position: relative;
+	margin: 0 10px;
+	padding: 10px 30px;
+	display: inline-flex;
+	flex: 1 0;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid $color-gray-300;
+	border-radius: 3px;
+	width: 100%;
 
-  @include media-breakpoint-up(md) {
-    width: 48%;
-  }
+	@include media-breakpoint-up(md) {
+		width: 48%;
+	}
 
-  [type="radio"] {
-    visibility: hidden;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-  }
+	[type="radio"] {
+		visibility: hidden;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+	}
 }
 
 .edd-gateway-option--stripe {
-  &.edd-gateway-option-selected {
-    color: #6771e5;
-    border-color: #6771e5;
-  }
 
-  svg {
-    width: 119px;
-    height: 26px;
-  }
+	&.edd-gateway-option-selected {
+		color: #6771e5;
+		border-color: #6771e5;
+	}
 
-  span {
-    margin-right: 1rem;
-  }
+	svg {
+		width: 119px;
+		height: 26px;
+	}
+
+	span {
+		margin-right: 1rem;
+	}
 }
 
 .edd-gateway-option--paypal {
-  &.edd-gateway-option-selected {
-    border-color: #003087;
-  }
 
-  svg {
-    width: 124px;
-    height: 33px;
-  }
+	&.edd-gateway-option-selected {
+		border-color: #003087;
+	}
 
-  span {
-    display: none;
-  }
+	svg {
+		width: 124px;
+		height: 33px;
+	}
+
+	span {
+		display: none;
+	}
 }
 
 .edd-gateway-option-selected {
-  color: $brandColor;
-  border-color: rgba($brandColor, 0.80);
+	color: $brandColor;
+	border-color: rgba($brandColor, 0.8);
 }
 
 #edd_purchase_submit .button {
-  @include button--size-block;
+
+	@include button--size-block;
 }
 
 .edd-purchase-terms {
-  color: $color-gray-500;
-  text-align: center;
-  font-size: 15px;
-  margin: 1.5rem 0;
+	color: $color-gray-500;
+	text-align: center;
+	font-size: 15px;
+	margin: 1.5rem 0;
 }

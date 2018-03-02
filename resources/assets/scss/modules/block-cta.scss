@@ -1,21 +1,23 @@
 .block-cta {
-  text-align: center;
-  margin-top: 3rem;
+	text-align: center;
+	margin-top: 3rem;
 
-  a:not(.button) {
-    @include link-focus;
-  }
+	a:not(.button) {
+
+		@include link-focus;
+	}
 }
 
 /**
- * [1] Should fall inside a .block most of the time. But when this is not possible
- *     make sure the sibling item does not duplicate margin.
+ * [1] Should fall inside a .block most of the time. But when
+ *     this is not possible make sure the sibling item does
+ *     not duplicate margin.
  */
-.block + .block-cta {
-  margin-top: 0; // [1]
+.block:not(.block--alt) + .block-cta {
+	margin-top: 0; // [1]
 }
 
 .block-cta__sublink {
-  font-size: 15px;
-  margin-left: 1em;
+	font-size: 15px;
+	margin-left: 1em;
 }

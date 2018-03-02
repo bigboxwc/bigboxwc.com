@@ -1,61 +1,62 @@
 // Overrides.
 .#{$choices-selector}:last-of-type {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 .#{$choices-selector},
 .#{$choices-selector}__inner {
-  color: $color-gray-700;
-  font: 400 18px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	color: $color-gray-700;
+	font: 400 18px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .#{$choices-selector}__inner {
-  padding: 0;
-  border-width: 2px;
+	padding: 0;
+	border-width: 2px;
 
-  .is-focused &,
-  .is-open & { 
-    border-color: rgba($brandColor, 0.80);
-  }
+	.is-focused &,
+	.is-open & {
+		border-color: rgba($brandColor, 0.8);
+	}
 }
 
 .#{$choices-selector}__list--single {
-  padding: 16px;
-  min-height: 45px;
+	padding: 16px;
+	min-height: 45px;
 }
 
 .#{$choices-selector}__list--dropdown {
-  border: 2px solid $brandColor;
-  border-top: 0;
-  z-index: 5;
+	border: 2px solid $brandColor;
+	border-top: 0;
+	z-index: 5;
 
-  .is-open & {
-    border-color: rgba($brandColor, 0.80);
-  }
+	.is-open & {
+		border-color: rgba($brandColor, 0.8);
+	}
 
-  .is-flipped & {
-    border-top: 2px solid rgba($brandColor, 0.80);
-    border-bottom: 0;
-  }
+	.is-flipped & {
+		border-top: 2px solid rgba($brandColor, 0.8);
+		border-bottom: 0;
+	}
 }
 
 .#{$choices-selector}__item {
-  color: $color-gray-600;
-  font-size: 16px;
+	color: $color-gray-600;
+	font-size: 16px;
 }
 
 .#{$choices-selector}[data-type*="select-one"] {
-  .#{$choices-selector}__inner {
-    padding: 0;
-  }
 
-  &:after {
-    right: 15px;
-  }
+	.#{$choices-selector}__inner {
+		padding: 0;
+	}
+
+	&:after {
+		right: 15px;
+	}
 }
 
 // Extras.
 .form-row-group > .choices {
-  width: 48%;
-  margin-bottom: 0;
+	width: 48%;
+	margin-bottom: 0;
 }

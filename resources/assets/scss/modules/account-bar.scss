@@ -1,19 +1,19 @@
 .account-bar {
-  padding: 10px 0;
-  background: #23282d;
+	padding: 10px 0;
+	background: #23282d;
 
-  .container {
-    display: flex;
-    justify-content: flex-end;
-  }
+	.container {
+		display: flex;
+		justify-content: flex-end;
+	}
 
-  .access-item {
-    margin: 0 10px;
-    font-size: 12px;
-    text-transform: uppercase;
+	.access-item {
+		margin: 0 10px;
+		font-size: 12px;
+		text-transform: uppercase;
 
-    &:hover {
-      border-bottom-width: 1px;
-    }
-  }
+		&:hover {
+			border-bottom-width: 1px;
+		}
+	}
 }

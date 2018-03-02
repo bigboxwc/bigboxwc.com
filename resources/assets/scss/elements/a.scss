@@ -1,12 +1,12 @@
 a {
 	color: $color-gray-600;
-  border-bottom: 2px solid transparent;
+	border-bottom: 2px solid transparent;
 	text-decoration: none;
 
 	&:hover {
 		color: $brandColor;
-    border-bottom-color: $brandColor;
-    text-decoration: none;
+		border-bottom-color: $brandColor;
+		text-decoration: none;
 
 		svg {
 			fill: $brandColor;

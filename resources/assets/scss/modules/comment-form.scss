@@ -1,36 +1,42 @@
 .comment-respond {
-  &:not(:first-child) {
-    margin-top: 3rem;
-  }
+
+	&:not(:first-child) {
+		margin-top: 3rem;
+	}
 }
 
 .comment-form {
-  label {
-    @include form-label;
-  }
 
-  [type="url"],
-  [type="text"],
-  [type="email"],
-  textarea {
-    @include form-input;
-  }
+	label {
+
+		@include form-label;
+	}
+
+	[type="url"],
+	[type="text"],
+	[type="email"],
+	textarea {
+
+		@include form-input;
+	}
 }
 
 .comment-notes,
 .logged-in-as,
 .must-log-in,
 .form-allowed-tags {
-  text-align: center;
-  color: $color-gray-500;
-  margin-top: 0;
+	text-align: center;
+	color: $color-gray-500;
+	margin-top: 0;
 
-  a:last-child {
-    @include link-focus;
-  }
+	a:last-child {
+
+		@include link-focus;
+	}
 }
 
 .form-submit [type="submit"] {
-  @include button--primary;
-  @include button--size-block;
+
+	@include button--primary;
+	@include button--size-block;
 }

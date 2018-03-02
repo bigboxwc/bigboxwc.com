@@ -1,19 +1,19 @@
 .brand-bar {
-  background: $brandColor;
-  position: relative;
-  z-index: 3;
+	background: $brandColor;
+	position: relative;
+	z-index: 3;
 
-  @include media-breakpoint-up(lg) {
-    background: none;
-    margin-bottom: -72px;
-  }
+	@include media-breakpoint-up(lg) {
+		background: none;
+		margin-bottom: -72px;
+	}
 
-  .container {
-    position: relative;
-  }
+	.container {
+		position: relative;
+	}
 }
 
 .brand-bar--static {
-  margin-bottom: 0;
-  background: $brandColor;
+	margin-bottom: 0;
+	background: $brandColor;
 }
