@@ -21,6 +21,7 @@
 
 .#{$choices-selector}__list--single {
 	min-height: 45px;
+	padding: 14px 10px 12px;
 }
 
 .#{$choices-selector}__list--dropdown {
@@ -40,7 +41,6 @@
 
 .#{$choices-selector}__item {
 	color: $color-gray-600;
-	font-size: 16px;
 }
 
 .#{$choices-selector}[data-type*="select-one"] {
