@@ -71,6 +71,7 @@
 	background-image: none;
 	border-color: #fff;
 	box-shadow: 0 2px 4px darken($brandColor, 5%), 0 4px 10px darken($brandColor, 5%) !important; // [1]
+	margin-top: 1rem;
 
 	@include media-breakpoint-up(lg) {
 		margin-top: 2rem;

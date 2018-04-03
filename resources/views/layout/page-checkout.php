@@ -73,7 +73,4 @@ bigbox_view(
 	</div>
 </div>
 
-		<?php wp_footer(); ?>
-
-	</body>
-</html>
+<?php bigbox_view( 'global/footer-min' ); ?>

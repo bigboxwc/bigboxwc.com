@@ -1,0 +1,22 @@
+.coming-soon {
+	height: 100vh;
+	display: flex;
+	padding-top: 0;
+	align-items: center;
+	margin: 0;
+
+	.container {
+		height: auto;
+	}
+
+	img,
+	.form-input {
+		box-shadow: 0 2px 4px rgba($brandColor, 0.1), 0 4px 10px rgba($brandColor, 0.3);
+		border: 1px solid $brandColor;
+	}
+}
+
+#mce-success-response {
+	margin-top: 0.5rem;
+	font-size: 14px;
+}
