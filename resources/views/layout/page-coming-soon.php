@@ -27,6 +27,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 		<?php endif; ?>
 
+		<title>BigBox - WooCommerce Solutions for Large Stores</title>
+
 		<?php wp_head(); ?>
 	</head>
 
