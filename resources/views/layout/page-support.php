@@ -45,7 +45,7 @@ else :
 		the_post();
 ?>
 
-<div class="block block--alt feature-callout">
+<div class="block block--alt feature-callout page-header">
 	<div class="container media">
 
 		<div class="feature-callout__media">

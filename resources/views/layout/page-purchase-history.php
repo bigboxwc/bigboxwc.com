@@ -61,7 +61,7 @@ else :
 
 	<ul class="feature-list">
 
-		<li class="feature-item feature-item--overlay col-lg-3">
+		<li class="feature-item feature-item--overlay col-sm-6 col-lg-3">
 			<a href="<?php echo esc_url( bigbox_edd_get_download_url() ); ?>" class="feature-item__content">
 				<?php bigbox_svg( 'illustration-hacker' ); ?>
 				<h4>Download BigBox</h4>
@@ -69,21 +69,21 @@ else :
 			</a>
 		</li>
 
-		<li class="feature-item feature-item--overlay col-lg-3">
+		<li class="feature-item feature-item--overlay col-sm-6 col-lg-3">
 			<a href="/docs/" class="feature-item__content">
 				<?php bigbox_svg( 'illustration-hand' ); ?>
 				<h4>View the Documentation</h4>
 			</a>
 		</li>
 
-		<li class="feature-item feature-item--overlay col-lg-3">
+		<li class="feature-item feature-item--overlay col-sm-6 col-lg-3">
 			<a href="/support/" class="feature-item__content">
 				<?php bigbox_svg( 'illustration-globe' ); ?>
 				<h4>Contact Technical Support</h4>
 			</a>
 		</li>
 
-		<li class="feature-item feature-item--overlay col-lg-3">
+		<li class="feature-item feature-item--overlay col-sm-6 col-lg-3">
 			<a href="<?php echo esc_url( bigbox_edd_get_receipt_url() ); ?>" class="feature-item__content">
 				<?php bigbox_svg( 'illustration-ipod' ); ?>
 				<h4>View Receipt &amp; Manage Subscription</h4>

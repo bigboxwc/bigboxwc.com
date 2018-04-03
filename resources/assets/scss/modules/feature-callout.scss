@@ -18,6 +18,15 @@
 		margin-bottom: 0;
 	}
 
+	// Hide when used in a page header.
+	.page-header & {
+		display: none;
+
+		@include media-breakpoint-up(lg) {
+			display: block;
+		}
+	}
+
 	.icon {
 		width: 400px;
 		height: 400px;

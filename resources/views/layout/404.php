@@ -21,7 +21,7 @@ bigbox_view(
 );
 ?>
 
-<div class="block feature-callout">
+<div class="block feature-callout page-header">
 	<div class="container media">
 
 		<div class="feature-callout__media">

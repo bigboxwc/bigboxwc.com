@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $payment = bigbox_edd_get_payment();
 ?>
 
-<div class="block block--alt feature-callout">
+<div class="block block--alt feature-callout page-header">
 	<div class="container media">
 
 		<div class="feature-callout__media">
