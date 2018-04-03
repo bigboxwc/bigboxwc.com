@@ -21,6 +21,9 @@ const extractConfig = {
 		},
 		{
 			loader: 'sass-loader',
+			query: {
+				outputStyle: 'production' === process.env.NODE_ENV ? 'compressed' : 'nested',
+			},
 		},
 	],
 };

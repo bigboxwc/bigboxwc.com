@@ -21,7 +21,7 @@ $posts = get_posts(
 		'post_type'   => 'page',
 		'orderby'     => 'menu_order',
 		'order'       => 'asc',
-	'nopaging'    => true, // @codingStandardsIgnoreLine
+		'nopaging'    => true, // @codingStandardsIgnoreLine
 	]
 );
 ?>
@@ -38,7 +38,7 @@ foreach ( $posts as $post ) :
 	<div class="container media">
 
 		<div class="feature-callout__media">
-			<img src="https://raw.githubusercontent.com/woocommerce/storefront/master/screenshot.png" alt="" />
+			<?php the_post_thumbnail( 'full' ); ?>
 		</div>
 
 		<div class="feature-callout__content">

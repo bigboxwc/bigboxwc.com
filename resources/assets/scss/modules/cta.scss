@@ -54,6 +54,15 @@
 
 .cta__description {
 	margin: 1rem 0 0;
+
+	a {
+		color: #fff;
+		border-bottom-color: #fff;
+
+		&:hover {
+			border-bottom-color: transparent;
+		}
+	}
 }
 
 .cta__button {

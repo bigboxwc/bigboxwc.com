@@ -10,6 +10,7 @@
 	"env": {
 		"default": {
 			"plugins": [
+				"lodash",
 				"import-glob"
 			]
 		}
