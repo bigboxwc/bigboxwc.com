@@ -1,0 +1,22 @@
+div.mce_inline_error,
+#mce-responses {
+	margin-top: 0.5rem;
+	font-size: 14px;
+}
+
+input.mce_inline_error {
+	border-color: $color-red;
+
+	&:focus {
+		border-color: $color-red;
+	}
+}
+
+div.mce_inline_error {
+	color: $color-red;
+}
+
+.mailchimp__email {
+	flex: 1;
+	margin-right: 1rem;
+}

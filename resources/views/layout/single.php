@@ -55,6 +55,7 @@ while ( have_posts() ) :
 				<div class="blog-post__content hentry">
 					<?php the_content(); ?>
 				</div>
+
 			</div>
 
 		</div>
@@ -62,6 +63,7 @@ while ( have_posts() ) :
 </div>
 
 <?php
+bigbox_partial( 'blog/subscribe' );
 comments_template( '/resources/views/partials/blog/comments.php' );
 
 endwhile;
