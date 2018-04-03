@@ -19,16 +19,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="container">
 
 		<div class="cta__content">
-			<h2 class="cta__title">A WooCommerce Theme That Matches the Size of Your Warehouse</h2>
-			<div class="cta__description"><p>
-				Simplified product discovery, item viewing, and checkout processes that fits your needs.
-			</p></div>
+			<h2 class="cta__title"><?php the_title(); ?></h2>
+			<div class="cta__description"><?php the_content(); ?></div>
 
 			<a href="/buy/" class="cta__button button">Get BigBox Now</a>
 			<a href="/demo/" class="cta__more">View Demo &rarr;</a>
 		</div>
 
-		<img src="https://raw.githubusercontent.com/woocommerce/storefront/master/screenshot.png" alt="" />
-
+		<?php the_post_thumbnail( 'full' ); ?>
 	</div>
 </div>

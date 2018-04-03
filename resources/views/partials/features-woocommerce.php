@@ -39,7 +39,7 @@ $woocommerce_features = get_posts(
 
 			<li class="feature-item feature-item--overlay col-md-6 col-lg-4 col-xl-3">
 				<a href="<?php echo esc_url( get_permalink( $feature->ID ) ); ?>" data-slug="<?php echo esc_attr( $feature->post_name ); ?>" class="feature-item__content js-modal-trigger--ajax">
-					<?php the_post_thumbnail(); ?>
+					<?php echo get_the_post_thumbnail( $feature->ID ); ?>
 					<h4><?php echo esc_html( $feature->post_title ); ?></h4>
 				</a>
 			</li>
