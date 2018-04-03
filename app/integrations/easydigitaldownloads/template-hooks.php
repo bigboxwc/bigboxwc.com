@@ -58,3 +58,10 @@ add_action(
 	$_POST['edd_email'] = $_POST['edd_user_login']; // @codingStandardsIgnoreLine
 	}
 );
+
+// Move Mailchimp subscription form.
+add_action( 'bigbox_after_billing_information', function() {
+	global $eddmc;
+
+	echo $eddmc::$checkout->checkout_fields();
+} );

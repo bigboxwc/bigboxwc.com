@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $page  = get_page_by_path( 'build-your-ecommerce-powerhouse' );
 $posts = get_posts(
 	[
-		'post__not_in' => $post__not_in ? $post__not_in : [],
+		'post__not_in' => isset( $post__not_in ) ? $post__not_in : [],
 		'post_parent'  => $page->ID,
 		'post_type'    => 'page',
 		'orderby'      => 'menu_order',

@@ -124,3 +124,5 @@ $customer['address'] = apply_filters( 'edd_checkout_billing_details_address', $c
 		</p>
 	</div>
 </div>
+
+<?php do_action( 'bigbox_after_billing_information' ); ?>
