@@ -23,17 +23,21 @@ if ( is_user_logged_in() && $payment && 'publish' === $payment->status ) {
 	edd_die();
 }
 
+edd_empty_cart();
+
 global $wpdb;
 
 $download = $wpdb->get_var( "SELECT ID from {$wpdb->prefix}posts WHERE post_type = 'download' AND post_status = 'publish'" );
 
 if ( $download ) {
-	edd_empty_cart();
-	edd_add_to_cart( $download, [] );
+	edd_add_to_cart( $download, [
+		'price_id' => isset( $_GET['price_id'] ) ? absint( $_GET['price_id'] ) : null,
+	] );
+
 	wp_safe_redirect( edd_get_checkout_uri() );
 	edd_die();
 } else {
-	edd_empty_cart();
 	wp_safe_redirect( home_url() );
+
 	edd_die();
 }

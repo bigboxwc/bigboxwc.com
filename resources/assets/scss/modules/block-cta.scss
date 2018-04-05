@@ -21,3 +21,16 @@
 	font-size: 15px;
 	margin-left: 1em;
 }
+
+.block-cta--subtle {
+	font-size: 15px;
+	opacity: 0.70;
+
+	p {
+		margin: 0.5rem 0;
+	}
+
+	a {
+		border: 0;
+	}
+}

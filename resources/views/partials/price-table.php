@@ -31,7 +31,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<li class="price-feature">Instant Activation</li>
 			</ul>
 
-			<a href="/buy/" class="button button--primary">Get BigBox Now</a>
+			<p>
+				<a href="/buy/" class="button button--primary">Get BigBox Now</a>
+			</p>
+
+			<p class="price-option__note">Each purchase provides automatic updates and technical support for a single site.</p>
 
 		</div>
 	</div>

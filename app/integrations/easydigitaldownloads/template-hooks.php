@@ -52,6 +52,11 @@ add_filter(
 // No need to log in.
 add_filter( 'edd_logged_in_only', '__return_false', 99 );
 
+// Clear cart when upgrading.
+add_action( 'edd_sl_license_upgrade', function() {
+	edd_empty_cart();
+}, 1 );
+
 // Map email to inputted login name.
 add_action(
 	'edd_pre_process_purchase', function() {

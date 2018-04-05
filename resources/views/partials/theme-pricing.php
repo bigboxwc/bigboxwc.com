@@ -18,12 +18,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div id="pricing" class="block block--alt">
 	<div class="block-header">
 		<h3 class="block-title">Get Started Right Now</h3>
-		<p class="block-subtitle">Join the thousands of people running large-scale WooCommerce-powered websites.</p>
+		<p class="block-subtitle">Choose the plan that fits your needs.</p>
 	</div>
 
 	<div class="container">
 
 		<?php bigbox_partial( 'price-table' ); ?>
 
+	</div>
+
+	<div class="block-cta block-cta--subtle">
+		<p>Need automatic updates on more than one website?</p>
+		<p><a href="/buy/?price_id=2" class="block-cta__sublink">Purchase an unlimited license &rarr;</a></p>
 	</div>
 </div>

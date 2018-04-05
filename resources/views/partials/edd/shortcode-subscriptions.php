@@ -36,18 +36,24 @@ endif;
 	</div>
 
 	<div class="order-summary__row">
-		<span class="order-summary__label">Renewal Date</span>
-		<span class="order-summary__value"><?php echo esc_html( ! empty( $subscription->expiration ) ? date_i18n( get_option( 'date_format' ), strtotime( $subscription->expiration ) ) : __( 'N/A', 'bigbox' ) ); ?></span>
+		<span class="order-summary__label">Payment Method</span>
+		<span class="order-summary__value"><?php echo esc_html( $method ); ?></span>
 	</div>
 
 	<div class="order-summary__row">
-		<span class="order-summary__label">Renewal Amount</span>
+		<span class="order-summary__label">Initial Amount</span>
 		<span class="order-summary__value"><?php echo esc_html( edd_currency_filter( edd_format_amount( $subscription->initial_amount ), edd_get_payment_currency_code( $subscription->parent_payment_id ) ) ); ?></span>
 	</div>
 
+
 	<div class="order-summary__row">
-		<span class="order-summary__label">Payment Method</span>
-		<span class="order-summary__value"><?php echo esc_html( $method ); ?></span>
+		<span class="order-summary__label">Renewal Amount</span>
+		<span class="order-summary__value"><?php echo esc_html( edd_currency_filter( edd_format_amount( $subscription->recurring_amount ), edd_get_payment_currency_code( $subscription->parent_payment_id ) ) ); ?></span>
+	</div>
+
+	<div class="order-summary__row">
+		<span class="order-summary__label">Renewal Date</span>
+		<span class="order-summary__value"><?php echo esc_html( ! empty( $subscription->expiration ) ? date_i18n( get_option( 'date_format' ), strtotime( $subscription->expiration ) ) : __( 'N/A', 'bigbox' ) ); ?></span>
 	</div>
 
 </div>

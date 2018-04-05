@@ -14,12 +14,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-$license = bigbox_edd_get_license();
-
-if ( is_user_logged_in() && $license && 'expired' !== $license->status ) {
-	wp_safe_redirect( get_permalink( edd_get_option( 'purchase_history_page' ) ) );
-	edd_die();
-}
+if ( empty( edd_get_cart_contents() ) ) :
+	wp_safe_redirect( home_url( '/' ) );
+	exit;
+endif;
 
 $payment_mode = edd_get_chosen_gateway();
 $form_action  = esc_url( edd_get_checkout_uri( 'payment-mode=' . $payment_mode ) );
@@ -32,10 +30,6 @@ bigbox_view(
 
 <div class="block block--alt checkout">
 	<div class="container">
-
-		<?php if ( empty( edd_get_cart_contents() ) ) : ?>
-			<p>Nothing to purchase.</p>
-		<?php else : ?>
 
 		<div class="block-header">
 			<h1 class="block-title">Complete Your Purchase</h3>
@@ -67,8 +61,6 @@ bigbox_view(
 				</div>
 			</div>
 		</div>
-
-		<?php endif; ?>
 
 	</div>
 </div>
