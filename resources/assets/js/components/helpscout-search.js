@@ -9,6 +9,7 @@ import { debounce } from 'lodash';
 window.wp = window.wp || {};
 const $searchField = $( '#docs-search-keywords' );
 const $searchResults = $( '#docs-search-results' );
+const $recordedTerm = $( '.docs-recorded-search-term [type="text"]' );
 let hasSearched = false;
 let searchResults = null;
 
@@ -45,6 +46,10 @@ const displaySuggestions = function( searchTerm ) {
 	// Clear existing.
 	$searchResults.html( '' );
 
+	if ( ! searchResults ) {
+		return;
+	}
+
 	// Results and term.
 	if ( searchResults.length > 0 && '' !== searchTerm ) {
 		$searchResults.fadeIn();
@@ -77,8 +82,18 @@ $searchField.on( 'keyup', debounce( function() {
   
 	results.then( function() {
 		displaySuggestions( searchTerm );
+		logInput( searchTerm );
 	} );
 }, 300 ) );
+
+/**
+ * Log the input in the form.
+ *
+ * @since 1.0.0
+ */
+const logInput = ( searchTerm ) => {
+	$recordedTerm.val( searchTerm );
+};
 
 /**
  * Close results clicking elsewhere.

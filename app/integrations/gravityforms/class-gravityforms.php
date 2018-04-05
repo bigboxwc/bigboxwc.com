@@ -41,8 +41,7 @@ class GravityForms extends Integration implements Registerable, Service {
 	 * @since 1.0.0
 	 */
 	public function register() {
-		require_once $this->get_dir() . '/template-hooks.php';
-		require_once $this->get_dir() . '/template-functions.php';
+		require_once $this->get_dir() . '/custom-fields.php';
 	}
 
 }
