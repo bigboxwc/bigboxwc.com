@@ -63,5 +63,7 @@ add_action(
 add_action( 'bigbox_after_billing_information', function() {
 	global $eddmc;
 
-	echo $eddmc::$checkout->checkout_fields();
+	if ( $eddmc ) {
+		echo $eddmc::$checkout->checkout_fields();
+	}
 } );
