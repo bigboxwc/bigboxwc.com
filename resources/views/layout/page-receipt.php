@@ -77,11 +77,6 @@ else :
 						?>
 
 						<div class="order-summary__row">
-							<span class="order-summary__label"><?php echo esc_html__( 'Subtotal', 'bigbox' ); ?></span>
-							<span class="order-summary__value"><?php echo esc_html( edd_payment_subtotal( $payment->ID ) ); ?></span>
-						</div>
-
-						<div class="order-summary__row">
 							<span class="order-summary__label"><?php echo esc_html__( 'Total', 'bigbox' ); ?></span>
 							<span class="order-summary__value"><strong><?php echo esc_html( edd_payment_amount( $payment->ID ) ); ?></strong></span>
 						</div>
