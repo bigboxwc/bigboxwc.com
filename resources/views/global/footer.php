@@ -23,12 +23,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<div class="colophon__section col-sm-12 col-lg-6">
 						<h4 class="section-title">Tips and Tricks</h4>
 
+						<?php
+						$posts = get_posts( [
+							'posts_per_page' => 4,
+						] );
+
+						if ( ! empty( $posts ) ) :
+						?>
 						<ul class="list">
-							<li><a href="#">Offloading WooCommerce Product Images to Amazon S3</a></li>
-							<li><a href="#">Choosing a WooCommerce-optimized Host Environment</a></li>
-							<li><a href="#">Minimizing Fees on WooCommerce Transaction</a></li>
-							<li><a href="#">Decreasing Load Time and Increasing Sales</a></li>
+							<?php foreach ( $posts as $post ) : ?>
+							<li><a href="<?php echo esc_url( get_the_permalink( $post->ID ) ); ?>">
+								<?php echo esc_html( get_the_title( $post->ID ) ); ?></a>
+							</li>
+							<?php endforeach; ?>
 						</ul>
+						<?php endif; ?>
 					</div>
 
 					<div class="colophon__section col-sm-6 col-lg-3">
@@ -46,9 +55,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<h4 class="section-title">Legal</h4>
 
 						<ul class="list">
-							<li><a href="/tos/">Terms of Service</a></li>
+							<li><a href="/terms/">Terms of Service</a></li>
 							<li><a href="/privacy/">Privacy Policy</a></li>
-							<li><strong>Copyright &copy; <?php echo esc_html( date( 'Y' ) ); ?></strong></li>
+							<li><strong>Copyright &copy; <?php echo esc_html( date( 'Y' ) ); ?> BigBox, LLC</strong></li>
 						</ul>
 					</div>
 

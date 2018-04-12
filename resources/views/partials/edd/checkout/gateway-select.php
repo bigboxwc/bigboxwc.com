@@ -64,7 +64,7 @@ $chosen_gateway = edd_get_chosen_gateway();
 					<?php echo edd_checkout_button_purchase(); // @codingStandardsIgnoreLine ?>
 				</div>
 
-				<p class="edd-purchase-terms">By clicking "Purchase", you agree to the <strong>BigBox</strong> <a href="/tos">Terms of Service</a> and <a href="/privacy-policty">Privacy Policy</a>.</p>
+				<p class="edd-purchase-terms">By clicking "Purchase", you agree to the <strong>BigBox</strong> <a href="/terms/">Terms of Service</a> and <a href="/privacy/">Privacy Policy</a>.</p>
 
 			</div>
 		</div>
