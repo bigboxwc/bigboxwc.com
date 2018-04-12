@@ -32,12 +32,12 @@ final class Theme implements Registerable {
 	public function register() {
 		add_action( 'after_setup_theme', [ $this, 'load_helpers' ], 0 );
 
-		// add_action( 'after_setup_theme', function() {
-		// 	if ( ! WP_DEBUG && ! ( is_user_logged_in() || current_user_can( 'manage_options' ) ) && $GLOBALS['pagenow'] !== 'wp-login.php' ) {
-		// 		bigbox_view( 'layout/page-coming-soon' );
-		// 		exit();
-		// 	}
-		// }, 1 );
+		add_action( 'after_setup_theme', function() {
+			if ( ! WP_DEBUG && ! ( is_user_logged_in() || current_user_can( 'manage_options' ) ) && $GLOBALS['pagenow'] !== 'wp-login.php' ) {
+				bigbox_view( 'layout/page-coming-soon' );
+				exit();
+			}
+		}, 1 );
 
 		add_action( 'after_setup_theme', [ $this, 'register_services' ], 0 );
 	}
