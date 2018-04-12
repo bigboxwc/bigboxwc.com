@@ -102,8 +102,8 @@ else :
 					?>
 
 						<div class="order-summary__row">
-							<span class="order-summary__label"><?php echo esc_html( $site ); ?></span>
-							<span class="order-summary__value"><a href="<?php echo wp_nonce_url( add_query_arg( array( 'edd_action' => 'deactivate_site', 'site_url' => $site, 'license' => $license->ID ) ), 'edd_deactivate_site_nonce', '_wpnonce' ); ?>">Deactivate</a></span>
+							<span class="order-summary__label"><?php echo make_clickable( esc_url( $site ) ); ?></span>
+							<span class="order-summary__value"><a href="<?php echo wp_nonce_url( add_query_arg( array( 'edd_action' => 'deactivate_site', 'site_url' => $site, 'license' => $license->ID ) ), 'edd_deactivate_site_nonce', '_wpnonce' ); ?>" class="ui-red">Deactivate</a></span>
 						</div>
 
 					<?php

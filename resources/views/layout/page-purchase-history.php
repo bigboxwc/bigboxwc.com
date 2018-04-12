@@ -77,7 +77,7 @@ else :
 		</li>
 
 		<li class="feature-item feature-item--overlay col-sm-6 col-lg-3">
-			<a href="/support/" class="feature-item__content">
+			<a href="/account/support/" class="feature-item__content">
 				<?php bigbox_svg( 'illustration-globe' ); ?>
 				<h4>Contact Technical Support</h4>
 			</a>
