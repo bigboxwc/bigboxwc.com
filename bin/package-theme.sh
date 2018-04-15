@@ -21,6 +21,15 @@ PACKAGE_VERSION=$(cat package.json \
   | awk -F: '{ print $2 }' \
   | sed 's/[",\t ]//g')
 
+status "
+.______    __    _______ .______     ______   ___   ___
+|   _  \  |  |  /  _____||   _  \   /  __  \  \  \ /  /
+|  |_)  | |  | |  |  __  |  |_)  | |  |  |  |  \  V  / 
+|   _  <  |  | |  | |_ | |   _  <  |  |  |  |   >   <  
+|  |_)  | |  | |  |__| | |  |_)  | | \`--'  |  /  .  \ 
+|______/  |__|  \______| |______/   \______/  /__/ \__\
+";
+
 # Make sure there are no changes in the working tree.  Release builds should be
 # traceable to a particular commit and reliably reproducible.  (This is not
 # totally true at the moment because we download nightly vendor scripts).

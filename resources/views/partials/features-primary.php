@@ -63,5 +63,5 @@ wp_reset_postdata();
 		<a href="/buy/" class="button button--primary">Get BigBox Now</a> 
 	<?php endif; ?>
 
-	<a href="/demo/" class="block-cta__sublink">View Demo &rarr;</a>
+	<a href="https://demos.bigboxwc.com/default/" class="block-cta__sublink">View Demo &rarr;</a>
 </div>

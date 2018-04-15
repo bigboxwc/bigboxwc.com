@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="cta__description"><?php the_content(); ?></div>
 
 			<a href="/buy/" class="cta__button button">Get BigBox Now</a>
-			<a href="/demo/" class="cta__more">View Demo &rarr;</a>
+			<a href="https://demos.bigboxwc.com/default/" class="cta__more">View Demo &rarr;</a>
 		</div>
 
 		<?php the_post_thumbnail( 'full' ); ?>
