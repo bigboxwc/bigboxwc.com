@@ -5,9 +5,13 @@
 
 	a {
 		color: #fff;
+		display: flex;
+		align-items: center;
+		border: 0;
+	}
 
-		&:hover {
-			border-bottom: 2px solid #fff;
-		}
+	svg {
+		margin-top: -3px;
+		margin-right: 10px;
 	}
 }

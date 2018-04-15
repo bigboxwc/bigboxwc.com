@@ -22,7 +22,7 @@ function bigbox_enqueue_styles() {
 	$version    = bigbox_get_theme_version();
 	$stylesheet = 'bigbox';
 
-	wp_enqueue_style( $stylesheet . '-fonts', 'https://fonts.googleapis.com/css?family=Lora:700|Lato:400,700' );
+	wp_enqueue_style( $stylesheet . '-fonts', 'https://fonts.googleapis.com/css?family=Lora:700|Varela+Round' );
 	wp_enqueue_style( $stylesheet, get_template_directory_uri() . '/public/css/app.min.css', [], $version );
 }
 add_action( 'wp_enqueue_scripts', 'bigbox_enqueue_styles' );
