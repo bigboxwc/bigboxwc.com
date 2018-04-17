@@ -20,16 +20,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				<div class="colophon row">
 
+					<?php
+					$lg = 'col-lg-6';
+					$posts = get_posts( [
+						'posts_per_page' => 4,
+					] );
+
+					if ( ! empty( $posts ) ) :
+						$lg = 'col-lg-3';
+					?>
+
 					<div class="colophon__section col-sm-12 col-lg-6">
 						<h4 class="section-title">Tips and Tricks</h4>
 
-						<?php
-						$posts = get_posts( [
-							'posts_per_page' => 4,
-						] );
-
-						if ( ! empty( $posts ) ) :
-						?>
 						<ul class="list">
 							<?php foreach ( $posts as $post ) : ?>
 							<li><a href="<?php echo esc_url( get_the_permalink( $post->ID ) ); ?>">
@@ -37,10 +40,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 							</li>
 							<?php endforeach; ?>
 						</ul>
-						<?php endif; ?>
 					</div>
+					<?php endif; ?>
 
-					<div class="colophon__section col-sm-6 col-lg-3">
+					<div class="colophon__section col-sm-6 <?php echo esc_attr( $lg ); ?>">
 						<h4 class="section-title">Site Links</h4>
 
 						<ul class="list">
@@ -51,7 +54,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						</ul>
 					</div>
 
-					<div class="colophon__section col-sm-6 col-lg-3">
+					<div class="colophon__section col-sm-6 <?php echo esc_attr( $lg ); ?>">
 						<h4 class="section-title">Legal</h4>
 
 						<ul class="list">

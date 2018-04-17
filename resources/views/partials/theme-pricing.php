@@ -18,7 +18,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div id="pricing" class="block">
 	<div class="block-header">
 		<h3 class="block-title">Get Started Right Now</h3>
-		<p class="block-subtitle">Choose the plan that fits your needs.</p>
 	</div>
 
 	<div class="container">

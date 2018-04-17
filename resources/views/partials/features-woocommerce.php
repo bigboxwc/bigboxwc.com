@@ -49,8 +49,8 @@ $woocommerce_features = get_posts(
 		</ul>
 
 	</div>
-</div>
 
-<div class="block-cta">
-	<a href="https://woocommerce.com/features/" class="block-cta__sublink">Read More on WooCommerce.com &rarr;</a>
+	<div class="block-cta">
+		<a href="https://woocommerce.com/features/" class="block-cta__sublink">Read More on WooCommerce.com &rarr;</a>
+	</div>
 </div>
