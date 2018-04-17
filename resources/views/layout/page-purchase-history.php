@@ -63,29 +63,29 @@ else :
 
 		<li class="feature-item feature-item--overlay col-sm-6 col-lg-3">
 			<a href="<?php echo esc_url( bigbox_edd_get_download_url() ); ?>" class="feature-item__content">
-				<?php bigbox_svg( 'illustration-hacker' ); ?>
+				<?php bigbox_svg( 'illustration-download' ); ?>
 				<h4>Download BigBox</h4>
 				<span class="pill"><?php echo esc_html( bigbox_edd_get_download_version() ); ?></span>
 			</a>
 		</li>
 
 		<li class="feature-item feature-item--overlay col-sm-6 col-lg-3">
-			<a href="/docs/" class="feature-item__content">
-				<?php bigbox_svg( 'illustration-hand' ); ?>
+			<a href="https://docs.bigboxwc.com/" class="feature-item__content">
+				<?php bigbox_svg( 'illustration-teacher' ); ?>
 				<h4>View the Documentation</h4>
 			</a>
 		</li>
 
 		<li class="feature-item feature-item--overlay col-sm-6 col-lg-3">
 			<a href="/account/support/" class="feature-item__content">
-				<?php bigbox_svg( 'illustration-globe' ); ?>
+				<?php bigbox_svg( 'illustration-programmer' ); ?>
 				<h4>Contact Technical Support</h4>
 			</a>
 		</li>
 
 		<li class="feature-item feature-item--overlay col-sm-6 col-lg-3">
 			<a href="<?php echo esc_url( bigbox_edd_get_receipt_url() ); ?>" class="feature-item__content">
-				<?php bigbox_svg( 'illustration-ipod' ); ?>
+				<?php bigbox_svg( 'illustration-receipt' ); ?>
 				<h4>View Receipt &amp; Manage Subscription</h4>
 			</a>
 		</li>

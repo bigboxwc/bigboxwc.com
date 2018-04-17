@@ -59,10 +59,10 @@ else :
 
 			<p><strong>Please note:</strong> technical support is just that: technical. We are not able provide website customization or setup services.</p>
 
-			<form class="docs-search" method="GET" action="/">
+			<form class="docs-search" method="GET" action="https://docs.bigboxwc.com/search">
 				<p class="form-row">
 					<strong>Find Answers:</strong><br />
-					<input type"text" id="docs-search-keywords" class="form-input docs-search__keywords" value="" placeholder="Installing a WordPress theme..." />
+					<input type"text" id="docs-search-keywords" class="form-input docs-search__keywords" value="" placeholder="Installing a WordPress theme..." name="query" />
 					<input type="submit" value="Search" class="button button--primary button--size-sm" />
 				</p>
 

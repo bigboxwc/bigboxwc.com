@@ -20,12 +20,12 @@ $woocommerce_features = get_posts(
 		'post_type'   => 'page',
 		'orderby'     => 'menu_order',
 		'order'       => 'asc',
-	'nopaging'    => true, // @codingStandardsIgnoreLine
+		'nopaging'    => true, // @codingStandardsIgnoreLine
 	]
 );
 ?>
 
-<div id="features" class="block">
+<div id="features" class="block block--alt">
 	<div class="block-header">
 		<h3 class="block-title">Why Use WooCommerce?</h3>
 		<p class="block-subtitle">WooCommerce is an open-source, completely customizable eCommerce platform for entrepreneurs worldwide.</p>
@@ -49,4 +49,8 @@ $woocommerce_features = get_posts(
 		</ul>
 
 	</div>
+</div>
+
+<div class="block-cta">
+	<a href="https://woocommerce.com/features/" class="block-cta__sublink">Read More on WooCommerce.com &rarr;</a>
 </div>

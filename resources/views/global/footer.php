@@ -57,7 +57,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<ul class="list">
 							<li><a href="/terms/">Terms of Service</a></li>
 							<li><a href="/privacy/">Privacy Policy</a></li>
-							<li><strong>Copyright &copy; <?php echo esc_html( date( 'Y' ) ); ?> BigBox, LLC</strong></li>
+							<li><strong>Copyright &copy; <?php echo esc_html( date( 'Y' ) ); ?> BigBoxWC, LLC</strong></li>
 						</ul>
 					</div>
 

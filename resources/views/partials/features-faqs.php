@@ -18,7 +18,7 @@ $faqs = get_posts(
 	[
 		'post_parent' => get_page_by_path( 'faqs' )->ID,
 		'post_type'   => 'page',
-	'nopaging'    => true, // @codingStandardsIgnoreLine
+		'nopaging'    => true, // @codingStandardsIgnoreLine
 	]
 );
 ?>
