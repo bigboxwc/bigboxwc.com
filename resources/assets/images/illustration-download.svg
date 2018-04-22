@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="88" height="71">
+  <g fill="none" fill-rule="evenodd" transform="translate(0 1)">
+    <path fill="#F0F2FF" fill-rule="nonzero" d="M84 40.24c-.0015-16.3354-9.936-31.0285-25.095-37.1155-15.1589-6.087-32.496-2.3447-43.7943 9.4533C3.8123 24.3758.8232 41.8585 7.56 56.74h72.88A39.85 39.85 0 0 0 84 40.24z"/>
+    <path stroke="#4550E5" stroke-linecap="round" stroke-linejoin="round" d="M5 56.74h78m-82.5 0H3m82 0h2.5"/>
+    <ellipse cx="43.43" cy="68.04" fill="#F0F2FF" fill-rule="nonzero" rx="14.85" ry="1.71"/>
+    <path fill="#D6DAFF" fill-rule="nonzero" d="M66.28 28.1a3.62 3.62 0 0 0-3.63-3.62h-37.3a3.62 3.62 0 0 0-3.63 3.62v24.73h44.56V28.1z"/>
+    <path fill="#FFF" fill-rule="nonzero" d="M51.49 24.48H25.35a3.62 3.62 0 0 0-3.63 3.62v24.73h1.42l28.35-28.35zM49.4 63.63H38.6l.67-5.4h9.46z"/>
+    <path stroke="#4550E5" stroke-linecap="round" stroke-linejoin="round" d="M49.4 63.63H38.6l.67-5.4h9.46z"/>
+    <path fill="#FFF" fill-rule="nonzero" stroke="#4550E5" stroke-linecap="round" stroke-linejoin="round" d="M51.73 66.33H36.27a.84.84 0 0 1-.78-1.17 2.7 2.7 0 0 1 2.43-1.53h12.16a2.7 2.7 0 0 1 2.43 1.53.84.84 0 0 1-.78 1.17zm10.92-8.1a3.62 3.62 0 0 0 3.63-3.62v-1.78H21.72v1.78a3.62 3.62 0 0 0 3.63 3.62h37.3z"/>
+    <path stroke="#4550E5" stroke-linecap="round" stroke-linejoin="round" d="M66.28 28.1a3.62 3.62 0 0 0-3.63-3.62h-37.3a3.62 3.62 0 0 0-3.63 3.62v24.73h44.56V28.1zM44.6 55.53a.6.6 0 1 1-1.2 0 .6.6 0 0 1 1.2 0z"/>
+    <path fill="#D6DAFF" fill-rule="nonzero" stroke="#4550E5" stroke-linejoin="round" d="M57.39 43.19c.0056 1.3271-1.0629 2.409-2.39 2.42H33c-1.2735-.082-2.2645-1.1388-2.2645-2.415s.991-2.333 2.2645-2.415h22c1.3232.011 2.39 1.0868 2.39 2.41z"/>
+    <path fill="#FFF" fill-rule="nonzero" stroke="#4550E5" stroke-linejoin="round" d="M49.14 40.78H33c-1.2735.082-2.2645 1.1388-2.2645 2.415s.991 2.333 2.2645 2.415h16.14v-4.83z"/>
+    <path stroke="#4550E5" stroke-linejoin="round" d="M49.14 40.78H33c-1.2735.082-2.2645 1.1388-2.2645 2.415s.991 2.333 2.2645 2.415h16.14v-4.83z"/>
+    <path fill="#FFF" fill-rule="nonzero" d="M36.21 8.34a1.22 1.22 0 0 0-1 1.95L43 20.38a1.22 1.22 0 0 0 1.92 0l7.79-10.09a1.22 1.22 0 0 0-1-1.95h-3v-5.6c0-1.331-1.079-2.41-2.41-2.41h-4.72c-1.331 0-2.41 1.079-2.41 2.41v5.6h-2.96z"/>
+    <path stroke="#4550E5" stroke-linejoin="round" d="M36.21 8.34a1.22 1.22 0 0 0-1 1.95L43 20.38a1.22 1.22 0 0 0 1.92 0l7.79-10.09a1.22 1.22 0 0 0-1-1.95h-3v-5.6c0-1.331-1.079-2.41-2.41-2.41h-4.72c-1.331 0-2.41 1.079-2.41 2.41v5.6h-2.96z"/>
+  </g>
+</svg>

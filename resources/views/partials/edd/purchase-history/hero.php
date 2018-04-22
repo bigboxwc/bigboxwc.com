@@ -19,13 +19,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="container media">
 
 		<div class="feature-callout__media">
-			<?php bigbox_svg( 'graphic-programmer' ); ?>
+			<?php bigbox_svg( 'graphic-receipt' ); ?>
 		</div>
 
 		<div class="feature-callout__content">
-			<h3 class="feature-callout__title">📦 Manage Your BigBox Purchase</h3>
+			<h3 class="feature-callout__title">📦 Your BigBox Purchase</h3>
 
-			<p>Access your files, one-on-one technical support, and more from your account dashboard. Your subscription will automatically renew on <strong><?php echo esc_html( ! empty( $subscription->expiration ) ? date_i18n( get_option( 'date_format' ), strtotime( $subscription->expiration ) ) : __( 'N/A', 'bigbox' ) ); ?></strong> for <?php echo edd_currency_filter( edd_format_amount( $subscription->recurring_amount ) ); ?>.</p>
+			<p>Your BigBox theme subscription will automatically renew on <strong><?php echo esc_html( ! empty( $subscription->expiration ) ? date_i18n( get_option( 'date_format' ), strtotime( $subscription->expiration ) ) : __( 'N/A', 'bigbox' ) ); ?></strong> for <?php echo edd_currency_filter( edd_format_amount( $subscription->recurring_amount ) ); ?>.</p>
 
 			<p>
 				<strong>License Key:</strong><br />
