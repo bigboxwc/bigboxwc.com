@@ -60,7 +60,7 @@ wp_reset_postdata();
 	<?php if ( isset( $context ) && 'features' === $context ) : ?>
 		<a href="/features/" class="button button--primary">View All Features</a> 
 	<?php else : ?>
-		<a href="/buy/" class="button button--primary">Get BigBox Now</a> 
+		<a href="/features/#pricing" class="button button--primary">Get BigBox Now</a> 
 	<?php endif; ?>
 
 	<a href="https://demos.bigboxwc.com/default/" class="block-cta__sublink">View Demo &rarr;</a>
