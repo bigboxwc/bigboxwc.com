@@ -32,6 +32,10 @@ const cssPlugin = new ExtractTextPlugin( {
 	filename: './public/css/app.min.css',
 } );
 
+const cssHelpscoutPlugin = new ExtractTextPlugin( {
+	filename: './public/css/helpscout.min.css',
+} );
+
 module.exports = {
 	entry: {
 		app: './resources/assets/js/app.js',
@@ -64,8 +68,13 @@ module.exports = {
 				include: /js/,
 			},
 			{
-				test: /.s?css$/,
+				test: /style.scss$/,
 				use: cssPlugin.extract( extractConfig ),
+				include: /scss/,
+			},
+			{
+				test: /helpscout.scss$/,
+				use: cssHelpscoutPlugin.extract( extractConfig ),
 				include: /scss/,
 			},
 		],
@@ -78,6 +87,7 @@ module.exports = {
 			'process.env.NODE_ENV': JSON.stringify( process.env.NODE_ENV || 'development' ),
 		} ),
 		cssPlugin,
+		cssHelpscoutPlugin,
 		new SpritePlugin(),
 		new webpack.ProvidePlugin( {
 			$: 'jquery',

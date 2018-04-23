@@ -55,7 +55,7 @@ else :
 		<div class="feature-callout__content">
 			<h3 class="feature-callout__title">🔎 Review the Documentation</h3>
 
-			<p>Before submitting a ticket please search the documentation.</p>
+			<p>Before submitting a ticket please search the <a href="https://docs.bigboxwc.com/">documentation</a>.</p>
 
 			<p><strong>Please note:</strong> technical support is just that: technical. We are not able provide website customization or setup services.</p>
 
@@ -64,10 +64,13 @@ else :
 					<strong>Find Answers:</strong><br />
 					<input type"text" id="docs-search-keywords" class="form-input docs-search__keywords" value="" placeholder="Installing a WordPress theme..." name="query" />
 					<input type="submit" value="Search" class="button button--primary button--size-sm" />
+
+					<small class="docs-view-all"><a href="https://docs.bigboxwc.com/">View all documentation &rarr;</a></small>
 				</p>
 
 				<ul id="docs-search-results" class="docs-search__results"></ul>
 			</form>
+
 		</div>
 
 	</div>

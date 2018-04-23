@@ -1,7 +1,7 @@
 {
 	"name": "bigbox",
 	"title": "BigBox",
-	"version": "0.9.3",
+	"version": "0.9.4",
 	"description": "WooCommerce solutions for large stores.",
 	"main": "webpack.config.js",
 	"devDependencies": {
