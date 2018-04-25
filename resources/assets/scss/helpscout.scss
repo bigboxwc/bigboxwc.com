@@ -14,7 +14,7 @@ body {
 		border-color: $color-gray-200;
 	}
 
-	#searchBar button {
+	#docsSearch #searchBar button {
 		background: $brandColor;
 		border-color: $brandColor;
 
@@ -24,7 +24,8 @@ body {
 	}
 
 	textarea,
-	input {
+	input,
+ 	input[type=text] {
 
 		&:focus {
 			border-color: rgba($brandColor, 0.7);
