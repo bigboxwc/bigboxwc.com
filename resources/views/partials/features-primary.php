@@ -38,7 +38,7 @@ foreach ( $posts as $post ) :
 	<div class="container media">
 
 		<div class="feature-callout__media">
-			<?php the_post_thumbnail( 'full' ); ?>
+				<a href="<?php echo esc_url( get_the_post_thumbnail_url( $post, 'full' ) ); ?>" class="js-modal-trigger--ajax" data-slug="<?php echo esc_attr( $post->post_name ); ?>"><?php the_post_thumbnail( 'medium' ); ?></a>
 		</div>
 
 		<div class="feature-callout__content">
