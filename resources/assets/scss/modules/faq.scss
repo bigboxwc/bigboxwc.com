@@ -79,6 +79,10 @@
 
 	.faq__title {
 
+		&:focus {
+			outline: 0;
+		}
+
 		svg {
 			transform: rotate(45deg);
 		}
