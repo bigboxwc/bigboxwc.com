@@ -32,8 +32,8 @@ bigbox_view(
 	<div class="container">
 
 		<div class="block-header">
-			<h1 class="block-title">Complete Your Purchase</h3>
-			<p class="block-subtitle">Your're on your way to a more scalable eCommerce solution.</p>
+			<h1 class="block-title">BigBox WooCommerce Theme</h3>
+			<p class="block-subtitle">Complete your <u>secure</u> purchase below.</p>
 		</div>
 
 		<div class="row justify-content-center">
