@@ -2,3 +2,12 @@
 	border-bottom: 0;
 	padding-bottom: 0;
 }
+
+.stripe-secure {
+	color: $color-gray-500;
+
+	a {
+		
+		@include link-focus();
+	}
+}

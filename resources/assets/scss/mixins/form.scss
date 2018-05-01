@@ -2,7 +2,6 @@
 	margin: 0 0 2em;
 	width: 100%;
 
-	&:not(.form-row--half):not(:first-of-type):last-of-type,
 	&:not(.form-row--half):not(:first-child):last-child {
 		margin-bottom: 0;
 	}

@@ -21,6 +21,7 @@
 
 .edd-gateway-option {
 	color: $color-gray-500;
+	line-height: 1;
 	cursor: pointer;
 	position: relative;
 	margin: 0 10px 1rem;
@@ -79,8 +80,8 @@
 	}
 
 	svg {
-		width: 124px;
-		height: 33px;
+		width: 88px;
+		height: 22px;
 	}
 
 	span {

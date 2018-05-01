@@ -30,7 +30,8 @@ remove_action( 'edd_stripe_cc_form', 'edds_credit_card_form' );
 add_action( 'edd_stripe_cc_form', 'bigbox_edd_stripe_cc_form' );
 
 // Add custom output to gateway selection.
-add_action( 'edd_purchase_form', 'bigbox_edd_purchase_form' );
+add_action( 'edd_purchase_form', 'bigbox_edd_purchase_form_before', 1 );
+add_action( 'edd_purchase_form', 'edd_checkout_hidden_fields' );
 
 // Remove empty states (messes with Choices script).
 add_filter(

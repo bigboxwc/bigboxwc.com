@@ -23,21 +23,23 @@ function bigbox_edd_stripe_cc_form() {
 }
 
 /**
- * Custom purchase form fields.
+ * Custom purchase form notes.
  *
  * When PayPal is being used add a custom note. Always add custom hidden fields
  * to ensure the current gateway is known.
  *
  * @since 1.0.0
  */
-function bigbox_edd_purchase_form() {
+function bigbox_edd_purchase_form_before() {
+	echo '<p style="margin-bottom: 2rem;">';
+
 	if ( isset( $_POST['edd_payment_mode'] ) && 'paypal' === $_POST['edd_payment_mode'] ) { // @codingStandardsIgnoreLine
-		echo '<p style="margin-bottom: 2rem;">';
 		echo 'You will be redirected to PayPal to complete your purchase.';
-		echo '</p>';
+	} else {
+		echo '<small class="stripe-secure">Your credit card details will be saved by our payment processor <a href="https://stripe.com/docs/security">Stripe</a> over a secure SSL connection and encrypted with AES-256.</small>';
 	}
 
-	edd_checkout_hidden_fields();
+	echo '</p>';
 }
 
 /**
