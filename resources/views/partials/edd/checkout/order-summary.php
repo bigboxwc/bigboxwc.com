@@ -25,18 +25,13 @@ $item = current( $cart );
 				<p class="card__label">Order Overview</p>
 
 				<div class="order-summary__row">
-					<span class="order-summary__label order-summary__label--highlight">Instant Account Activation</span>
-					<span class="order-summary__value order-summary__value--highlight">Free!</span>
-				</div>
-
-				<div class="order-summary__row">
-					<span class="order-summary__label order-summary__label--highlight">Money Back Guarantee</span>
+					<span class="order-summary__label">Money Back Guarantee</span>
 					<span class="order-summary__value order-summary__value--highlight">14 Days</span>
 				</div>
 
 				<?php if ( 1 !== $item['options']['price_id'] ) : // Unlimited license. ?>
 				<div class="order-summary__row">
-					<span class="order-summary__label order-summary__label--highlight">License Activation Limit</span>
+					<span class="order-summary__label">License Activation Limit</span>
 					<span class="order-summary__value order-summary__value--highlight">Unlimited</span>
 				</div>
 				<?php endif; ?>
