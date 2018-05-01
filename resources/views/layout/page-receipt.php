@@ -119,12 +119,12 @@ else :
 					<?php if ( ! $at_limit && ( $status == 'active' || $status == 'inactive' ) && get_post_status( $license->ID ) !== 'draft' ) : ?>
 					<form method="post" id="edd_sl_license_add_site_form" class="edd_sl_form">
 						<p class="form-row">
-							<label for="site_url" class="screen-reader-text">Authorize a website for automatic updates:<label>
+							<label for="site_url" class="screen-reader-text">Activate a URL to receive automatic updates:<label>
 							<input type="text" name="site_url" class="form-input" placeholder="http://"/>
 						</p>
 
 						<p class="form-row">
-							<input type="submit" class="button button--primary button--size-sm" value="Authorize" />
+							<input type="submit" class="button button--primary button--size-sm" value="Activate" />
 							<input type="hidden" name="license_id" value="<?php echo esc_attr( $license->ID ); ?>"/>
 							<input type="hidden" name="edd_action" value="insert_site"/>
 							<?php wp_nonce_field( 'edd_add_site_nonce', 'edd_add_site_nonce', true ); ?>
