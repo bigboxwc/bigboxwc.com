@@ -19,7 +19,8 @@ PACKAGE_VERSION=$(cat package.json \
   | grep version \
   | head -1 \
   | awk -F: '{ print $2 }' \
-  | sed 's/[",\t ]//g')
+  | sed 's/[",]//g' \
+  | tr -d '[[:space:]]')
 
 status "
 .______    __    _______ .______     ______   ___   ___
