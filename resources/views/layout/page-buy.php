@@ -31,7 +31,7 @@ $download = $wpdb->get_var( "SELECT ID from {$wpdb->prefix}posts WHERE post_type
 
 if ( $download ) {
 	edd_add_to_cart( $download, [
-		'price_id' => isset( $_GET['price_id'] ) ? absint( $_GET['price_id'] ) : null,
+		'price_id' => isset( $_GET['price_id'] ) ? absint( $_GET['price_id'] ) : 1,
 	] );
 
 	wp_safe_redirect( edd_get_checkout_uri() );
