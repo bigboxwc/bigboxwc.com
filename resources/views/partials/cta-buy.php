@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<h2 class="cta__title cta__title--mini">Get Started Today</h2>
 			<div class="cta__description"><p>Join the thousands who are already using BigBox resources to optimize their WooCommerce website.</p></div>
 
-			<a href="/features/#pricing" class="cta__button cta__button--mini button button--size-sm">Get BigBox Now</a>
+			<a href="/buy/" class="cta__button cta__button--mini button button--size-sm">Get BigBox Now</a>
 		</div>
 
 	</div>

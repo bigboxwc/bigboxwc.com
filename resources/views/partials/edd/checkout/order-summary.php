@@ -29,14 +29,16 @@ $item = current( $cart );
 					<span class="order-summary__value order-summary__value--highlight">14 Days</span>
 				</div>
 
-				<?php if ( 1 !== $item['options']['price_id'] ) : // Unlimited license. ?>
 				<div class="order-summary__row">
 					<span class="order-summary__label">License Activation Limit</span>
-					<span class="order-summary__value order-summary__value--highlight">Unlimited</span>
+					<?php if ( 1 !== (int) $item['options']['price_id'] ) : // Unlimited license. ?>
+						<span class="order-summary__value order-summary__value--highlight">Unlimited Sites</span>
+					<?php else : ?>
+						<span class="order-summary__value order-summary__value--highlight">1 Site</span>
+					<?php endif; ?>
 				</div>
-				<?php endif; ?>
 
-				<?php if ( 1 !== $item['options']['price_id'] && isset( $item['options']['license_id'] ) ) : // Upgrading. ?>
+				<?php if ( 1 !== (int) $item['options']['price_id'] && isset( $item['options']['license_id'] ) ) : // Upgrading. ?>
 				<div class="order-summary__row edd_cart_total">
 					<span class="order-summary__label">License Upgrade</span>
 					<span class="order-summary__value edd_cart_amount" data-total="<?php echo esc_attr( edd_get_cart_total() ); ?>"><?php edd_cart_total(); ?></span>
