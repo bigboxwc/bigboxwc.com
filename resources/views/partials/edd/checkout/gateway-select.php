@@ -67,7 +67,7 @@ $chosen_gateway = edd_get_chosen_gateway();
 				<p class="edd-purchase-terms">By clicking "Purchase", you agree to the <strong>BigBox</strong> <a href="/terms/">Terms of Service</a> and authorize your payment method to be saved and charged on a recurring basis until you cancel, which you can do at any time. </p>
 
 				<p clas="edd-purchase-terms" aria-label="Click to Verify - This site chose Symantec SSL for secure e-commerce and confidential communications.">
-					<script type="text/javascript" src="https://seal.websecurity.norton.com/getseal?host_name=bigboxwc.com&amp;size=L&amp;use_flash=NO&amp;use_transparent=Yes&amp;lang=en"></script>
+					<script type="text/javascript" src="https://seal.websecurity.norton.com/getseal?host_name=bigboxwc.com&size=L&use_flash=NO&use_transparent=Yes&lang=en"></script>
 				</p>
 
 			</div>
