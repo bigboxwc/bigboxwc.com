@@ -1,7 +1,7 @@
 {
 	"name": "bigbox",
 	"title": "BigBox",
-	"version": "1.0.0-beta",
+	"version": "1.0.0",
 	"description": "WooCommerce solutions for large stores.",
 	"main": "webpack.config.js",
 	"devDependencies": {
@@ -73,7 +73,7 @@
 	"author": "Spencer Finnell",
 	"license": "GPL-3.0",
 	"bugs": {
-		"url": "https://github.com/spencerfinnell/bigbox/issues"
+		"url": "https://github.com/bigboxwc/bigbox/issues"
 	},
 	"homepage": "https://bigboxwp.com"
 }
