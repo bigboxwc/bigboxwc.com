@@ -46,6 +46,12 @@
 	padding-left: 5px;
 }
 
+.order-summary__value--has-button {
+	position: absolute;
+	right: 0;
+	bottom: 3px;
+}
+
 .order-summary__label--highlight,
 .order-summary__value--highlight {
 	color: $color-green;

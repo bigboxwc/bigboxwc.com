@@ -34,6 +34,11 @@
 	@include button--size-sm;
 }
 
+.button--size-xs {
+
+	@include button--size-xs;
+}
+
 .button--size-block {
 
 	@include button--size-block;

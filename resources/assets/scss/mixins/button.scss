@@ -95,6 +95,15 @@
 	}
 }
 
+@mixin button--size-xs {
+	font-size: 14px;
+	padding: 5px 15px;
+
+	@include media-breakpoint-up(md) {
+		padding: 5px 15px;
+	}
+}
+
 @mixin button--size-block {
 	width: 100%;
 	display: block;
