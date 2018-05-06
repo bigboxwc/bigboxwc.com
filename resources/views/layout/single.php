@@ -27,15 +27,9 @@ while ( have_posts() ) :
 			<h2 class="cta__title"><?php the_title(); ?></h2>
 
 			<div class="cta__description blog-post__meta">
-			<?php
-				printf(
-					// Translators: %1$s post author avatar, %2$s post author name, %3$s post date.
-					esc_html__( 'by %1$s %2$s on %3$s', 'bigbox' ),
-					get_avatar( get_the_author_meta( 'ID' ), 24 ),
-					'<span class="post-author">' . esc_html( get_the_author_meta( 'display_name' ) ) . '</span>',
-					'<span class="post-date">' . esc_html( get_the_date() ) . '</span>'
-				);
-			?>
+				<?php echo get_avatar( get_the_author_meta( 'ID' ), 24 ); ?>
+				<span class="post-author"><?php echo esc_html( get_the_author_meta( 'display_name' ) ); ?></span>
+				<span class="post-date"><?php echo esc_html( get_the_date() ); ?></span>
 			</div>
 
 		</div>
@@ -48,14 +42,9 @@ while ( have_posts() ) :
 		<div class="col-lg-8">
 
 			<div class="blog-post">
-				<div class="alignwide">
-					<?php the_post_thumbnail( 'large' ); ?>
-				</div>
-
 				<div class="blog-post__content hentry">
 					<?php the_content(); ?>
 				</div>
-
 			</div>
 
 		</div>
