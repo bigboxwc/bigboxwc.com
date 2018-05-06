@@ -24,11 +24,12 @@ add_filter( 'gform_pre_render', function( $form ) {
 	$fields = $form['fields'];
 
 	foreach ( $fields as $field ) {
-		if ( 'sites' !== $field->inputName ) {
+		if ( 'sites' !== $field->cssClass ) {
 			continue;
 		}
 
-		$license = bigbox_edd_get_license();
+		$license        = bigbox_edd_get_license();
+		$field->choices = [];
 
 		if ( $license->sites ) {
 			foreach ( $license->sites as $site ) {
