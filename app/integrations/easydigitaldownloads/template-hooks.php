@@ -61,7 +61,8 @@ add_action( 'edd_sl_license_upgrade', function() {
 // Map email to inputted login name.
 add_action(
 	'edd_pre_process_purchase', function() {
-	$_POST['edd_email'] = $_POST['edd_user_login']; // @codingStandardsIgnoreLine
+		$_POST['edd_email'] = $_POST['edd_user_login'];
+		$_POST['edd_first'] = explode( '@', $_POST['edd_user_login'] )[0];
 	}
 );
 

@@ -15,6 +15,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $subscription = bigbox_edd_get_subscription();
+
+if ( ! $subscription ) {
+	return false;
+}
+
 $payment      = bigbox_edd_get_payment();
 $method       = false;
 
