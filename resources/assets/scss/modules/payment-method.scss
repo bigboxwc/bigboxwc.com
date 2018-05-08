@@ -13,10 +13,14 @@
 }
 
 #edd-payment-mode-wrap {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	margin: 1rem -10px 2rem;
+	display: none;
+}
+
+.powered-by-stripe {
+	width: 100px;
+	height: 22px;
+	margin-left: 1rem;
+	margin-top: -1px;
 }
 
 .edd-gateway-option {
