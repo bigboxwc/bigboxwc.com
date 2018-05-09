@@ -26,9 +26,9 @@ while ( have_posts() ) :
 			'context' => 'features',
 		]
 	);
-	bigbox_partial( 'features-faqs' );
-	bigbox_partial( 'testimonials' );
-	bigbox_partial( 'from-the-blog' );
+	// bigbox_partial( 'features-faqs' );
+	// bigbox_partial( 'testimonials' );
+	// bigbox_partial( 'from-the-blog' );
 	bigbox_partial( 'cta-buy' );
 endwhile;
 
