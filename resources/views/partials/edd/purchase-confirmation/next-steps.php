@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<li>
 					<span class="next-steps__step">2</span>
 
-					<p>Follow the <strong>BigBox Setup Guide</strong> to complete your installation.</p>
+					<p>Visit <strong>Apperance &rarr; BigBox</strong> to complete your installation.</p>
 					<p class="next-steps__hint">When prompted enter your license key:</p>
 					<input type"text" class="form-input next-steps__license-key" value="<?php echo esc_attr( $license->key ); ?>" onClick="this.select();" />
 				</li>
@@ -38,7 +38,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<li>
 					<span class="next-steps__step">3</span>
 
-					<p>Learn more about <a href="/">importing products</a>, <a href="/">advanced product filtering</a>, <a href="/">speeding up your images</a>, and <a href="/">more on the blog</a>.</p>
+					<p>Learn more about <a href="https://docs.woocommerce.com/document/product-csv-import-suite-importing-products/">importing products</a>, <a href="https://bigboxwc.com/speeding-up-product-searches-with-facetwp/">speeding up product searches</a>, and more <a href="https://bigboxwc.com/blog/">on the blog</a>.</p>
 				</li>
 			</ol>
 
