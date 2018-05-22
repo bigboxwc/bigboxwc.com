@@ -4,10 +4,13 @@
 	list-style: none;
 
 	li {
-		margin-bottom: 4rem;
+		margin-bottom: 3rem;
 		padding-left: 5rem;
 		position: relative;
 		min-height: 60px;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
 	}
 
 	.next-steps__hint {
@@ -43,6 +46,6 @@
 }
 
 .next-steps__license-key {
-	margin: 1rem auto 0;
+	margin: 1rem 0 0;
 	width: 372px;
 }
