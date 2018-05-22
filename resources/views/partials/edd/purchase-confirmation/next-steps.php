@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<span class="next-steps__step">1</span>
 
 					<p>Visit <strong>Appearance &rarr; Themes &rarr; Add New</strong> in WordPress and upload your theme.</p>
-					<p class="next-steps__hint">Need help choosing WordCommerce hosting? <a href="#">Learn more about hosting</a>.</p>
+					<!-- <p class="next&#45;steps__hint">Need help choosing WordCommerce hosting? <a href="#">Learn more about hosting</a>.</p> -->
 				</li>
 
 				<li>
@@ -38,7 +38,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<li>
 					<span class="next-steps__step">3</span>
 
-					<p>Learn more about <a href="https://docs.woocommerce.com/document/product-csv-import-suite-importing-products/">importing products</a>, <a href="https://bigboxwc.com/speeding-up-product-searches-with-facetwp/">speeding up product searches</a>, and more <a href="https://bigboxwc.com/blog/">on the blog</a>.</p>
+					<p>Learn more about <a href="https://docs.woocommerce.com/document/product-csv-import-suite-importing-products/">importing products</a>, <a href="https://bigboxwc.com/speeding-up-product-searches-with-facetwp/">speeding up product searches</a>, or <a href="https://docs.bigboxwc.com/">view the documentation</a>.</p>
 				</li>
 			</ol>
 
