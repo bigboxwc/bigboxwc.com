@@ -20,8 +20,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="price-option col col-md-8 col-lg-5">
 		<div class="card price-option__inner">
 
-			<h3 class="price-option__price">$9 <sub>/month</sub></h3>
-			<span class="price-option__term">(billed yearly)</span>
+			<!-- <h3 class="price&#45;option__price">$9 <sub>/month</sub></h3> -->
+			<!-- <span class="price&#45;option__term">(billed yearly)</span> -->
+
+			<h3 class="price-option__price">Free!</h3>
+			<span class="price-option__term">For early adopters</span>
 
 			<ul class="price-features">
 				<li class="price-feature"><strong>All Purchases Include:</strong></li>
