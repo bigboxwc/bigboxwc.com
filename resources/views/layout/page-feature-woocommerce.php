@@ -40,5 +40,6 @@ if ( get_post()->post_parent ) :
 endif;
 
 bigbox_partial( 'features-woocommerce' );
+bigbox_partial( 'cta-buy' );
 
 bigbox_view( 'global/footer' );
