@@ -20,6 +20,12 @@
 		opacity: 0.5;
 		font-size: 14px;
 	}
+
+	&--old {
+		font-size: 20px;
+		opacity: 0.50;
+		color: $color-red;
+	}
 }
 
 .price-option__term {

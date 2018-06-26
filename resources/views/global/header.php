@@ -72,7 +72,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</script>
 	</head>
 
-	<body <?php body_class(); ?>>
+	<body <?php body_class( ( ! is_page( 'checkout' ) && ! is_user_logged_in() ) ? 'has-sale-bar' : null ); ?>>
+
+		<?php if ( ! is_page( 'checkout' ) && ! is_user_logged_in() ) : ?>
+		<div class="sale-bar">
+			<p>BigBox is currently 25% off and includes a 14-day money back guarantee. <a href="/buy/">Get Started for 25% Off</a></p>
+		</div>
+		<?php endif; ?>
 
 		<div class="brand-bar <?php echo esc_attr( isset( $min ) && $min ? 'brand-bar--static' : null ); ?>">
 			<div class="container">
