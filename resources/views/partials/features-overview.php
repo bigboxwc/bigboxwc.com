@@ -66,6 +66,6 @@ global $post;
 			<a href="/buy/" class="button button--primary">Get BigBox Now</a> 
 		<?php endif; ?>
 
-		<a href="/demos/" class="block-cta__sublink">View Demo &rarr;</a>
+		<a href="/theme-demos/" class="block-cta__sublink">View Demo &rarr;</a>
 	</div>
 </div>
