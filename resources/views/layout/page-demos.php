@@ -14,20 +14,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-bigbox_view(
-	'global/header', [
-		'min' => true,
-	]
-);
+bigbox_view( 'global/header' );
+
+the_post();
 ?>
 
-<div class="block">
+<div class="cta hero-cta hero-cta--center block">
+	<div class="container">
 
-	<div class="block-header" style="padding-bottom: 0;">
-		<h2 class="block-title">Flexible Enough for Any Brand</h2>
-		<p class="block-subtitle">BigBox's customization options make it simple to match your brand's ethos. Below are a couple examples of how BigBox can be used.</p>
+		<div class="cta__content">
+			<h2 class="cta__title"><?php the_title(); ?></h2>
+			<div class="cta__description"><?php the_content(); ?></div>
+		</div>
+
 	</div>
-
 </div>
 
 <div class="block feature-callout">
