@@ -38,11 +38,11 @@ foreach ( $posts as $post ) :
 	<div class="container media">
 
 		<div class="feature-callout__media">
-				<a href="<?php echo esc_url( get_the_post_thumbnail_url( $post, 'full' ) ); ?>" data-slug="<?php echo esc_attr( $post->post_name ); ?>"><?php the_post_thumbnail( 'medium' ); ?></a>
+				<a href="/theme-demos/"><?php the_post_thumbnail( 'medium' ); ?></a>
 		</div>
 
 		<div class="feature-callout__content">
-			<h3 class="feature-callout__title"><?php the_title(); ?></h3>
+			<h3 class="feature-callout__title"><a href="/theme-demos/"><?php the_title(); ?></a></h3>
 
 			<?php the_content(); ?>
 		</div>

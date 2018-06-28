@@ -67,17 +67,23 @@
 		&:last-child {
 			margin-bottom: 0;
 		}
-	}
 
-	a:not(.button) {
+		a:not(.button) {
 
-		@include link-focus;
+			@include link-focus;
+		}
 	}
 }
 
 .feature-callout__title {
 	font: 700 30px/1.25 Lora, serif;
 	margin: 0 auto 0.2rem;
+
+	a {
+		color: $color-gray-700;
+		border: 0;
+		padding: 0;
+	}
 
 	&--with-button {
 		margin-bottom: 2rem;
