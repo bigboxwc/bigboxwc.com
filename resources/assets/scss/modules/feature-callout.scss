@@ -73,6 +73,14 @@
 			@include link-focus;
 		}
 	}
+
+	li {
+
+		a
+
+			@include link-focus;
+		}
+	}
 }
 
 .feature-callout__title {
