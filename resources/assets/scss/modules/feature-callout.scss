@@ -79,7 +79,7 @@
 	font: 700 30px/1.25 Lora, serif;
 	margin: 0 auto 0.2rem;
 
-	a {
+	a:not(.button) {
 		color: $color-gray-700;
 		border: 0;
 		padding: 0;
