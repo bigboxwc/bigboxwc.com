@@ -17,8 +17,12 @@
 	max-width: none;
 
 	@include media-breakpoint-up(lg) {
-		max-width: 80%;
+		max-width: 73%;
 		padding: 5rem 0;
+	}
+
+	+ img {
+		display: none;
 	}
 }
 
@@ -99,6 +103,7 @@
 
 	@include media-breakpoint-up(lg) {
 		text-align: left;
+		max-width: none;
 	}
 }
 

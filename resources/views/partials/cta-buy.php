@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<div class="cta__content cta__content--mini">
 			<h2 class="cta__title cta__title--mini">Get Started Today</h2>
-			<div class="cta__description"><p>Join the thousands who are already using BigBox resources to optimize their WooCommerce website.</p></div>
+			<div class="cta__description"><p>The best Shopify alternative to scale WooCommerce product catalogs.</p></div>
 
 			<a href="/buy/" class="cta__button cta__button--mini button button--size-sm">Get BigBox Now</a>
 		</div>

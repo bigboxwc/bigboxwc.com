@@ -25,13 +25,17 @@ $woocommerce_features = get_posts(
 );
 ?>
 
-<div id="features" class="block block--alt">
+<div id="features" class="block">
 	<div class="block-header">
 		<h3 class="block-title">Why Use WooCommerce?</h3>
-		<p class="block-subtitle">WooCommerce is an open-source, completely customizable eCommerce platform for entrepreneurs worldwide.</p>
+		<p class="block-subtitle">WooCommerce is a free, open-source, and completely customizable eCommerce platform for entrepreneurs worldwide.</p>
 	</div>
 
 	<div class="container features__container">
+
+		<p style="text-align: center;">Features included with WooCommerce:</p>
+
+		<br />
 
 		<ul class="feature-list">
 

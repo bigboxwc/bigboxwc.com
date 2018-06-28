@@ -78,4 +78,21 @@
 .feature-callout__title {
 	font: 700 30px/1.25 Lora, serif;
 	margin: 0 auto 0.2rem;
+
+	&--with-button {
+		margin-bottom: 2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.feature-callout__list {
+	margin: 1.5rem 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		margin: 0.5rem 0;
+	}
 }

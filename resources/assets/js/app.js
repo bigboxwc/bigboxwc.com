@@ -7,6 +7,7 @@
 import '../scss/style.scss';
 import '../scss/helpscout.scss';
 import '../images/*.svg';
+import '../images/demos/*.png';
 
 import './components/choices';
 import './components/faqs';

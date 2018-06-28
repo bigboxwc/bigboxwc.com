@@ -41,6 +41,7 @@ function bigbox_page_templates( $post_templates, $theme, $post, $post_type ) {
 	$post_templates['resources/views/layout/page-feature-woocommerce.php']   = esc_html_x( 'Page: WooCommerce Feature', 'page template title', 'bigbox' );
 	$post_templates['resources/views/layout/page-feature-overview.php']      = esc_html_x( 'Page: Overview Feature', 'page template title', 'bigbox' );
 	$post_templates['resources/views/layout/page-faqs.php']                  = esc_html_x( 'Page: FAQs', 'page template title', 'bigbox' );
+	$post_templates['resources/views/layout/page-demos.php']                 = esc_html_x( 'Page: Demos', 'page template title', 'bigbox' );
 	$post_templates['resources/views/layout/page-minimal.php']               = esc_html_x( 'Layout: Minimal', 'page template title', 'bigbox' );
 
 	return $post_templates;
