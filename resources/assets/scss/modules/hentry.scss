@@ -191,20 +191,6 @@
 	}
 }
 
-.wp-block-image {
-	padding: 5px;
-	border: 1px solid $color-gray-200;
-
-	a:hover {
-		border: 0;
-	}
-
-	&:not(.alignwide):not(.alignfull) {
-		margin-left: 0;
-		margin-right: 0;
-	}
-}
-
 .wp-block-gallery {
 	padding: 0;
 }
@@ -218,11 +204,21 @@
 }
 
 .wp-block-cover-image {
-	margin-top: 2rem;
-	margin-bottom: 2rem;
-	width: auto;
 
 	h2 {
 		color: #fff;
+	}
+}
+
+.wp-block-embed {
+
+	&.alignnone {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	iframe,
+	object {
+		width: 100%;
 	}
 }

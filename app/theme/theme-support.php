@@ -19,9 +19,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 1.0.0
  */
 function bigbox_add_theme_support() {
-	if ( ! isset( $content_width ) ) {
-		$content_width = 930;
-	}
+	// Set the default content width.
+	$GLOBALS['content_width'] = 730;
 
 	add_theme_support( 'title-tag' );
 

@@ -1,4 +1,4 @@
-<div class="blog-post__comments block">
+<div class="blog-post__comments block block--alt">
 	<div class="block-header">
 		<h3 class="block-title">Enjoy this article?</h3>
 		<p class="block-subtitle">Get more exclusive updates delivered directly to your inbox.</p>
