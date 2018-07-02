@@ -29,6 +29,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<div class="hentry blog-post__content">
 			<?php the_excerpt(); ?>
+
+			<a href="<?php the_permalink(); ?>">Continue reading &rarr;</a>
 		</div>
 	</div>
 

@@ -19,8 +19,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="container">
 
 		<div class="cta__content cta__content--blog">
-			<h2 class="cta__title">WooCommerce Scaling Resources and Tips</h2>
-			<div class="cta__description">Tips and tricks for getting the most out of WooCommerce.</div>
+			<h2 class="cta__title">Learn About WooCommerce</h2>
+			<div class="cta__description">Discover why WooCommerce is the best free eCommerce platform available and how BigBox can make it even better.</div>
 
 			<?php if ( ! is_singular() ) : ?>
 			<form action="<?php echo esc_url( home_url() ); ?>" method="GET" class="hero-cta__search">

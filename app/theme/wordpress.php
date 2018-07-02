@@ -49,11 +49,7 @@ add_filter(
  *
  * @return string
  */
-add_filter(
-	'excerpt_more', function() {
-		return '&hellip; <p><a href="' . get_permalink() . '">' . esc_html__( 'Continue Reading &rarr;', 'bigbox' ) . '</a></p>';
-	}
-);
+add_filter( 'excerpt_more', '__return_empty_string' );
 
 /**
  * Adjust the length of default excerpts.

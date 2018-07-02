@@ -29,10 +29,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<h4 class="section-title">Site Links</h4>
 
 						<ul class="list">
-							<li><a href="/features/">All Features</a></li>
-							<li><a href="https://blog.bigboxwc.com/">Resources &amp; Blog</a></li>
+							<li><a href="/buy/">Buy BigBox</a></li>
+							<li><a href="/blog/">Learn About WooCommerce</a></li>
 							<li><a href="/contact/">Contact</a></li>
-							<li><a href="/account/support/">Support</a></li>
+							<li><a href="/account/">Account</a></li>
+							<li><a href="https://dev.bigboxwc.com/">Development Blog</a></li>
 						</ul>
 					</div>
 
