@@ -1,18 +1,14 @@
 #!/bin/bash
 
+# Include useful functions
+. "$(dirname "$0")/includes.sh"
+
 # Exit if any command fails
 set -e
 
 # Change to the expected directory
 cd "$(dirname "$0")"
 cd ..
-
-# Enable nicer messaging for build status
-YELLOW_BOLD='\033[1;33m';
-COLOR_RESET='\033[0m';
-status () {
-	echo -e "\n${YELLOW_BOLD}$1${COLOR_RESET}\n"
-}
 
 # Get version number from package.json
 PACKAGE_VERSION=$(cat package.json \
@@ -22,18 +18,8 @@ PACKAGE_VERSION=$(cat package.json \
   | sed 's/[",]//g' \
   | tr -d '[[:space:]]')
 
-status "
-.______    __    _______ .______     ______   ___   ___
-|   _  \  |  |  /  _____||   _  \   /  __  \  \  \ /  /
-|  |_)  | |  | |  |  __  |  |_)  | |  |  |  |  \  V  / 
-|   _  <  |  | |  | |_ | |   _  <  |  |  |  |   >   <  
-|  |_)  | |  | |  |__| | |  |_)  | |  \`--'  |  /  .  \ 
-|______/  |__|  \______| |______/   \______/  /__/ \__\
-";
-
 # Make sure there are no changes in the working tree.  Release builds should be
-# traceable to a particular commit and reliably reproducible.  (This is not
-# totally true at the moment because we download nightly vendor scripts).
+# traceable to a particular commit and reliably reproducible.
 changed=
 if ! git diff --exit-code > /dev/null; then
 	changed="file(s) modified"
@@ -55,15 +41,28 @@ if [ "$branch" != 'master' ]; then
 	sleep 2
 fi
 
-# Remove ignored files to reset repository to pristine condition. Previous test
-# ensures that changed files abort the plugin build.
-status "Cleaning working directory..."
-git clean -xdf
+# Do a dry run of the repository reset. Prompting the user for a list of all
+# files that will be removed should prevent them from losing important files!
+status "Resetting the repository to pristine condition."
+git clean -xdf --dry-run
+warning "About to delete everything above! Is this okay?"
+echo -n "[Y]es/[N]o: "
+read answer
+if [ "$answer" != "${answer#[Yy]}" ]; then
+	# Remove ignored files to reset repository to pristine condition. Previous
+	# test ensures that changed files abort the plugin build.
+	status "Cleaning working directory..."
+	git clean -xdf
+else
+	error "Aborting."
+	exit 1
+fi
 
 # Run the build
 status "Installing dependencies..."
 npm install
 composer install
+
 status "Generating build..."
 npm run build
 
@@ -97,4 +96,4 @@ rm -rf bigbox && rm -f bigbox.zip
 # Reset style.css -- kinda ghetto.
 git reset head --hard
 
-status "Done. Version v$PACKAGE_VERSION build complete."
+success "Done. Version v$PACKAGE_VERSION build complete."

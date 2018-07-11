@@ -36,7 +36,8 @@ const cssHelpscoutPlugin = new ExtractTextPlugin( {
 	filename: './public/css/helpscout.min.css',
 } );
 
-module.exports = {
+const config = {
+	mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
 	entry: {
 		app: './resources/assets/js/app.js',
 		support: './resources/assets/js/support.js',
@@ -97,11 +98,9 @@ module.exports = {
 	},
 	externals: {
 		jquery: 'jQuery',
+		$: 'jQuery',
 	},
 	plugins: [
-		new webpack.DefinePlugin( {
-			'process.env.NODE_ENV': JSON.stringify( process.env.NODE_ENV || 'development' ),
-		} ),
 		cssPlugin,
 		cssHelpscoutPlugin,
 		new SpritePlugin(),
@@ -114,3 +113,9 @@ module.exports = {
 		} ),
 	],
 };
+
+if ( config.mode !== 'production' ) {
+	config.devtool = process.env.SOURCEMAP || 'source-map';
+}
+
+module.exports = config;

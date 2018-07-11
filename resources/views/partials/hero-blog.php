@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="container">
 
 		<div class="cta__content cta__content--blog">
-			<h2 class="cta__title">Learn About WooCommerce</h2>
+			<h2 class="cta__title">Optimize Your Store</h2>
 			<div class="cta__description">Discover why WooCommerce is the best free eCommerce platform available and how BigBox can make it even better.</div>
 
 			<?php if ( ! is_singular() ) : ?>
