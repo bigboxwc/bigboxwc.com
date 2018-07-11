@@ -16,4 +16,11 @@
 
 		@include link-focus;
 	}
+
+	br {
+
+		@include media-breakpoint-down(lg) {
+			display: none;
+		}
+	}
 }

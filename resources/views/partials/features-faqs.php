@@ -26,7 +26,7 @@ $faqs = get_posts(
 <div id="faqs" class="block <?php echo esc_attr( ( ! isset( $alt ) || $alt ) ? 'block--alt' : null ); ?>">
 	<div class="block-header">
 		<h3 class="block-title">Frequently Asked Questions</h3>
-		<p class="block-subtitle">Still have questions about the theme? We've answered some of the most common questions below.</p>
+		<p class="block-subtitle">Still have questions about the theme?<br /> We've answered some of the most common questions below.</p>
 	</div>
 
 	<div class="container">
