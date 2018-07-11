@@ -24,7 +24,7 @@ endif;
 ?>
 
 
-<div class="blog-post__comments block block--alt">
+<div class="blog-post__comments block">
 	<?php if ( have_comments() ) : ?>
 	<div class="block-header">
 		<h3 class="block-title">

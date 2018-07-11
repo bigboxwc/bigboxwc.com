@@ -16,9 +16,9 @@
 
 @mixin form-input {
 	color: $color-gray-700;
-	font: 400 18px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font: 400 18px/1.5 $body-family;
 	padding: 10px;
-	border: 2px solid #ddd;
+	border: 2px solid darken($color-gray-200, 5);
 	border-radius: 3px;
 
 	&:focus {

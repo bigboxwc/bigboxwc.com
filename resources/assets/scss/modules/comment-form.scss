@@ -40,3 +40,12 @@
 	@include button--primary;
 	@include button--size-block;
 }
+
+.comment-form-cookies-consent {
+
+	label {
+		font-weight: 400;
+		display: inline-block;
+		margin-left: 5px;
+	}
+}
