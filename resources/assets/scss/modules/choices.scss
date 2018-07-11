@@ -11,7 +11,7 @@
 
 .#{$choices-selector}__inner {
 	padding: 0;
-	border: 2px solid #ddd;
+	border: 2px solid darken($color-gray-200, 5);
 
 	.is-focused &,
 	.is-open & {

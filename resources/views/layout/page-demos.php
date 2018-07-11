@@ -40,20 +40,18 @@ the_post();
 		</div>
 
 		<div class="feature-callout__content">
-			<h3 class="feature-callout__title feature-callout__title--with-button">
+			<h3 class="feature-callout__title">
 				Mega Store
-
-				<a href="https://demos.bigboxwc.com/default/" class="button button--size-sm">View Demo</a>
 			</h3>
 
 			<p>Put BigBox to the test by browsing and filtering thousands of products with ease.</p>
 
-			<p><strong>Quick Links:</strong></p>
+			<p><a href="https://demos.bigboxwc.com/default/" class="button">View Demo</a></p>
 
-			<ul class="feature-callout__list">
-				<li><a href="https://demos.bigboxwc.com/default/shop/" target="_blank" rel="noindex noopener">Shop</a></li>
+			<ul class="feature-callout__list feature-callout__list--split">
+				<li><a href="https://demos.bigboxwc.com/default/shop/" target="_blank" rel="noindex noopener">Shop Index</a></li>
+				<li><a href="https://demos.bigboxwc.com/default/checkout/?add-to-cart=2853" target="_blank" rel="noindex noopener">Cart &amp; Checkout</a></li>
 				<li><a href="https://demos.bigboxwc.com/default/product/product-2040/" target="_blank" rel="noindex noopener">Variable Product</a></li>
-				<li><a href="https://demos.bigboxwc.com/default/checkout/?add-to-cart=2853" target="_blank" rel="noindex noopener">Checkout</a></li>
 				<li><a href="https://demos.bigboxwc.com/default/dynamc-shop/" target="_blank" rel="noindex noopener">Custom Shop Landing Page</a></li>
 			</ul>
 
@@ -72,20 +70,18 @@ the_post();
 		</div>
 
 		<div class="feature-callout__content">
-			<h3 class="feature-callout__title feature-callout__title--with-button">
+			<h3 class="feature-callout__title">
 				Boutique Shop
-
-				<a href="https://demos.bigboxwc.com/lifestyle" class="button button--size-sm">View Demo</a>
 			</h3>
 
 			<p>An example of BigBox adapting to a smaller boutique store with fewer products.</p>
 
-			<p><strong>Quick Links:</strong></p>
+			<p><a href="https://demos.bigboxwc.com/lifestyle" class="button">View Demo</a></p>
 
-			<ul class="feature-callout__list">
-				<li><a href="https://demos.bigboxwc.com/lifestyle/" target="_blank" rel="noindex noopener">Landing Page</a></li>
-				<li><a href="https://demos.bigboxwc.com/lifestyle/shop/" target="_blank" rel="noindex noopener">Shop</a></li>
+			<ul class="feature-callout__list feature-callout__list--split">
+				<li><a href="https://demos.bigboxwc.com/lifestyle/" target="_blank" rel="noindex noopener">Customized Homepage</a></li>
 				<li><a href="https://demos.bigboxwc.com/lifestyle/welcome-to-the-gutenberg-editor/" target="_blank" rel="noindex noopener">Blog Post</a></li>
+				<li><a href="https://demos.bigboxwc.com/lifestyle/shop/" target="_blank" rel="noindex noopener">Boutique Shop</a></li>
 			</ul>
 		</div>
 

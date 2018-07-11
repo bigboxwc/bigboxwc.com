@@ -61,7 +61,7 @@
 	}
 
 	p {
-		color: $color-gray-500;
+		color: $color-gray-600;
 
 		&:only-child,
 		&:last-child {
@@ -108,5 +108,14 @@
 
 	li {
 		margin: 0.5rem 0;
+	}
+
+	&--split {
+		overflow: hidden;
+
+		li {
+			width: 50%;
+			float: left;
+		}
 	}
 }

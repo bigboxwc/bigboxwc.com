@@ -27,8 +27,7 @@ while ( have_posts() ) :
 			<h2 class="cta__title"><?php the_title(); ?></h2>
 
 			<div class="cta__description blog-post__meta">
-				<span class="post-author"><?php echo esc_html( get_the_author_meta( 'display_name' ) ); ?></span> on 
-				<span class="post-date"><?php echo esc_html( get_the_date() ); ?></span>
+				<span class="post-date">Last updated on <?php echo esc_html( get_the_modified_date() ); ?></span>
 			</div>
 
 		</div>
