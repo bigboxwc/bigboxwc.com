@@ -1,6 +1,6 @@
 .block-title {
+	font: 700 24px $heading-family;
 	text-align: center;
-	font: 700 24px/1.25 Lora, serif;
 	margin: 0 auto 0.2rem;
 
 	@include media-breakpoint-up(lg) {

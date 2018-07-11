@@ -43,8 +43,8 @@
 }
 
 .cta__title {
-	font: 700 38px/1.25 Lora, serif;
-	text-shadow: 0 1px 1px rgba($brandColor, 0.1);
+	font: 700 38px/1.25 $heading-family;
+	text-shadow: 0 1px 2px darken($brandColor, 10);
 	margin: 0;
 
 	@include media-breakpoint-up(lg) {
@@ -52,7 +52,7 @@
 	}
 
 	@include media-breakpoint-up(xl) {
-		font-size: 68px;
+		font-size: 60px;
 	}
 }
 

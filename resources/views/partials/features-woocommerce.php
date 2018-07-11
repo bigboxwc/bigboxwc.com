@@ -33,10 +33,6 @@ $woocommerce_features = get_posts(
 
 	<div class="container features__container">
 
-		<p style="text-align: center;">Features included with WooCommerce:</p>
-
-		<br />
-
 		<ul class="feature-list">
 
 			<?php foreach ( $woocommerce_features as $feature ) : ?>

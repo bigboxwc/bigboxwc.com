@@ -1,0 +1,11 @@
+table {
+	&,
+	&.wp-block-table td,
+	&.wp-block-table th {
+		border-color: $color-gray-300;
+	}
+
+	th {
+		background-color: $color-gray-100;
+	}
+}

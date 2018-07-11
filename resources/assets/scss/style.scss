@@ -1,5 +1,6 @@
 // Variables
 @import "variables/colors";
+@import "variables/fonts";
 
 /**
  * External dependencies
@@ -40,6 +41,7 @@ $choices-keyline-color: #ddd;
 @import "elements/img";
 @import "elements/label";
 @import "elements/code";
+@import "elements/table";
 
 // Repeatable Patterns
 @import "modules/button";

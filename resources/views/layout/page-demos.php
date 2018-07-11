@@ -48,6 +48,8 @@ the_post();
 
 			<p>Put BigBox to the test by browsing and filtering thousands of products with ease.</p>
 
+			<p><strong>Quick Links:</strong></p>
+
 			<ul class="feature-callout__list">
 				<li><a href="https://demos.bigboxwc.com/default/shop/" target="_blank" rel="noindex noopener">Shop</a></li>
 				<li><a href="https://demos.bigboxwc.com/default/product/product-2040/" target="_blank" rel="noindex noopener">Variable Product</a></li>
@@ -77,6 +79,8 @@ the_post();
 			</h3>
 
 			<p>An example of BigBox adapting to a smaller boutique store with fewer products.</p>
+
+			<p><strong>Quick Links:</strong></p>
 
 			<ul class="feature-callout__list">
 				<li><a href="https://demos.bigboxwc.com/lifestyle/" target="_blank" rel="noindex noopener">Landing Page</a></li>

@@ -8,23 +8,28 @@
 .card__inner {
 	padding: 3rem;
 	position: relative;
-}
 
-.card__inner--mini {
-	padding: 1.5rem;
+	&--mini {
+		padding: 1.5rem;
 
-	.form-row {
-		margin-bottom: 1rem;
+		.form-row {
+			margin-bottom: 1rem;
+		}
 	}
 }
 
-.card__label--mini {
-	font-size: 20px;
-	font-weight: 200;
-	margin: 0 0 0.5rem;
-}
+.card__label {
+	font: $heading-family;
+	font-weight: 700;
 
-.card__label--has-icon {
-	display: flex;
-	align-items: center;
+	&--mini {
+		font-size: 20px;
+		font-weight: 200;
+		margin: 0 0 0.5rem;
+	}
+
+	&--has-icon {
+		display: flex;
+		align-items: center;
+	}
 }

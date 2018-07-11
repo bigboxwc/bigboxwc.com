@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 						<ul class="list">
 							<li><a href="/buy/">Buy BigBox</a></li>
-							<li><a href="/blog/">Learn About WooCommerce</a></li>
+							<li><a href="/blog/">Optimize Your Store</a></li>
 							<li><a href="/contact/">Contact</a></li>
 							<li><a href="/account/">Account</a></li>
 							<li><a href="https://dev.bigboxwc.com/">Development Blog</a></li>

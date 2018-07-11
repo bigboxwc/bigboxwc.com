@@ -23,8 +23,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<h3 class="price-option__price">$6 <sub>/month</sub></h3>
 			<span class="price-option__term">(billed yearly)</span>
 
-			<p class="price-option__save ui-green">Save over $35 today!</p>
-
 			<ul class="price-features">
 				<li class="price-feature"><strong>All Purchases Include:</strong></li>
 				<li class="price-feature">Technical Support</li>
