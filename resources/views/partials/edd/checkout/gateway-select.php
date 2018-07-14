@@ -42,10 +42,12 @@ $chosen_gateway = edd_get_chosen_gateway();
 							$label         = apply_filters( 'edd_gateway_checkout_label_' . $gateway_id, $gateway['checkout_label'] );
 							$checked       = checked( $gateway_id, $chosen_gateway, false );
 							$checked_class = $checked ? ' edd-gateway-option-selected' : '';
+							$nonce = ' data-' . esc_attr( $gateway_id ) . '-nonce="' . wp_create_nonce( 'edd-gateway-selected-' . esc_attr( $gateway_id ) ) .'"';
 						?>
 
 							<label for="edd-gateway-<?php echo esc_attr( $gateway_id ); ?>" class="edd-gateway-option edd-gateway-option--<?php echo esc_attr( $gateway_id ); ?><?php echo esc_attr( $checked_class ); ?>" id="edd-gateway-option-<?php echo esc_attr( $gateway_id ); ?>" aria-title="Click to pay with <?php echo esc_attr( $label ); ?>">
-								<input type="radio" name="payment-mode" class="edd-gateway" id="edd-gateway-<?php echo esc_attr( $gateway_id ); ?>" value="<?php echo esc_attr( $gateway_id ); ?>" <?php echo esc_attr( $checked ); ?> />
+							<input type="radio" name="payment-mode" class="edd-gateway" id="edd-gateway-<?php echo esc_attr( $gateway_id ); ?>" value="<?php echo esc_attr( $gateway_id ); ?>" <?php echo esc_attr( $checked ); ?> <?php echo $nonce; // WPCS: XSS okay ?> />
+
 
 								<span><?php echo esc_html( $label ); ?></span>
 								<?php bigbox_svg( 'graphic-' . $gateway_id ); ?>
