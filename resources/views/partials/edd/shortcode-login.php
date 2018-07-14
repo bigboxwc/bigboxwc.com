@@ -47,12 +47,13 @@ if ( ! is_user_logged_in() ) :
 					<input type="hidden" name="edd_login_nonce" value="<?php echo esc_attr( wp_create_nonce( 'edd-login-nonce' ) ); ?>"/>
 					<input type="hidden" name="edd_action" value="user_login"/>
 					<input id="edd_login_submit" type="submit" class="button button--size-block" value="Sign In"/>
+					<?php wp_nonce_field( 'edd-login-form', 'edd_login_nonce', false, true ); ?>
 				</p>
 
 				<p class="form-row form-row--actions">
 
 					<label class="form-label form-label--checkbox">
-						<input name="rememberme" type="checkbox" id="rememberme" value="forever" class="form-input form-input--checkbox" /> 
+						<input name="rememberme" type="checkbox" id="rememberme" value="forever" class="form-input form-input--checkbox" />
 						<span>Remember Me</span>
 					</label>
 
