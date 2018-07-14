@@ -38,7 +38,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<li>
 					<span class="next-steps__step">3</span>
 
-					<p>Learn more about <a href="https://docs.woocommerce.com/document/product-csv-import-suite-importing-products/">importing products</a>, ,<a href="https://docs.bigboxwc.com/">view the documentation</a>, or read <a href="https://bigboxwc.com/blog/">more about WooCommerce and BigBox on the blog</a>.</p>
+					<p>Learn more about <a href="https://docs.woocommerce.com/document/product-csv-import-suite-importing-products/">importing products</a>, <a href="https://docs.bigboxwc.com/">view the documentation</a>, or read <a href="https://bigboxwc.com/blog/">more about WooCommerce and BigBox on the blog</a>.</p>
 				</li>
 			</ol>
 
