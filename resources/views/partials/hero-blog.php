@@ -28,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<?php bigbox_svg( 'search' ); ?>
 				</button>
 
-				<input type="search" placeholder="Find a topic..." value="<?php echo esc_attr( get_search_query() ); ?>" name="s" id="s" class="form-input" />
+				<input type="search" placeholder="Find an article..." value="<?php echo esc_attr( get_search_query() ); ?>" name="s" id="s" class="form-input" />
 				<input type="hidden" name="post_type" value="post" />
 			</form>
 			<?php endif; ?>
