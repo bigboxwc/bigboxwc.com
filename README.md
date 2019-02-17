@@ -1,16 +1,7 @@
-# BigBox
+# BigBoxWC.com
 
-WooCommerce solutions for large stores.
+WordPress theme for https://bigboxwc.com
 
-## Install
+### WordPress Theme
 
-```
-$ git clone git@github.com:spencerfinnell/bigbox && cd bigbox
-$ npm install
-```
-
-## Develop
-
-```
-$ npm run dev
-```
+To report a bug about the distributed BigBox theme, please refer to the [separate repository](https://github.com/bigboxwc/bigbox).
