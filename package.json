@@ -44,7 +44,7 @@
 		"svgo": "^1.0.5",
 		"svgo-loader": "^2.1.0",
 		"webpack": "^4.8.1",
-		"webpack-cli": "^3.0.3"
+		"webpack-cli": "^3.3.12"
 	},
 	"babel": {
 		"presets": [
